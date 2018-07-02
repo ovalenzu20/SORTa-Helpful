@@ -13,21 +13,21 @@ class SearchViewController: UIViewController {
     let algorithmCollection : [String : [SearchCellButtonData]] =
     [
         "Comparison"     : [
-            SearchCellButtonData(name: "Bubble Sort",    bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Selection Sort", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Insertion Sort", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Heap Sort",      bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Shell Sort",     bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Cocktail Sort",  bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Block Sort",     bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Selection Sort", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Bubble Sort",    algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Selection Sort", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Insertion Sort", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Heap Sort",      algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Shell Sort",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Cocktail Sort",  algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Block Sort",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Selection Sort", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
         ],
         "Non-comparison" : [
-            SearchCellButtonData(name: "Counting Sort",   bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Radix Sort",      bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Spread Sort",     bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Bucket Sort",     bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-            SearchCellButtonData(name: "Pigeonhole Sort", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Counting Sort",   algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Radix Sort",      algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Spread Sort",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Bucket Sort",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+            SearchCellButtonData(name: "Pigeonhole Sort", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
         ]
     ]
 
