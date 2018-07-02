@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="adg-S0-vkp">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
             <objects>
                 <viewController id="Sdo-qc-Pa6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RSn-IT-kQ2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jF4-Gp-clT"/>
@@ -31,7 +32,7 @@
             <objects>
                 <viewController id="3VP-yc-dRD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ru-ny-YBQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gpV-xr-dwH"/>
@@ -40,14 +41,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="1013"/>
+            <point key="canvasLocation" x="483" y="1012"/>
         </scene>
         <!--Item-->
         <scene sceneID="A7b-hY-kEV">
             <objects>
                 <viewController id="qAZ-07-7VZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGS-3g-dUO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1kM-iC-wnR"/>
@@ -56,23 +57,200 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-Yj-d8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="482" y="-1002"/>
+            <point key="canvasLocation" x="483" y="-1008"/>
         </scene>
-        <!--Item 1-->
+        <!--Search View Controller-->
         <scene sceneID="840-PH-Z3P">
             <objects>
-                <viewController id="kA2-Or-VRK" sceneMemberID="viewController">
+                <viewController id="kA2-Or-VRK" customClass="SearchViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qlj-hz-58W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.52941176469999995" green="0.30980392159999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="se9-4V-xzs">
+                                <rect key="frame" x="0.0" y="94" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kA2-Or-VRK" id="Prn-G7-Xrm"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-uX-ANN" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="16" y="180" width="65" height="26"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="Comparison">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaF-Xw-aBQ" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="100" y="180" width="89" height="26"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="Non-comparison">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6c-Rq-0Rq" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="352" y="180" width="43" height="26"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="In-place">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szE-3m-wY3">
+                                <rect key="frame" x="0.0" y="256" width="414" height="431"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="13q-e4-fR8">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="431"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="130" id="jYw-DZ-xIf" customClass="SearchCell" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jYw-DZ-xIf" id="qlq-qm-GDd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="129.66666666666666"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-GD-QtD" customClass="SearchCellButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                            <rect key="frame" x="20" y="11" width="374" height="108"/>
+                                                            <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <state key="normal">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-Oe-BVf">
+                                                            <rect key="frame" x="259" y="34" width="55.666666666666686" height="14"/>
+                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekT-72-uEq">
+                                                            <rect key="frame" x="259" y="58" width="76" height="14"/>
+                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worst Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mij-Uk-2w3">
+                                                            <rect key="frame" x="259" y="82" width="67" height="14"/>
+                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHM-0K-USI">
+                                                            <rect key="frame" x="27" y="54" width="148" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="hZc-bp-6na"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" secondItem="ekT-72-uEq" secondAttribute="leading" id="2h3-Le-UPh"/>
+                                                        <constraint firstItem="wHM-0K-USI" firstAttribute="centerY" secondItem="Eck-GD-QtD" secondAttribute="centerY" constant="-0.5" id="6nN-J3-QJJ"/>
+                                                        <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AaW-Oe-BVf" secondAttribute="leading" id="7h4-J1-DRo"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="Mij-Uk-2w3" secondAttribute="trailing" constant="68" id="7oM-Az-e5g"/>
+                                                        <constraint firstItem="ekT-72-uEq" firstAttribute="top" secondItem="AaW-Oe-BVf" secondAttribute="bottom" constant="10" id="KCn-rg-Iwi"/>
+                                                        <constraint firstItem="Eck-GD-QtD" firstAttribute="leading" secondItem="wHM-0K-USI" secondAttribute="trailing" constant="-155" id="Ygx-aE-Pz6"/>
+                                                        <constraint firstItem="ekT-72-uEq" firstAttribute="centerY" secondItem="qlq-qm-GDd" secondAttribute="centerY" id="cBO-au-5Yg"/>
+                                                        <constraint firstItem="ekT-72-uEq" firstAttribute="leading" secondItem="Eck-GD-QtD" secondAttribute="trailing" constant="-135" id="dcS-su-Nea"/>
+                                                        <constraint firstItem="Mij-Uk-2w3" firstAttribute="top" secondItem="ekT-72-uEq" secondAttribute="bottom" constant="10" id="f5R-xo-rrJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="AaW-Oe-BVf" secondAttribute="trailing" constant="99.333333333333314" id="jqT-lA-zvo"/>
+                                                        <constraint firstItem="Eck-GD-QtD" firstAttribute="centerY" secondItem="qlq-qm-GDd" secondAttribute="centerY" id="kGN-wn-byU"/>
+                                                        <constraint firstItem="Eck-GD-QtD" firstAttribute="trailing" secondItem="qlq-qm-GDd" secondAttribute="trailingMargin" id="mUk-pZ-A8Q"/>
+                                                        <constraint firstItem="Eck-GD-QtD" firstAttribute="bottom" secondItem="qlq-qm-GDd" secondAttribute="bottomMargin" id="wqa-WA-sbm"/>
+                                                        <constraint firstItem="Eck-GD-QtD" firstAttribute="leading" secondItem="qlq-qm-GDd" secondAttribute="leadingMargin" id="x1d-X4-NJs"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="13q-e4-fR8" firstAttribute="leading" secondItem="szE-3m-wY3" secondAttribute="leading" id="9qy-ef-Zvf"/>
+                                    <constraint firstAttribute="trailing" secondItem="13q-e4-fR8" secondAttribute="trailing" id="L77-dW-Rsw"/>
+                                    <constraint firstAttribute="bottom" secondItem="13q-e4-fR8" secondAttribute="bottom" id="MXq-YS-zPP"/>
+                                    <constraint firstItem="13q-e4-fR8" firstAttribute="top" secondItem="szE-3m-wY3" secondAttribute="top" id="cCZ-rz-Ulv"/>
+                                    <constraint firstItem="13q-e4-fR8" firstAttribute="leading" secondItem="szE-3m-wY3" secondAttribute="leading" id="ggs-UM-nlv"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-A4-nEa" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="210" y="180" width="123" height="26"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <state key="normal" title="Stable">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1246589558" green="0.1231011113" blue="0.15432475179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="edO-Lg-Epv" firstAttribute="trailing" secondItem="o6c-Rq-0Rq" secondAttribute="trailing" constant="19" id="76e-tZ-MJi"/>
+                            <constraint firstItem="HVf-A4-nEa" firstAttribute="leading" secondItem="RaF-Xw-aBQ" secondAttribute="trailing" constant="21" id="Egr-Db-pqv"/>
+                            <constraint firstItem="RaF-Xw-aBQ" firstAttribute="leading" secondItem="cZ8-uX-ANN" secondAttribute="trailing" constant="19" id="GvE-qR-bSC"/>
+                            <constraint firstItem="cZ8-uX-ANN" firstAttribute="top" secondItem="se9-4V-xzs" secondAttribute="bottom" constant="30" id="Hvo-ea-LRw"/>
+                            <constraint firstItem="szE-3m-wY3" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" id="KGo-iX-boB"/>
+                            <constraint firstItem="HVf-A4-nEa" firstAttribute="top" secondItem="se9-4V-xzs" secondAttribute="bottom" constant="30" id="Sgz-dP-Yax"/>
+                            <constraint firstItem="o6c-Rq-0Rq" firstAttribute="top" secondItem="se9-4V-xzs" secondAttribute="bottom" constant="30" id="Xch-TA-d6e"/>
+                            <constraint firstItem="se9-4V-xzs" firstAttribute="top" secondItem="edO-Lg-Epv" secondAttribute="top" constant="30" id="ZxS-7y-7LN"/>
+                            <constraint firstItem="szE-3m-wY3" firstAttribute="bottom" secondItem="edO-Lg-Epv" secondAttribute="bottom" id="ayw-eg-jlx"/>
+                            <constraint firstItem="szE-3m-wY3" firstAttribute="trailing" secondItem="edO-Lg-Epv" secondAttribute="trailing" id="e38-D6-BRX"/>
+                            <constraint firstItem="se9-4V-xzs" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" id="i05-vu-rHO"/>
+                            <constraint firstItem="cZ8-uX-ANN" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" constant="16" id="l4o-zH-urv"/>
+                            <constraint firstItem="szE-3m-wY3" firstAttribute="top" secondItem="cZ8-uX-ANN" secondAttribute="bottom" constant="50" id="mD0-sD-vdw"/>
+                            <constraint firstItem="o6c-Rq-0Rq" firstAttribute="leading" secondItem="HVf-A4-nEa" secondAttribute="trailing" constant="19" id="orX-4q-qua"/>
+                            <constraint firstItem="edO-Lg-Epv" firstAttribute="trailing" secondItem="se9-4V-xzs" secondAttribute="trailing" id="owU-5r-NpW"/>
+                            <constraint firstItem="RaF-Xw-aBQ" firstAttribute="top" secondItem="se9-4V-xzs" secondAttribute="bottom" constant="30" id="qLj-5V-zQh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="edO-Lg-Epv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Bmn-Fk-cLD"/>
+                    <navigationItem key="navigationItem" id="6cO-eQ-Fvy"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="7nO-gQ-nYc" id="xbS-O5-QV9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNe-MO-IeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="7nO-gQ-nYc">
+                    <connections>
+                        <outlet property="delegate" destination="kA2-Or-VRK" id="qQq-mP-C6u"/>
+                        <outlet property="searchBar" destination="se9-4V-xzs" id="xb4-LC-7cY"/>
+                        <outlet property="searchContentsController" destination="kA2-Or-VRK" id="Mfh-hY-QDK"/>
+                        <outlet property="searchResultsDataSource" destination="kA2-Or-VRK" id="WsO-te-VWn"/>
+                        <outlet property="searchResultsDelegate" destination="kA2-Or-VRK" id="EPJ-Rb-UNU"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="483" y="-339"/>
+            <point key="canvasLocation" x="1250.7246376811595" y="-340.76086956521743"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VVb-2l-z76">
@@ -84,7 +262,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kA2-Or-VRK" kind="relationship" relationship="viewControllers" id="tRb-Vv-FIo"/>
+                        <segue destination="iqW-gc-bkq" kind="relationship" relationship="viewControllers" id="tRb-Vv-FIo"/>
                         <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                         <segue destination="qAZ-07-7VZ" kind="relationship" relationship="viewControllers" id="0YL-Pr-hV9"/>
                         <segue destination="3VP-yc-dRD" kind="relationship" relationship="viewControllers" id="cEj-bm-cOd"/>
@@ -93,6 +271,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAA-iH-mbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-470" y="-7"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="zpN-vy-19q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iqW-gc-bkq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="Bmn-Fk-cLD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="scl-7r-dfa">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kA2-Or-VRK" kind="relationship" relationship="rootViewController" id="fer-0u-zeJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbd-Hk-vNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="-340"/>
         </scene>
     </scenes>
 </document>
