@@ -52,19 +52,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTa Helpful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR2-0I-AIl">
-                                <rect key="frame" x="48" y="51" width="278" height="55"/>
+                                <rect key="frame" x="48" y="51" width="317" height="55"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Omar Valenzuela &amp; Brandon Teran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-jO-kez">
-                                <rect key="frame" x="233" y="114" width="93" height="41"/>
+                                <rect key="frame" x="233" y="114" width="132" height="27.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed to help students learn and visualize various sorting algorithms" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5I-Lp-93u">
-                                <rect key="frame" x="61" y="199" width="252" height="82"/>
+                                <rect key="frame" x="61" y="199" width="291" height="82"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -185,7 +185,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worst Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mij-Uk-2w3">
-                                                            <rect key="frame" x="259" y="82" width="67" height="14"/>
+                                                            <rect key="frame" x="263.33333333333331" y="82" width="62.666666666666686" height="14"/>
                                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" secondItem="ekT-72-uEq" secondAttribute="leading" id="2h3-Le-UPh"/>
+                                                        <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ekT-72-uEq" secondAttribute="leading" id="2h3-Le-UPh"/>
                                                         <constraint firstItem="wHM-0K-USI" firstAttribute="centerY" secondItem="Eck-GD-QtD" secondAttribute="centerY" constant="-0.5" id="6nN-J3-QJJ"/>
                                                         <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AaW-Oe-BVf" secondAttribute="leading" id="7h4-J1-DRo"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="Mij-Uk-2w3" secondAttribute="trailing" constant="68" id="7oM-Az-e5g"/>
@@ -297,9 +297,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
-                        <segue destination="iqW-gc-bkq" kind="relationship" relationship="viewControllers" id="tRb-Vv-FIo"/>
                         <segue destination="qAZ-07-7VZ" kind="relationship" relationship="viewControllers" id="0YL-Pr-hV9"/>
+                        <segue destination="iqW-gc-bkq" kind="relationship" relationship="viewControllers" id="OrR-fB-Rje"/>
+                        <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                         <segue destination="3VP-yc-dRD" kind="relationship" relationship="viewControllers" id="cEj-bm-cOd"/>
                     </connections>
                 </tabBarController>
