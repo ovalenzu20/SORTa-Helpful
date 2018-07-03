@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Connoisseurs.ttf">
+            <string>Connoisseurs</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Item 2-->
         <scene sceneID="bKg-jg-JgL">
@@ -50,37 +58,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTa Helpful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR2-0I-AIl">
-                                <rect key="frame" x="48" y="51" width="278" height="55"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sorta helpful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2s-Uu-OIp">
+                                <rect key="frame" x="84" y="52" width="207" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Omar Valenzuela &amp; Brandon Teran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-jO-kez">
-                                <rect key="frame" x="233" y="114" width="93" height="41"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed to help students learn and visualize various sorting algorithms" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5I-Lp-93u">
-                                <rect key="frame" x="61" y="199" width="252" height="82"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCM-Yv-jwm">
+                                <rect key="frame" x="55" y="484" width="265" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
+                                <state key="normal" title="START TUTORIAL" backgroundImage="tutorialButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn. Visualize. Master." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XC-ZJ-16r">
+                                <rect key="frame" x="55" y="292" width="133" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="jR2-0I-AIl" firstAttribute="top" secondItem="1kM-iC-wnR" secondAttribute="top" constant="31" id="4X1-S5-j28"/>
-                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="43J-jO-kez" secondAttribute="trailing" constant="49" id="F8w-Av-fbI"/>
-                            <constraint firstItem="A5I-Lp-93u" firstAttribute="top" secondItem="jR2-0I-AIl" secondAttribute="bottom" constant="93" id="K0r-HA-f49"/>
-                            <constraint firstItem="43J-jO-kez" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="233" id="LJ7-9G-Z68"/>
-                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="jR2-0I-AIl" secondAttribute="trailing" constant="49" id="Sap-Kd-8Mw"/>
-                            <constraint firstItem="A5I-Lp-93u" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="61" id="hfo-Gi-Yjs"/>
-                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="A5I-Lp-93u" secondAttribute="trailing" constant="62" id="lH7-Vw-1Iy"/>
-                            <constraint firstItem="43J-jO-kez" firstAttribute="top" secondItem="jR2-0I-AIl" secondAttribute="bottom" constant="8" id="uXg-zt-TsL"/>
-                            <constraint firstItem="jR2-0I-AIl" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="48" id="veR-ij-Rvn"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.31764705879999999" green="0.4941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="1kM-iC-wnR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="cM9-99-GBV"/>
@@ -126,4 +127,7 @@
             <point key="canvasLocation" x="-470" y="-7"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tutorialButton" width="265" height="72"/>
+    </resources>
 </document>
