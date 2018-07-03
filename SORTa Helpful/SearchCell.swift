@@ -12,6 +12,15 @@ import UIKit
 
 class SearchCell: UITableViewCell {
     
+    @IBOutlet weak var algoNameLabel: UILabel!
+    @IBOutlet weak var bestCaseLabel: UILabel!
+    @IBOutlet weak var averageCaseLabel: UILabel!
+    @IBOutlet weak var worstCaseLabel: UILabel!
     
-    
+    func setSearchButtonLabels(buttonData: SearchCellButtonData) {
+        algoNameLabel.text    = buttonData.name
+        bestCaseLabel.text    = buttonData.bestCase
+        averageCaseLabel.text = buttonData.averageCase
+        worstCaseLabel.text   = buttonData.worstCase
+    }
 }

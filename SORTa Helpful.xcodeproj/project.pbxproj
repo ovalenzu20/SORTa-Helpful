@@ -14,7 +14,6 @@
 		07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */; };
 		78C6174720EA066C00208BF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6174620EA066C00208BF6 /* HomeViewController.swift */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
-		78F9845B20E84F760017DCCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845A20E84F760017DCCC /* ViewController.swift */; };
 		78F9845E20E84F760017DCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845C20E84F760017DCCC /* Main.storyboard */; };
 		78F9846020E84F770017DCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845F20E84F770017DCCC /* Assets.xcassets */; };
 		78F9846320E84F770017DCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9846120E84F770017DCCC /* LaunchScreen.storyboard */; };
@@ -29,7 +28,6 @@
 		78C6174620EA066C00208BF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F9845820E84F760017DCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		78F9845A20E84F760017DCCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78F9845D20E84F760017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78F9845F20E84F770017DCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78F9846220E84F770017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 			children = (
 				78C6174620EA066C00208BF6 /* HomeViewController.swift */,
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
-				78F9845A20E84F760017DCCC /* ViewController.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
 				78F9845F20E84F770017DCCC /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
@@ -163,7 +160,6 @@
 			files = (
 				07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */,
 				07E237B820E9DDB3000D22DE /* SearchCellButtonData.swift in Sources */,
-				78F9845B20E84F760017DCCC /* ViewController.swift in Sources */,
 				07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				07E237B220E9CDBA000D22DE /* SearchCellButton.swift in Sources */,
@@ -313,13 +309,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FWR8J2UYTV;
+				DEVELOPMENT_TEAM = 5VH56T7SNL;
 				INFOPLIST_FILE = "SORTa Helpful/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.OBDevs.SORTa-Helpful";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OBDevs.SORTa-Helpful1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,13 +328,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FWR8J2UYTV;
+				DEVELOPMENT_TEAM = 5VH56T7SNL;
 				INFOPLIST_FILE = "SORTa Helpful/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.OBDevs.SORTa-Helpful";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OBDevs.SORTa-Helpful1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
