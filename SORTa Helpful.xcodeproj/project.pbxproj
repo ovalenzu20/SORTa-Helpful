@@ -67,6 +67,7 @@
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
 				78F9845A20E84F760017DCCC /* ViewController.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
+				78C6174620EA066C00208BF6 /* HomeViewController.swift */,
 				78F9845F20E84F770017DCCC /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				78F9846420E84F770017DCCC /* Info.plist */,
