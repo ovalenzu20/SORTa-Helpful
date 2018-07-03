@@ -26,21 +26,67 @@
             </objects>
             <point key="canvasLocation" x="483" y="325"/>
         </scene>
-        <!--Stats-->
+        <!--Info-->
         <scene sceneID="L6D-8F-7HO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3VP-yc-dRD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ru-ny-YBQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.87883608670000002" blue="0.78208233800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m79-9S-gB6">
+                                <rect key="frame" x="14" y="20" width="347" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZB-Nr-wGs">
+                                <rect key="frame" x="0.0" y="83" width="375" height="868"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="youre a bitch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mz3-V9-JO8">
+                                        <rect key="frame" x="65" y="766" width="245" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Mz3-V9-JO8" firstAttribute="centerX" secondItem="yZB-Nr-wGs" secondAttribute="centerX" id="OA0-69-U44"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mz3-V9-JO8" secondAttribute="bottom" constant="48" id="PzO-z2-NwS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mz3-V9-JO8" secondAttribute="trailing" constant="65" id="hDU-Yy-Ujs"/>
+                                    <constraint firstItem="Mz3-V9-JO8" firstAttribute="top" secondItem="yZB-Nr-wGs" secondAttribute="top" constant="766" id="pn3-Xv-YfL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="395" height="1000"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
+                                        <rect key="value" x="0.0" y="0.0" width="395" height="667"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                        <constraints>
+                            <constraint firstItem="m79-9S-gB6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gpV-xr-dwH" secondAttribute="leading" id="14c-Kw-fHS"/>
+                            <constraint firstItem="yZB-Nr-wGs" firstAttribute="leading" secondItem="3ru-ny-YBQ" secondAttribute="leading" id="2bt-6j-weN"/>
+                            <constraint firstItem="gpV-xr-dwH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m79-9S-gB6" secondAttribute="trailing" id="4PZ-yA-ENf"/>
+                            <constraint firstItem="yZB-Nr-wGs" firstAttribute="bottom" secondItem="gpV-xr-dwH" secondAttribute="bottom" id="INU-fT-6fh"/>
+                            <constraint firstAttribute="trailing" secondItem="yZB-Nr-wGs" secondAttribute="trailing" id="O4f-0d-ZHF"/>
+                            <constraint firstItem="m79-9S-gB6" firstAttribute="top" secondItem="gpV-xr-dwH" secondAttribute="top" id="f6T-vf-NOp"/>
+                            <constraint firstItem="yZB-Nr-wGs" firstAttribute="centerX" secondItem="m79-9S-gB6" secondAttribute="centerX" id="qWt-Sl-wIv"/>
+                            <constraint firstItem="yZB-Nr-wGs" firstAttribute="top" secondItem="m79-9S-gB6" secondAttribute="bottom" constant="8" symbolic="YES" id="suf-uw-Loj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gpV-xr-dwH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stats" image="stats icon 29x29" id="bRM-fe-9oE"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="stats icon 29x29" id="bRM-fe-9oE"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="1013"/>
+            <point key="canvasLocation" x="469.60000000000002" y="1011.9940029985008"/>
         </scene>
         <!--Settings-->
         <scene sceneID="A7b-hY-kEV">
