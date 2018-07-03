@@ -34,7 +34,7 @@
                     <view key="view" contentMode="scaleToFill" id="3ru-ny-YBQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.87883608670000002" blue="0.78208233800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="gpV-xr-dwH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="bRM-fe-9oE"/>
@@ -43,17 +43,48 @@
             </objects>
             <point key="canvasLocation" x="483" y="1012"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="A7b-hY-kEV">
             <objects>
-                <viewController id="qAZ-07-7VZ" sceneMemberID="viewController">
+                <viewController id="qAZ-07-7VZ" customClass="HomeViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGS-3g-dUO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTa Helpful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR2-0I-AIl">
+                                <rect key="frame" x="48" y="51" width="317" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Omar Valenzuela &amp; Brandon Teran" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-jO-kez">
+                                <rect key="frame" x="233" y="114" width="132" height="27.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed to help students learn and visualize various sorting algorithms" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5I-Lp-93u">
+                                <rect key="frame" x="61" y="199" width="291" height="82"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jR2-0I-AIl" firstAttribute="top" secondItem="1kM-iC-wnR" secondAttribute="top" constant="31" id="4X1-S5-j28"/>
+                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="43J-jO-kez" secondAttribute="trailing" constant="49" id="F8w-Av-fbI"/>
+                            <constraint firstItem="A5I-Lp-93u" firstAttribute="top" secondItem="jR2-0I-AIl" secondAttribute="bottom" constant="93" id="K0r-HA-f49"/>
+                            <constraint firstItem="43J-jO-kez" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="233" id="LJ7-9G-Z68"/>
+                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="jR2-0I-AIl" secondAttribute="trailing" constant="49" id="Sap-Kd-8Mw"/>
+                            <constraint firstItem="A5I-Lp-93u" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="61" id="hfo-Gi-Yjs"/>
+                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="A5I-Lp-93u" secondAttribute="trailing" constant="62" id="lH7-Vw-1Iy"/>
+                            <constraint firstItem="43J-jO-kez" firstAttribute="top" secondItem="jR2-0I-AIl" secondAttribute="bottom" constant="8" id="uXg-zt-TsL"/>
+                            <constraint firstItem="jR2-0I-AIl" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="48" id="veR-ij-Rvn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1kM-iC-wnR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cM9-99-GBV"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="cM9-99-GBV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-Yj-d8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +172,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worst Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mij-Uk-2w3">
-                                                            <rect key="frame" x="259" y="82" width="67" height="14"/>
+                                                            <rect key="frame" x="263.33333333333331" y="82" width="62.666666666666686" height="14"/>
                                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -157,15 +188,19 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" secondItem="ekT-72-uEq" secondAttribute="leading" id="2h3-Le-UPh"/>
+                                                        <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ekT-72-uEq" secondAttribute="leading" id="2h3-Le-UPh"/>
                                                         <constraint firstItem="wHM-0K-USI" firstAttribute="centerY" secondItem="Eck-GD-QtD" secondAttribute="centerY" constant="-0.5" id="6nN-J3-QJJ"/>
                                                         <constraint firstItem="Mij-Uk-2w3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AaW-Oe-BVf" secondAttribute="leading" id="7h4-J1-DRo"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="Mij-Uk-2w3" secondAttribute="trailing" constant="68" id="7oM-Az-e5g"/>
+                                                        <constraint firstItem="ekT-72-uEq" firstAttribute="leading" secondItem="qlq-qm-GDd" secondAttribute="leading" constant="259" id="9dl-m2-0zp"/>
                                                         <constraint firstItem="ekT-72-uEq" firstAttribute="top" secondItem="AaW-Oe-BVf" secondAttribute="bottom" constant="10" id="KCn-rg-Iwi"/>
                                                         <constraint firstItem="Eck-GD-QtD" firstAttribute="leading" secondItem="wHM-0K-USI" secondAttribute="trailing" constant="-155" id="Ygx-aE-Pz6"/>
+                                                        <constraint firstItem="wHM-0K-USI" firstAttribute="leading" secondItem="qlq-qm-GDd" secondAttribute="leading" constant="27" id="c8O-4e-WfY"/>
                                                         <constraint firstItem="ekT-72-uEq" firstAttribute="centerY" secondItem="qlq-qm-GDd" secondAttribute="centerY" id="cBO-au-5Yg"/>
                                                         <constraint firstItem="ekT-72-uEq" firstAttribute="leading" secondItem="Eck-GD-QtD" secondAttribute="trailing" constant="-135" id="dcS-su-Nea"/>
                                                         <constraint firstItem="Mij-Uk-2w3" firstAttribute="top" secondItem="ekT-72-uEq" secondAttribute="bottom" constant="10" id="f5R-xo-rrJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ekT-72-uEq" secondAttribute="trailing" constant="79" id="g7O-zp-Ted"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Eck-GD-QtD" secondAttribute="trailing" constant="20" id="hCc-dA-xp3"/>
                                                         <constraint firstAttribute="trailing" secondItem="AaW-Oe-BVf" secondAttribute="trailing" constant="99.333333333333314" id="jqT-lA-zvo"/>
                                                         <constraint firstItem="Eck-GD-QtD" firstAttribute="centerY" secondItem="qlq-qm-GDd" secondAttribute="centerY" id="kGN-wn-byU"/>
                                                         <constraint firstItem="Eck-GD-QtD" firstAttribute="trailing" secondItem="qlq-qm-GDd" secondAttribute="trailingMargin" id="mUk-pZ-A8Q"/>
@@ -265,9 +300,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="iqW-gc-bkq" kind="relationship" relationship="viewControllers" id="tRb-Vv-FIo"/>
-                        <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                         <segue destination="qAZ-07-7VZ" kind="relationship" relationship="viewControllers" id="0YL-Pr-hV9"/>
+                        <segue destination="iqW-gc-bkq" kind="relationship" relationship="viewControllers" id="OrR-fB-Rje"/>
+                        <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                         <segue destination="3VP-yc-dRD" kind="relationship" relationship="viewControllers" id="cEj-bm-cOd"/>
                     </connections>
                 </tabBarController>
