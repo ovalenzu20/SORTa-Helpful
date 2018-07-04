@@ -404,7 +404,6 @@
                         <segue destination="b6N-TX-dwu" kind="relationship" relationship="viewControllers" id="E0e-L8-JLJ"/>
                         <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                         <segue destination="3VP-yc-dRD" kind="relationship" relationship="viewControllers" id="cEj-bm-cOd"/>
-                        <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAA-iH-mbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,7 +432,6 @@
     </scenes>
     <resources>
         <image name="home icon 29x29" width="29" height="29"/>
-        <image name="search icon 29x29" width="29" height="29"/>
         <image name="settings 29x29" width="29" height="29"/>
         <image name="stats icon 29x29" width="29" height="29"/>
     </resources>
