@@ -10,17 +10,24 @@ import Foundation
 import UIKit
 
 
-class SearchCell: UITableViewCell {
+@IBDesignable class SearchCell: UICollectionViewCell {
     
     @IBOutlet weak var algoNameLabel: UILabel!
     @IBOutlet weak var bestCaseLabel: UILabel!
     @IBOutlet weak var averageCaseLabel: UILabel!
     @IBOutlet weak var worstCaseLabel: UILabel!
     
-    func setSearchButtonLabels(buttonData: SearchCellButtonData) {
-        algoNameLabel.text    = buttonData.name
-        bestCaseLabel.text    = buttonData.bestCase
-        averageCaseLabel.text = buttonData.averageCase
-        worstCaseLabel.text   = buttonData.worstCase
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+    }
+
+    
+    func setSearchButtonLabels(cellData: SearchCellData) {
+        algoNameLabel.text!    = cellData.name
+        bestCaseLabel.text!    = cellData.bestCase
+        averageCaseLabel.text! = cellData.averageCase
+        worstCaseLabel.text!   = cellData.worstCase
     }
 }

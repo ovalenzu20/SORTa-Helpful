@@ -1,5 +1,5 @@
 //
-//  SearchCellButtonData.swift
+//  SearchCellData.swift
 //  SORTa Helpful
 //
 //  Created by Teran on 7/1/18.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-class SearchCellButtonData {
+class SearchCellData {
     var name        : String
     var algoClass   : String
     var algoType    : String
