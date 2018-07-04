@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     
     /*
+    // TODO: IMPLEMENT THE TUTORIAL
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
