@@ -1,28 +1,18 @@
 //
-//  InfoTabViewController.swift
+//  LaunchScreenViewController.swift
 //  SORTa Helpful
 //
-//  Created by Omar Valenzuela on 7/4/18.
+//  Created by Omar Valenzuela on 7/9/18.
 //  Copyright © 2018 OB Devs. All rights reserved.
 //
 
 import UIKit
 
-class InfoTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let algorithms = ["classObjectsOfTypeAlgorithm"]
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
+class LaunchScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NSRunLoocurrentRunLoop().runUntilDate(NSDate(timeIntervalSinceNow: 1))
         // Do any additional setup after loading the view.
     }
 
