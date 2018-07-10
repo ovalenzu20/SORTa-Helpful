@@ -29,6 +29,11 @@ class SearchViewController: UIViewController {
         Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)")
     ]
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        var algorithmViewController = segue.destination as! AlgorithmViewController
+//
+//
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,9 +96,15 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         return algorithmCollection.count
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let currentAlgorithm = algorithmCollection[indexPath.row]
+        
+        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
+        
+        algorithmVC?.algorithm = currentAlgorithm
+        
+        self.navigationController?.pushViewController(algorithmVC!, animated: true)
+    }
 }
 
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */; };
+		077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */; };
 		07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237AF20E9CD06000D22DE /* SearchCell.swift */; };
 		07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B520E9DCA9000D22DE /* SearchViewController.swift */; };
 		07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* Algorithm.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
 		07E237AF20E9CD06000D22DE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		07E237B520E9DCA9000D22DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		07E237B720E9DDB3000D22DE /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				07E237B720E9DDB3000D22DE /* Algorithm.swift */,
 				07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */,
 				0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */,
+				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
 			);
 			path = "SORTa Helpful";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
 				07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */,
+				077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */,
 				78C6174720EA066C00208BF6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

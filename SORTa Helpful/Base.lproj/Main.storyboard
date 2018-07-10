@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -144,14 +145,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="se9-4V-xzs">
-                                <rect key="frame" x="0.0" y="50" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="kA2-Or-VRK" id="Prn-G7-Xrm"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-uX-ANN" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="98" y="116" width="96" height="26"/>
+                                <rect key="frame" x="98" y="160" width="96" height="26"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="sfX-k7-fV8"/>
@@ -168,7 +169,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaF-Xw-aBQ" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="220" y="116" width="96" height="26"/>
+                                <rect key="frame" x="220" y="160" width="96" height="26"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="9SO-Ci-bz9"/>
@@ -185,10 +186,10 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szE-3m-wY3">
-                                <rect key="frame" x="0.0" y="212" width="414" height="475"/>
+                                <rect key="frame" x="0.0" y="256" width="414" height="431"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-96-gQr">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="475"/>
+                                        <rect key="frame" x="10" y="0.0" width="394" height="431"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uLE-2l-m0e">
                                             <size key="itemSize" width="50" height="50"/>
@@ -280,7 +281,7 @@
                                                 <size key="customSize" width="190" height="120"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="12"/>
+                                                        <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -301,7 +302,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-A4-nEa" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="98" y="153" width="96" height="26"/>
+                                <rect key="frame" x="98" y="197" width="96" height="26"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="SfU-7Q-SqK"/>
@@ -318,7 +319,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldp-KH-uPT">
-                                <rect key="frame" x="202" y="116" width="10" height="26"/>
+                                <rect key="frame" x="202" y="160" width="10" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="Ubj-6t-RPI"/>
@@ -326,7 +327,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6c-Rq-0Rq" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="220" y="153" width="96" height="26"/>
+                                <rect key="frame" x="220" y="197" width="96" height="26"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="pwE-pI-Val"/>
@@ -370,11 +371,11 @@
                         <viewLayoutGuide key="safeArea" id="edO-Lg-Epv"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6cO-eQ-Fvy"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="searchCollectionView" destination="1wE-96-gQr" id="TGb-qW-xJg"/>
                         <outlet property="searchDisplayController" destination="7nO-gQ-nYc" id="xbS-O5-QV9"/>
                         <outlet property="searchViewSearchBar" destination="se9-4V-xzs" id="Ycq-cN-0kE"/>
+                        <segue destination="zIs-93-VYW" kind="show" id="wKV-Zv-GNw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNe-MO-IeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -388,7 +389,160 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1417" y="-346"/>
+            <point key="canvasLocation" x="1178" y="-346"/>
+        </scene>
+        <!--Algorithm Name-->
+        <scene sceneID="O1B-9E-eii">
+            <objects>
+                <viewController storyboardIdentifier="AlgorithmViewController" title="Algorithm Name" id="zIs-93-VYW" customClass="AlgorithmViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ml-7h-b1i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yol-bI-nTF">
+                                <rect key="frame" x="20" y="413.66666666666669" width="79" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Best Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyW-kv-Yuo">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Average Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocO-bC-sz7">
+                                        <rect key="frame" x="0.0" y="34" width="79" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Worst Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNb-os-jRb">
+                                        <rect key="frame" x="0.0" y="68" width="79" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yol-bI-nTF" secondAttribute="height" multiplier="79:82" id="g40-HC-2kJ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-ZK-dxh">
+                                <rect key="frame" x="107" y="413.66666666666669" width="24" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDS-rg-2Ne">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7G-TN-UDN">
+                                        <rect key="frame" x="0.0" y="34" width="24" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azi-wp-IP1">
+                                        <rect key="frame" x="0.0" y="68" width="24" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Zkn-re-fZB"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7M-s4-Pdf">
+                                <rect key="frame" x="20" y="84" width="374" height="259.66666666666669"/>
+                                <color key="backgroundColor" red="0.0" green="0.39960739210000001" blue="0.01731854197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cLU-K3-AS5">
+                                <rect key="frame" x="68.333333333333343" y="353.66666666666669" width="277.33333333333326" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cLU-K3-AS5" secondAttribute="height" multiplier="264:29" id="Ezo-tI-lYX"/>
+                                </constraints>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k6G-m9-unr">
+                                <rect key="frame" x="283" y="413" width="79" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Best Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc0-F1-oO8">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Average Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrk-UB-Uvq">
+                                        <rect key="frame" x="0.0" y="34" width="79" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Worst Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUJ-5r-cJz">
+                                        <rect key="frame" x="0.0" y="68" width="79" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k6G-m9-unr" secondAttribute="height" multiplier="79:82" id="xG0-xT-yhG"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JWZ-F4-uqx">
+                                <rect key="frame" x="370" y="413" width="24" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9f-sF-eLl">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-Wa-of2">
+                                        <rect key="frame" x="0.0" y="34" width="24" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY3-4Z-i1i">
+                                        <rect key="frame" x="0.0" y="68" width="24" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Iuh-5g-wIH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JWZ-F4-uqx" firstAttribute="leading" secondItem="k6G-m9-unr" secondAttribute="trailing" constant="8" id="2tx-1Q-PB5"/>
+                            <constraint firstItem="P7M-s4-Pdf" firstAttribute="leading" secondItem="zUk-Ok-R1j" secondAttribute="leading" constant="20" id="77R-PV-V4m"/>
+                            <constraint firstItem="DOE-ZK-dxh" firstAttribute="leading" secondItem="Yol-bI-nTF" secondAttribute="trailing" constant="8" id="7pI-hl-DU5"/>
+                            <constraint firstItem="DOE-ZK-dxh" firstAttribute="top" secondItem="cLU-K3-AS5" secondAttribute="bottom" constant="30" id="FEl-BE-EbA"/>
+                            <constraint firstItem="P7M-s4-Pdf" firstAttribute="top" secondItem="zUk-Ok-R1j" secondAttribute="top" constant="20" id="IQU-gm-OEO"/>
+                            <constraint firstItem="JWZ-F4-uqx" firstAttribute="top" secondItem="cLU-K3-AS5" secondAttribute="bottom" constant="29.333333333333314" id="NYa-ae-Xxx"/>
+                            <constraint firstItem="Yol-bI-nTF" firstAttribute="top" secondItem="cLU-K3-AS5" secondAttribute="bottom" constant="30" id="SsW-Lw-oSb"/>
+                            <constraint firstItem="zUk-Ok-R1j" firstAttribute="trailing" secondItem="JWZ-F4-uqx" secondAttribute="trailing" constant="20" id="TaJ-Ma-qst"/>
+                            <constraint firstItem="zUk-Ok-R1j" firstAttribute="trailing" secondItem="P7M-s4-Pdf" secondAttribute="trailing" constant="20" id="V2c-VN-qNF"/>
+                            <constraint firstItem="k6G-m9-unr" firstAttribute="top" secondItem="cLU-K3-AS5" secondAttribute="bottom" constant="29.333333333333314" id="ZWr-QJ-xTu"/>
+                            <constraint firstItem="cLU-K3-AS5" firstAttribute="top" secondItem="P7M-s4-Pdf" secondAttribute="bottom" constant="10" id="ac9-I1-iod"/>
+                            <constraint firstItem="Yol-bI-nTF" firstAttribute="leading" secondItem="zUk-Ok-R1j" secondAttribute="leading" constant="19.999999999999993" id="rhB-im-exT"/>
+                            <constraint firstItem="cLU-K3-AS5" firstAttribute="centerY" secondItem="9Ml-7h-b1i" secondAttribute="centerY" id="yp9-tE-cpr"/>
+                            <constraint firstItem="cLU-K3-AS5" firstAttribute="centerX" secondItem="9Ml-7h-b1i" secondAttribute="centerX" id="yzF-Is-ApC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zUk-Ok-R1j"/>
+                    </view>
+                    <connections>
+                        <outlet property="averageCaseLabel" destination="t7G-TN-UDN" id="wgZ-ey-kht"/>
+                        <outlet property="bestCaseLabel" destination="fDS-rg-2Ne" id="WoZ-PV-qnv"/>
+                        <outlet property="worstCaseLabel" destination="Azi-wp-IP1" id="QSb-n6-jra"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYp-mx-AG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936.2318840579712" y="-346.46739130434787"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VVb-2l-z76">
@@ -401,9 +555,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="qAZ-07-7VZ" kind="relationship" relationship="viewControllers" id="0YL-Pr-hV9"/>
-                        <segue destination="b6N-TX-dwu" kind="relationship" relationship="viewControllers" id="E0e-L8-JLJ"/>
-                        <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
+                        <segue destination="yL7-Jh-mdY" kind="relationship" relationship="viewControllers" id="NV2-Lq-oss"/>
                         <segue destination="3VP-yc-dRD" kind="relationship" relationship="viewControllers" id="cEj-bm-cOd"/>
+                        <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAA-iH-mbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,27 +565,28 @@
             <point key="canvasLocation" x="-470" y="-7"/>
         </scene>
         <!--Search-->
-        <scene sceneID="4HS-JO-iF9">
+        <scene sceneID="hpX-WD-2gh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b6N-TX-dwu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="cDx-Tb-Fmt"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yL7-Jh-mdY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" selectedImage="search icon 29x29" id="4Kz-jE-mSC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g1r-13-vmy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yiL-AL-yOd">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kA2-Or-VRK" kind="relationship" relationship="rootViewController" id="VyK-oz-hXk"/>
+                        <segue destination="kA2-Or-VRK" kind="relationship" relationship="rootViewController" id="QEo-s2-DPE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7e-u0-Zfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juh-L9-UER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="483" y="-346"/>
         </scene>
     </scenes>
     <resources>
         <image name="home icon 29x29" width="29" height="29"/>
+        <image name="search icon 29x29" width="29" height="29"/>
         <image name="settings 29x29" width="29" height="29"/>
         <image name="stats icon 29x29" width="29" height="29"/>
     </resources>
