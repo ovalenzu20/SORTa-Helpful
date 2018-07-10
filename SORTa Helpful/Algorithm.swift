@@ -9,6 +9,9 @@
 import Foundation
 
 
+// Help with passing data between view controllers more efficiently
+
+
 class Algorithm {
     var name        : String
     var algoClass   : String
