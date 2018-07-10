@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78CD3C6C20EB70B60068E244 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 78CD3C6B20EB70B60068E244 /* fonts */; };
 		78E68B5F20F4756800E52845 /* Connoisseurs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78FC55F320ECB05F00714C50 /* Connoisseurs.ttf */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
 		78F9845B20E84F760017DCCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845A20E84F760017DCCC /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		78CD3C6B20EB70B60068E244 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../Downloads/fonts; sourceTree = "<group>"; };
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F9845820E84F760017DCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F9845A20E84F760017DCCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,21 +53,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		78E68B5E20F4746400E52845 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				78CD3C6B20EB70B60068E244 /* fonts */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		78F9844C20E84F760017DCCC = {
 			isa = PBXGroup;
 			children = (
 				78F9845720E84F760017DCCC /* SORTa Helpful */,
 				78F9845620E84F760017DCCC /* Products */,
 				78FC55EE20ECB05F00714C50 /* fonts */,
-				78E68B5E20F4746400E52845 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,7 +167,6 @@
 				78F9846320E84F770017DCCC /* LaunchScreen.storyboard in Resources */,
 				78F9846020E84F770017DCCC /* Assets.xcassets in Resources */,
 				78E68B5F20F4756800E52845 /* Connoisseurs.ttf in Resources */,
-				78CD3C6C20EB70B60068E244 /* fonts in Resources */,
 				78F9845E20E84F760017DCCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
