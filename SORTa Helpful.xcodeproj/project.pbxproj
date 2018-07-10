@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
-		07849B7C20F55AAD00F47E52 /* algorithmInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = algorithmInfo.json; sourceTree = "<group>"; };
+		07849B7C20F55AAD00F47E52 /* algorithmInfo.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = algorithmInfo.json; sourceTree = "<group>"; };
 		07E237AF20E9CD06000D22DE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		07E237B520E9DCA9000D22DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		07E237B720E9DDB3000D22DE /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
