@@ -24,7 +24,7 @@ import UIKit
     }
 
     
-    func setSearchButtonLabels(cellData: SearchCellData) {
+    func setSearchButtonLabels(cellData: Algorithm) {
         algoNameLabel.text!    = cellData.name
         bestCaseLabel.text!    = cellData.bestCase
         averageCaseLabel.text! = cellData.averageCase

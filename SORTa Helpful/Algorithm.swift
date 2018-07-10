@@ -9,7 +9,7 @@
 import Foundation
 
 
-class SearchCellData {
+class Algorithm {
     var name        : String
     var algoClass   : String
     var algoType    : String

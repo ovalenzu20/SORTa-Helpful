@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="1012"/>
+            <point key="canvasLocation" x="483" y="1097"/>
         </scene>
         <!--home-->
         <scene sceneID="A7b-hY-kEV">
@@ -280,7 +280,7 @@
                                                 <size key="customSize" width="190" height="120"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="34"/>
+                                                        <real key="value" value="12"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -388,7 +388,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1390" y="-346"/>
+            <point key="canvasLocation" x="1417" y="-346"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VVb-2l-z76">

@@ -10,7 +10,7 @@
 		0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */; };
 		07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237AF20E9CD06000D22DE /* SearchCell.swift */; };
 		07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B520E9DCA9000D22DE /* SearchViewController.swift */; };
-		07E237B820E9DDB3000D22DE /* SearchCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* SearchCellData.swift */; };
+		07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* Algorithm.swift */; };
 		07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */; };
 		78C6174720EA066C00208BF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6174620EA066C00208BF6 /* HomeViewController.swift */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
@@ -23,7 +23,7 @@
 		0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		07E237AF20E9CD06000D22DE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		07E237B520E9DCA9000D22DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		07E237B720E9DDB3000D22DE /* SearchCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellData.swift; sourceTree = "<group>"; };
+		07E237B720E9DDB3000D22DE /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterButton.swift; sourceTree = "<group>"; };
 		78C6174620EA066C00208BF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +80,7 @@
 				78F9846420E84F770017DCCC /* Info.plist */,
 				07E237AF20E9CD06000D22DE /* SearchCell.swift */,
 				07E237B520E9DCA9000D22DE /* SearchViewController.swift */,
-				07E237B720E9DDB3000D22DE /* SearchCellData.swift */,
+				07E237B720E9DDB3000D22DE /* Algorithm.swift */,
 				07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */,
 				0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */,
 			);
@@ -159,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */,
-				07E237B820E9DDB3000D22DE /* SearchCellData.swift in Sources */,
+				07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */,
 				07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,

@@ -13,20 +13,20 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchCollectionView: UICollectionView!
     
     
-    let algorithmCollection : [SearchCellData] = [
-        SearchCellData(name: "Bubble Sort",     algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Shell Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Counting Sort",   algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Radix Sort",      algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Spread Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Bucket Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
-        SearchCellData(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)")
+    let algorithmCollection : [Algorithm] = [
+        Algorithm(name: "Bubble Sort",     algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Shell Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Counting Sort",   algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Radix Sort",      algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Spread Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Bucket Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)"),
+        Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)")
     ]
     
     
@@ -50,24 +50,38 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 
         searchCell.setSearchButtonLabels(cellData: cellData)
         
-        var colors: [UIColor] = [
-            .red, .blue, .green, .yellow, .purple, .orange, .cyan, .magenta
-        ]
-
-        let r1 = arc4random_uniform(UInt32(colors.count))
-        let randomFirst: UIColor = colors[Int(r1)]
-        colors.remove(at: Int(r1))
+//        var colors: [UIColor] = [
+//            .red, .blue, .green, .yellow, .purple, .orange, .cyan, .magenta
+//        ]
+//
+//        let r1 = arc4random_uniform(UInt32(colors.count))
+//        let randomFirst: UIColor = colors[Int(r1)]
+//        colors.remove(at: Int(r1))
+//
+//        var r2 = arc4random_uniform(UInt32(colors.count))
+//        var randomSecond: UIColor = colors[Int(r2)]
+//        colors.remove(at: Int(r2))
+//
+//        while randomFirst == randomSecond {
+//            r2 = arc4random_uniform(UInt32(colors.count))
+//            randomSecond = colors[Int(r2)]
+//        }
+//
+//        searchCell.setGradientBackground(primary: randomFirst, secondary: randomSecond)
         
-        var r2 = arc4random_uniform(UInt32(colors.count))
-        var randomSecond: UIColor = colors[Int(r2)]
-        colors.remove(at: Int(r2))
+        var primary: UIColor
+        var secondary: UIColor
         
-        while randomFirst == randomSecond {
-            r2 = arc4random_uniform(UInt32(colors.count))
-            randomSecond = colors[Int(r2)]
+        if cellData.algoClass == "Comparison" {
+            primary   = .orange
+            secondary = .red
+        }
+        else {
+            primary   = .blue
+            secondary = .green
         }
         
-        searchCell.setGradientBackground(primary: randomFirst, secondary: randomSecond)
+        searchCell.setGradientBackground(primary: primary, secondary: secondary)
         
         return searchCell
     }
@@ -77,9 +91,9 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         return algorithmCollection.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        <#code#>
+//    }
 }
 
 
