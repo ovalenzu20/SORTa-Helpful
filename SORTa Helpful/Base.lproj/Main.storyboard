@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Connoisseurs.ttf">
+            <string>Connoisseurs</string>
+        </array>
         <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
@@ -167,7 +170,6 @@
                         <segue destination="kA2-Or-VRK" kind="relationship" relationship="viewControllers" id="tRb-Vv-FIo"/>
                         <segue destination="Sdo-qc-Pa6" kind="relationship" relationship="viewControllers" id="nIS-R0-MBH"/>
                         <segue destination="3VP-yc-dRD" kind="relationship" relationship="viewControllers" id="cEj-bm-cOd"/>
-                        <segue destination="qAZ-07-7VZ" kind="relationship" relationship="viewControllers" id="0YL-Pr-hV9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAA-iH-mbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,5 +182,6 @@
         <image name="search icon 29x29" width="29" height="29"/>
         <image name="settings 29x29" width="29" height="29"/>
         <image name="stats icon 29x29" width="29" height="29"/>
+        <image name="tutorialButton" width="265" height="72"/>
     </resources>
 </document>
