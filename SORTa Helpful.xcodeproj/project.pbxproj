@@ -78,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				07794B9A20F565CC001D4B12 /* SupportingFiles */,
-				7822419E20F5622900442BD4 /* fonts */,
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
 				78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */,
@@ -91,6 +90,7 @@
 				07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */,
 				0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */,
 				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
+				7822419E20F5622900442BD4 /* fonts */,
 			);
 			path = "SORTa Helpful";
 			sourceTree = "<group>";
