@@ -13,7 +13,7 @@
 		07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B520E9DCA9000D22DE /* SearchViewController.swift */; };
 		07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* Algorithm.swift */; };
 		07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */; };
-		78AB175B20F55EDA00BD1E5E /* SupportingFiles in Resources */ = {isa = PBXBuildFile; fileRef = 78AB175A20F55ED900BD1E5E /* SupportingFiles */; };
+		7822419F20F5622900442BD4 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 7822419E20F5622900442BD4 /* fonts */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
 		78F9845E20E84F760017DCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845C20E84F760017DCCC /* Main.storyboard */; };
 		78F9846020E84F770017DCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845F20E84F770017DCCC /* Assets.xcassets */; };
@@ -27,13 +27,14 @@
 		07E237B520E9DCA9000D22DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		07E237B720E9DDB3000D22DE /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterButton.swift; sourceTree = "<group>"; };
-		78AB175A20F55ED900BD1E5E /* SupportingFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SupportingFiles; sourceTree = "<group>"; };
+		7822419E20F5622900442BD4 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F9845820E84F760017DCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F9845D20E84F760017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78F9845F20E84F770017DCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78F9846220E84F770017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78F9846420E84F770017DCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				78F9845720E84F760017DCCC /* SORTa Helpful */,
+				7822419E20F5622900442BD4 /* fonts */,
 				78F9845620E84F760017DCCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +70,7 @@
 			children = (
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
+				78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */,
 				78F9845F20E84F770017DCCC /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				78F9846420E84F770017DCCC /* Info.plist */,
@@ -77,7 +80,6 @@
 				07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */,
 				0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */,
 				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
-				78AB175A20F55ED900BD1E5E /* SupportingFiles */,
 			);
 			path = "SORTa Helpful";
 			sourceTree = "<group>";
@@ -141,8 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F9846320E84F770017DCCC /* LaunchScreen.storyboard in Resources */,
+				7822419F20F5622900442BD4 /* fonts in Resources */,
 				78F9846020E84F770017DCCC /* Assets.xcassets in Resources */,
-				78AB175B20F55EDA00BD1E5E /* SupportingFiles in Resources */,
 				78F9845E20E84F760017DCCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
