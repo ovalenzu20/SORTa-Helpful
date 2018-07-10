@@ -12,7 +12,6 @@
 		78F9845E20E84F760017DCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845C20E84F760017DCCC /* Main.storyboard */; };
 		78F9846020E84F770017DCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845F20E84F770017DCCC /* Assets.xcassets */; };
 		78F9846320E84F770017DCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9846120E84F770017DCCC /* LaunchScreen.storyboard */; };
-		78FC55EB20ECA9CE00714C50 /* InfoTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		78F9845F20E84F770017DCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78F9846220E84F770017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78F9846420E84F770017DCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
 				78F9845A20E84F760017DCCC /* ViewController.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
-				78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */,
 				78F9845F20E84F770017DCCC /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				78F9846420E84F770017DCCC /* Info.plist */,
@@ -140,7 +137,6 @@
 			files = (
 				78F9845B20E84F760017DCCC /* ViewController.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
-				78FC55EB20ECA9CE00714C50 /* InfoTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
