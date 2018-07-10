@@ -60,10 +60,7 @@
 		78F9845720E84F760017DCCC /* SORTa Helpful */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 =======
-				07794B9A20F565CC001D4B12 /* SupportingFiles */,
-				7822419E20F5622900442BD4 /* fonts */,
 >>>>>>> parent of f77c8ea... organized files
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
