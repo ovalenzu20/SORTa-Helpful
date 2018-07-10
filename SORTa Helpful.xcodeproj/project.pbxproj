@@ -14,7 +14,6 @@
 		78F9846020E84F770017DCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845F20E84F770017DCCC /* Assets.xcassets */; };
 		78F9846320E84F770017DCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9846120E84F770017DCCC /* LaunchScreen.storyboard */; };
 		78FC55EB20ECA9CE00714C50 /* InfoTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */; };
-		78FC55ED20ECABE600714C50 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC55EC20ECABE600714C50 /* Algorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		78F9846220E84F770017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78F9846420E84F770017DCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTabViewController.swift; sourceTree = "<group>"; };
-		78FC55EC20ECABE600714C50 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		78FC55EF20ECB05F00714C50 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		78FC55F020ECB05F00714C50 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		78FC55F120ECB05F00714C50 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				78F9845A20E84F760017DCCC /* ViewController.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
 				78FC55EA20ECA9CE00714C50 /* InfoTabViewController.swift */,
-				78FC55EC20ECABE600714C50 /* Algorithm.swift */,
 				78F9845F20E84F770017DCCC /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				78F9846420E84F770017DCCC /* Info.plist */,
@@ -179,7 +176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F9845B20E84F760017DCCC /* ViewController.swift in Sources */,
-				78FC55ED20ECABE600714C50 /* Algorithm.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				78FC55EB20ECA9CE00714C50 /* InfoTabViewController.swift in Sources */,
 			);
