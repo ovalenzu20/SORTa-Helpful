@@ -50,7 +50,10 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        algorithmTableView.delegate = self
         algorithmTableView.dataSource = self
+        algorithmTableView.estimatedRowHeight = 2000
+        algorithmTableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
