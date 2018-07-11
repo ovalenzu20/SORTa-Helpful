@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
         <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
@@ -30,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TnA-dR-BM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="365"/>
+            <point key="canvasLocation" x="-751" y="439"/>
         </scene>
         <!--Info-->
         <scene sceneID="L6D-8F-7HO">
@@ -96,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-530.39999999999998" y="1177.5112443778112"/>
+            <point key="canvasLocation" x="-1836" y="876"/>
         </scene>
         <!--Home-->
         <scene sceneID="A7b-hY-kEV">
@@ -133,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-Yj-d8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343.4782608695652" y="-992.11956521739137"/>
+            <point key="canvasLocation" x="-1836" y="-757"/>
         </scene>
         <!--Search-->
         <scene sceneID="840-PH-Z3P">
@@ -150,45 +153,11 @@
                                     <outlet property="delegate" destination="kA2-Or-VRK" id="Prn-G7-Xrm"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-uX-ANN" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="98" y="160" width="96" height="26"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="sfX-k7-fV8"/>
-                                    <constraint firstAttribute="height" constant="26" id="yrt-IX-XHv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <state key="normal" title="Comparison">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaF-Xw-aBQ" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="220" y="160" width="96" height="26"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="9SO-Ci-bz9"/>
-                                    <constraint firstAttribute="height" constant="26" id="rUi-EQ-uDc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <state key="normal" title="Non-comparison">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szE-3m-wY3">
-                                <rect key="frame" x="0.0" y="256" width="414" height="431"/>
+                                <rect key="frame" x="0.0" y="216" width="414" height="471"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-96-gQr">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="401"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-96-gQr">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="471"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uLE-2l-m0e">
                                             <size key="itemSize" width="50" height="50"/>
@@ -205,32 +174,32 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-ul-rq2">
-                                                            <rect key="frame" x="25.333333333333329" y="6" width="139.33333333333337" height="21"/>
+                                                            <rect key="frame" x="28.666666666666671" y="6" width="132.66666666666663" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="UWu-fG-5l4"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-xS-v0A">
-                                                            <rect key="frame" x="20" y="50" width="79.333333333333329" height="50"/>
+                                                            <rect key="frame" x="20" y="50" width="76" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Case:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPE-Se-Lev">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="59" height="14"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="14.333333333333334"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Case:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMY-Fw-tRe">
-                                                                    <rect key="frame" x="0.0" y="18" width="79.333333333333329" height="14"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="18.333333333333329" width="76" height="14.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worst Case:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blb-Wp-gnN">
-                                                                    <rect key="frame" x="0.0" y="36" width="66" height="14"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="36.666666666666671" width="64.333333333333329" height="13.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -240,23 +209,23 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-di-Asb">
-                                                            <rect key="frame" x="146" y="50" width="24" height="50"/>
+                                                            <rect key="frame" x="146.66666666666666" y="50" width="23.333333333333343" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU6-rc-bBp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="14"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="23.333333333333332" height="14.333333333333334"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiT-74-bls">
-                                                                    <rect key="frame" x="0.0" y="18" width="24" height="14"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="18.333333333333329" width="23.333333333333332" height="14.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-er-sdM">
-                                                                    <rect key="frame" x="0.0" y="36" width="24" height="14"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                                    <rect key="frame" x="0.0" y="36.666666666666671" width="23.333333333333332" height="13.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -300,72 +269,83 @@
                                     <constraint firstItem="1wE-96-gQr" firstAttribute="leading" secondItem="szE-3m-wY3" secondAttribute="leading" constant="10" id="zTg-XM-dSe"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-A4-nEa" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="98" y="197" width="96" height="26"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bza-aJ-WHj">
+                                <rect key="frame" x="44" y="160" width="326" height="27"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-uX-ANN" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="27"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="Comparison">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaF-Xw-aBQ" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="0.0" width="105" height="27"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="Non-comparison">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az3-LZ-JcK" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="50" height="27"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="Stable">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6c-Rq-0Rq" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                        <rect key="frame" x="267" y="0.0" width="59" height="27"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="In-place">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="SfU-7Q-SqK"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="YxN-4Z-dpd"/>
+                                    <constraint firstAttribute="width" constant="326" id="8U5-io-UKU"/>
+                                    <constraint firstAttribute="height" constant="27" id="riF-db-BHc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <state key="normal" title="Stable">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldp-KH-uPT">
-                                <rect key="frame" x="202" y="160" width="10" height="26"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="Ubj-6t-RPI"/>
-                                    <constraint firstAttribute="width" constant="10" id="YDW-LA-Qjn"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6c-Rq-0Rq" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="220" y="197" width="96" height="26"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="pwE-pI-Val"/>
-                                    <constraint firstAttribute="height" constant="26" id="r3R-NM-Pca"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <state key="normal" title="In-place">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.1246589558" green="0.1231011113" blue="0.15432475179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cZ8-uX-ANN" firstAttribute="top" secondItem="ldp-KH-uPT" secondAttribute="top" id="1QX-rR-oME"/>
-                            <constraint firstItem="ldp-KH-uPT" firstAttribute="leading" secondItem="cZ8-uX-ANN" secondAttribute="trailing" constant="8" id="4QS-GB-SVe"/>
-                            <constraint firstItem="RaF-Xw-aBQ" firstAttribute="leading" secondItem="ldp-KH-uPT" secondAttribute="trailing" constant="8" id="7IU-8E-356"/>
-                            <constraint firstItem="ldp-KH-uPT" firstAttribute="top" secondItem="se9-4V-xzs" secondAttribute="bottom" constant="10" id="8lH-Mt-VH9"/>
-                            <constraint firstAttribute="trailing" secondItem="RaF-Xw-aBQ" secondAttribute="trailing" constant="98" id="GZc-Lz-KG6"/>
-                            <constraint firstItem="RaF-Xw-aBQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ldp-KH-uPT" secondAttribute="trailing" constant="8" symbolic="YES" id="IGr-T2-Iwf"/>
+                            <constraint firstItem="Bza-aJ-WHj" firstAttribute="centerX" secondItem="Qlj-hz-58W" secondAttribute="centerX" id="2ve-wo-UQ9"/>
                             <constraint firstItem="szE-3m-wY3" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" id="KGo-iX-boB"/>
-                            <constraint firstItem="cZ8-uX-ANN" firstAttribute="baseline" secondItem="RaF-Xw-aBQ" secondAttribute="baseline" id="Rny-ER-2hQ"/>
-                            <constraint firstItem="HVf-A4-nEa" firstAttribute="top" secondItem="cZ8-uX-ANN" secondAttribute="bottom" constant="11" id="U0y-I9-Cqh"/>
+                            <constraint firstItem="szE-3m-wY3" firstAttribute="top" secondItem="RaF-Xw-aBQ" secondAttribute="bottom" constant="29" id="NgE-oR-Arw"/>
                             <constraint firstItem="se9-4V-xzs" firstAttribute="top" secondItem="edO-Lg-Epv" secondAttribute="top" constant="30" id="ZxS-7y-7LN"/>
                             <constraint firstItem="szE-3m-wY3" firstAttribute="bottom" secondItem="edO-Lg-Epv" secondAttribute="bottom" id="ayw-eg-jlx"/>
-                            <constraint firstItem="szE-3m-wY3" firstAttribute="top" secondItem="HVf-A4-nEa" secondAttribute="bottom" constant="33" id="cc3-y4-4ct"/>
-                            <constraint firstItem="o6c-Rq-0Rq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HVf-A4-nEa" secondAttribute="trailing" constant="8" symbolic="YES" id="dFp-cR-UQe"/>
                             <constraint firstItem="szE-3m-wY3" firstAttribute="trailing" secondItem="edO-Lg-Epv" secondAttribute="trailing" id="e38-D6-BRX"/>
-                            <constraint firstItem="cZ8-uX-ANN" firstAttribute="leading" secondItem="HVf-A4-nEa" secondAttribute="leading" id="e7J-c5-DZd"/>
                             <constraint firstItem="se9-4V-xzs" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" id="i05-vu-rHO"/>
-                            <constraint firstItem="o6c-Rq-0Rq" firstAttribute="top" secondItem="RaF-Xw-aBQ" secondAttribute="bottom" constant="11" id="iks-Dl-0NV"/>
-                            <constraint firstAttribute="trailing" secondItem="o6c-Rq-0Rq" secondAttribute="trailing" constant="98" id="isU-rc-WgR"/>
+                            <constraint firstItem="Bza-aJ-WHj" firstAttribute="top" secondItem="se9-4V-xzs" secondAttribute="bottom" constant="10" id="lwK-E3-6VQ"/>
                             <constraint firstItem="edO-Lg-Epv" firstAttribute="trailing" secondItem="se9-4V-xzs" secondAttribute="trailing" id="owU-5r-NpW"/>
-                            <constraint firstItem="cZ8-uX-ANN" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" constant="98" id="wtS-WK-Zc0"/>
-                            <constraint firstItem="cZ8-uX-ANN" firstAttribute="trailing" secondItem="HVf-A4-nEa" secondAttribute="trailing" id="zqe-iz-WUu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="edO-Lg-Epv"/>
                     </view>
@@ -389,7 +369,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1260.8695652173915" y="363.58695652173918"/>
+            <point key="canvasLocation" x="-20.289855072463769" y="-359.51086956521743"/>
         </scene>
         <!--Algorithm Name-->
         <scene sceneID="O1B-9E-eii">
@@ -402,9 +382,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUm-CO-qFO">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pseudo Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8i-RJ-O5X">
-                                        <rect key="frame" x="0.0" y="0.0" width="115.33333333333333" height="21"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="def bubbleSort:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8i-RJ-O5X">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.33333333333334" height="20.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -582,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYp-mx-AG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.2318840579712" y="-346.46739130434787"/>
+            <point key="canvasLocation" x="710" y="-359"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VVb-2l-z76">
@@ -621,7 +601,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juh-L9-UER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-346"/>
+            <point key="canvasLocation" x="-752" y="-359"/>
         </scene>
     </scenes>
     <resources>
