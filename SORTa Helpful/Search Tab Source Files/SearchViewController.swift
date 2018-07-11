@@ -29,11 +29,11 @@ class SearchViewController: UIViewController {
         Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)")
     ]
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var algorithmViewController = segue.destination as! AlgorithmViewController
-
-
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        var algorithmViewController = segue.destination as! AlgorithmViewController
+//
+//
+//    }
     
     
     
