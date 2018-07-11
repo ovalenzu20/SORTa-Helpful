@@ -101,6 +101,25 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		78340A8520F6ABC9001D0746 /* Search Tab Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				07E237AF20E9CD06000D22DE /* SearchCell.swift */,
+				07E237B520E9DCA9000D22DE /* SearchViewController.swift */,
+				07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */,
+				0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */,
+			);
+			path = "Search Tab Source Files";
+			sourceTree = "<group>";
+		};
+		78340A8620F6ABEB001D0746 /* Info Tab Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				78340A5E20F694CD001D0746 /* InfoViewController.swift */,
+			);
+			path = "Info Tab Source Files";
+			sourceTree = "<group>";
+		};
 		78F9844C20E84F760017DCCC = {
 			isa = PBXGroup;
 			children = (
@@ -125,15 +144,12 @@
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
 				78F9845F20E84F770017DCCC /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
-				07E237AF20E9CD06000D22DE /* SearchCell.swift */,
-				07E237B520E9DCA9000D22DE /* SearchViewController.swift */,
 				07E237B720E9DDB3000D22DE /* Algorithm.swift */,
-				07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */,
-				0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */,
 				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
-				78340A5E20F694CD001D0746 /* InfoViewController.swift */,
-				78F9846420E84F770017DCCC /* Info.plist */,
+				78340A8620F6ABEB001D0746 /* Info Tab Source Files */,
+				78340A8520F6ABC9001D0746 /* Search Tab Source Files */,
 				07794B9A20F565CC001D4B12 /* SupportingFiles */,
+				78F9846420E84F770017DCCC /* Info.plist */,
 			);
 			path = "SORTa Helpful";
 			sourceTree = "<group>";

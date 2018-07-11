@@ -34,9 +34,16 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentAlgorithm = algorithmCollection[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell")!
-        let text = currentAlgorithm.name //2.
-        cell.textLabel?.text = text //3.
-        return cell //4.
+        let text = currentAlgorithm.name
+        cell.textLabel?.text = text
+        
+        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
+
+        algorithmVC?.algorithm = currentAlgorithm
+        
+        self.navigationController?.pushViewController(algorithmVC!, animated: true)
+
+        return cell 
     }
     
 
