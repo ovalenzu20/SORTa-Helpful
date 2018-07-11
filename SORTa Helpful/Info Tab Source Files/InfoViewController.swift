@@ -31,17 +31,19 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
         return algorithmCollection.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentAlgorithm = algorithmCollection[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell")!
-        let text = currentAlgorithm.name
-        cell.textLabel?.text = text
         
-        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
-
-        algorithmVC?.algorithm = currentAlgorithm
+//        let text = currentAlgorithm.name
+//        cell.textLabel?.text = text
         
-        self.navigationController?.pushViewController(algorithmVC!, animated: true)
+//        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
+//
+//        algorithmVC?.algorithm = currentAlgorithm
+//
+//        self.navigationController?.pushViewController(algorithmVC!, animated: true)
 
         return cell 
     }
@@ -54,6 +56,8 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
         algorithmTableView.dataSource = self
         algorithmTableView.estimatedRowHeight = 2000
         algorithmTableView.rowHeight = UITableViewAutomaticDimension
+        self.algorithmTableView.rowHeight = CGFloat(2000/algorithmCollection.count)
+        
     }
 
     override func didReceiveMemoryWarning() {
