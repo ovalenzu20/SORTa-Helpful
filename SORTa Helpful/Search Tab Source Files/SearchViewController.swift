@@ -9,8 +9,8 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    @IBOutlet weak var searchViewSearchBar: UISearchBar!
     @IBOutlet weak var searchCollectionView: UICollectionView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     
     let algorithmCollection : [Algorithm] = [
@@ -29,21 +29,45 @@ class SearchViewController: UIViewController {
         Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)")
     ]
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var algorithmViewController = segue.destination as! AlgorithmViewController
-//
-//
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var algorithmViewController = segue.destination as! AlgorithmViewController
+    }
+    
+    
+    
+    let algorithmFilePath: String = "SupportingFiles/algorithmInfo.json"
+    
+    
+//    func loadJSON(filename fileName: String) -> [Algorithm]? {
+//        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+//            do {
+//                let data = try Data(contentsOf: url)
+//                let decoder = JSONDecoder()
+//                let jsonData = try decoder.decode(ResponseData.self, from: data)
+//                return jsonData.person
+//            } catch {
+//                print("error:\(error)")
+//            }
+//        }
+//        return nil
 //    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
+        
         searchCollectionView.delegate   = self
         searchCollectionView.dataSource = self
         
-        let collectionWidth = (view.frame.size.width - 40) / 2
+        let collectionWidth = (view.frame.size.width - 60) / 2
         let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: collectionWidth, height: 120.0)
+        layout.itemSize = CGSize(width: collectionWidth, height: 100.0)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 
@@ -74,19 +98,21 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 //
 //        searchCell.setGradientBackground(primary: randomFirst, secondary: randomSecond)
         
-        var primary: UIColor
-        var secondary: UIColor
+//        var primary: UIColor
+//        var secondary: UIColor
+//
+//        if cellData.algoClass == "Comparison" {
+//            primary   = .orange
+//            secondary = .red
+//        }
+//        else {
+//            primary   = .blue
+//            secondary = .green
+//        }
         
-        if cellData.algoClass == "Comparison" {
-            primary   = .orange
-            secondary = .red
-        }
-        else {
-            primary   = .blue
-            secondary = .green
-        }
+//        searchCell.setGradientBackground(primary: primary, secondary: secondary)
         
-        searchCell.setGradientBackground(primary: primary, secondary: secondary)
+        searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4352941176, blue: 1, alpha: 1)
         
         return searchCell
     }
