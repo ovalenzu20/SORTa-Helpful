@@ -33,6 +33,9 @@ class AlgorithmViewController: UIViewController {
         
         if algorithm != nil {
             self.title = algorithm?.name
+//            let attributes = [NSAttributedStringKey.font: UIFont(name: "Roboto-Bold.ttf", size: 24)!]
+//            UINavigationBar.appearance().titleTextAttributes = attributes
+//            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Roboto Sans", size: 24)!]
             typeLabel.text = algorithm?.algoType
             bestCaseLabel.text = algorithm?.bestCase
             averageCaseLabel.text = algorithm?.averageCase
