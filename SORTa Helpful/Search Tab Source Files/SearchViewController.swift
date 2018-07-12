@@ -56,9 +56,6 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
-        
         searchCollectionView.delegate   = self
         searchCollectionView.dataSource = self
         
