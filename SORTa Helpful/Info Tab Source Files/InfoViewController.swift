@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class InfoViewController: UIViewController{
     
     @IBOutlet weak var algorithmTableView: UITableView!
     let algorithmCollection : [Algorithm] = [
@@ -16,6 +16,8 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
         Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
         Algorithm(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
         Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
+        Algorithm(name: "Merge Sort", algoClass: "Comparison", algoType: "Stable", bestCase: "O(logn)", averageCase: "O(logn)", worstCase: "O(logn)", memory: "O(logn)"),
+        Algorithm(name: "Quick Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
         Algorithm(name: "Shell Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
         Algorithm(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
         Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
@@ -27,46 +29,49 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
         Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)")
     ]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        algorithmTableView.delegate = self
+        algorithmTableView.dataSource = self
+        algorithmTableView.estimatedRowHeight = 3000
+        algorithmTableView.rowHeight = UITableViewAutomaticDimension
+        self.algorithmTableView.rowHeight = CGFloat(3000/algorithmCollection.count)
+        
+    }
+
+
+}
+
+extension InfoViewController: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return algorithmCollection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentAlgorithm = algorithmCollection[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell")!
-        let text = currentAlgorithm.name
-        cell.textLabel?.text = text
+        let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell") as! AlgorithmTableCell
         
-        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
-
-        algorithmVC?.algorithm = currentAlgorithm
-        
-        self.navigationController?.pushViewController(algorithmVC!, animated: true)
-
-        return cell 
-    }
+        cell.setAlgorithmLabels(cellData: currentAlgorithm)
+        return cell
+        }
     
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        algorithmTableView.dataSource = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//this is for creating a new view when you click on one of the rows
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+//        let currentAlgorithm = algorithmCollection[indexPath.row]
+//
+//        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
+//
+//        algorithmVC?.algorithm = currentAlgorithm
+//
+//        self.navigationController?.pushViewController(algorithmVC!, animated: true)
+//
+//    }
+    
+    
+    
 }
+
+
+
