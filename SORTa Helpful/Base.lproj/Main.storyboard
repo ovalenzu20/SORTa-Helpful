@@ -236,34 +236,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sorta helpful" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-bP-cs3">
-                                <rect key="frame" x="86" y="86" width="243" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sorta helpful" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-bP-cs3">
+                                <rect key="frame" x="86" y="86" width="243" height="79"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb1-As-7Kj">
-                                <rect key="frame" x="138" y="586" width="138" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Developed by Omar Valenzuela and Brandon Teran">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" metaFont="system" size="14"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn. Visualize. Master." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XC-ZJ-16r">
-                                <rect key="frame" x="141" y="297" width="133" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-My-oAm">
+                                <rect key="frame" x="143.33333333333334" y="315" width="128.00000000000003" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiS-FS-MhE">
+                                        <rect key="frame" x="22.666666666666657" y="0.0" width="83" height="35.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="yus-6u-516"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visualize." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1Y-uZ-JcZ">
+                                        <rect key="frame" x="0.0" y="35.333333333333314" width="128" height="35.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="svW-oz-dlQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5a-kf-XFa">
+                                        <rect key="frame" x="14" y="70.666666666666686" width="100" height="35.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="vjb-WR-7MY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="amH-bz-9ym">
+                                <rect key="frame" x="93.999999999999986" y="586" width="226.66666666666663" height="35.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eln-ws-mOf">
+                                        <rect key="frame" x="67" y="0.0" width="92.666666666666686" height="17.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Omar Valenzuela &amp; Brandon Teran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-OT-4lv">
+                                        <rect key="frame" x="0.0" y="17.666666666666629" width="226.66666666666666" height="17.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.43529411764705883" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xnm-bP-cs3" firstAttribute="top" secondItem="1kM-iC-wnR" secondAttribute="top" constant="66" id="MPT-bj-xVX"/>
+                            <constraint firstItem="amH-bz-9ym" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="OUA-Qd-dkh"/>
+                            <constraint firstItem="7gg-My-oAm" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="OYJ-hq-e4Y"/>
+                            <constraint firstItem="1kM-iC-wnR" firstAttribute="bottom" secondItem="amH-bz-9ym" secondAttribute="bottom" constant="65.666666666666629" id="R4r-58-cPL"/>
+                            <constraint firstItem="xnm-bP-cs3" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="86" id="WOj-nn-sE6"/>
+                            <constraint firstItem="7gg-My-oAm" firstAttribute="centerY" secondItem="EGS-3g-dUO" secondAttribute="centerY" id="imZ-Dh-L1V"/>
+                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="xnm-bP-cs3" secondAttribute="trailing" constant="85" id="ztE-pC-Oib"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1kM-iC-wnR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home icon 29x29" id="cM9-99-GBV"/>
@@ -315,6 +351,7 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Kg5-ul-rq2" firstAttribute="top" secondItem="f8k-pf-NfJ" secondAttribute="top" constant="10" id="Hx0-U6-K1j"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kg5-ul-rq2" secondAttribute="trailing" symbolic="YES" id="bFe-VN-zNd"/>
                                                     <constraint firstItem="Kg5-ul-rq2" firstAttribute="leading" secondItem="f8k-pf-NfJ" secondAttribute="leading" constant="10" id="jAi-bv-qs3"/>
                                                 </constraints>
                                                 <size key="customSize" width="190" height="120"/>
@@ -398,7 +435,6 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" id="8U5-io-UKU"/>
                                     <constraint firstAttribute="height" constant="27" id="riF-db-BHc"/>
                                 </constraints>
                             </stackView>
@@ -598,9 +634,8 @@
                                     <constraint firstAttribute="height" constant="14.333333333333334" id="6pi-RU-p30"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnQ-pH-sFP">
-                                <rect key="frame" x="20" y="465" width="374" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnQ-pH-sFP">
+                                <rect key="frame" x="20" y="490.00000000000006" width="374" height="91.666666666666686"/>
                                 <string key="text">Like QuickSort, Merge Sort is a Divide and Conquer algorithm. It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves. The merge() function is used for merging two halves. The merge(arr, l, m, r) is key process that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one.</string>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -615,8 +650,11 @@
                             <constraint firstItem="P7M-s4-Pdf" firstAttribute="top" secondItem="zUk-Ok-R1j" secondAttribute="top" constant="40" id="BHT-zH-IGy"/>
                             <constraint firstItem="VIi-fF-UMf" firstAttribute="centerX" secondItem="9Ml-7h-b1i" secondAttribute="centerX" id="Mf0-qM-pJy"/>
                             <constraint firstItem="zUk-Ok-R1j" firstAttribute="trailing" secondItem="P7M-s4-Pdf" secondAttribute="trailing" constant="20" id="V2c-VN-qNF"/>
+                            <constraint firstItem="AnQ-pH-sFP" firstAttribute="leading" secondItem="zUk-Ok-R1j" secondAttribute="leading" constant="20" id="cQb-fU-taA"/>
                             <constraint firstItem="so9-97-zZk" firstAttribute="centerX" secondItem="9Ml-7h-b1i" secondAttribute="centerX" id="hRh-dV-qTC"/>
                             <constraint firstItem="cLU-K3-AS5" firstAttribute="top" secondItem="P7M-s4-Pdf" secondAttribute="bottom" constant="41" id="hdE-6h-vuH"/>
+                            <constraint firstItem="zUk-Ok-R1j" firstAttribute="trailing" secondItem="AnQ-pH-sFP" secondAttribute="trailing" constant="20" id="l7e-ZU-O5c"/>
+                            <constraint firstItem="AnQ-pH-sFP" firstAttribute="top" secondItem="cLU-K3-AS5" secondAttribute="bottom" constant="107" id="o9d-Tm-xvt"/>
                             <constraint firstItem="cLU-K3-AS5" firstAttribute="centerY" secondItem="9Ml-7h-b1i" secondAttribute="centerY" id="yp9-tE-cpr"/>
                             <constraint firstItem="cLU-K3-AS5" firstAttribute="centerX" secondItem="9Ml-7h-b1i" secondAttribute="centerX" id="yzF-Is-ApC"/>
                         </constraints>
