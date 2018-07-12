@@ -129,8 +129,9 @@ class SearchViewController: UIViewController {
         searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
             NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
         
-        searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
+        searchCollectionView.delegate   = self
+        searchCollectionView.dataSource = self
+        searchTextField.delegate = self
         
         let collectionWidth = (view.frame.size.width - 60) / 2
         let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout

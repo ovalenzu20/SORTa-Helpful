@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g2-ug-D7i">
-                                <rect key="frame" x="160" y="67" width="95" height="24"/>
+                                <rect key="frame" x="160.33333333333334" y="67" width="94.666666666666657" height="24"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -429,6 +429,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="8U5-io-UKU"/>
                                     <constraint firstAttribute="height" constant="27" id="riF-db-BHc"/>
                                 </constraints>
                             </stackView>
@@ -724,7 +725,6 @@
         <image name="settings 29x29" width="29" height="29"/>
         <image name="sorta helpful" width="212" height="79"/>
         <image name="stats icon 29x29" width="29" height="29"/>
-        <image name="tutorialButton" width="265" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wKV-Zv-GNw"/>
