@@ -18,7 +18,6 @@ class AlgorithmViewController: UIViewController {
     
     @IBAction func algoAnimationSlider(_ sender: UISlider) {
         testSliderLabel.text = String(sender.value)
-//        print(sender.value)
     }
     
     @IBOutlet weak var typeLabel: UILabel!
@@ -32,12 +31,17 @@ class AlgorithmViewController: UIViewController {
         super.viewDidLoad()
         
         if algorithm != nil {
-            self.title = algorithm?.name
-            typeLabel.text = algorithm?.algoType
-            bestCaseLabel.text = algorithm?.bestCase
+            self.title = algorithm?.name.uppercased()
+            
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Roboto-Bold", size: 20)!]
+            
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            
+            typeLabel.text        = algorithm?.algoType
+            bestCaseLabel.text    = algorithm?.bestCase
             averageCaseLabel.text = algorithm?.averageCase
-            worstCaseLabel.text = algorithm?.worstCase
-            memoryLabel.text = algorithm?.memory
+            worstCaseLabel.text   = algorithm?.worstCase
+            memoryLabel.text      = algorithm?.memory
         }
     }
 }

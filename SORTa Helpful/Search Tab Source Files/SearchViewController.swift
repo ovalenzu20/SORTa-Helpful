@@ -29,11 +29,31 @@ class SearchViewController: UIViewController {
         Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)")
     ]
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var algorithmViewController = segue.destination as! AlgorithmViewController
-//
-//
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var algorithmViewController = segue.destination as! AlgorithmViewController
+
+
+    }
+    
+    
+    
+    let algorithmFilePath: String = "SupportingFiles/algorithmInfo.json"
+    
+    
+//    func loadJSON(filename fileName: String) -> [Algorithm]? {
+//        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+//            do {
+//                let data = try Data(contentsOf: url)
+//                let decoder = JSONDecoder()
+//                let jsonData = try decoder.decode(ResponseData.self, from: data)
+//                return jsonData.person
+//            } catch {
+//                print("error:\(error)")
+//            }
+//        }
+//        return nil
 //    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +64,9 @@ class SearchViewController: UIViewController {
         let collectionWidth = (view.frame.size.width - 40) / 2
         let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: collectionWidth, height: 120.0)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 
