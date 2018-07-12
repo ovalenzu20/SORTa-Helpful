@@ -10,6 +10,11 @@ import UIKit
 
 class SearchViewController: UIViewController {
     var searchedAlgorithms: [Algorithm] = Array()
+    var sortedByName:    Bool = false
+    var sortedByBest:    Bool = false
+    var sortedByAverage: Bool = false
+    var sortedByWorst:   Bool = false
+    
     
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -20,97 +25,182 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func nameFilterActionButton(_ sender: SearchFilterButton) {
-        //        if nameFilterButton.state != .disabled {
-        //            nameFilterButton.setSelectedProperties()
-        //        }
-        //        else {
-        //            nameFilterButton.setUnselectedProperties()
-        //        }
-        
-        nameFilterButton.setSelectedProperties()
-        bestFilterButton.setUnselectedProperties()
-        averageFilterButton.setUnselectedProperties()
-        worstFilterButton.setUnselectedProperties()
-        
-        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
-            return algo1.name < algo2.name
-        })
-        
-        searchCollectionView.reloadData()
+        if nameFilterButton.buttonIsSelected() {
+            sortedByName    = false
+            sortedByBest    = false
+            sortedByAverage = false
+            sortedByWorst   = false
+            
+            nameFilterButton.isSelected = false
+            
+            nameFilterButton.setUnselectedProperties()
+            bestFilterButton.setUnselectedProperties()
+            averageFilterButton.setUnselectedProperties()
+            worstFilterButton.setUnselectedProperties()
+            
+            searchedAlgorithms.removeAll()
+            
+            for algo in algorithmCollection {
+                searchedAlgorithms.append(algo)
+            }
+            
+            searchCollectionView.reloadData()
+        }
+        else {
+            sortedByName    = true
+            sortedByBest    = false
+            sortedByAverage = false
+            sortedByWorst   = false
+            
+            nameFilterButton.setSelectedProperties()
+            bestFilterButton.setUnselectedProperties()
+            averageFilterButton.setUnselectedProperties()
+            worstFilterButton.setUnselectedProperties()
+            
+            searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+                return algo1.name < algo2.name
+            })
+            
+            searchCollectionView.reloadData()
+        }
     }
     
     @IBAction func bestFilterActionButton(_ sender: SearchFilterButton) {
-        //        if bestFilterButton.state == .selected {
-        //            bestFilterButton.setSelectedProperties()
-        //        }
-        //        else {
-        //            bestFilterButton.setUnselectedProperties()
-        //        }
-        
-        nameFilterButton.setUnselectedProperties()
-        bestFilterButton.setSelectedProperties()
-        averageFilterButton.setUnselectedProperties()
-        worstFilterButton.setUnselectedProperties()
-        
-        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
-            return algo1.bestCase.1 < algo2.bestCase.1
-        })
-        
-        searchCollectionView.reloadData()
+        if bestFilterButton.buttonIsSelected() {
+            sortedByName    = false
+            sortedByBest    = false
+            sortedByAverage = false
+            sortedByWorst   = false
+            
+            bestFilterButton.isSelected = false
+            
+            nameFilterButton.setUnselectedProperties()
+            bestFilterButton.setUnselectedProperties()
+            averageFilterButton.setUnselectedProperties()
+            worstFilterButton.setUnselectedProperties()
+            
+            searchedAlgorithms.removeAll()
+            
+            for algo in algorithmCollection {
+                searchedAlgorithms.append(algo)
+            }
+            
+            searchCollectionView.reloadData()
+        }
+        else {
+            sortedByName    = false
+            sortedByBest    = true
+            sortedByAverage = false
+            sortedByWorst   = false
+            
+            nameFilterButton.setUnselectedProperties()
+            bestFilterButton.setSelectedProperties()
+            averageFilterButton.setUnselectedProperties()
+            worstFilterButton.setUnselectedProperties()
+            
+            searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+                return algo1.bestCase.1 < algo2.bestCase.1
+            })
+            
+            searchCollectionView.reloadData()
+        }
     }
+    
     
     @IBAction func averageFilterActionButton(_ sender: SearchFilterButton) {
-        //        if averageFilterButton.state == .selected {
-        //            averageFilterButton.setSelectedProperties()
-        //        }
-        //        else {
-        //            averageFilterButton.setUnselectedProperties()
-        //        }
-        
-        nameFilterButton.setUnselectedProperties()
-        bestFilterButton.setUnselectedProperties()
-        averageFilterButton.setSelectedProperties()
-        worstFilterButton.setUnselectedProperties()
-        
-        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
-            return algo1.averageCase.1 < algo2.averageCase.1
-        })
-        
-        searchCollectionView.reloadData()
+        if averageFilterButton.buttonIsSelected() {
+            sortedByName    = false
+            sortedByBest    = false
+            sortedByAverage = false
+            sortedByWorst   = false
+            
+            averageFilterButton.isSelected = false
+            
+            nameFilterButton.setUnselectedProperties()
+            bestFilterButton.setUnselectedProperties()
+            averageFilterButton.setUnselectedProperties()
+            worstFilterButton.setUnselectedProperties()
+            
+            searchedAlgorithms.removeAll()
+            
+            for algo in algorithmCollection {
+                searchedAlgorithms.append(algo)
+            }
+            
+            searchCollectionView.reloadData()
+        }
+        else {
+            sortedByName    = false
+            sortedByBest    = false
+            sortedByAverage = true
+            sortedByWorst   = false
+            
+            nameFilterButton.setUnselectedProperties()
+            bestFilterButton.setUnselectedProperties()
+            averageFilterButton.setSelectedProperties()
+            worstFilterButton.setUnselectedProperties()
+            
+            searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+                return algo1.averageCase.1 < algo2.averageCase.1
+            })
+            
+            searchCollectionView.reloadData()
+        }
     }
+    
     
     @IBAction func worstFilterActionButton(_ sender: SearchFilterButton) {
-        //        if worstFilterButton.state == .selected {
-        //            worstFilterButton.setSelectedProperties()
-        //        }
-        //        else {
-        //            worstFilterButton.setUnselectedProperties()
-        //        }
-        
-        nameFilterButton.setUnselectedProperties()
-        bestFilterButton.setUnselectedProperties()
-        averageFilterButton.setUnselectedProperties()
-        worstFilterButton.setSelectedProperties()
-        
-        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
-            return algo1.worstCase.1 < algo2.worstCase.1
-        })
-        
-        searchCollectionView.reloadData()
+        if worstFilterButton.buttonIsSelected() {
+            sortedByName    = false
+            sortedByBest    = false
+            sortedByAverage = false
+            sortedByWorst   = false
+            
+            worstFilterButton.isSelected = false
+            
+            nameFilterButton.setUnselectedProperties()
+            bestFilterButton.setUnselectedProperties()
+            averageFilterButton.setUnselectedProperties()
+            worstFilterButton.setUnselectedProperties()
+            
+            searchedAlgorithms.removeAll()
+            
+            for algo in algorithmCollection {
+                searchedAlgorithms.append(algo)
+            }
+            
+            searchCollectionView.reloadData()
+        }
+        else {
+            sortedByName    = false
+            sortedByBest    = false
+            sortedByAverage = false
+            sortedByWorst   = true
+            
+            nameFilterButton.setUnselectedProperties()
+            bestFilterButton.setUnselectedProperties()
+            averageFilterButton.setUnselectedProperties()
+            worstFilterButton.setSelectedProperties()
+            
+            searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+                return algo1.worstCase.1 < algo2.worstCase.1
+            })
+            
+            searchCollectionView.reloadData()
+        }
     }
-    
     
     
     private let algorithmCollection : [Algorithm] = [
         Algorithm(name: "Bubble Sort",     algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(n²)", 10),     worstCase: ("O(n²)", 10),        memory: "O(1)"),
         Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10),      averageCase: ("O(n²)", 10),     worstCase: ("O(n²)", 10),        memory: "O(1)"),
         Algorithm(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(n²)", 10),     worstCase: ("O(n²)", 10),        memory: "O(n²)"),
-        Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(nlog(n))", 6), worstCase: ("O(nlog(n))", 6),    memory: "O(1)"),
+        Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(nlogn)", 6), worstCase: ("O(nlogn)", 6),    memory: "O(1)"),
         Algorithm(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(n²)", 10),     worstCase: ("O(n²)", 10),        memory: "O(1)"),
-        Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(nlog(n))", 6), worstCase: ("O(nlog(n))", 6),    memory: "O(1)"),
-        Algorithm(name: "Merge Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(nlog(n))", 6), averageCase: ("O(nlog(n))", 6), worstCase: ("O(nlog(n))", 6),    memory: "O(n)"),
-        Algorithm(name: "Quick Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(nlog(n))", 6), averageCase: ("O(nlog(n))", 6), worstCase: ("O(n²)", 10),        memory: "O(log(n))"),
-        Algorithm(name: "Cube Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(nlog(n))", 6), worstCase: ("O(nlog(n))", 6),    memory: "O(n)"),
+        Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(nlogn)", 6), worstCase: ("O(nlogn)", 6),    memory: "O(1)"),
+        Algorithm(name: "Merge Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(nlogn)", 6), averageCase: ("O(nlogn)", 6), worstCase: ("O(nlogn)", 6),    memory: "O(n)"),
+        Algorithm(name: "Quick Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(nlogn)", 6), averageCase: ("O(nlogn)", 6), worstCase: ("O(n²)", 10),        memory: "O(log(n))"),
+        Algorithm(name: "Cube Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(nlogn)", 6), worstCase: ("O(nlogn)", 6),    memory: "O(n)"),
         Algorithm(name: "Counting Sort",   algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(n+r)", 2),     worstCase: ("O(n+r)", 2),        memory: "O(n+r)"),
         Algorithm(name: "Radix Sort",      algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(n(k/d))", 3),  worstCase: ("O(n(k/d))", 3),     memory: "O(n+2ᵈ)"),
         Algorithm(name: "Spread Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n)", 1),       averageCase: ("O(n(k/d))", 3),  worstCase: ("O(n((k/s)+d))", 4), memory: "O(n+2ᵈ)"),
@@ -153,6 +243,24 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         let searchCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as! SearchCell
 
         searchCell.setSearchButtonLabels(cellData: cellData)
+        
+        if sortedByName {
+            searchCell.setComplexityLabel(complexity: "")
+        }
+        else if sortedByBest {
+            searchCell.setComplexityLabel(complexity: cellData.bestCase.0)
+        }
+        else if sortedByAverage {
+            searchCell.setComplexityLabel(complexity: cellData.averageCase.0)
+        }
+        else if sortedByWorst {
+            searchCell.setComplexityLabel(complexity: cellData.worstCase.0)
+        }
+        else {
+           searchCell.setComplexityLabel(complexity: "")
+        }
+        
+        
         
 //        var colors: [UIColor] = [
 //            .red, .blue, .green, .yellow, .purple, .orange, .cyan, .magenta
