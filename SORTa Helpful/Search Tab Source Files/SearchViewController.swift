@@ -31,8 +31,6 @@ class SearchViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var algorithmViewController = segue.destination as! AlgorithmViewController
-
-
     }
     
     
@@ -57,6 +55,8 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchViewSearchBar.
         
         searchCollectionView.delegate   = self
         searchCollectionView.dataSource = self
