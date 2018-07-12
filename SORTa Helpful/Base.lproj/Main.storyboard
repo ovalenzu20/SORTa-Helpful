@@ -39,9 +39,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jF4-Gp-clT" firstAttribute="trailing" secondItem="3g2-ug-D7i" secondAttribute="trailing" constant="159" id="0bk-mY-fVg"/>
                             <constraint firstItem="3g2-ug-D7i" firstAttribute="top" secondItem="jF4-Gp-clT" secondAttribute="top" constant="47" id="YNi-6L-bfU"/>
-                            <constraint firstItem="3g2-ug-D7i" firstAttribute="leading" secondItem="jF4-Gp-clT" secondAttribute="leading" constant="160" id="dyj-9R-287"/>
+                            <constraint firstItem="3g2-ug-D7i" firstAttribute="centerX" secondItem="RSn-IT-kQ2" secondAttribute="centerX" id="f7O-Ib-I8z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jF4-Gp-clT"/>
                     </view>
@@ -237,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sorta helpful" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-bP-cs3">
-                                <rect key="frame" x="86" y="86" width="243" height="79"/>
+                                <rect key="frame" x="101.66666666666669" y="86" width="212" height="79"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-My-oAm">
                                 <rect key="frame" x="143.33333333333334" y="315" width="128.00000000000003" height="106"/>
@@ -292,13 +291,12 @@
                         <color key="backgroundColor" red="0.2627450980392157" green="0.43529411764705883" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xnm-bP-cs3" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="Byl-mW-fmu"/>
                             <constraint firstItem="xnm-bP-cs3" firstAttribute="top" secondItem="1kM-iC-wnR" secondAttribute="top" constant="66" id="MPT-bj-xVX"/>
                             <constraint firstItem="amH-bz-9ym" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="OUA-Qd-dkh"/>
                             <constraint firstItem="7gg-My-oAm" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="OYJ-hq-e4Y"/>
                             <constraint firstItem="1kM-iC-wnR" firstAttribute="bottom" secondItem="amH-bz-9ym" secondAttribute="bottom" constant="65.666666666666629" id="R4r-58-cPL"/>
-                            <constraint firstItem="xnm-bP-cs3" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="86" id="WOj-nn-sE6"/>
                             <constraint firstItem="7gg-My-oAm" firstAttribute="centerY" secondItem="EGS-3g-dUO" secondAttribute="centerY" id="imZ-Dh-L1V"/>
-                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="xnm-bP-cs3" secondAttribute="trailing" constant="85" id="ztE-pC-Oib"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1kM-iC-wnR"/>
                     </view>
