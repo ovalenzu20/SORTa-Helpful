@@ -17,13 +17,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var worstFilterButton: SearchFilterButton!
     
     @IBAction func nameFilterActionButton(_ sender: SearchFilterButton) {
-//        if nameFilterButton.state != .disabled {
-//            nameFilterButton.setSelectedProperties()
-//        }
-//        else {
-//            nameFilterButton.setUnselectedProperties()
-//        }
-        
         nameFilterButton.setSelectedProperties()
         bestFilterButton.setUnselectedProperties()
         averageFilterButton.setUnselectedProperties()
@@ -36,14 +29,7 @@ class SearchViewController: UIViewController {
         searchCollectionView.reloadData()
     }
     
-    @IBAction func bestFilterActionButton(_ sender: SearchFilterButton) {
-//        if bestFilterButton.state == .selected {
-//            bestFilterButton.setSelectedProperties()
-//        }
-//        else {
-//            bestFilterButton.setUnselectedProperties()
-//        }
-        
+    @IBAction func bestFilterActionButton(_ sender: SearchFilterButton) {        
         nameFilterButton.setUnselectedProperties()
         bestFilterButton.setSelectedProperties()
         averageFilterButton.setUnselectedProperties()
