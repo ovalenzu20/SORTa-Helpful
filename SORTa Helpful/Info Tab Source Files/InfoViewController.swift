@@ -56,17 +56,19 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource  {
         }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let currentAlgorithm = algorithmCollection[indexPath.row]
-        
-        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
-        
-        algorithmVC?.algorithm = currentAlgorithm
-        
-        self.navigationController?.pushViewController(algorithmVC!, animated: true)
-
-    }
-        
+//this is for creating a new view when you click on one of the rows
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+//        let currentAlgorithm = algorithmCollection[indexPath.row]
+//
+//        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
+//
+//        algorithmVC?.algorithm = currentAlgorithm
+//
+//        self.navigationController?.pushViewController(algorithmVC!, animated: true)
+//
+//    }
+    
     
     
 }
