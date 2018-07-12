@@ -38,9 +38,9 @@ class AlgorithmViewController: UIViewController {
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
             
             typeLabel.text        = algorithm?.algoType
-            bestCaseLabel.text    = algorithm?.bestCase
-            averageCaseLabel.text = algorithm?.averageCase
-            worstCaseLabel.text   = algorithm?.worstCase
+            bestCaseLabel.text    = algorithm?.bestCase.0
+            averageCaseLabel.text = algorithm?.averageCase.0
+            worstCaseLabel.text   = algorithm?.worstCase.0
             memoryLabel.text      = algorithm?.memory
         }
     }

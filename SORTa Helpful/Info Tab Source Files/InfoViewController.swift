@@ -11,23 +11,24 @@ import UIKit
 class InfoViewController: UIViewController{
     
     @IBOutlet weak var algorithmTableView: UITableView!
-    let algorithmCollection : [Algorithm] = [
-        Algorithm(name: "Bubble Sort",     algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Merge Sort", algoClass: "Comparison", algoType: "Stable", bestCase: "O(logn)", averageCase: "O(logn)", worstCase: "O(logn)", memory: "O(logn)"),
-        Algorithm(name: "Quick Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Shell Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Counting Sort",   algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Radix Sort",      algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Spread Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Bucket Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)")
-    ]
+    private let algorithmCollection : [Algorithm] = [
+        Algorithm(name: "Bubble Sort",     algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Shell Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Merge Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Quick Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Cube Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Binary Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Counting Sort",   algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Radix Sort",      algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Spread Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Bucket Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()

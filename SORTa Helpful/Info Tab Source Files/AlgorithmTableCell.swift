@@ -19,9 +19,9 @@ import UIKit
     
     func setAlgorithmLabels(cellData: Algorithm){
         algorithmName.text!    = cellData.name
-        bestCase.text!    = cellData.bestCase
-        worstCase.text! = cellData.worstCase
-        averageCase.text!   = cellData.averageCase
+        bestCase.text!    = cellData.bestCase.0
+        worstCase.text! = cellData.worstCase.0
+        averageCase.text!   = cellData.averageCase.0
         memory.text! = cellData.memory
         type.text! = cellData.algoType
     }

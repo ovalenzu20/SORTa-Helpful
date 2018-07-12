@@ -11,27 +11,112 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var nameFilterButton: SearchFilterButton!
+    @IBOutlet weak var bestFilterButton: SearchFilterButton!
+    @IBOutlet weak var averageFilterButton: SearchFilterButton!
+    @IBOutlet weak var worstFilterButton: SearchFilterButton!
+    
+    @IBAction func nameFilterActionButton(_ sender: SearchFilterButton) {
+//        if nameFilterButton.state != .disabled {
+//            nameFilterButton.setSelectedProperties()
+//        }
+//        else {
+//            nameFilterButton.setUnselectedProperties()
+//        }
+        
+        nameFilterButton.setSelectedProperties()
+        bestFilterButton.setUnselectedProperties()
+        averageFilterButton.setUnselectedProperties()
+        worstFilterButton.setUnselectedProperties()
+        
+        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+            return algo1.name < algo2.name
+        })
+        
+        searchCollectionView.reloadData()
+    }
+    
+    @IBAction func bestFilterActionButton(_ sender: SearchFilterButton) {
+//        if bestFilterButton.state == .selected {
+//            bestFilterButton.setSelectedProperties()
+//        }
+//        else {
+//            bestFilterButton.setUnselectedProperties()
+//        }
+        
+        nameFilterButton.setUnselectedProperties()
+        bestFilterButton.setSelectedProperties()
+        averageFilterButton.setUnselectedProperties()
+        worstFilterButton.setUnselectedProperties()
+        
+        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+            return algo1.bestCase.1 < algo2.bestCase.1
+        })
+        
+        searchCollectionView.reloadData()
+    }
+    
+    @IBAction func averageFilterActionButton(_ sender: SearchFilterButton) {
+//        if averageFilterButton.state == .selected {
+//            averageFilterButton.setSelectedProperties()
+//        }
+//        else {
+//            averageFilterButton.setUnselectedProperties()
+//        }
+        
+        nameFilterButton.setUnselectedProperties()
+        bestFilterButton.setUnselectedProperties()
+        averageFilterButton.setSelectedProperties()
+        worstFilterButton.setUnselectedProperties()
+        
+        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+            return algo1.averageCase.1 < algo2.averageCase.1
+        })
+        
+        searchCollectionView.reloadData()
+    }
+    
+    @IBAction func worstFilterActionButton(_ sender: SearchFilterButton) {
+//        if worstFilterButton.state == .selected {
+//            worstFilterButton.setSelectedProperties()
+//        }
+//        else {
+//            worstFilterButton.setUnselectedProperties()
+//        }
+        
+        nameFilterButton.setUnselectedProperties()
+        bestFilterButton.setUnselectedProperties()
+        averageFilterButton.setUnselectedProperties()
+        worstFilterButton.setSelectedProperties()
+        
+        searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+            return algo1.worstCase.1 < algo2.worstCase.1
+        })
+        
+        searchCollectionView.reloadData()
+    }
+    
     
     private var searchedAlgorithms: [Algorithm] = Array()
     var isFiltering: Bool = false
     
     private let algorithmCollection : [Algorithm] = [
-        Algorithm(name: "Bubble Sort",     algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Shell Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Merge Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Quick Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Cube Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Binary Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Counting Sort",   algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Radix Sort",      algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Spread Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Bucket Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)"),
-        Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: "O(n²)", averageCase: "O(n²)", worstCase: "O(n²)", memory: "O(n²)")
+        Algorithm(name: "Bubble Sort",     algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Selection Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Heap Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Shell Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Cocktail Sort",   algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Block Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Merge Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Quick Sort",      algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Cube Sort",       algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Binary Insertion Sort",  algoClass: "Comparison",     algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Counting Sort",   algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Radix Sort",      algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Spread Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Bucket Sort",     algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
+        Algorithm(name: "Pigeonhole Sort", algoClass: "Non-comparison", algoType: "In-place", bestCase: ("O(n²)", 10), averageCase: ("O(n²)", 10), worstCase: ("O(n²)", 10), memory: "O(n²)"),
     ]
     
     
