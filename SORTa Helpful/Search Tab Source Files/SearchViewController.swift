@@ -187,7 +187,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         
 //        searchCell.setGradientBackground(primary: primary, secondary: secondary)
         
-        searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4352941176, blue: 1, alpha: 1)
+        searchCell.backgroundColor = #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1)
         
         return searchCell
     }
