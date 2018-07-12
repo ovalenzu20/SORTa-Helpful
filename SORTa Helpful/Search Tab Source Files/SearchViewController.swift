@@ -59,6 +59,9 @@ class SearchViewController: UIViewController {
         searchCollectionView.delegate   = self
         searchCollectionView.dataSource = self
         
+        searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
+        
         let collectionWidth = (view.frame.size.width - 60) / 2
         let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: collectionWidth, height: 100.0)
