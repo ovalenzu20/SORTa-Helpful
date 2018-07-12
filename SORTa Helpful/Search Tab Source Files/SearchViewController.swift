@@ -64,6 +64,9 @@ class SearchViewController: UIViewController {
         let collectionWidth = (view.frame.size.width - 40) / 2
         let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: collectionWidth, height: 120.0)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 
