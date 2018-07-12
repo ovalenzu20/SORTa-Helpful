@@ -59,6 +59,9 @@ class SearchViewController: UIViewController {
         searchCollectionView.delegate   = self
         searchCollectionView.dataSource = self
         
+        searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
+        
         let collectionWidth = (view.frame.size.width - 60) / 2
         let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: collectionWidth, height: 100.0)
@@ -75,40 +78,6 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         let searchCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as! SearchCell
 
         searchCell.setSearchButtonLabels(cellData: cellData)
-        
-//        var colors: [UIColor] = [
-//            .red, .blue, .green, .yellow, .purple, .orange, .cyan, .magenta
-//        ]
-//
-//        let r1 = arc4random_uniform(UInt32(colors.count))
-//        let randomFirst: UIColor = colors[Int(r1)]
-//        colors.remove(at: Int(r1))
-//
-//        var r2 = arc4random_uniform(UInt32(colors.count))
-//        var randomSecond: UIColor = colors[Int(r2)]
-//        colors.remove(at: Int(r2))
-//
-//        while randomFirst == randomSecond {
-//            r2 = arc4random_uniform(UInt32(colors.count))
-//            randomSecond = colors[Int(r2)]
-//        }
-//
-//        searchCell.setGradientBackground(primary: randomFirst, secondary: randomSecond)
-        
-//        var primary: UIColor
-//        var secondary: UIColor
-//
-//        if cellData.algoClass == "Comparison" {
-//            primary   = .orange
-//            secondary = .red
-//        }
-//        else {
-//            primary   = .blue
-//            secondary = .green
-//        }
-        
-//        searchCell.setGradientBackground(primary: primary, secondary: secondary)
-        
         searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4352941176, blue: 1, alpha: 1)
         
         return searchCell
