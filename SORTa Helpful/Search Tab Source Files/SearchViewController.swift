@@ -56,8 +56,6 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchViewSearchBar.
-        
         searchCollectionView.delegate   = self
         searchCollectionView.dataSource = self
         
