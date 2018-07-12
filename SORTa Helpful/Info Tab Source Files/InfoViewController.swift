@@ -36,17 +36,8 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentAlgorithm = algorithmCollection[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell")!
-        
-//        let text = currentAlgorithm.name
-//        cell.textLabel?.text = text
-        
-//        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
-//
-//        algorithmVC?.algorithm = currentAlgorithm
-//
-//        self.navigationController?.pushViewController(algorithmVC!, animated: true)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell") as! AlgorithmTableCell
+        cell.setAlgorithmLabels(cellData: currentAlgorithm)
         return cell 
     }
 
@@ -55,9 +46,9 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         algorithmTableView.delegate = self
         algorithmTableView.dataSource = self
-        algorithmTableView.estimatedRowHeight = 2000
+        algorithmTableView.estimatedRowHeight = 3000
         algorithmTableView.rowHeight = UITableViewAutomaticDimension
-        self.algorithmTableView.rowHeight = CGFloat(2000/algorithmCollection.count)
+        self.algorithmTableView.rowHeight = CGFloat(3000/algorithmCollection.count)
         
     }
 
