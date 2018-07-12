@@ -280,20 +280,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for an algorithm" translatesAutoresizingMaskIntoConstraints="NO" id="se9-4V-xzs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="kA2-Or-VRK" id="Prn-G7-Xrm"/>
-                                </connections>
-                            </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szE-3m-wY3">
-                                <rect key="frame" x="0.0" y="122" width="414" height="565"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="566"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-96-gQr">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="565"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="566"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uLE-2l-m0e">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="uLE-2l-m0e">
                                             <size key="itemSize" width="50" height="50"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -301,96 +294,37 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCell" id="f8k-pf-NfJ" customClass="SearchCell" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="190" height="120"/>
+                                                <rect key="frame" x="92" y="0.0" width="190" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="190" height="120"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-ul-rq2">
-                                                            <rect key="frame" x="29" y="6" width="132.66666666666666" height="21"/>
+                                                            <rect key="frame" x="10.000000000000007" y="10" width="110.66666666666669" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="UWu-fG-5l4"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-xS-v0A">
-                                                            <rect key="frame" x="20" y="50" width="76" height="50"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Case:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPE-Se-Lev">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="14.333333333333334"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Case:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMY-Fw-tRe">
-                                                                    <rect key="frame" x="0.0" y="18.333333333333329" width="76" height="14.333333333333336"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worst Case:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blb-Wp-gnN">
-                                                                    <rect key="frame" x="0.0" y="36.666666666666671" width="64.333333333333329" height="13.333333333333336"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="dOv-9n-4qw"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-di-Asb">
-                                                            <rect key="frame" x="146.66666666666666" y="50" width="23.333333333333343" height="50"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU6-rc-bBp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="23.333333333333332" height="14.333333333333334"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiT-74-bls">
-                                                                    <rect key="frame" x="0.0" y="18.333333333333329" width="23.333333333333332" height="14.333333333333336"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-er-sdM">
-                                                                    <rect key="frame" x="0.0" y="36.666666666666671" width="23.333333333333332" height="13.333333333333336"/>
-                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="yb6-16-jse"/>
-                                                            </constraints>
-                                                        </stackView>
                                                     </subviews>
                                                 </view>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="vI4-di-Asb" secondAttribute="trailing" constant="20" id="8jJ-nJ-FYU"/>
-                                                    <constraint firstItem="Kg5-ul-rq2" firstAttribute="top" secondItem="f8k-pf-NfJ" secondAttribute="top" constant="6" id="Hx0-U6-K1j"/>
-                                                    <constraint firstItem="hX5-xS-v0A" firstAttribute="leading" secondItem="f8k-pf-NfJ" secondAttribute="leading" constant="20" id="UTP-80-ZpT"/>
-                                                    <constraint firstItem="Kg5-ul-rq2" firstAttribute="centerX" secondItem="f8k-pf-NfJ" secondAttribute="centerX" id="UZ2-2O-YIL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="hX5-xS-v0A" secondAttribute="bottom" constant="20" id="siJ-o6-NW4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vI4-di-Asb" secondAttribute="bottom" constant="20" id="zaX-Pj-qok"/>
+                                                    <constraint firstItem="Kg5-ul-rq2" firstAttribute="top" secondItem="f8k-pf-NfJ" secondAttribute="top" constant="10" id="Hx0-U6-K1j"/>
+                                                    <constraint firstItem="Kg5-ul-rq2" firstAttribute="leading" secondItem="f8k-pf-NfJ" secondAttribute="leading" constant="10" id="jAi-bv-qs3"/>
                                                 </constraints>
                                                 <size key="customSize" width="190" height="120"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="algoNameLabel" destination="Kg5-ul-rq2" id="tnW-Kt-O2p"/>
-                                                    <outlet property="averageCaseLabel" destination="TiT-74-bls" id="m27-b6-fm0"/>
-                                                    <outlet property="bestCaseLabel" destination="rU6-rc-bBp" id="gx5-Xu-L2d"/>
-                                                    <outlet property="worstCaseLabel" destination="RhI-er-sdM" id="azF-FS-bec"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -399,12 +333,12 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1wE-96-gQr" secondAttribute="bottom" id="2II-eI-z5M"/>
                                     <constraint firstItem="1wE-96-gQr" firstAttribute="top" secondItem="szE-3m-wY3" secondAttribute="top" id="fxM-ep-uG4"/>
-                                    <constraint firstAttribute="trailing" secondItem="1wE-96-gQr" secondAttribute="trailing" constant="10" id="jvp-FP-Tu7"/>
-                                    <constraint firstItem="1wE-96-gQr" firstAttribute="leading" secondItem="szE-3m-wY3" secondAttribute="leading" constant="10" id="zTg-XM-dSe"/>
+                                    <constraint firstAttribute="trailing" secondItem="1wE-96-gQr" secondAttribute="trailing" constant="20" id="jvp-FP-Tu7"/>
+                                    <constraint firstItem="1wE-96-gQr" firstAttribute="leading" secondItem="szE-3m-wY3" secondAttribute="leading" constant="20" id="zTg-XM-dSe"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bza-aJ-WHj">
-                                <rect key="frame" x="44" y="66" width="326" height="27"/>
+                                <rect key="frame" x="44" y="65" width="326" height="27"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-uX-ANN" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="27"/>
@@ -416,7 +350,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="9"/>
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -430,7 +364,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="9"/>
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -444,7 +378,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="9"/>
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -458,7 +392,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="9"/>
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -468,18 +402,40 @@
                                     <constraint firstAttribute="height" constant="27" id="riF-db-BHc"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="M98-x3-FH1">
+                                <rect key="frame" x="30" y="0.0" width="354" height="27"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for an algorithm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-eG-cLg">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="CvD-mA-DCj"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ey9-i5-pXP">
+                                        <rect key="frame" x="0.0" y="26" width="354" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="uvb-5J-DEg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bza-aJ-WHj" firstAttribute="centerX" secondItem="Qlj-hz-58W" secondAttribute="centerX" id="2ve-wo-UQ9"/>
+                            <constraint firstItem="edO-Lg-Epv" firstAttribute="trailing" secondItem="M98-x3-FH1" secondAttribute="trailing" constant="30" id="36c-ah-LyL"/>
+                            <constraint firstItem="Bza-aJ-WHj" firstAttribute="top" secondItem="M98-x3-FH1" secondAttribute="bottom" constant="38" id="CC8-po-HMW"/>
+                            <constraint firstItem="M98-x3-FH1" firstAttribute="centerX" secondItem="Qlj-hz-58W" secondAttribute="centerX" id="F2a-4D-Cds"/>
                             <constraint firstItem="szE-3m-wY3" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" id="KGo-iX-boB"/>
+                            <constraint firstItem="M98-x3-FH1" firstAttribute="top" secondItem="edO-Lg-Epv" secondAttribute="top" constant="-20" id="LzZ-aF-iAB"/>
                             <constraint firstItem="szE-3m-wY3" firstAttribute="top" secondItem="RaF-Xw-aBQ" secondAttribute="bottom" constant="29" id="NgE-oR-Arw"/>
-                            <constraint firstItem="se9-4V-xzs" firstAttribute="top" secondItem="edO-Lg-Epv" secondAttribute="top" constant="-20" id="ZxS-7y-7LN"/>
                             <constraint firstItem="szE-3m-wY3" firstAttribute="bottom" secondItem="edO-Lg-Epv" secondAttribute="bottom" id="ayw-eg-jlx"/>
+                            <constraint firstItem="M98-x3-FH1" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" constant="30" id="dTw-q0-Zug"/>
                             <constraint firstItem="szE-3m-wY3" firstAttribute="trailing" secondItem="edO-Lg-Epv" secondAttribute="trailing" id="e38-D6-BRX"/>
-                            <constraint firstItem="se9-4V-xzs" firstAttribute="leading" secondItem="edO-Lg-Epv" secondAttribute="leading" id="i05-vu-rHO"/>
-                            <constraint firstItem="Bza-aJ-WHj" firstAttribute="top" secondItem="se9-4V-xzs" secondAttribute="bottom" constant="10" id="lwK-E3-6VQ"/>
-                            <constraint firstItem="edO-Lg-Epv" firstAttribute="trailing" secondItem="se9-4V-xzs" secondAttribute="trailing" id="owU-5r-NpW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="edO-Lg-Epv"/>
                     </view>
@@ -491,7 +447,7 @@
                     <connections>
                         <outlet property="searchCollectionView" destination="1wE-96-gQr" id="TGb-qW-xJg"/>
                         <outlet property="searchDisplayController" destination="7nO-gQ-nYc" id="xbS-O5-QV9"/>
-                        <outlet property="searchViewSearchBar" destination="se9-4V-xzs" id="Ycq-cN-0kE"/>
+                        <outlet property="searchTextField" destination="GdT-eG-cLg" id="2tL-aj-q71"/>
                         <segue destination="zIs-93-VYW" kind="show" id="wKV-Zv-GNw"/>
                     </connections>
                 </viewController>
@@ -499,7 +455,6 @@
                 <searchDisplayController id="7nO-gQ-nYc">
                     <connections>
                         <outlet property="delegate" destination="kA2-Or-VRK" id="qQq-mP-C6u"/>
-                        <outlet property="searchBar" destination="se9-4V-xzs" id="xb4-LC-7cY"/>
                         <outlet property="searchContentsController" destination="kA2-Or-VRK" id="Mfh-hY-QDK"/>
                         <outlet property="searchResultsDataSource" destination="kA2-Or-VRK" id="WsO-te-VWn"/>
                         <outlet property="searchResultsDelegate" destination="kA2-Or-VRK" id="EPJ-Rb-UNU"/>
