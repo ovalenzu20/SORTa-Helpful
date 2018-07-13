@@ -25,6 +25,7 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var averageCaseLabel: UILabel!
     @IBOutlet weak var worstCaseLabel: UILabel!
     @IBOutlet weak var memoryLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -42,6 +43,7 @@ class AlgorithmViewController: UIViewController {
             averageCaseLabel.text = algorithm?.averageCase.0
             worstCaseLabel.text   = algorithm?.worstCase.0
             memoryLabel.text      = algorithm?.memory
+            infoLabel.text        = algorithm?.info
         }
     }
 }
