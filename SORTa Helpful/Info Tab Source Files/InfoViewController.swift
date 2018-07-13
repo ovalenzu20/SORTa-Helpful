@@ -10,6 +10,8 @@ import UIKit
 
 class InfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
+
     @IBOutlet weak var algorithmTableView: UITableView!
 
     private let algorithmCollection : [Algorithm] = [
@@ -52,19 +54,11 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func didClickSearchIcon(_ sender: Any) {
+        tabBarController?.selectedIndex = 1
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 }
