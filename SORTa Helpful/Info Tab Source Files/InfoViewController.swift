@@ -10,6 +10,8 @@ import UIKit
 
 class InfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
+
     @IBOutlet weak var algorithmTableView: UITableView!
 
     private let algorithmCollection : [Algorithm] = [
@@ -176,17 +178,8 @@ do {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentAlgorithm = algorithmCollection[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell")!
-        
-//        let text = currentAlgorithm.name
-//        cell.textLabel?.text = text
-        
-//        let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
-//
-//        algorithmVC?.algorithm = currentAlgorithm
-//
-//        self.navigationController?.pushViewController(algorithmVC!, animated: true)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell") as! AlgorithmTableCell
+        cell.setAlgorithmLabels(cellData: currentAlgorithm)
         return cell 
     }
 
@@ -195,25 +188,17 @@ do {
         super.viewDidLoad()
         algorithmTableView.delegate = self
         algorithmTableView.dataSource = self
-        algorithmTableView.estimatedRowHeight = 2000
+        algorithmTableView.estimatedRowHeight = 3000
         algorithmTableView.rowHeight = UITableViewAutomaticDimension
-        self.algorithmTableView.rowHeight = CGFloat(2000/algorithmCollection.count)
+        self.algorithmTableView.rowHeight = CGFloat(3000/algorithmCollection.count)
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func didClickSearchIcon(_ sender: Any) {
+        tabBarController?.selectedIndex = 1
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 }
