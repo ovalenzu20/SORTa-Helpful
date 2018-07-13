@@ -28,6 +28,8 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var pseudocodeLabel: UILabel!
     
+    @IBOutlet weak var algorithmScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,5 +48,6 @@ class AlgorithmViewController: UIViewController {
             infoLabel.text        = algorithm?.info
             pseudocodeLabel.text  = algorithm?.pseudocode
         }
+        
     }
 }
