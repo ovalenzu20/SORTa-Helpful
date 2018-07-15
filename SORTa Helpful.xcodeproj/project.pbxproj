@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */; };
+		0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */; };
 		0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767647820FAFDA9005B7136 /* SearchTextField.swift */; };
 		07794B9C20F565E2001D4B12 /* algorithmInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 07794B9B20F565E2001D4B12 /* algorithmInfo.json */; };
 		077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmSectionView.swift; sourceTree = "<group>"; };
 		0767647820FAFDA9005B7136 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		07794B9B20F565E2001D4B12 /* algorithmInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algorithmInfo.json; sourceTree = "<group>"; };
 		077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				78340A8520F6ABC9001D0746 /* Search Tab Source Files */,
 				07794B9A20F565CC001D4B12 /* SupportingFiles */,
 				78F9846420E84F770017DCCC /* Info.plist */,
+				0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */,
 			);
 			path = "SORTa Helpful";
 			sourceTree = "<group>";
@@ -350,10 +353,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +381,7 @@
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				78340A8A20F6C0A9001D0746 /* ScrollViewController.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
+				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,
 				07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */,
 				78340A5F20F694CD001D0746 /* InfoViewController.swift in Sources */,
 				077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Charts
 
 
 class AlgorithmViewController: UIViewController {
@@ -45,7 +46,7 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var memoryLabel:      UILabel!
     @IBOutlet weak var infoLabel:        UILabel!
     @IBOutlet weak var pseudocodeLabel:  UILabel!
-    
+    @IBOutlet weak var aboutAlgorithmSectionLabel: UILabel!
     @IBOutlet weak var algorithmScrollView: UIScrollView!
     
     
@@ -82,6 +83,7 @@ class AlgorithmViewController: UIViewController {
             worstCaseLabel.text   = algorithm?.worstCase.0
             memoryLabel.text      = algorithm?.memory
             infoLabel.text        = algorithm?.info
+            aboutAlgorithmSectionLabel.text = "ABOUT " +  (algorithm?.name)!.uppercased()
             pseudocodeLabel.text  = getPseudocodeFromFile(algoName: (algorithm?.name)!)
         }
     }
