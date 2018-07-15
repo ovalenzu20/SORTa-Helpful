@@ -206,11 +206,11 @@
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				07E237B720E9DDB3000D22DE /* Algorithm.swift */,
 				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
+				0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */,
 				78340A8620F6ABEB001D0746 /* Info Tab Source Files */,
 				78340A8520F6ABC9001D0746 /* Search Tab Source Files */,
 				07794B9A20F565CC001D4B12 /* SupportingFiles */,
 				78F9846420E84F770017DCCC /* Info.plist */,
-				0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */,
 			);
 			path = "SORTa Helpful";
 			sourceTree = "<group>";

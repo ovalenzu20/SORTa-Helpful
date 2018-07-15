@@ -117,9 +117,7 @@ class SearchViewController: UIViewController {
                     let worstCase        = (worstCaseArray[0].stringValue, worstCaseArray[1].intValue)
                     let memory           = algorithmData["memory"].stringValue
                     let info             = algorithmData["info"].stringValue
-                    
-//                    print(info)
-                    
+                                        
                     algorithmCollection.append(Algorithm(name: algorithmName, algoClass: algoClass, algoType: algoType, bestCase: bestCase, averageCase: averageCase, worstCase: worstCase, memory: memory, info: info))
                 }
                 
