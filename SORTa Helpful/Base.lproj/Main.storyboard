@@ -388,6 +388,15 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.25"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="algoNameLabel" destination="Kg5-ul-rq2" id="tnW-Kt-O2p"/>
@@ -901,7 +910,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYp-mx-AG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.98550724637687" y="495.6521739130435"/>
+            <point key="canvasLocation" x="852" y="-319"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VVb-2l-z76">

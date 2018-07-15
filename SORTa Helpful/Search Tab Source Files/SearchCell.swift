@@ -21,6 +21,25 @@ import UIKit
         }
     }
     
+    @IBInspectable var shadowRadius: CGFloat = 0 {
+        didSet {
+            self.layer.shadowRadius = shadowRadius
+            self.layer.shadowOffset = CGSize(width: 1, height: 1)
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float = 0 {
+        didSet {
+            self.layer.shadowOpacity = shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor = .black {
+        didSet {
+            self.layer.shadowColor = shadowColor.cgColor
+        }
+    }
+    
     
     override var isHighlighted: Bool {
         didSet {
