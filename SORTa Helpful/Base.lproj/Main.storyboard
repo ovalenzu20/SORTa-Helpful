@@ -646,7 +646,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfH-vF-kCA" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="646.33333333333337" width="374" height="71.666666666666629"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pseudocode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-jE-UQd">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pseudocode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-jE-UQd">
                                                         <rect key="frame" x="10" y="50" width="354" height="11.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="10"/>
                                                         <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
