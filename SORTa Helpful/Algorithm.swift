@@ -16,18 +16,20 @@ class Algorithm {
     var name        : String
     var algoClass   : String
     var algoType    : String
-    var bestCase    : String
-    var averageCase : String
-    var worstCase   : String
+    var bestCase    : (String, Int)
+    var averageCase : (String, Int)
+    var worstCase   : (String, Int)
     var memory      : String
+    var info        : String
     
-    init(name: String, algoClass: String, algoType: String, bestCase: String, averageCase: String, worstCase: String, memory: String) {
-        self.name = name
-        self.algoClass = algoClass
-        self.algoType = algoType
-        self.bestCase = bestCase
+    init(name: String, algoClass: String, algoType: String, bestCase: (String, Int), averageCase: (String, Int), worstCase: (String, Int), memory: String, info: String) {
+        self.name        = name
+        self.algoClass   = algoClass
+        self.algoType    = algoType
+        self.bestCase    = bestCase
         self.averageCase = averageCase
-        self.worstCase = worstCase
-        self.memory = memory
+        self.worstCase   = worstCase
+        self.memory      = memory
+        self.info        = info
     }
 }
