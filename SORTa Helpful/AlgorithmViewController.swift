@@ -56,6 +56,7 @@ class AlgorithmViewController: UIViewController {
         
         do {
             pseudoCodeString = try String(contentsOfFile: fileUrl!, encoding: .utf8)
+            pseudoCodeString.removeLast()
         } catch let error as NSError {
             print(error.localizedDescription)
             return "Error loading pseudocode"

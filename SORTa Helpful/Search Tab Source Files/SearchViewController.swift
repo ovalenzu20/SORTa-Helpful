@@ -90,7 +90,7 @@ class SearchViewController: UIViewController {
         else {
             sortByWorst()
             searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
-                return algo1.worstCase.1 < algo2.worstCase.1
+                return algo1.worstCase.1 > algo2.worstCase.1
             })
             searchCollectionView.reloadData()
         }
@@ -117,6 +117,8 @@ class SearchViewController: UIViewController {
                     let worstCase        = (worstCaseArray[0].stringValue, worstCaseArray[1].intValue)
                     let memory           = algorithmData["memory"].stringValue
                     let info             = algorithmData["info"].stringValue
+                    
+//                    print(info)
                     
                     algorithmCollection.append(Algorithm(name: algorithmName, algoClass: algoClass, algoType: algoType, bestCase: bestCase, averageCase: averageCase, worstCase: worstCase, memory: memory, info: info))
                 }
