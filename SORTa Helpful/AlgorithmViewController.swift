@@ -13,20 +13,20 @@ import UIKit
 class AlgorithmViewController: UIViewController {
     
     private let algorithmFiles: [String: String] = [
-        "Bubble Sort"     : "SupportingFiles/bubble_sort.txt",
-        "Selection Sort"  : "SupportingFiles/selection_sort.txt",
-        "Insertion Sort"  : "SupportingFiles/insertion_sort.txt",
-        "Heap Sort"       : "SupportingFiles/heap_sort.txt",
-        "Cocktail Sort"   : "SupportingFiles/cocktail_sort.txt",
-        "Block Sort"      : "SupportingFiles/block_sort.txt",
-        "Merge Sort"      : "SupportingFiles/merge_sort.txt",
-        "Quick Sort"      : "SupportingFiles/quick_sort.txt",
-        "Cube Sort"       : "SupportingFiles/cube_sort.txt",
-        "Counting Sort"   : "SupportingFiles/counting_sort.txt",
-        "Radix Sort"      : "SupportingFiles/radix_sort.txt",
-        "Spread Sort"     : "SupportingFiles/spread_sort.txt",
-        "Bucket Sort"     : "SupportingFiles/bucket_sort.txt",
-        "Pigeonhole Sort" : "SupportingFiles/pigeonhole_sort.txt"
+        "Bubble Sort"     : "bubble_sort",
+        "Selection Sort"  : "selection_sort",
+        "Insertion Sort"  : "insertion_sort",
+        "Heap Sort"       : "heap_sort.txt",
+        "Cocktail Sort"   : "cocktail_sort",
+        "Block Sort"      : "block_sort",
+        "Merge Sort"      : "merge_sort",
+        "Quick Sort"      : "quick_sort",
+        "Cube Sort"       : "cube_sort",
+        "Counting Sort"   : "counting_sort",
+        "Radix Sort"      : "radix_sort",
+        "Spread Sort"     : "spread_sort",
+        "Bucket Sort"     : "bucket_sort",
+        "Pigeonhole Sort" : "pigeonhole_sort"
     ]
     
     
@@ -49,8 +49,19 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var algorithmScrollView: UIScrollView!
     
     
-    func getPseudocodeFromFile(file: String) {
+    func getPseudocodeFromFile(algoName: String) -> String {
+        let fileUrl = Bundle.main.path(forResource: algorithmFiles[algoName]!, ofType: "txt")
         
+        var pseudoCodeString = ""
+        
+        do {
+            pseudoCodeString = try String(contentsOfFile: fileUrl!, encoding: .utf8)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            return "Error loading pseudocode"
+        }
+        
+        return pseudoCodeString
     }
     
     
@@ -70,10 +81,7 @@ class AlgorithmViewController: UIViewController {
             worstCaseLabel.text   = algorithm?.worstCase.0
             memoryLabel.text      = algorithm?.memory
             infoLabel.text        = algorithm?.info
-            
-            
-            
-//            pseudocodeLabel.text  = algorithm?.pseudocode
+            pseudocodeLabel.text  = getPseudocodeFromFile(algoName: (algorithm?.name)!)
         }
     }
 }

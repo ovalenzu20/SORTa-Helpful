@@ -645,6 +645,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="dEk-5U-jhX"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="algoAnimationSlider:" destination="zIs-93-VYW" eventType="valueChanged" id="j38-is-MZ0"/>
+                                                </connections>
                                             </slider>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc5-za-hAL">
                                                 <rect key="frame" x="348" y="355" width="20" height="20"/>
@@ -661,7 +664,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="Sri-8K-2JA"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-58-klp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-58-klp">
                                                 <rect key="frame" x="40" y="624" width="334" height="14.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -760,7 +763,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfH-vF-kCA">
                                                 <rect key="frame" x="20" y="739.33333333333326" width="374" height="2260.666666666667"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pseudocode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-jE-UQd">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pseudocode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-jE-UQd">
                                                         <rect key="frame" x="20" y="20" width="334" height="13"/>
                                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
                                                         <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -830,10 +833,13 @@
                     </view>
                     <size key="freeformSize" width="414" height="3000"/>
                     <connections>
+                        <outlet property="algorithmScrollView" destination="A0T-Zu-vGW" id="SbG-nr-XD4"/>
                         <outlet property="averageCaseLabel" destination="t7G-TN-UDN" id="MPE-xD-Gq5"/>
                         <outlet property="bestCaseLabel" destination="fDS-rg-2Ne" id="Zh5-pf-t6f"/>
                         <outlet property="infoLabel" destination="ddr-58-klp" id="hgX-NV-4T7"/>
                         <outlet property="memoryLabel" destination="p9f-sF-eLl" id="4ss-cw-mCe"/>
+                        <outlet property="pseudocodeLabel" destination="0hc-jE-UQd" id="qnq-ki-K4m"/>
+                        <outlet property="testSliderLabel" destination="aSW-Nx-kdH" id="DlB-WC-nI7"/>
                         <outlet property="typeLabel" destination="tXz-Wa-of2" id="cqU-hI-A0L"/>
                         <outlet property="worstCaseLabel" destination="Azi-wp-IP1" id="ZAK-mK-dIv"/>
                     </connections>
