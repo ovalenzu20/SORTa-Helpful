@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import SafariServices
 
 class SettingsTabViewController: UIViewController {
     
@@ -27,8 +28,11 @@ class SettingsTabViewController: UIViewController {
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send Email.  Please check Email configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        sendMailErrorAlert.addAction(cancelAction)
+        present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
     @IBAction func didClickNotificationSettings(_ sender: Any) {
@@ -38,14 +42,9 @@ class SettingsTabViewController: UIViewController {
     }
     
     @IBAction func didClickViewGithub(_ sender: Any) {
-        if let url = URL(string: "https://github.com/ovalenzu20/SORTa-Helpful") {
-            if #available(iOS 10, *){
-                UIApplication.shared.open(url)
-            }else{
-                UIApplication.shared.openURL(url)
-            }
-            
-        }
+        let githubLink = URL(string: "https://github.com/ovalenzu20/SORTa-Helpful")
+        let svc = SFSafariViewController(url: githubLink!)
+        present(svc, animated: true, completion: nil)
     }
     
     @IBAction func didClickContactDevelopers(_ sender: Any) {
