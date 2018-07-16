@@ -31,6 +31,7 @@
 		07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* Algorithm.swift */; };
 		07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */; };
 		437F4DDD6997F81958F92691 /* Pods_SORTa_Helpful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */; };
+		781900A520FC334900C275BF /* quizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 781900A420FC334900C275BF /* quizData.json */; };
 		78340A5F20F694CD001D0746 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A5E20F694CD001D0746 /* InfoViewController.swift */; };
 		78340A7620F6994E001D0746 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */; };
 		78340A7720F6994E001D0746 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A6B20F6994D001D0746 /* Roboto-Medium.ttf */; };
@@ -79,6 +80,7 @@
 		1AF56050F3C46720A02D58A9 /* Pods-SORTa Helpful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.debug.xcconfig"; sourceTree = "<group>"; };
 		44FFDBD99D5B968B369C1992 /* Pods-SORTa Helpful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.release.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.release.xcconfig"; sourceTree = "<group>"; };
 		71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SORTa_Helpful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		781900A420FC334900C275BF /* quizData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quizData.json; sourceTree = "<group>"; };
 		78340A5E20F694CD001D0746 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		78340A6B20F6994D001D0746 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				07DD2E8C20F9736B00699EF2 /* spread_sort.txt */,
 				07DD2E8E20F9737E00699EF2 /* bucket_sort.txt */,
 				07DD2E9020F9739100699EF2 /* pigeonhole_sort.txt */,
+				781900A420FC334900C275BF /* quizData.json */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				78340A7E20F6994E001D0746 /* Roboto-MediumItalic.ttf in Resources */,
 				07DD2E7720F972A400699EF2 /* selection_sort.txt in Resources */,
 				78340A7D20F6994E001D0746 /* Roboto-LightItalic.ttf in Resources */,
+				781900A520FC334900C275BF /* quizData.json in Resources */,
 				07DD2E8520F9732200699EF2 /* quick_sort.txt in Resources */,
 				78340A8120F6994E001D0746 /* Roboto-Bold.ttf in Resources */,
 				78340A8020F6994E001D0746 /* Roboto-BlackItalic.ttf in Resources */,
