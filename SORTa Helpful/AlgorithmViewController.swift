@@ -11,6 +11,7 @@ import UIKit
 import Charts
 
 
+
 class AlgorithmViewController: UIViewController {
     
     private let algorithmFiles: [String: String] = [
@@ -31,6 +32,28 @@ class AlgorithmViewController: UIViewController {
     ]
     
     
+    private let equationDict: [String: Any] = [
+        "O(n)"          : { (x: Float) -> Float in
+            return x
+        },
+        "O(nlogn)"      : { (x: Float) -> Float in
+            return x * log(x)
+        },
+        "O(n²)"         : { (x: Float) -> Float in
+            return x * x
+        },
+        "O(n+r)"        : { (x: Float) -> Float in
+            return x
+        },
+        "O(n(k/d))"     : { (x: Float) -> Float in
+            return x
+        },
+        "O(n((k/s)+d))" : { (x: Float) -> Float in
+            return x
+        }
+    ]
+    
+    
     var algorithm: Algorithm?
     
     @IBOutlet weak var testSliderLabel: UILabel!
@@ -38,6 +61,7 @@ class AlgorithmViewController: UIViewController {
     @IBAction func algoAnimationSlider(_ sender: UISlider) {
         testSliderLabel.text = String(sender.value)
     }
+    
     
     @IBOutlet weak var typeLabel:        UILabel!
     @IBOutlet weak var bestCaseLabel:    UILabel!
@@ -48,6 +72,47 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var pseudocodeLabel:  UILabel!
     @IBOutlet weak var aboutAlgorithmSectionLabel: UILabel!
     @IBOutlet weak var algorithmScrollView: UIScrollView!
+    
+    
+    @IBOutlet weak var algorithmGraphView: UIView!
+    let lineGraphView = LineChartView()
+    
+//    func generateAlgorithmGraphForCase(algoCase: String) {
+//        let graph = LineChartView()
+//
+//        for i in stride(from: 0.0, to: algorithmGraphView.frame.width, by: 0.1) {
+//            let dataEntry = ChartDataEntry(x: Double(i), y: Double(equationDict[algoCase](i)))
+//            data.append(dataEntry)
+//        }
+//
+//
+//    }
+    
+    
+    func graphViewSetup() {
+        algorithmGraphView.addSubview(lineGraphView)
+        lineGraphView.translatesAutoresizingMaskIntoConstraints = false
+        lineGraphView.topAnchor.constraint(equalTo: algorithmGraphView.topAnchor).isActive = true
+        lineGraphView.bottomAnchor.constraint(equalTo: algorithmGraphView.bottomAnchor).isActive = true
+        lineGraphView.leadingAnchor.constraint(equalTo: algorithmGraphView.leadingAnchor).isActive = true
+        lineGraphView.trailingAnchor.constraint(equalTo: algorithmGraphView.trailingAnchor).isActive = true
+    }
+    
+    
+//    func setChart(dataPoints: [String], values: [Double]) {
+//
+//        var data: [ChartDataEntry] = []
+//
+//        for i in stride(from: 0.0, to: algorithmGraphView.frame.width, by: 0.1) {
+//            let dataEntry = ChartDataEntry(x: x, y: <#T##Double#>)
+//            data.append(dataEntry)
+//        }
+//
+//
+//        let lineChartDataSet = LineChartDataSet(yVals: data, label: "Units Sold")
+//        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+//        lineChartView.data = lineChartData
+//    }
     
     
     func getPseudocodeFromFile(algoName: String) -> String {
@@ -69,6 +134,7 @@ class AlgorithmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        graphViewSetup()
         
         if algorithm != nil {
             let algoName = algorithm?.name

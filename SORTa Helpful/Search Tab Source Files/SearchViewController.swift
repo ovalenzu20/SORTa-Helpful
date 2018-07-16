@@ -23,6 +23,7 @@ class SearchViewController: UIViewController {
     var sortedByBest:    Bool = false
     var sortedByAverage: Bool = false
     var sortedByWorst:   Bool = false
+    var sortedByMemory:  Bool = false
     
     
     @IBOutlet weak var searchCollectionView: UICollectionView!
@@ -31,8 +32,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var bestFilterButton:     SearchFilterButton!
     @IBOutlet weak var averageFilterButton:  SearchFilterButton!
     @IBOutlet weak var worstFilterButton:    SearchFilterButton!
+    @IBOutlet weak var memoryFilterButton:   SearchFilterButton!
+    @IBOutlet weak var cellLayoutButton:     UIButton!
     
-    @IBOutlet weak var cellLayoutButton: UIButton!
     
     @IBAction func switchCellLayoutButton(_ sender: UIButton) {
         if isGridView {
@@ -66,6 +68,23 @@ class SearchViewController: UIViewController {
             sortByName()
             searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
                 return algo1.name < algo2.name
+            })
+            searchCollectionView.reloadData()
+        }
+    }
+    
+    
+    @IBAction func memoryFiterActionButton(_ sender: UIButton) {
+        if memoryFilterButton.buttonIsSelected() {
+            setSortedLabelsOff()
+            memoryFilterButton.isSelected = false
+            setAllUnselectedProperties()
+            reloadOriginalData()
+        }
+        else {
+            sortByMemory()
+            searchedAlgorithms.sort(by: {(algo1: Algorithm, algo2: Algorithm) -> Bool in
+                return algo1.memory < algo2.memory
             })
             searchCollectionView.reloadData()
         }
@@ -163,6 +182,7 @@ class SearchViewController: UIViewController {
         sortedByBest    = false
         sortedByAverage = false
         sortedByWorst   = false
+        sortedByMemory  = false
     }
     
     func setAllUnselectedProperties() {
@@ -170,6 +190,7 @@ class SearchViewController: UIViewController {
         bestFilterButton.setUnselectedProperties()
         averageFilterButton.setUnselectedProperties()
         worstFilterButton.setUnselectedProperties()
+        memoryFilterButton.setUnselectedProperties()
     }
     
     func sortByName() {
@@ -177,10 +198,12 @@ class SearchViewController: UIViewController {
         sortedByBest    = false
         sortedByAverage = false
         sortedByWorst   = false
+        sortedByMemory  = false
         nameFilterButton.setSelectedProperties()
         bestFilterButton.setUnselectedProperties()
         averageFilterButton.setUnselectedProperties()
         worstFilterButton.setUnselectedProperties()
+        memoryFilterButton.setUnselectedProperties()
     }
     
     func sortByBest() {
@@ -188,10 +211,12 @@ class SearchViewController: UIViewController {
         sortedByBest    = true
         sortedByAverage = false
         sortedByWorst   = false
+        sortedByMemory  = false
         nameFilterButton.setUnselectedProperties()
         bestFilterButton.setSelectedProperties()
         averageFilterButton.setUnselectedProperties()
         worstFilterButton.setUnselectedProperties()
+        memoryFilterButton.setUnselectedProperties()
     }
     
     func sortByAverage() {
@@ -199,10 +224,12 @@ class SearchViewController: UIViewController {
         sortedByBest    = false
         sortedByAverage = true
         sortedByWorst   = false
+        sortedByMemory  = false
         nameFilterButton.setUnselectedProperties()
         bestFilterButton.setUnselectedProperties()
         averageFilterButton.setSelectedProperties()
         worstFilterButton.setUnselectedProperties()
+        memoryFilterButton.setUnselectedProperties()
     }
     
     func sortByWorst() {
@@ -210,11 +237,27 @@ class SearchViewController: UIViewController {
         sortedByBest    = false
         sortedByAverage = false
         sortedByWorst   = true
+        sortedByMemory  = false
         nameFilterButton.setUnselectedProperties()
         bestFilterButton.setUnselectedProperties()
         averageFilterButton.setUnselectedProperties()
         worstFilterButton.setSelectedProperties()
+        memoryFilterButton.setUnselectedProperties()
     }
+    
+    func sortByMemory() {
+        sortedByName    = false
+        sortedByBest    = false
+        sortedByAverage = false
+        sortedByWorst   = false
+        sortedByMemory  = true
+        nameFilterButton.setUnselectedProperties()
+        bestFilterButton.setUnselectedProperties()
+        averageFilterButton.setUnselectedProperties()
+        worstFilterButton.setUnselectedProperties()
+        memoryFilterButton.setSelectedProperties()
+    }
+    
     
     func reloadOriginalData() {
         searchedAlgorithms.removeAll()
@@ -286,11 +329,14 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         else if sortedByWorst {
             searchCell.setComplexityLabel(complexity: cellData.worstCase.0)
         }
+        else if sortedByMemory {
+            searchCell.setComplexityLabel(complexity: cellData.memory)
+        }
         else {
            searchCell.setComplexityLabel(complexity: "")
         }
         
-        searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+//        searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         return searchCell
     }
     
