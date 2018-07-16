@@ -23,7 +23,7 @@
         <!--Settings-->
         <scene sceneID="bKg-jg-JgL">
             <objects>
-                <viewController id="Sdo-qc-Pa6" sceneMemberID="viewController">
+                <viewController id="Sdo-qc-Pa6" customClass="SettingsTabViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RSn-IT-kQ2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,21 +36,33 @@
                                 <rect key="frame" x="74" y="232" width="284" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="NOTIFICATION SETTING"/>
+                                <connections>
+                                    <action selector="didClickNotificationSettings:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="rOZ-d3-74x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KF-up-IDa">
                                 <rect key="frame" x="74" y="311" width="182" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="GIVE FEEDBACK"/>
+                                <connections>
+                                    <action selector="didClickGiveFeedback:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="ZMe-ba-eN6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9L-3x-xej">
                                 <rect key="frame" x="74" y="390" width="152" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="VIEW GITHUB"/>
+                                <connections>
+                                    <action selector="didClickViewGithub:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="6Tw-J7-xSp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-Hm-W7s">
                                 <rect key="frame" x="74" y="473" width="267" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="CONTACT DEVELOPERS"/>
+                                <connections>
+                                    <action selector="didClickContactDevelopers:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="J28-H0-8Z8"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ob devs" translatesAutoresizingMaskIntoConstraints="NO" id="6Cx-8T-Ty4">
                                 <rect key="frame" x="322" y="641" width="72" height="36"/>
@@ -66,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="-752.17391304347836" y="372.554347826087"/>
         </scene>
-        <!--View Controller-->
+        <!--Flashcard View Controller-->
         <scene sceneID="S8f-Nf-Wfd">
             <objects>
-                <viewController id="GeX-zu-uOD" sceneMemberID="viewController">
+                <viewController id="GeX-zu-uOD" customClass="flashcardViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ta4-DG-Gas">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flashcards" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-9Y-2Fv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Flashcards" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-9Y-2Fv">
                                 <rect key="frame" x="40" y="40" width="140" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1017,7 +1029,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSE-1E-rkh">
                                 <rect key="frame" x="0.0" y="344" width="414" height="343"/>
-                                <state key="normal" image="flashcards" backgroundImage="Flashcard background"/>
+                                <state key="normal" image="Flashcards" backgroundImage="Flashcard background"/>
                                 <connections>
                                     <segue destination="GeX-zu-uOD" kind="show" id="EDu-Wg-6YK"/>
                                 </connections>
@@ -1079,6 +1091,7 @@
         <image name="BEST CASE" width="100" height="16"/>
         <image name="CONTACT DEVELOPERS" width="267" height="19"/>
         <image name="Flashcard background" width="414" height="343"/>
+        <image name="Flashcards" width="165" height="71"/>
         <image name="GIVE FEEDBACK" width="182" height="19"/>
         <image name="MEMORY" width="83" height="16"/>
         <image name="NOTIFICATION SETTING" width="284" height="19"/>
@@ -1087,7 +1100,6 @@
         <image name="TYPE" width="48" height="15"/>
         <image name="VIEW GITHUB" width="152" height="19"/>
         <image name="WORST CASE" width="121" height="16"/>
-        <image name="flashcards" width="165" height="71"/>
         <image name="home icon 29x29" width="29" height="29"/>
         <image name="list-menu" width="96" height="96"/>
         <image name="ob devs" width="83" height="42"/>
