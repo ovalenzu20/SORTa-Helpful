@@ -17,7 +17,7 @@ class SettingsTabViewController: UIViewController {
         
         mailComposerVC.setToRecipients(["ovalenzu@uci.edu", "bteran@uci.edu"])
         mailComposerVC.setSubject("SORTa Helpful - Contact")
-        mailComposerVC.setMessageBody("Thank you for contacting us! We are more than happy to answer any questions or concersn you may have.", isHTML: false)
+        mailComposerVC.setMessageBody("Thank you for contacting us! We are more than happy to answer any questions or concerns you may have.", isHTML: false)
         
         return mailComposerVC
     }
