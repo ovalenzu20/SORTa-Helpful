@@ -43,7 +43,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jF4-Gp-clT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings 29x29" id="oDP-Yv-B8b"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings-Outline" selectedImage="Settings-Filled" id="oDP-Yv-B8b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TnA-dR-BM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -320,7 +320,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1kM-iC-wnR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home icon 29x29" id="cM9-99-GBV"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home-Outline" selectedImage="Home-Filled" id="cM9-99-GBV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-Yj-d8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,16 +387,16 @@
                                                 <size key="customSize" width="190" height="120"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="2"/>
+                                                        <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="5"/>
+                                                        <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.25"/>
+                                                        <real key="value" value="1.5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -407,6 +407,7 @@
                                         </cells>
                                     </collectionView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1wE-96-gQr" secondAttribute="bottom" id="2II-eI-z5M"/>
                                     <constraint firstItem="1wE-96-gQr" firstAttribute="top" secondItem="szE-3m-wY3" secondAttribute="top" id="fxM-ep-uG4"/>
@@ -623,7 +624,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="edO-Lg-Epv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="search icon 29x29" id="Bmn-Fk-cLD"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search-Outline" selectedImage="Settings-Filled" id="Bmn-Fk-cLD"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6cO-eQ-Fvy">
                         <barButtonItem key="backBarButtonItem" title=" " id="cTa-LI-W9W"/>
                     </navigationItem>
@@ -1138,11 +1139,12 @@
         <scene sceneID="VVb-2l-z76">
             <objects>
                 <tabBarController id="adg-S0-vkp" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3B6-Ob-tWs">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3B6-Ob-tWs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="qAZ-07-7VZ" kind="relationship" relationship="viewControllers" id="0YL-Pr-hV9"/>
@@ -1165,7 +1167,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uzj-Fo-GTB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Practice" image="Practice" id="Jlw-o5-5zI"/>
+                    <tabBarItem key="tabBarItem" title="Practice" image="Practice-Outline" selectedImage="Practice-Filled" id="Jlw-o5-5zI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4o-Av-kbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1175,7 +1177,7 @@
         <scene sceneID="hpX-WD-2gh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yL7-Jh-mdY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="search icon 29x29" selectedImage="search icon 29x29" id="4Kz-jE-mSC"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search-Outline" selectedImage="Search-Filled" id="4Kz-jE-mSC"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yiL-AL-yOd">
@@ -1198,12 +1200,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Practice" width="29" height="29"/>
-        <image name="home icon 29x29" width="29" height="29"/>
+        <image name="Home-Filled" width="25" height="25"/>
+        <image name="Home-Outline" width="25" height="25"/>
+        <image name="Practice-Filled" width="25" height="25"/>
+        <image name="Practice-Outline" width="25" height="25"/>
+        <image name="Search-Filled" width="25" height="25"/>
+        <image name="Search-Outline" width="25" height="25"/>
+        <image name="Settings-Filled" width="25" height="25"/>
+        <image name="Settings-Outline" width="25" height="25"/>
         <image name="list-menu" width="96" height="96"/>
         <image name="play-arrow" width="128" height="128"/>
         <image name="search icon 29x29" width="29" height="29"/>
-        <image name="settings 29x29" width="29" height="29"/>
         <image name="sorta helpful" width="212" height="79"/>
         <image name="stats icon 29x29" width="29" height="29"/>
         <image name="stop-button" width="128" height="128"/>
