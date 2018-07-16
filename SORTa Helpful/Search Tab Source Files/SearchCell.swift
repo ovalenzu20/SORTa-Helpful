@@ -25,6 +25,7 @@ import UIKit
         didSet {
             self.layer.shadowRadius = shadowRadius
             self.layer.shadowOffset = CGSize(width: 1, height: 1)
+            self.layer.masksToBounds = false
         }
     }
     
