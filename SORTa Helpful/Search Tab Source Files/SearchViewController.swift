@@ -230,6 +230,8 @@ class SearchViewController: UIViewController {
         for algo in algorithmCollection {
             searchedAlgorithms.append(algo)
         }
+        
+        print(algorithmCollection)
     }
 }
 

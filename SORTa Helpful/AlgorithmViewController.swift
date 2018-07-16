@@ -29,6 +29,32 @@ class AlgorithmViewController: UIViewController {
         "Bucket Sort"     : "bucket_sort",
         "Pigeonhole Sort" : "pigeonhole_sort"
     ]
+
+
+    
+    private let equationDict = [
+        "O(n)"          : { (x: Double) -> Double in
+            return x
+        },
+        "O(nlogn)"      : { (x: Double) -> Double in
+            return x * log(x)
+        },
+        "O(n²)"         : { (x: Double) -> Double in
+            return x * x
+        },
+        "O(n+r)"        : { (x: Double) -> Double in
+            return x
+        },
+        "O(n(k/d))"     : { (x: Double) -> Double in
+            return x
+        },
+        "O(n((k/s)+d))" : { (x: Double) -> Double in
+            return x
+        },
+        "O(n+2ᵏ)"       : { (x: Double) -> Double in
+            return x
+        }
+    ]
     
     
     var algorithm: Algorithm?
@@ -48,6 +74,67 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var pseudocodeLabel:  UILabel!
     @IBOutlet weak var aboutAlgorithmSectionLabel: UILabel!
     @IBOutlet weak var algorithmScrollView: UIScrollView!
+    
+    
+    @IBOutlet weak var algorithmGraphView: UIView!
+    let lineGraphView = LineChartView()
+    
+    
+    func graphViewSetup() {
+        algorithmGraphView.addSubview(lineGraphView)
+        lineGraphView.translatesAutoresizingMaskIntoConstraints = false
+        lineGraphView.topAnchor.constraint(equalTo: algorithmGraphView.topAnchor).isActive = true
+        lineGraphView.bottomAnchor.constraint(equalTo: algorithmGraphView.bottomAnchor).isActive = true
+        lineGraphView.leadingAnchor.constraint(equalTo: algorithmGraphView.leadingAnchor).isActive = true
+        lineGraphView.trailingAnchor.constraint(equalTo: algorithmGraphView.trailingAnchor).isActive = true
+        lineGraphView.chartDescription?.text = ""
+        
+        lineGraphView.rightAxis.enabled = false
+        lineGraphView.leftAxis.enabled = false
+        
+        lineGraphView.xAxis.enabled = false
+        lineGraphView.legend.enabled = false
+        lineGraphView.isUserInteractionEnabled = false
+        
+        lineGraphView.animate(xAxisDuration: 4, yAxisDuration: 4)
+    }
+    
+    
+    func drawGraphData() {
+        let caseArray = [algorithm?.bestCase.0, algorithm?.averageCase.0, algorithm?.worstCase.0]
+        let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
+        
+        var dataSets: [LineChartDataSet] = []
+        
+        for i in 0..<3 {
+            print(caseArray[i]!)
+            var yVals: [ChartDataEntry] = []
+            
+            for y in stride(from: 0.0, to: Double(algorithmGraphView.frame.width), by: 1.0) {
+                let equation = (equationDict[caseArray[i]!])!
+                let val = equation(Double(y))
+                yVals.append(ChartDataEntry(x: y, y: val))
+            }
+            
+            let set = LineChartDataSet(values: yVals, label: caseArray[i]!)
+            set.mode = .horizontalBezier
+            set.drawCirclesEnabled = false
+            set.lineWidth = 2.0
+            set.circleRadius = 4
+            set.setCircleColor(.white)
+            set.highlightColor = colors[i]
+            set.fillColor = .white
+            set.fillAlpha = 1
+            set.drawHorizontalHighlightIndicatorEnabled = false
+            set.setColor(colors[i])
+            print("Current Color: \(colors[i])")
+            
+            dataSets.append(set)
+        }
+        
+        let data = LineChartData(dataSets: dataSets)
+        lineGraphView.data = data
+    }
     
     
     func getPseudocodeFromFile(algoName: String) -> String {
