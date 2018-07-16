@@ -14,6 +14,11 @@ class SearchViewController: UIViewController {
     private var algorithmCollection : [Algorithm] = Array()
     private var searchedAlgorithms  : [Algorithm] = Array()
     
+    private var cellsPerScreen: CGFloat = 2
+    private var cellHeight: CGFloat = 100.0
+    private var widthConstraint: CGFloat = 60
+    private var isGridView: Bool = false
+    
     var sortedByName:    Bool = false
     var sortedByBest:    Bool = false
     var sortedByAverage: Bool = false
@@ -26,6 +31,27 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var bestFilterButton:     SearchFilterButton!
     @IBOutlet weak var averageFilterButton:  SearchFilterButton!
     @IBOutlet weak var worstFilterButton:    SearchFilterButton!
+    
+    @IBOutlet weak var cellLayoutButton: UIButton!
+    
+    @IBAction func switchCellLayoutButton(_ sender: UIButton) {
+        if isGridView {
+            cellLayoutButton.setImage(#imageLiteral(resourceName: "grid-2-filled"), for: .normal)
+            isGridView      = false
+            cellsPerScreen  = 1
+            widthConstraint = 40
+            cellHeight      = 50.0
+        }
+        else {
+            cellLayoutButton.setImage(#imageLiteral(resourceName: "list-menu"), for: .normal)
+            isGridView      = true
+            cellsPerScreen  = 2
+            widthConstraint = 60
+            cellHeight      = 100.0
+        }
+        
+        refreshCellView()
+    }
     
     
     @IBAction func nameFilterActionButton(_ sender: SearchFilterButton) {
@@ -196,6 +222,7 @@ class SearchViewController: UIViewController {
         for algo in algorithmCollection {
             searchedAlgorithms.append(algo)
         }
+        
         searchCollectionView.reloadData()
     }
     
@@ -204,12 +231,22 @@ class SearchViewController: UIViewController {
 //    }
     
     
+    func refreshCellView() {
+        let collectionWidth = (view.frame.size.width - widthConstraint) / cellsPerScreen
+        let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: collectionWidth, height: cellHeight)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         readAlgorithmJsonData()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
+        
         self.view.addGestureRecognizer(tap)
+        cellLayoutButton.setImage(#imageLiteral(resourceName: "list-menu"), for: .normal)
+        isGridView      = false
         
         searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
             NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
@@ -218,9 +255,7 @@ class SearchViewController: UIViewController {
         searchCollectionView.dataSource = self
         searchTextField.delegate        = self
         
-        let collectionWidth = (view.frame.size.width - 60) / 2
-        let layout = searchCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: collectionWidth, height: 100.0)
+        refreshCellView()
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
