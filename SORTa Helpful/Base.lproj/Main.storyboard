@@ -731,9 +731,6 @@
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ui9-gV-c2h">
                                                                 <rect key="frame" x="46" y="0.0" width="222" height="25"/>
                                                                 <color key="minimumTrackTintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <connections>
-                                                                    <action selector="algoAnimationSlider:" destination="zIs-93-VYW" eventType="valueChanged" id="j38-is-MZ0"/>
-                                                                </connections>
                                                             </slider>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc5-za-hAL">
                                                                 <rect key="frame" x="290" y="0.0" width="24" height="24"/>

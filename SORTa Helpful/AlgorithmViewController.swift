@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Charts
+import SpriteKit
 
 
 
@@ -18,7 +19,7 @@ class AlgorithmViewController: UIViewController {
         "Bubble Sort"     : "bubble_sort",
         "Selection Sort"  : "selection_sort",
         "Insertion Sort"  : "insertion_sort",
-        "Heap Sort"       : "heap_sort.txt",
+        "Heap Sort"       : "heap_sort",
         "Cocktail Sort"   : "cocktail_sort",
         "Block Sort"      : "block_sort",
         "Merge Sort"      : "merge_sort",
@@ -33,37 +34,33 @@ class AlgorithmViewController: UIViewController {
 
     
     private let equationDict = [
-        "O(n)"          : { (x: Double) -> Double in
+        1          : { (x: Double) -> Double in
             return x
         },
-        "O(nlogn)"      : { (x: Double) -> Double in
-            return x * log(x)
+        6      : { (x: Double) -> Double in
+            var result = log(x)
+            result = x * result
+            return result
         },
-        "O(n²)"         : { (x: Double) -> Double in
+        10         : { (x: Double) -> Double in
             return x * x
         },
-        "O(n+r)"        : { (x: Double) -> Double in
+        2        : { (x: Double) -> Double in
             return x
         },
-        "O(n(k/d))"     : { (x: Double) -> Double in
+        3     : { (x: Double) -> Double in
             return x
         },
-        "O(n((k/s)+d))" : { (x: Double) -> Double in
+        4 : { (x: Double) -> Double in
             return x
         },
-        "O(n+2ᵏ)"       : { (x: Double) -> Double in
+        5       : { (x: Double) -> Double in
             return x
         }
     ]
     
     
     var algorithm: Algorithm?
-    
-    @IBOutlet weak var testSliderLabel: UILabel!
-    
-    @IBAction func algoAnimationSlider(_ sender: UISlider) {
-        testSliderLabel.text = String(sender.value)
-    }
     
     
     @IBOutlet weak var typeLabel:        UILabel!
@@ -102,22 +99,21 @@ class AlgorithmViewController: UIViewController {
     
     
     func drawGraphData() {
-        let caseArray = [algorithm?.bestCase.0, algorithm?.averageCase.0, algorithm?.worstCase.0]
+        let caseArray = [algorithm!.bestCase.1, algorithm!.averageCase.1, algorithm!.worstCase.1]
         let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
         
         var dataSets: [LineChartDataSet] = []
         
         for i in 0..<3 {
-            print(caseArray[i]!)
             var yVals: [ChartDataEntry] = []
             
-            for y in stride(from: 0.0, to: Double(algorithmGraphView.frame.width), by: 1.0) {
-                let equation = (equationDict[caseArray[i]!])!
-                let val = equation(Double(y))
-                yVals.append(ChartDataEntry(x: y, y: val))
+            for x in stride(from: 1, to: Double(algorithmGraphView.frame.width), by: 1) {
+                let equation = (equationDict[caseArray[i]])!
+                let val = equation(Double(x))
+                yVals.append(ChartDataEntry(x: x + Double((i+1) * 400), y: val))
             }
             
-            let set = LineChartDataSet(values: yVals, label: caseArray[i]!)
+            let set = LineChartDataSet(values: yVals, label: "")
             set.mode = .horizontalBezier
             set.drawCirclesEnabled = false
             set.lineWidth = 2.0
@@ -128,7 +124,6 @@ class AlgorithmViewController: UIViewController {
             set.fillAlpha = 1
             set.drawHorizontalHighlightIndicatorEnabled = false
             set.setColor(colors[i])
-            print("Current Color: \(colors[i])")
             
             dataSets.append(set)
         }
