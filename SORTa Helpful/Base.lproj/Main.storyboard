@@ -684,6 +684,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="nameFilterActionButton:" destination="kA2-Or-VRK" eventType="touchUpInside" id="7Gp-DT-jX0"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaF-Xw-aBQ" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
@@ -715,6 +716,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="bestFilterActionButton:" destination="kA2-Or-VRK" eventType="touchUpInside" id="49l-oq-CZe"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az3-LZ-JcK" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
@@ -1356,10 +1358,12 @@
                                                     <constraint firstAttribute="trailing" secondItem="TZ5-RM-xIC" secondAttribute="trailing" id="peq-Bo-9CO"/>
                                                 </constraints>
                                             </view>
-                                        </constraints>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.1246589558" green="0.1231011113" blue="0.15432475179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="xp4-hx-eLz" firstAttribute="top" secondItem="WOO-vb-4Bz" secondAttribute="bottom" constant="20" id="00T-Jq-wHn"/>
+                                            <constraint firstItem="CfH-vF-kCA" firstAttribute="leading" secondItem="1F2-l4-ssG" secondAttribute="leading" constant="20" id="3ty-RT-9BY"/>
+                                            <constraint firstAttribute="bottom" secondItem="CfH-vF-kCA" secondAttribute="bottom" constant="20" id="67U-Xe-zbl"/>
                                             <constraint firstItem="vH1-l1-xn5" firstAttribute="top" secondItem="P7M-s4-Pdf" secondAttribute="bottom" constant="20" id="AgK-4x-FlZ"/>
 
                                             <constraint firstAttribute="trailing" secondItem="vH1-l1-xn5" secondAttribute="trailing" constant="20" id="CfH-B6-pj5"/>
@@ -1432,7 +1436,7 @@
             <point key="canvasLocation" x="852" y="-319"/>
 
             <point key="canvasLocation" x="879.71014492753625" y="-115.7608695652174"/>
-
+ 
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VVb-2l-z76">
