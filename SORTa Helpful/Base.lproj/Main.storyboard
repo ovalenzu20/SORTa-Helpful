@@ -1315,7 +1315,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quiz" translatesAutoresizingMaskIntoConstraints="NO" id="tKx-ye-y7b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizWord" translatesAutoresizingMaskIntoConstraints="NO" id="tKx-ye-y7b">
                                 <rect key="frame" x="41" y="41" width="83" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1345,7 +1345,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-Y4-5Qs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="344"/>
-                                <state key="normal" image="quiz" backgroundImage="Quiz background"/>
+                                <state key="normal" image="quizWord" backgroundImage="Quiz background"/>
                                 <connections>
                                     <segue destination="SLS-ZC-twu" kind="show" id="jC9-Zd-71F"/>
                                 </connections>
@@ -1423,7 +1423,7 @@
         <image name="ob devs" width="83" height="42"/>
         <image name="outlineFlashCard" width="290" height="56"/>
         <image name="play-arrow" width="128" height="128"/>
-        <image name="quiz" width="71" height="62"/>
+        <image name="quizWord" width="71" height="62"/>
         <image name="search icon 29x29" width="29" height="29"/>
         <image name="settings" width="133" height="80"/>
         <image name="sorta helpful" width="212" height="79"/>
