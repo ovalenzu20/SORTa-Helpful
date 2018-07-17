@@ -34,28 +34,28 @@ class AlgorithmViewController: UIViewController {
 
     
     private let equationDict = [
-        1          : { (x: Double) -> Double in
+        1  : { (x: Double) -> Double in
             return x
         },
-        6      : { (x: Double) -> Double in
+        2  : { (x: Double) -> Double in
+            return x
+        },
+        3  : { (x: Double) -> Double in
+            return x
+        },
+        4  : { (x: Double) -> Double in
+            return x
+        },
+        5  : { (x: Double) -> Double in
+            return x
+        },
+        6  : { (x: Double) -> Double in
             var result = log(x)
             result = x * result
             return result
         },
-        10         : { (x: Double) -> Double in
+        10 : { (x: Double) -> Double in
             return x * x
-        },
-        2        : { (x: Double) -> Double in
-            return x
-        },
-        3     : { (x: Double) -> Double in
-            return x
-        },
-        4 : { (x: Double) -> Double in
-            return x
-        },
-        5       : { (x: Double) -> Double in
-            return x
         }
     ]
     
@@ -75,60 +75,52 @@ class AlgorithmViewController: UIViewController {
     
     
     @IBOutlet weak var algorithmGraphView: UIView!
-    let lineGraphView = LineChartView()
+    
+    let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
+    let lineGraphViewArray = [LineChartView(), LineChartView(), LineChartView()]
     
     
     func graphViewSetup() {
-        algorithmGraphView.addSubview(lineGraphView)
-        lineGraphView.translatesAutoresizingMaskIntoConstraints = false
-        lineGraphView.topAnchor.constraint(equalTo: algorithmGraphView.topAnchor).isActive = true
-        lineGraphView.bottomAnchor.constraint(equalTo: algorithmGraphView.bottomAnchor).isActive = true
-        lineGraphView.leadingAnchor.constraint(equalTo: algorithmGraphView.leadingAnchor).isActive = true
-        lineGraphView.trailingAnchor.constraint(equalTo: algorithmGraphView.trailingAnchor).isActive = true
-        lineGraphView.chartDescription?.text = ""
-        
-        lineGraphView.rightAxis.enabled = false
-        lineGraphView.leftAxis.enabled = false
-        
-        lineGraphView.xAxis.enabled = false
-        lineGraphView.legend.enabled = false
-        lineGraphView.isUserInteractionEnabled = false
-        
-        lineGraphView.animate(xAxisDuration: 4, yAxisDuration: 4)
+        for lineGraphView in lineGraphViewArray {
+            algorithmGraphView.addSubview(lineGraphView)
+            lineGraphView.translatesAutoresizingMaskIntoConstraints = false
+            lineGraphView.topAnchor.constraint(equalTo: algorithmGraphView.topAnchor).isActive = true
+            lineGraphView.bottomAnchor.constraint(equalTo: algorithmGraphView.bottomAnchor).isActive = true
+            lineGraphView.leadingAnchor.constraint(equalTo: algorithmGraphView.leadingAnchor).isActive = true
+            lineGraphView.trailingAnchor.constraint(equalTo: algorithmGraphView.trailingAnchor).isActive = true
+            lineGraphView.chartDescription?.text   = ""
+            lineGraphView.rightAxis.enabled        = false
+            lineGraphView.leftAxis.enabled         = false
+            lineGraphView.xAxis.enabled            = false
+            lineGraphView.legend.enabled           = false
+            lineGraphView.isUserInteractionEnabled = false
+            lineGraphView.animate(xAxisDuration: 4, yAxisDuration: 4)
+        }
     }
     
     
-    func drawGraphData() {
-        let caseArray = [algorithm!.bestCase.1, algorithm!.averageCase.1, algorithm!.worstCase.1]
-        let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
+    func drawGraphData(caseKey: Int, lineGraphView: LineChartView, lineColor: UIColor, offset: Int) {
+        var yVals: [ChartDataEntry] = Array()
+        print(offset)
         
-        var dataSets: [LineChartDataSet] = []
-        
-        for i in 0..<3 {
-            var yVals: [ChartDataEntry] = []
-            
-            for x in stride(from: 1, to: Double(algorithmGraphView.frame.width), by: 1) {
-                let equation = (equationDict[caseArray[i]])!
-                let val = equation(Double(x))
-                yVals.append(ChartDataEntry(x: x + Double((i+1) * 40), y: val))
-            }
-            
-            let set = LineChartDataSet(values: yVals, label: "")
-            set.mode = .horizontalBezier
-            set.drawCirclesEnabled = false
-            set.lineWidth = 2.0
-            set.circleRadius = 4
-            set.setCircleColor(.white)
-            set.highlightColor = colors[i]
-            set.fillColor = .white
-            set.fillAlpha = 1
-            set.drawHorizontalHighlightIndicatorEnabled = false
-            set.setColor(colors[i])
-            
-            dataSets.append(set)
+        for x in stride(from: 1, to: Double(algorithmGraphView.frame.width), by: 1) {
+            let equation = (equationDict[caseKey])!
+            let val = equation(x)
+            let dataEntry = ChartDataEntry(x: x + Double((offset) * 10), y: val + Double(offset))
+            print("(\(x + Double((offset) * 100)), \(val))")
+            yVals.append(dataEntry)
         }
         
-        let data = LineChartData(dataSets: dataSets)
+        let set = LineChartDataSet(values: yVals, label: "")
+        set.mode = .horizontalBezier
+        set.drawCirclesEnabled = false
+        set.lineWidth = 2.0
+        set.highlightColor = lineColor
+        set.fillAlpha = 1
+        set.drawHorizontalHighlightIndicatorEnabled = false
+        set.setColor(lineColor)
+
+        let data = LineChartData(dataSet: set)
         lineGraphView.data = data
     }
     
@@ -153,7 +145,13 @@ class AlgorithmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         graphViewSetup()
-        drawGraphData()
+        
+        let caseArray = [algorithm!.bestCase.1, algorithm!.averageCase.1, algorithm!.worstCase.1]
+        let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
+        
+        for i in 0..<caseArray.count {
+            drawGraphData(caseKey: caseArray[i], lineGraphView: lineGraphViewArray[i], lineColor: colors[i], offset: i + 1)
+        }
         
         if algorithm != nil {
             let algoName = algorithm?.name
