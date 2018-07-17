@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FlashcardViewController: UITabBarController {
+class FlashcardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
