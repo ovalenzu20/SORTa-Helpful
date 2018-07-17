@@ -82,7 +82,7 @@
         <!--Flashcard View Controller-->
         <scene sceneID="S8f-Nf-Wfd">
             <objects>
-                <viewController id="GeX-zu-uOD" customClass="flashcardViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GeX-zu-uOD" customClass="FlashcardViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ta4-DG-Gas">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

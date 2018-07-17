@@ -10,7 +10,7 @@
 		0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */; };
 		071ED4E820FDC44B0039FDB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071ED4E720FDC4480039FDB2 /* Assets.xcassets */; };
 		071ED4EE20FDC7150039FDB2 /* SettingsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED4ED20FDC7140039FDB2 /* SettingsTabViewController.swift */; };
-		071ED4F020FDC7210039FDB2 /* flashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED4EF20FDC7210039FDB2 /* flashcardViewController.swift */; };
+		071ED4F020FDC7210039FDB2 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED4EF20FDC7210039FDB2 /* FlashcardViewController.swift */; };
 		0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */; };
 		0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767647820FAFDA9005B7136 /* SearchTextField.swift */; };
 		07794B9C20F565E2001D4B12 /* algorithmInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 07794B9B20F565E2001D4B12 /* algorithmInfo.json */; };
@@ -58,7 +58,7 @@
 		0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		071ED4E720FDC4480039FDB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Users/andyteran/Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		071ED4ED20FDC7140039FDB2 /* SettingsTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTabViewController.swift; sourceTree = "<group>"; };
-		071ED4EF20FDC7210039FDB2 /* flashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flashcardViewController.swift; sourceTree = "<group>"; };
+		071ED4EF20FDC7210039FDB2 /* FlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
 		0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmSectionView.swift; sourceTree = "<group>"; };
 		0767647820FAFDA9005B7136 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		07794B9B20F565E2001D4B12 /* algorithmInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algorithmInfo.json; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 				07E237B720E9DDB3000D22DE /* Algorithm.swift */,
 				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
 				0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */,
-				071ED4EF20FDC7210039FDB2 /* flashcardViewController.swift */,
+				071ED4EF20FDC7210039FDB2 /* FlashcardViewController.swift */,
 				071ED4ED20FDC7140039FDB2 /* SettingsTabViewController.swift */,
 				78340A8620F6ABEB001D0746 /* Info Tab Source Files */,
 				78340A8520F6ABC9001D0746 /* Search Tab Source Files */,
@@ -382,7 +382,7 @@
 				07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */,
 				0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */,
 				07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */,
-				071ED4F020FDC7210039FDB2 /* flashcardViewController.swift in Sources */,
+				071ED4F020FDC7210039FDB2 /* FlashcardViewController.swift in Sources */,
 				78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */,
 				07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
