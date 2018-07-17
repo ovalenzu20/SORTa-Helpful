@@ -91,30 +91,35 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-D1-Aop">
+                                <rect key="frame" x="62" y="465" width="290" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="TYPE" backgroundImage="outlineFlashCard"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-UM-lxq">
+                                <rect key="frame" x="62" y="190" width="290" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BEST CASE" backgroundImage="outlineFlashCard"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-e1-TEF">
+                                <rect key="frame" x="62" y="261" width="290" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AVERAGE CASE" backgroundImage="outlineFlashCard"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-zV-UWB">
+                                <rect key="frame" x="62" y="326" width="290" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="WORST CASE" backgroundImage="outlineFlashCard"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-tD-O6q">
+                                <rect key="frame" x="62" y="397" width="290" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="MEMORY" backgroundImage="outlineFlashCard"/>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flashcards" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-9Y-2Fv">
                                 <rect key="frame" x="40" y="40" width="140" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiA-9j-zDE">
-                                <rect key="frame" x="62" y="600" width="290" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="TYPE" backgroundImage="outlineFlashCard"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbx-Zi-UjW">
-                                <rect key="frame" x="62" y="400" width="290" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="WORST CASE" backgroundImage="outlineFlashCard"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEo-bE-jGp">
-                                <rect key="frame" x="62" y="500" width="290" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="MEMORY" backgroundImage="outlineFlashCard"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruk-T7-ozH">
-                                <rect key="frame" x="62" y="300" width="290" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AVERAGE CASE" backgroundImage="outlineFlashCard"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHOOSE A CATEGORY:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-cc-qH0">
                                 <rect key="frame" x="39" y="139" width="206" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -122,10 +127,18 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBq-1K-yKE">
-                                <rect key="frame" x="62" y="200" width="290" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-dl-nBg">
+                                <rect key="frame" x="62" y="651" width="290" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="BEST CASE" backgroundImage="outlineFlashCard"/>
+                                <state key="normal" image="VIEW CHEAT SHEET" backgroundImage="outlineFlashCard"/>
+                                <connections>
+                                    <segue destination="3VP-yc-dRD" kind="show" id="aJ5-N5-6pB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-4u-Udn">
+                                <rect key="frame" x="62" y="534" width="290" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="RANDOM MIX" backgroundImage="outlineFlashCard"/>
                             </button>
                         </subviews>
                         <color key="tintColor" red="0.97450533419999996" green="1" blue="0.9581733791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -134,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXX-Qi-Qvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-946.37681159420299" y="1130.7065217391305"/>
+            <point key="canvasLocation" x="-972" y="1378"/>
         </scene>
         <!--Info-->
         <scene sceneID="L6D-8F-7HO">
@@ -144,10 +157,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALGORITHM INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92W-an-iXS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHEAT SHEET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92W-an-iXS">
                                 <rect key="frame" x="61" y="67" width="253" height="24"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <color key="textColor" red="0.97450533419999996" green="1" blue="0.9581733791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGB-ty-91Q" customClass="ScrollViewController" customModule="SORTa_Helpful" customModuleProvider="target">
@@ -308,7 +321,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         <constraints>
                             <constraint firstItem="QGB-ty-91Q" firstAttribute="top" secondItem="92W-an-iXS" secondAttribute="bottom" constant="53" id="IDJ-yr-m5c"/>
@@ -332,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="496"/>
+            <point key="canvasLocation" x="-80" y="2301"/>
         </scene>
         <!--Home-->
         <scene sceneID="A7b-hY-kEV">
@@ -1340,7 +1353,7 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="343"/>
                                 <state key="normal" image="flashcards" backgroundImage="Flashcard background"/>
                                 <connections>
-                                    <segue destination="GeX-zu-uOD" kind="show" id="EDu-Wg-6YK"/>
+                                    <segue destination="GeX-zu-uOD" kind="showDetail" id="EDu-Wg-6YK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-Y4-5Qs">
@@ -1411,17 +1424,19 @@
         <image name="Practice-Filled" width="25" height="25"/>
         <image name="Practice-Outline" width="25" height="25"/>
         <image name="Quiz background" width="414" height="344"/>
+        <image name="RANDOM MIX" width="123" height="16"/>
         <image name="Search-Filled" width="25" height="25"/>
         <image name="Search-Outline" width="25" height="25"/>
         <image name="Settings-Filled" width="25" height="25"/>
         <image name="Settings-Outline" width="25" height="25"/>
         <image name="TYPE" width="48" height="15"/>
+        <image name="VIEW CHEAT SHEET" width="180" height="16"/>
         <image name="VIEW GITHUB" width="152" height="19"/>
         <image name="WORST CASE" width="121" height="16"/>
         <image name="flashcards" width="165" height="71"/>
         <image name="list-menu" width="96" height="96"/>
         <image name="ob devs" width="83" height="42"/>
-        <image name="outlineFlashCard" width="290" height="56"/>
+        <image name="outlineFlashCard" width="290" height="43"/>
         <image name="play-arrow" width="128" height="128"/>
         <image name="quizWord" width="71" height="62"/>
         <image name="search icon 29x29" width="29" height="29"/>
