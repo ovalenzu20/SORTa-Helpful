@@ -110,7 +110,7 @@ class AlgorithmViewController: UIViewController {
             for x in stride(from: 1, to: Double(algorithmGraphView.frame.width), by: 1) {
                 let equation = (equationDict[caseArray[i]])!
                 let val = equation(Double(x))
-                yVals.append(ChartDataEntry(x: x + Double((i+1) * 400), y: val))
+                yVals.append(ChartDataEntry(x: x + Double((i+1) * 40), y: val))
             }
             
             let set = LineChartDataSet(values: yVals, label: "")
