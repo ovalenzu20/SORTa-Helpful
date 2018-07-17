@@ -230,6 +230,8 @@ class SearchViewController: UIViewController {
         for algo in algorithmCollection {
             searchedAlgorithms.append(algo)
         }
+        
+        print(algorithmCollection)
     }
 }
 
@@ -257,7 +259,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
            searchCell.setComplexityLabel(complexity: "")
         }
         
-        searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        //searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         return searchCell
     }
     
