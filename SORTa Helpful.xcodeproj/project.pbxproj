@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */; };
+		071ED4E820FDC44B0039FDB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071ED4E720FDC4480039FDB2 /* Assets.xcassets */; };
 		0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */; };
 		0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767647820FAFDA9005B7136 /* SearchTextField.swift */; };
 		07794B9C20F565E2001D4B12 /* algorithmInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 07794B9B20F565E2001D4B12 /* algorithmInfo.json */; };
@@ -48,12 +49,12 @@
 		78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
 		78F9845E20E84F760017DCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845C20E84F760017DCCC /* Main.storyboard */; };
-		78F9846020E84F770017DCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F9845F20E84F770017DCCC /* Assets.xcassets */; };
 		78F9846320E84F770017DCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9846120E84F770017DCCC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0715184F20EC1DD6007C49D0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		071ED4E720FDC4480039FDB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Users/andyteran/Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmSectionView.swift; sourceTree = "<group>"; };
 		0767647820FAFDA9005B7136 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		07794B9B20F565E2001D4B12 /* algorithmInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algorithmInfo.json; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F9845820E84F760017DCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F9845D20E84F760017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		78F9845F20E84F770017DCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78F9846220E84F770017DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78F9846420E84F770017DCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,7 +202,7 @@
 				78340A8220F6995F001D0746 /* Fonts */,
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
-				78F9845F20E84F770017DCCC /* Assets.xcassets */,
+				071ED4E720FDC4480039FDB2 /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				07E237B720E9DDB3000D22DE /* Algorithm.swift */,
 				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
@@ -312,10 +312,10 @@
 				78340A7F20F6994E001D0746 /* Roboto-Italic.ttf in Resources */,
 				78340A7720F6994E001D0746 /* Roboto-Medium.ttf in Resources */,
 				78340A7C20F6994E001D0746 /* Roboto-BoldItalic.ttf in Resources */,
-				78F9846020E84F770017DCCC /* Assets.xcassets in Resources */,
 				78F9845E20E84F760017DCCC /* Main.storyboard in Resources */,
 				07DD2E9120F9739100699EF2 /* pigeonhole_sort.txt in Resources */,
 				07DD2E7F20F972F400699EF2 /* block_sort.txt in Resources */,
+				071ED4E820FDC44B0039FDB2 /* Assets.xcassets in Resources */,
 				78340A7A20F6994E001D0746 /* Connoisseurs.ttf in Resources */,
 				07DD2E7920F972BB00699EF2 /* insertion_sort.txt in Resources */,
 				07794B9C20F565E2001D4B12 /* algorithmInfo.json in Resources */,
