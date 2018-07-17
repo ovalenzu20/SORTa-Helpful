@@ -31,16 +31,40 @@ import UIKit
         }
     }
     
+    @IBInspectable var shadowRadius: CGFloat = 0 {
+        didSet {
+            self.layer.shadowRadius = shadowRadius
+            self.layer.shadowOffset = CGSize(width: 1, height: 1)
+            self.layer.masksToBounds = false
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float = 0 {
+        didSet {
+            self.layer.shadowOpacity = shadowOpacity
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor = .black {
+        didSet {
+            self.layer.shadowColor = shadowColor.cgColor
+        }
+    }
+    
     func setUnselectedProperties() {
         self.currentlySelected = false
-        self.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
-        self.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        self.layer.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1215686275, blue: 0.1529411765, alpha: 1)
+        self.shadowColor = .black
+        self.shadowOpacity = 0.50
+        self.shadowRadius = 3
     }
     
     func setSelectedProperties() {
         self.currentlySelected = true
-        self.layer.backgroundColor = #colorLiteral(red: 0, green: 0.4352941176, blue: 1, alpha: 1)
-        self.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1).cgColor
+        self.layer.backgroundColor = #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1)
+        self.shadowColor = .black
+        self.shadowOpacity = 0.75
+        self.shadowRadius = 5
     }
     
     func buttonIsSelected() -> Bool {
