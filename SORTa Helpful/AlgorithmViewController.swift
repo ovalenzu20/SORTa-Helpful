@@ -12,7 +12,6 @@ import Charts
 import SpriteKit
 
 
-
 class AlgorithmViewController: UIViewController {
     
     private let algorithmFiles: [String: String] = [
@@ -31,6 +30,7 @@ class AlgorithmViewController: UIViewController {
         "Bucket Sort"     : "bucket_sort",
         "Pigeonhole Sort" : "pigeonhole_sort"
     ]
+
 
     
     private let equationDict = [
@@ -152,8 +152,6 @@ class AlgorithmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        graphViewSetup()
-        drawGraphData()
         
         if algorithm != nil {
             let algoName = algorithm?.name
