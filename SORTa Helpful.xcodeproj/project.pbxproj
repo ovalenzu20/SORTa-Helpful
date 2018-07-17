@@ -31,6 +31,9 @@
 		07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* Algorithm.swift */; };
 		07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */; };
 		437F4DDD6997F81958F92691 /* Pods_SORTa_Helpful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */; };
+		781900A520FC334900C275BF /* quizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 781900A420FC334900C275BF /* quizData.json */; };
+		781900A720FC4CE000C275BF /* flashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781900A620FC4CE000C275BF /* flashcardViewController.swift */; };
+		781900AC20FC4E4000C275BF /* SettingsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781900AB20FC4E4000C275BF /* SettingsTabViewController.swift */; };
 		78340A5F20F694CD001D0746 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A5E20F694CD001D0746 /* InfoViewController.swift */; };
 		78340A7620F6994E001D0746 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */; };
 		78340A7720F6994E001D0746 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A6B20F6994D001D0746 /* Roboto-Medium.ttf */; };
@@ -79,6 +82,9 @@
 		1AF56050F3C46720A02D58A9 /* Pods-SORTa Helpful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.debug.xcconfig"; sourceTree = "<group>"; };
 		44FFDBD99D5B968B369C1992 /* Pods-SORTa Helpful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.release.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.release.xcconfig"; sourceTree = "<group>"; };
 		71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SORTa_Helpful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		781900A420FC334900C275BF /* quizData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quizData.json; sourceTree = "<group>"; };
+		781900A620FC4CE000C275BF /* flashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardViewController.swift; sourceTree = "<group>"; };
+		781900AB20FC4E4000C275BF /* SettingsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTabViewController.swift; path = "SORTa Helpful/Settings Tab Source Files/SettingsTabViewController.swift"; sourceTree = SOURCE_ROOT; };
 		78340A5E20F694CD001D0746 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		78340A6B20F6994D001D0746 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -132,8 +138,25 @@
 				07DD2E8C20F9736B00699EF2 /* spread_sort.txt */,
 				07DD2E8E20F9737E00699EF2 /* bucket_sort.txt */,
 				07DD2E9020F9739100699EF2 /* pigeonhole_sort.txt */,
+				781900A420FC334900C275BF /* quizData.json */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		781900A820FC4CEB00C275BF /* Practice Tab Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				781900A620FC4CE000C275BF /* flashcardViewController.swift */,
+			);
+			path = "Practice Tab Source Files";
+			sourceTree = "<group>";
+		};
+		781900AD20FC4E4A00C275BF /* Settings Tab Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				781900AB20FC4E4000C275BF /* SettingsTabViewController.swift */,
+			);
+			path = "Settings Tab Source Files";
 			sourceTree = "<group>";
 		};
 		78340A8220F6995F001D0746 /* Fonts */ = {
@@ -205,8 +228,10 @@
 				78F9845F20E84F770017DCCC /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				07E237B720E9DDB3000D22DE /* Algorithm.swift */,
-				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
 				0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */,
+				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
+				781900AD20FC4E4A00C275BF /* Settings Tab Source Files */,
+				781900A820FC4CEB00C275BF /* Practice Tab Source Files */,
 				78340A8620F6ABEB001D0746 /* Info Tab Source Files */,
 				78340A8520F6ABC9001D0746 /* Search Tab Source Files */,
 				07794B9A20F565CC001D4B12 /* SupportingFiles */,
@@ -303,6 +328,7 @@
 				78340A7E20F6994E001D0746 /* Roboto-MediumItalic.ttf in Resources */,
 				07DD2E7720F972A400699EF2 /* selection_sort.txt in Resources */,
 				78340A7D20F6994E001D0746 /* Roboto-LightItalic.ttf in Resources */,
+				781900A520FC334900C275BF /* quizData.json in Resources */,
 				07DD2E8520F9732200699EF2 /* quick_sort.txt in Resources */,
 				78340A8120F6994E001D0746 /* Roboto-Bold.ttf in Resources */,
 				78340A8020F6994E001D0746 /* Roboto-BlackItalic.ttf in Resources */,
@@ -376,8 +402,10 @@
 				07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */,
 				0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */,
 				07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */,
+				781900AC20FC4E4000C275BF /* SettingsTabViewController.swift in Sources */,
 				78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */,
 				07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */,
+				781900A720FC4CE000C275BF /* flashcardViewController.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				78340A8A20F6C0A9001D0746 /* ScrollViewController.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
