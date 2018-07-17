@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TnA-dR-BM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-752.17391304347836" y="372.554347826087"/>
+            <point key="canvasLocation" x="-429" y="358"/>
         </scene>
         <!--Flashcard View Controller-->
         <scene sceneID="S8f-Nf-Wfd">
