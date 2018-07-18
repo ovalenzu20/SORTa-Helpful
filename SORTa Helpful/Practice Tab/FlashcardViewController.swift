@@ -12,7 +12,9 @@ class FlashcardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Connoisseurs", size: 70)!]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         // Do any additional setup after loading the view.
     }
 
