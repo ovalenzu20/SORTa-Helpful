@@ -442,11 +442,11 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-ul-rq2">
-                                                            <rect key="frame" x="10.000000000000007" y="10" width="110.66666666666669" height="21"/>
+                                                            <rect key="frame" x="9.9999999999999929" y="10" width="109.33333333333331" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="UWu-fG-5l4"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1270,6 +1270,7 @@
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="aboutAlgorithmSectionLabel" destination="Dld-R0-kAn" id="AdJ-XP-7Lj"/>
+                        <outlet property="algorithmAnimationView" destination="TZ5-RM-xIC" id="ofH-3f-Kdh"/>
                         <outlet property="algorithmGraphView" destination="hrl-uc-NsU" id="ljR-pd-oUC"/>
                         <outlet property="algorithmScrollView" destination="A0T-Zu-vGW" id="SbG-nr-XD4"/>
                         <outlet property="averageCaseLabel" destination="t7G-TN-UDN" id="MPE-xD-Gq5"/>

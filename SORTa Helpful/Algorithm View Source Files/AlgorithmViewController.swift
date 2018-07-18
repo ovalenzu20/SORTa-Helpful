@@ -62,6 +62,7 @@ class AlgorithmViewController: UIViewController {
     
     var algorithm: Algorithm?
     
+    @IBOutlet weak var algorithmAnimationView: SKView!
     
     @IBOutlet weak var typeLabel:        UILabel!
     @IBOutlet weak var bestCaseLabel:    UILabel!
