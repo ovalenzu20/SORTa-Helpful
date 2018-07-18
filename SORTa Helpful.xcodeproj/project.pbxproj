@@ -50,6 +50,7 @@
 		78340A8A20F6C0A9001D0746 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A8920F6C0A9001D0746 /* ScrollViewController.swift */; };
 		78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */; };
 		7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245020FED84900D4213B /* PracticeNavigationController.swift */; };
+		7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */; };
 		78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6814820FE90B300075C50 /* QuizViewController.swift */; };
 		78F6B78A20FEB585001FA42F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B78920FEB585001FA42F /* PracticeViewController.swift */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
@@ -103,6 +104,7 @@
 		78340A8920F6C0A9001D0746 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTableCell.swift; sourceTree = "<group>"; };
 		7846245020FED84900D4213B /* PracticeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNavigationController.swift; sourceTree = "<group>"; };
+		7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashcardChosenViewController.swift; path = "SORTa Helpful/Practice Tab/FlashcardChosenViewController.swift"; sourceTree = SOURCE_ROOT; };
 		78F6814820FE90B300075C50 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		78F6B78920FEB585001FA42F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 		78F6814A20FE90BB00075C50 /* Practice Tab */ = {
 			isa = PBXGroup;
 			children = (
+				7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */,
 				78F6B78920FEB585001FA42F /* PracticeViewController.swift */,
 				7846245020FED84900D4213B /* PracticeNavigationController.swift */,
 				071ED4EF20FDC7210039FDB2 /* FlashcardViewController.swift */,
@@ -415,6 +418,7 @@
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				78340A8A20F6C0A9001D0746 /* ScrollViewController.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
+				7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */,
 				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,
 				7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */,
 				07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */,
