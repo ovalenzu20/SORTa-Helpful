@@ -80,6 +80,16 @@ class AlgorithmViewController: UIViewController {
     let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
     let lineGraphViewArray = [LineChartView(), LineChartView(), LineChartView()]
     
+    var algorithmAnimationScene: AlgorithmAnimationScene!
+    var sortingAlgorithm: SortingAlgorithm!
+    
+    
+    
+    func setupAlgorithmAnimationView() {
+        
+    }
+    
+    
     
     func graphViewSetup() {
         var offset = 0
@@ -149,6 +159,11 @@ class AlgorithmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let testArray = [Element(value: 4, isBeingSorted: false), Element(value: 1, isBeingSorted: false), Element(value: 3, isBeingSorted: false), Element(value: 5, isBeingSorted: false), Element(value: 2, isBeingSorted: false)]
+//
+//        sortingAlgorithm = SortingAlgorithm(elements: testArray)
+//        sortingAlgorithm.BubbleSort()
+        
         graphViewSetup()
         
         let caseArray = [algorithm!.bestCase, algorithm!.averageCase, algorithm!.worstCase]
