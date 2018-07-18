@@ -49,6 +49,7 @@
 		78340A8120F6994E001D0746 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A7520F6994E001D0746 /* Roboto-Bold.ttf */; };
 		78340A8A20F6C0A9001D0746 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A8920F6C0A9001D0746 /* ScrollViewController.swift */; };
 		78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */; };
+		783B23B820FEE51300490CFF /* allQuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 783B23B720FEE51300490CFF /* allQuizQuestions.json */; };
 		7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245020FED84900D4213B /* PracticeNavigationController.swift */; };
 		7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */; };
 		78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6814820FE90B300075C50 /* QuizViewController.swift */; };
@@ -103,6 +104,7 @@
 		78340A7520F6994E001D0746 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		78340A8920F6C0A9001D0746 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTableCell.swift; sourceTree = "<group>"; };
+		783B23B720FEE51300490CFF /* allQuizQuestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = allQuizQuestions.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		7846245020FED84900D4213B /* PracticeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNavigationController.swift; sourceTree = "<group>"; };
 		7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashcardChosenViewController.swift; path = "SORTa Helpful/Practice Tab/FlashcardChosenViewController.swift"; sourceTree = SOURCE_ROOT; };
 		78F6814820FE90B300075C50 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				07DD2E8C20F9736B00699EF2 /* spread_sort.txt */,
 				07DD2E8E20F9737E00699EF2 /* bucket_sort.txt */,
 				07DD2E9020F9739100699EF2 /* pigeonhole_sort.txt */,
+				783B23B720FEE51300490CFF /* allQuizQuestions.json */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783B23B820FEE51300490CFF /* allQuizQuestions.json in Resources */,
 				07DD2E7B20F972D100699EF2 /* heap_sort.txt in Resources */,
 				78340A7820F6994E001D0746 /* Roboto-Thin.ttf in Resources */,
 				78340A7620F6994E001D0746 /* Roboto-Regular.ttf in Resources */,

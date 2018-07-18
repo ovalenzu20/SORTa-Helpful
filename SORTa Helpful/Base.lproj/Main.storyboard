@@ -93,8 +93,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE A CATEGORY:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-cc-qH0">
-                                <rect key="frame" x="26" y="116" width="195" height="22.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE A CATEGORY TO PRACTICE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-cc-qH0">
+                                <rect key="frame" x="26" y="116" width="316" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22.333333333333343" id="G7j-pp-keb"/>
                                 </constraints>
@@ -289,7 +289,7 @@
                                 <rect key="frame" x="-20" y="20" width="240" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="4Fa-9y-xzV"/>
-                                    <constraint firstAttribute="width" constant="240" id="Vo8-5q-bnm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Vo8-5q-bnm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="82"/>
                                 <color key="textColor" red="0.97450533419999996" green="1" blue="0.9581733791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -306,6 +306,8 @@
                             <constraint firstItem="0r4-rd-tcN" firstAttribute="leading" secondItem="0c7-CD-6H7" secondAttribute="leading" constant="-20" id="dx9-Gi-5aO"/>
                             <constraint firstItem="tw4-cc-qH0" firstAttribute="top" secondItem="0r4-rd-tcN" secondAttribute="bottom" constant="16" id="l5J-L2-uSa"/>
                             <constraint firstItem="0r4-rd-tcN" firstAttribute="top" secondItem="0c7-CD-6H7" secondAttribute="top" id="laE-Aa-SWd"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tw4-cc-qH0" secondAttribute="trailing" constant="20" symbolic="YES" id="nBk-mu-Pk9"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0r4-rd-tcN" secondAttribute="trailing" constant="20" symbolic="YES" id="rTv-Um-Dgb"/>
                             <constraint firstItem="tw4-cc-qH0" firstAttribute="leading" secondItem="0c7-CD-6H7" secondAttribute="leading" constant="26" id="s85-bC-s5D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0c7-CD-6H7"/>
@@ -313,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXX-Qi-Qvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.217391304347828" y="1377.717391304348"/>
+            <point key="canvasLocation" x="-524" y="1610"/>
         </scene>
         <!--Flashcard Chosen View Controller-->
         <scene sceneID="exl-9P-kto">
@@ -322,20 +324,13 @@
                     <view key="view" contentMode="scaleToFill" id="q2V-BK-IvY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ejy-QK-7Yo">
-                                <rect key="frame" x="0.0" y="129" width="414" height="607"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NsH-lJ-hX6"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYT-GP-hIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.69565217391312" y="1377.717391304348"/>
+            <point key="canvasLocation" x="155" y="1356"/>
         </scene>
         <!--Info-->
         <scene sceneID="L6D-8F-7HO">
@@ -518,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="2135"/>
+            <point key="canvasLocation" x="155" y="2254"/>
         </scene>
         <!--Home-->
         <scene sceneID="A7b-hY-kEV">
@@ -1492,7 +1487,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAA-iH-mbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1836" y="-11"/>
+            <point key="canvasLocation" x="-1502" y="65"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="uXd-Wg-wPp">
@@ -1502,18 +1497,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizWord" translatesAutoresizingMaskIntoConstraints="NO" id="tKx-ye-y7b">
-                                <rect key="frame" x="41" y="41" width="83" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-gr-S92">
+                                <rect key="frame" x="20" y="20" width="100" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="B6a-fp-mTV"/>
+                                    <constraint firstAttribute="width" constant="100" id="MxF-2F-EXd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE A TEST:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNv-z7-cbo">
+                                <rect key="frame" x="34" y="158" width="152.66666666666666" height="23.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="7f5-pt-bfp">
+                                <rect key="frame" x="66" y="238.66666666666663" width="283" height="324"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYz-Py-B9S">
+                                        <rect key="frame" x="35" y="0.0" width="213" height="36"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="IDENTIFY ALGORITHMS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDQ-2E-k3D">
+                                        <rect key="frame" x="28" y="72.000000000000028" width="227" height="36"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="IDENTIFY COMPLEXITIES">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-hD-EjV">
+                                        <rect key="frame" x="67" y="144.00000000000003" width="149" height="36"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="IDENTIFY TYPES">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYF-np-o3d">
+                                        <rect key="frame" x="38.666666666666686" y="216.00000000000003" width="206" height="36"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="SITUATION MATCHING">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-qE-fje">
+                                        <rect key="frame" x="93.666666666666657" y="288" width="96" height="36"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="UNIT TEST">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SNv-z7-cbo" firstAttribute="top" secondItem="8c3-gr-S92" secondAttribute="bottom" constant="28" id="2Kz-QW-Oiw"/>
+                            <constraint firstItem="7f5-pt-bfp" firstAttribute="top" secondItem="SNv-z7-cbo" secondAttribute="bottom" constant="57" id="8F5-Ni-mGw"/>
+                            <constraint firstItem="8c3-gr-S92" firstAttribute="leading" secondItem="GuN-ht-HxV" secondAttribute="leading" constant="20" id="CIz-b7-z1f"/>
+                            <constraint firstItem="GuN-ht-HxV" firstAttribute="trailing" secondItem="7f5-pt-bfp" secondAttribute="trailing" constant="65" id="DBY-YJ-yEu"/>
+                            <constraint firstItem="7f5-pt-bfp" firstAttribute="leading" secondItem="GuN-ht-HxV" secondAttribute="leading" constant="65.666666666666686" id="DJT-ar-3qq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SNv-z7-cbo" secondAttribute="trailing" constant="20" symbolic="YES" id="JXc-Z6-tSB"/>
+                            <constraint firstItem="8c3-gr-S92" firstAttribute="top" secondItem="glB-LT-7xB" secondAttribute="top" constant="20" id="cpb-9i-ybN"/>
+                            <constraint firstItem="7f5-pt-bfp" firstAttribute="centerX" secondItem="glB-LT-7xB" secondAttribute="centerX" id="mxo-FY-HH8"/>
+                            <constraint firstItem="SNv-z7-cbo" firstAttribute="leading" secondItem="GuN-ht-HxV" secondAttribute="leading" constant="34" id="osJ-tD-nUC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GuN-ht-HxV"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1f-EK-QIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1791" y="1480"/>
+            <point key="canvasLocation" x="-1371" y="1610"/>
         </scene>
         <!--Practice View Controller-->
         <scene sceneID="Mqc-pd-CAj">
@@ -1613,7 +1671,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qh-St-Q7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1836.2318840579712" y="747.554347826087"/>
+            <point key="canvasLocation" x="-2005" y="851"/>
         </scene>
     </scenes>
     <resources>
