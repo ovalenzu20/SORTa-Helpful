@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -93,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE A CATEGORY:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-cc-qH0">
-                                <rect key="frame" x="26" y="186" width="195" height="22.333333333333343"/>
+                                <rect key="frame" x="26" y="116" width="195" height="22.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22.333333333333343" id="G7j-pp-keb"/>
                                 </constraints>
@@ -102,10 +103,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-20-YCp">
-                                <rect key="frame" x="80" y="249" width="254" height="398"/>
+                                <rect key="frame" x="80" y="179" width="254" height="468"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-UM-lxq" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="o4q-Kf-rtQ"/>
                                         </constraints>
@@ -133,7 +134,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-e1-TEF" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="58" width="254" height="50"/>
+                                        <rect key="frame" x="0.0" y="68" width="254" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="hXk-qg-Umz"/>
                                         </constraints>
@@ -161,7 +162,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-zV-UWB" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116" width="254" height="50"/>
+                                        <rect key="frame" x="0.0" y="136" width="254" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oW6-N4-5t0"/>
                                         </constraints>
@@ -189,7 +190,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-tD-O6q" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="174" width="254" height="50"/>
+                                        <rect key="frame" x="0.0" y="204" width="254" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="qjb-xd-91V"/>
                                         </constraints>
@@ -217,7 +218,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-D1-Aop" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="232" width="254" height="50"/>
+                                        <rect key="frame" x="0.0" y="272" width="254" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="2UZ-4b-936"/>
                                         </constraints>
@@ -245,7 +246,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-4u-Udn" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="290" width="254" height="50"/>
+                                        <rect key="frame" x="0.0" y="340" width="254" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="vNt-6T-F8Z"/>
                                         </constraints>
@@ -273,7 +274,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-dl-nBg" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="348" width="254" height="50"/>
+                                        <rect key="frame" x="0.0" y="408" width="254" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ofc-aQ-z5s"/>
                                         </constraints>
@@ -306,9 +307,9 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flashcards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0r4-rd-tcN">
-                                <rect key="frame" x="-20" y="64" width="240" height="106"/>
+                                <rect key="frame" x="-20" y="20" width="240" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="4Fa-9y-xzV"/>
+                                    <constraint firstAttribute="height" constant="80" id="4Fa-9y-xzV"/>
                                     <constraint firstAttribute="width" constant="240" id="Vo8-5q-bnm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="82"/>
@@ -344,10 +345,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gw6-yn-V0J">
-                                <rect key="frame" x="0.0" y="182" width="414" height="505"/>
+                                <rect key="frame" x="0.0" y="136" width="414" height="551"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="slK-Ed-6qV">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="485"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="531"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="algorithmCell" rowHeight="210" id="1My-dx-MMY" customClass="AlgorithmTableCell" customModule="SORTa_Helpful" customModuleProvider="target">
@@ -487,8 +488,9 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cheat sheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTu-vL-SZS">
-                                <rect key="frame" x="-20" y="64" width="240" height="82"/>
+                                <rect key="frame" x="-20" y="20" width="240" height="80"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="BKD-3v-wdO"/>
                                     <constraint firstAttribute="width" constant="240" id="h4p-J8-hTE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="82"/>
@@ -508,8 +510,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gpV-xr-dwH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" image="stats icon 29x29" id="bRM-fe-9oE"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="stats icon 29x29" badgeValue=" " id="bRM-fe-9oE"/>
                     <connections>
                         <outlet property="algorithmTableView" destination="slK-Ed-6qV" id="349-Zi-A9q"/>
                     </connections>
@@ -1559,6 +1560,7 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4o-Av-kbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1592,7 +1594,7 @@
         <!--Practice-->
         <scene sceneID="IBQ-gJ-eCd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rfn-Y9-RCI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rfn-Y9-RCI" customClass="PracticeNavigationController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Practice" image="Practice-Outline" selectedImage="Practice-Filled" id="Jlw-o5-5zI"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
