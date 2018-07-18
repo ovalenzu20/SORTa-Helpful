@@ -8,9 +8,10 @@
 
 import UIKit
 
-class QuizTableViewCell: UITableViewCell {
+@IBDesignable class QuizTableViewCell: UITableViewCell {
 
     @IBOutlet weak var question: UILabel!
+    
     @IBOutlet var possibleAnswers: [UILabel]!
     
     override func awakeFromNib() {
@@ -24,5 +25,13 @@ class QuizTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func setTableLabels(inputQuestion: String, inputPossibleAnswers: [String])
+    {
+        question.text! = inputQuestion
+        for ans in stride(from: 0, to: inputPossibleAnswers.count, by: 1){
+            possibleAnswers[ans].text! = inputPossibleAnswers[ans]
+            print(inputPossibleAnswers[ans])
+        }
+    }
 }
