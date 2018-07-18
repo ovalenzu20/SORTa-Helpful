@@ -92,57 +92,59 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-D1-Aop">
-                                <rect key="frame" x="62" y="465" width="290" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="TYPE" backgroundImage="outlineFlashCard"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-UM-lxq">
-                                <rect key="frame" x="62" y="190" width="290" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="BEST CASE" backgroundImage="outlineFlashCard"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-e1-TEF">
-                                <rect key="frame" x="62" y="261" width="290" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AVERAGE CASE" backgroundImage="outlineFlashCard"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-zV-UWB">
-                                <rect key="frame" x="62" y="326" width="290" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="WORST CASE" backgroundImage="outlineFlashCard"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-tD-O6q">
-                                <rect key="frame" x="62" y="397" width="290" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="MEMORY" backgroundImage="outlineFlashCard"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flashcards" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-9Y-2Fv">
-                                <rect key="frame" x="40" y="40" width="140" height="60"/>
+                                <rect key="frame" x="62" y="75" width="140" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHOOSE A CATEGORY:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-cc-qH0">
-                                <rect key="frame" x="39" y="139" width="206" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-20-YCp">
+                                <rect key="frame" x="62" y="204" width="290" height="439"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-UM-lxq">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="43"/>
+                                        <state key="normal" image="BEST CASE" backgroundImage="outlineFlashCard"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-e1-TEF">
+                                        <rect key="frame" x="0.0" y="66" width="290" height="43"/>
+                                        <state key="normal" image="AVERAGE CASE" backgroundImage="outlineFlashCard"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-zV-UWB">
+                                        <rect key="frame" x="0.0" y="132" width="290" height="43"/>
+                                        <state key="normal" image="WORST CASE" backgroundImage="outlineFlashCard"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-tD-O6q">
+                                        <rect key="frame" x="0.0" y="198" width="290" height="43"/>
+                                        <state key="normal" image="MEMORY" backgroundImage="outlineFlashCard"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-D1-Aop">
+                                        <rect key="frame" x="0.0" y="264" width="290" height="43"/>
+                                        <state key="normal" image="TYPE" backgroundImage="outlineFlashCard"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-4u-Udn">
+                                        <rect key="frame" x="0.0" y="330" width="290" height="43"/>
+                                        <state key="normal" image="RANDOM MIX" backgroundImage="outlineFlashCard"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-dl-nBg">
+                                        <rect key="frame" x="0.0" y="396" width="290" height="43"/>
+                                        <state key="normal" image="VIEW CHEAT SHEET" backgroundImage="outlineFlashCard"/>
+                                        <connections>
+                                            <segue destination="3VP-yc-dRD" kind="show" id="aJ5-N5-6pB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CHOOSE A CATEGORY:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-cc-qH0">
+                                <rect key="frame" x="62" y="157" width="206" height="23.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-dl-nBg">
-                                <rect key="frame" x="62" y="651" width="290" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="VIEW CHEAT SHEET" backgroundImage="outlineFlashCard"/>
-                                <connections>
-                                    <segue destination="3VP-yc-dRD" kind="show" id="aJ5-N5-6pB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-4u-Udn">
-                                <rect key="frame" x="62" y="534" width="290" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="RANDOM MIX" backgroundImage="outlineFlashCard"/>
-                            </button>
                         </subviews>
                         <color key="tintColor" red="0.97450533419999996" green="1" blue="0.9581733791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="qYr-20-YCp" firstAttribute="top" secondItem="tw4-cc-qH0" secondAttribute="bottom" constant="33.333333333333343" id="5Nz-uc-uDX"/>
+                            <constraint firstItem="qYr-20-YCp" firstAttribute="centerX" secondItem="Ta4-DG-Gas" secondAttribute="centerX" id="jbG-ZP-uNd"/>
+                            <constraint firstItem="0c7-CD-6H7" firstAttribute="bottom" secondItem="qYr-20-YCp" secondAttribute="bottom" constant="44" id="zWX-X9-KVn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0c7-CD-6H7"/>
                     </view>
                 </viewController>
@@ -159,16 +161,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHEAT SHEET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92W-an-iXS">
-                                <rect key="frame" x="61" y="67" width="253" height="24"/>
+                                <rect key="frame" x="61" y="111" width="253" height="24"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                 <color key="textColor" red="0.97450533419999996" green="1" blue="0.9581733791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGB-ty-91Q" customClass="ScrollViewController" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="144" width="375" height="2807"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="2763"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="slK-Ed-6qV">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2832"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2788"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="algorithmCell" rowHeight="230" id="1My-dx-MMY" customClass="AlgorithmTableCell" customModule="SORTa_Helpful" customModuleProvider="target">
@@ -1315,10 +1317,10 @@
             </objects>
             <point key="canvasLocation" x="-1836" y="-11"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="uXd-Wg-wPp">
             <objects>
-                <viewController id="SLS-ZC-twu" sceneMemberID="viewController">
+                <viewController id="SLS-ZC-twu" customClass="QuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glB-LT-7xB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1336,10 +1338,10 @@
             </objects>
             <point key="canvasLocation" x="-1791" y="1480"/>
         </scene>
-        <!--View Controller-->
+        <!--Practice View Controller-->
         <scene sceneID="Mqc-pd-CAj">
             <objects>
-                <viewController id="pzA-42-VsY" sceneMemberID="viewController">
+                <viewController id="pzA-42-VsY" customClass="PracticeViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yjm-iz-lsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1374,8 +1376,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uzj-Fo-GTB"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3h7-HD-ngu"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Ebv-4b-D5m">
+                        <barButtonItem key="backBarButtonItem" title=" " id="IJx-VG-Zug">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4o-Av-kbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
