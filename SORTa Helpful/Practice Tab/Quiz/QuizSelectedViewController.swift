@@ -13,10 +13,6 @@ import SwiftyJSON
 class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var questionTableView: UITableView!
-
-    private var question = "What is merge sort's runtime"
-    private let possible_answers = ["O(n^2)", "O(n^2)", "O(n^2)", "O(n^2)"]
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -25,7 +21,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuizTableViewCell
         
-        cell.setTableLabels(inputQuestion: question, inputPossibleAnswers: possible_answers)
+        //cell.setTableLabels(inputQuestion: question, inputPossibleAnswers: possible_answers)
         
         return cell
     }

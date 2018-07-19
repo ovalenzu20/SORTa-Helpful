@@ -6,6 +6,7 @@
 //  Copyright © 2018 OB Devs. All rights reserved.
 //
 
+
 import UIKit
 
 @IBDesignable class QuizTableViewCell: UITableViewCell {
@@ -26,6 +27,7 @@ import UIKit
         // Configure the view for the selected state
     }
     
+    //TODO: set table labels according to the quizzes obtained
     func setTableLabels(inputQuestion: String, inputPossibleAnswers: [String])
     {
         question.text! = inputQuestion
