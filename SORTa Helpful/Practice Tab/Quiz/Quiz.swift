@@ -45,6 +45,12 @@ class Quiz {
         numberOfQuestions += 1
     }
     
+    func addMultipleQuestions(questionsToAdd: [Question]){
+        for q in questionsToAdd{
+            addQuestion(question: q)
+        }
+    }
+    
     func answerQuestion(questionNumberToAnswer: Int, answer: String) throws -> Bool {
         if questionNumberToAnswer < numberOfQuestions{
             if questions[questionNumberToAnswer].correctAnswer == answer {
