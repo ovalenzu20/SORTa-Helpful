@@ -12,7 +12,6 @@ import Charts
 import SpriteKit
 
 
-
 class AlgorithmViewController: UIViewController {
     
     private let algorithmFiles: [String: String] = [
@@ -62,31 +61,54 @@ class AlgorithmViewController: UIViewController {
     
     var algorithm: Algorithm?
     
-    @IBOutlet weak var algorithmAnimationView: SKView!
-    
-    @IBOutlet weak var typeLabel:        UILabel!
-    @IBOutlet weak var bestCaseLabel:    UILabel!
-    @IBOutlet weak var averageCaseLabel: UILabel!
-    @IBOutlet weak var worstCaseLabel:   UILabel!
-    @IBOutlet weak var memoryLabel:      UILabel!
-    @IBOutlet weak var infoLabel:        UILabel!
-    @IBOutlet weak var pseudocodeLabel:  UILabel!
+ 
+    @IBOutlet weak var algorithmAnimationView:     UIView!
+    @IBOutlet weak var typeLabel:                  UILabel!
+    @IBOutlet weak var bestCaseLabel:              UILabel!
+    @IBOutlet weak var averageCaseLabel:           UILabel!
+    @IBOutlet weak var worstCaseLabel:             UILabel!
+    @IBOutlet weak var memoryLabel:                UILabel!
+    @IBOutlet weak var infoLabel:                  UILabel!
+    @IBOutlet weak var pseudocodeLabel:            UILabel!
     @IBOutlet weak var aboutAlgorithmSectionLabel: UILabel!
-    @IBOutlet weak var algorithmScrollView: UIScrollView!
+    @IBOutlet weak var algorithmScrollView:        UIScrollView!
+    @IBOutlet weak var algorithmGraphView:         UIView!
+    
+    @IBAction func playAnimationButton(_ sender: UIButton) {
+        
+    }
     
     
-    @IBOutlet weak var algorithmGraphView: UIView!
+    private let colors             = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
+    private let lineGraphViewArray = [LineChartView(), LineChartView(), LineChartView()]
     
-    let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
-    let lineGraphViewArray = [LineChartView(), LineChartView(), LineChartView()]
     
-    var algorithmAnimationScene: AlgorithmAnimationScene!
-    var sortingAlgorithm: SortingAlgorithm!
-    
+    var algorithmAnimation: AlgorithmAnimation!
+    private let animation = Animation(elements: [
+            Element(value: 4,  isBeingMoved: false),
+            Element(value: 3,  isBeingMoved: false),
+            Element(value: 5,  isBeingMoved: false),
+            Element(value: 9,  isBeingMoved: false),
+            Element(value: 1,  isBeingMoved: false),
+            Element(value: 8,  isBeingMoved: false),
+            Element(value: 2,  isBeingMoved: false),
+            Element(value: 7,  isBeingMoved: false),
+            Element(value: 10, isBeingMoved: false),
+            Element(value: 6,  isBeingMoved: false),
+        ])
     
     
     func setupAlgorithmAnimationView() {
+        let numElements = CGFloat(animation.elements.count)
         
+        let barOffset: CGFloat = numElements + 1
+        
+        algorithmAnimation = AlgorithmAnimation(
+            animation: animation,
+            animationView: algorithmAnimationView,
+            barWidth: (algorithmAnimationView.frame.width / numElements) - (barOffset))
+        
+        algorithmAnimation.setupAnimationView(startY: algorithmAnimationView.frame.height)
     }
     
     
@@ -159,11 +181,7 @@ class AlgorithmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let testArray = [Element(value: 4, isBeingSorted: false), Element(value: 1, isBeingSorted: false), Element(value: 3, isBeingSorted: false), Element(value: 5, isBeingSorted: false), Element(value: 2, isBeingSorted: false)]
-//
-//        sortingAlgorithm = SortingAlgorithm(elements: testArray)
-//        sortingAlgorithm.BubbleSort()
-        
+        setupAlgorithmAnimationView()
         graphViewSetup()
         
         let caseArray = [algorithm!.bestCase, algorithm!.averageCase, algorithm!.worstCase]

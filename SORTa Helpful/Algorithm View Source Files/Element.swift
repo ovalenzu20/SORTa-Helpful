@@ -11,5 +11,5 @@ import Foundation
 
 struct Element {
     var value: Int
-    var isBeingSorted: Bool
+    var isBeingMoved: Bool
 }

@@ -1,5 +1,5 @@
 //
-//  AlgorithmBase.swift
+//  Animation.swift
 //  SORTa Helpful
 //
 //  Created by Teran on 7/17/18.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class SortingAlgorithm {
+class Animation {
     var elements: [Element]
     
     
@@ -30,6 +30,7 @@ class SortingAlgorithm {
         repeat {
             var lastSwapIndex = 0
             print(elements)
+            
             for i in stride(from: 1, to: sortedAboveIndex, by: 1) {
                 if (elements[i - 1].value > elements[i].value) {
                     elements.swapAt(i, i - 1)
@@ -44,7 +45,14 @@ class SortingAlgorithm {
     
     
     func InsertionSort() {
-        
+        for i in 1..<elements.count {
+            var j = i
+            
+            while j > 0 && elements[j].value < elements[j - 1].value {
+                elements.swapAt(j - 1, j)
+                j -= 1
+            }
+        }
     }
     
     

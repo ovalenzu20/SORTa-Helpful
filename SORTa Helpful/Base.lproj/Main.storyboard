@@ -814,10 +814,13 @@
                                                                     <constraint firstAttribute="height" constant="24" id="hQb-RX-X4I"/>
                                                                 </constraints>
                                                                 <state key="normal" image="play-arrow"/>
+                                                                <connections>
+                                                                    <action selector="playAnimationButton:" destination="zIs-93-VYW" eventType="touchUpInside" id="Gfa-cx-SJa"/>
+                                                                </connections>
                                                             </button>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ui9-gV-c2h">
                                                                 <rect key="frame" x="46" y="0.0" width="222" height="25"/>
-                                                                <color key="minimumTrackTintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="minimumTrackTintColor" red="0.26274509800000001" green="0.43529411759999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </slider>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc5-za-hAL">
                                                                 <rect key="frame" x="290" y="0.0" width="24" height="24"/>
@@ -1223,17 +1226,18 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-vs-djg">
                                                 <rect key="frame" x="30" y="30" width="354" height="199"/>
                                                 <subviews>
-                                                    <skView contentMode="scaleToFill" allowsTransparency="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZ5-RM-xIC" userLabel="Algorithm Animation SpriteKit View">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-rr-oFz">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="199"/>
-                                                    </skView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="TZ5-RM-xIC" firstAttribute="leading" secondItem="n3v-vs-djg" secondAttribute="leading" id="HDN-2B-IGe"/>
-                                                    <constraint firstAttribute="bottom" secondItem="TZ5-RM-xIC" secondAttribute="bottom" id="cax-xH-zop"/>
-                                                    <constraint firstItem="TZ5-RM-xIC" firstAttribute="top" secondItem="n3v-vs-djg" secondAttribute="top" id="gK2-4u-tUx"/>
+                                                    <constraint firstItem="YKs-rr-oFz" firstAttribute="top" secondItem="n3v-vs-djg" secondAttribute="top" id="CZd-6O-D6X"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YKs-rr-oFz" secondAttribute="trailing" id="IhL-xr-QKd"/>
                                                     <constraint firstAttribute="width" secondItem="n3v-vs-djg" secondAttribute="height" multiplier="16:9" id="kXq-pi-hbu"/>
-                                                    <constraint firstAttribute="trailing" secondItem="TZ5-RM-xIC" secondAttribute="trailing" id="peq-Bo-9CO"/>
+                                                    <constraint firstItem="YKs-rr-oFz" firstAttribute="leading" secondItem="n3v-vs-djg" secondAttribute="leading" id="sCQ-x5-ZKr"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YKs-rr-oFz" secondAttribute="bottom" id="wvy-4H-XfX"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1283,7 +1287,7 @@
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="aboutAlgorithmSectionLabel" destination="Dld-R0-kAn" id="AdJ-XP-7Lj"/>
-                        <outlet property="algorithmAnimationView" destination="TZ5-RM-xIC" id="ofH-3f-Kdh"/>
+                        <outlet property="algorithmAnimationView" destination="YKs-rr-oFz" id="OpO-6O-APs"/>
                         <outlet property="algorithmGraphView" destination="hrl-uc-NsU" id="ljR-pd-oUC"/>
                         <outlet property="algorithmScrollView" destination="A0T-Zu-vGW" id="SbG-nr-XD4"/>
                         <outlet property="averageCaseLabel" destination="t7G-TN-UDN" id="MPE-xD-Gq5"/>
@@ -1311,7 +1315,7 @@
                                 <rect key="frame" x="15" y="193" width="384" height="350"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT ARE COMPLEXITIES?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91K-jP-pbh">
-                                        <rect key="frame" x="10" y="10" width="228" height="22"/>
+                                        <rect key="frame" x="10" y="10" width="227.66666666666666" height="21"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1340,7 +1344,7 @@
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-Yd-5wY">
-                                        <rect key="frame" x="20" y="52" width="344" height="248"/>
+                                        <rect key="frame" x="20" y="51" width="344" height="249"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7V-4Z-aBR">
                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="199.66666666666666"/>
@@ -1370,7 +1374,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theta Notation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PQ-N1-sut">
-                                                        <rect key="frame" x="8" y="79" width="107" height="19"/>
+                                                        <rect key="frame" x="8" y="79" width="106" height="19"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
