@@ -31,7 +31,6 @@ import UIKit
         question.text! = inputQuestion
         for ans in stride(from: 0, to: inputPossibleAnswers.count, by: 1){
             possibleAnswers[ans].text! = inputPossibleAnswers[ans]
-            print(inputPossibleAnswers[ans])
         }
     }
 }

@@ -23,7 +23,6 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuizTableViewCell
         
         cell.setTableLabels(inputQuestion: question, inputPossibleAnswers: possible_answers)
@@ -34,6 +33,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         //I want to read the json file and load the algorithms & questions
+        loadTestFromJSONData(jsonPath: "allQuizQuestions")
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         questionTableView.delegate = self
@@ -49,24 +49,23 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     
    
     func loadTestFromJSONData(jsonPath: String){
-        if let path = Bundle.main.path(forResource: jsonPath, ofType: "json")
-        {
+        if let path = Bundle.main.path(forResource: jsonPath, ofType: "json") {
             do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                let jsonObj = try JSON(data: data)
-                let testDictionary = jsonObj.dictionaryValue
-                
-                for (testName, testData) in testDictionary{
-                    
+                let json = try JSON(data: jsonData)
+                for elem in json{
+                    print(elem)
                 }
-                
             } catch let error {
+                // In the future add function that displays empty cells and prompts user to reload page
                 print("parse error: \(error.localizedDescription)")
             }
         } else {
-            print("Invalid Path")
+            // In the future add function that displays empty cells and prompts user to reload page
+            print("Invalid filename/path.")
         }
+       
     }
     
     

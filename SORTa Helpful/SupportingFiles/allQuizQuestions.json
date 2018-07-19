@@ -1,120 +1,117 @@
 {
-    
-    
-   
     "IDENTIFY ALGORITHMS": {
         "bubble_sort": {
-            "possibleAnswers" : ["Bubble Sort", "", "", ""]
+            "possibleAnswers" : ["Bubble Sort", "", "", ""],
             "correctAnswers"  : "Bubble Sort"
             
-        }
+        },
         
         "selection_sort": {
-            "possibleAnswers" : ["Selection Sort", "", "", ""]
+            "possibleAnswers" : ["Selection Sort", "", "", ""],
             "correctAnswers"  : "Selection Sort"
             
-        }
+        },
         
         "insertion_sort": {
-            "possibleAnswers" : ["Insertion Sort", "", "", ""]
+            "possibleAnswers" : ["Insertion Sort", "", "", ""],
             "correctAnswers"  : "Insertion Sort"
             
-        }
+        },
         
         "heap_sort": {
-            "possibleAnswers" : ["Heap Sort", " ", " ", " "]
+            "possibleAnswers" : ["Heap Sort", " ", " ", " "],
             "correctAnswers"  : "Heap Sort"
             
-        }
+        },
         
         "cocktail_sort": {
-            "possibleAnswers" : ["Cocktail Sort", " ", " ", " "]
+            "possibleAnswers" : ["Cocktail Sort", " ", " ", " "],
             "correctAnswers"  : "Cocktail Sort"
             
-        }
+        },
         
         "block_sort": {
-            "possibleAnswers" : ["Block Sort", " ", " ", " "]
+            "possibleAnswers" : ["Block Sort", " ", " ", " "],
             "correctAnswers"  : "Block Sort"
             
-        }
+        },
         
         "merge_sort": {
-            "possibleAnswers" : ["Block Sort", " ", " ", " "]
+            "possibleAnswers" : ["Block Sort", " ", " ", " "],
             "correctAnswers"  : "Block Sort"
             
-        }
+        },
         
         "quick_sort": {
-            "possibleAnswers" : ["Quick Sort", " ", " ", " "]
+            "possibleAnswers" : ["Quick Sort", " ", " ", " "],
             "correctAnswers"  : "Quick Sort"
             
-        }
+        },
         
         "cube_sort": {
-            "possibleAnswers" : ["Cube Sort", " ", " ", " "]
+            "possibleAnswers" : ["Cube Sort", " ", " ", " "],
             "correctAnswers"  : "Cube Sort"
             
-        }
+        },
         
         "counting_sort": {
-            "possibleAnswers" : ["Counting Sort", " ", " ", " "]
+            "possibleAnswers" : ["Counting Sort", " ", " ", " "],
             "correctAnswers"  : "Counting Sort"
             
-        }
+        },
         
         "radix_sort": {
-            "possibleAnswers" : ["Radix Sort", " ", " ", " "]
+            "possibleAnswers" : ["Radix Sort", " ", " ", " "],
             "correctAnswers"  : "Radix Sort"
             
-        }
+        },
         
         "spread_sort": {
-            "possibleAnswers" : ["Spread Sort", " ", " ", " "]
+            "possibleAnswers" : ["Spread Sort", " ", " ", " "],
             "correctAnswers"  : "Spread Sort"
             
-        }
+        },
         
         "bucket_sort": {
-            "possibleAnswers" : ["Bucket Sort", " ", " ", " "]
+            "possibleAnswers" : ["Bucket Sort", " ", " ", " "],
             "correctAnswers"  : "Bucket Sort"
             
-        }
+        },
         
         "pigeonhole_sort": {
-            "possibleAnswers" : ["Pigeonhole Sort", " ", " ", " "]
+            "possibleAnswers" : ["Pigeonhole Sort", " ", " ", " "],
             "correctAnswers"  : "Pigeonhole Sort"
             
-        }
-    }
+        },
+    },
     
     "IDENTIFY COMPLEXITIES": {
         "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"]
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
             "correctAnswers"  : "ans1"
             
         }
-    }
+    },
     
     "IDENTIFY TYPES": {
         "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"]
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
             "correctAnswers"  : "ans1"
             
         }
-    }
+    },
     
     "SITUATION MATCHING": {
         "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"]
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
             "correctAnswers"  : "ans1"
             
         }
-    }
+    },
     
     "MIXED TEST": {
         "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"]
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
             "correctAnswers"  : "ans1"
             
         }
