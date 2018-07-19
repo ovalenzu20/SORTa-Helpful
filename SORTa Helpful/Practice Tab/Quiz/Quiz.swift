@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameplayKit
 
 enum questionOutOfBoundsError : Error {
     case runtimeError(String)
@@ -18,12 +19,37 @@ class Question {
     var possibleAnswers: [String]
     var correctAnswer: String
     
+    var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Spread Sort", "Radix Sort", "Cube Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Block Sort", "Heap Sort", "Bucket Sort", "Counting Sort"]
+    
     init (question : String, possibleAnswers: [String], correctAnswer: String)
     {
         self.question = question
         self.possibleAnswers = possibleAnswers
         self.correctAnswer = correctAnswer
+        
+        self.possibleAnswers = randomizeAnswers(answersToRandomize: possibleAnswers, allAlgorithms: allPossibleAlgorithms)
     }
+    
+    func randomizeAnswers(answersToRandomize: [String], allAlgorithms: [String]) -> [String]
+    {
+        var randomPossibleAnswers = [String]()
+        var allAlgorithmsShuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allAlgorithms) as! [String]
+        
+        for elem in 0..<answersToRandomize.count{
+            if elem == 0 {
+                randomPossibleAnswers.append(answersToRandomize[0])
+            }
+            else if elem > 0 {
+                let lastElem = allAlgorithmsShuffled.removeLast()
+                randomPossibleAnswers.append(lastElem)
+            }
+        }
+        //shuffle final result
+        let shuffledRandomPossibleAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: randomPossibleAnswers) as! [String]
+        
+        return shuffledRandomPossibleAnswers
+    }
+    
 }
 
 class Quiz {
@@ -34,6 +60,8 @@ class Quiz {
     private var numberOfQuestionsAnswered = 0
     private var numberOfQuestionsAnsweredCorrectly = 0
     private var numberOfQuestionsAnsweredIncorrectly = 0
+    
+    
     
     init (quizName: String)
     {
@@ -82,7 +110,6 @@ class Quiz {
         let divisor = pow(10.0, Double(places))
         return Darwin.round(value * divisor) / divisor
     }
-    
     
 }
 

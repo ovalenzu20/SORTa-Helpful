@@ -1,20 +1,6 @@
 {
     
-    "algorithms": [
-                  "Bubble Sort",
-                  "Insertion Sort",
-                  "Selection Sort",
-                  "Spread Sort",
-                  "Radix Sort",
-                  "Cube Sort",
-                  "Pigeonhole Sort",
-                  "Merge Sort",
-                  "Quick Sort",
-                  "Cocktail Sort",
-                  "Block Sort",
-                  "Heap Sort",
-                  "Bucket Sort",
-                  "Counting Sort"]
+    
    
     "IDENTIFY ALGORITHMS": {
         "bubble_sort": {

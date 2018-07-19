@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GameplayKit
+
 import SwiftyJSON
 
 class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
@@ -46,25 +46,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         // Dispose of any resources that can be recreated.
     }
     
-    func randomizeAnswersPerQuestion(allAlgorithms: [String], possibleAns: [String]) -> [String]
-    {
-        var randomPossibleAnswers = [String]()
-        var shuffeledAlgorithms = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allAlgorithms) as! [String]
-
-        for elem in 0..<possibleAns.count{
-            if elem == 0{
-                randomPossibleAnswers.append(possibleAns[0])
-            }
-            else if elem > 0{
-                let lastElem = shuffeledAlgorithms.removeLast()
-                randomPossibleAnswers.append(lastElem)
-            }
-        }
-        
-        let shuffledRandomPossibleAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: randomPossibleAnswers) as! [String]
-        
-        return shuffledRandomPossibleAnswers
-    }
+    
    
     func loadTestFromJSONData(jsonPath: String){
         if let path = Bundle.main.path(forResource: jsonPath, ofType: "json")
