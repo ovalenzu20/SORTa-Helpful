@@ -12,25 +12,35 @@ import SwiftyJSON
 
 class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    var quizIndex : Int?
+    var quizzes : [Quiz]?
+    var currentQuiz : Quiz?
+    
+    @IBOutlet weak var quizName: UILabel!
     @IBOutlet weak var questionTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return currentQuiz!.numberOfQuestions
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuizTableViewCell
         
-        //cell.setTableLabels(inputQuestion: question, inputPossibleAnswers: possible_answers)
-        
+        cell.setQuestionButtonLabels(quiz: currentQuiz!, questionNumber: indexPath.item)
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //I want to read the json file and load the algorithms & questions
-        loadTestFromJSONData(jsonPath: "allQuizQuestions")
-        navigationController?.setNavigationBarHidden(true, animated: true)
+    
+        quizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
+        print(quizIndex!)
+        currentQuiz = quizzes?[quizIndex!]
+        
+        
+        quizName.text! = currentQuiz!.quizName  //set testName
+        
+        
         
         questionTableView.delegate = self
         questionTableView.dataSource = self
@@ -44,17 +54,20 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     
     
    
-    func loadTestFromJSONData(jsonPath: String){
+    func loadQuizFromJSONData(jsonPath: String) -> [Quiz]{
+        var allQuizzes = [Quiz]()
         if let path = Bundle.main.path(forResource: jsonPath, ofType: "json") {
             do {
                 let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let json = try JSON(data: jsonData)
                 
-                var allQuizzes = [Quiz]()
+                
                 for quizType in json{
                     let quiz = createQuizFromJson(jsonData: quizType)
                     allQuizzes.append(quiz)
                 }
+            
+                
             } catch let error {
                 // In the future add function that displays empty cells and prompts user to reload page
                 print("parse error: \(error.localizedDescription)")
@@ -63,19 +76,23 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
             // In the future add function that displays empty cells and prompts user to reload page
             print("Invalid filename/path.")
         }
-       
+        return allQuizzes
     }
     
     func createQuizFromJson(jsonData: (String, JSON)) -> Quiz{
         let currentQuiz = Quiz(quizName: jsonData.0)
         var quizQuestions = [Question]()
         
+        
         for elem in jsonData.1{
             let possibleAnsAsJsonArr = elem.1["possibleAnswers"].array!
             let possibleAnsAsStringArr = convertJsonArrayToStringArray(jsonArray: possibleAnsAsJsonArr)
             let correctAns = elem.1["correctAnswers"].string!
             
-            let currentQuestion = Question(question: jsonData.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns)
+            //TODO: get the question's name on the label
+            //elem.1 -> (STRING, JSON)
+            //elem.1.0 is what i what
+            let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns)
             quizQuestions.append(currentQuestion)
         }
         currentQuiz.addMultipleQuestions(questionsToAdd: quizQuestions)

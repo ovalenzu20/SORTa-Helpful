@@ -11,14 +11,29 @@ import UIKit
 
 @IBDesignable class QuizTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var question: UILabel!
+    var quiz : Quiz?
     
-    @IBOutlet var possibleAnswers: [UILabel]!
+    @IBOutlet weak var questionName: UILabel!
+    
+    @IBAction func answer1(_ sender: Any) {
+        
+    }
+    
+    @IBAction func answer2(_ sender: Any) {
+    }
+    
+    @IBAction func answer3(_ sender: Any) {
+    }
+    
+    @IBAction func answer4(_ sender: Any) {
+    }
+    
+    @IBOutlet var possibleAnswers: [UIButton]!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        question.text = "what is merge sort's runtime"
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,12 +42,19 @@ import UIKit
         // Configure the view for the selected state
     }
     
-    //TODO: set table labels according to the quizzes obtained
-    func setTableLabels(inputQuestion: String, inputPossibleAnswers: [String])
+   
+    
+    func setQuestionButtonLabels(quiz: Quiz, questionNumber: Int)
     {
-        question.text! = inputQuestion
-        for ans in stride(from: 0, to: inputPossibleAnswers.count, by: 1){
-            possibleAnswers[ans].text! = inputPossibleAnswers[ans]
+        var answerIndex = 0
+        questionName.text! = quiz.questions[questionNumber].question
+//        print(quiz.questions[questionNumber].question)
+//        print(questionNumber)
+        for posAnswer in quiz.questions[questionNumber].possibleAnswers{
+            possibleAnswers[answerIndex].setTitle(posAnswer, for: UIControlState.normal)
+            answerIndex += 1
         }
     }
+    
+    
 }
