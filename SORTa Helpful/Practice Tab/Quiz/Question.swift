@@ -13,10 +13,12 @@ class Question : Quiz {
     var possibleAnswers: [String]
     var correctAnswer: String
     
-    init (question: String, possibleAnswers: [String], correctAnswer: String) {
+    init (question: String, possibleAnswers: [String], correctAnswer: String, numberOfQuestions: Int, numberOfQuestionsAnswered : Int, numberOfQuestionsAnsweredCorrectly : Int) {
         self.question = question
         self.possibleAnswers = possibleAnswers
         self.correctAnswer = correctAnswer
+        
+        super.init(numberOfQuestions: numberOfQuestions, numberOfQuestionsAnswered: numberOfQuestionsAnswered, numberOfQuestionsAnsweredCorrectly: numberOfQuestionsAnsweredCorrectly)
     }
     
 }
