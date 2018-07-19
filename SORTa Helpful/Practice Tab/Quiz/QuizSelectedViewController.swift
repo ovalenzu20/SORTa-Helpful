@@ -20,19 +20,26 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var questionTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentQuiz!.numberOfQuestions
+        return currentQuiz!.numberOfQuestions //+ 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if indexPath.item > currentQuiz!.numberOfQuestions{
+//            //MAKE CALCULATE SCORE BUTTON
+//        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuizTableViewCell
         
         cell.setQuestionButtonLabels(quiz: currentQuiz!, questionNumber: indexPath.item)
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 365
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         quizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
         print(quizIndex!)
         currentQuiz = quizzes?[quizIndex!]
