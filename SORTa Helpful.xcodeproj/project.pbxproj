@@ -54,8 +54,6 @@
 		7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245020FED84900D4213B /* PracticeNavigationController.swift */; };
 		7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */; };
 		78C33AB320FFF38100EC34BB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C33AB220FFF38100EC34BB /* Quiz.swift */; };
-		78C33AB520FFF43F00EC34BB /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C33AB420FFF43F00EC34BB /* Test.swift */; };
-		78C33AB72100002500EC34BB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C33AB62100002500EC34BB /* Question.swift */; };
 		78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6814820FE90B300075C50 /* QuizViewController.swift */; };
 		78F6B78A20FEB585001FA42F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B78920FEB585001FA42F /* PracticeViewController.swift */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
@@ -113,8 +111,6 @@
 		7846245020FED84900D4213B /* PracticeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNavigationController.swift; sourceTree = "<group>"; };
 		7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashcardChosenViewController.swift; path = "SORTa Helpful/Practice Tab/Flashcard/FlashcardChosenViewController.swift"; sourceTree = SOURCE_ROOT; };
 		78C33AB220FFF38100EC34BB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
-		78C33AB420FFF43F00EC34BB /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		78C33AB62100002500EC34BB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		78F6814820FE90B300075C50 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		78F6B78920FEB585001FA42F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,9 +199,7 @@
 		783B23BB20FF0B2D00490CFF /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				78C33AB62100002500EC34BB /* Question.swift */,
 				78C33AB220FFF38100EC34BB /* Quiz.swift */,
-				78C33AB420FFF43F00EC34BB /* Test.swift */,
 				783B23B920FF054900490CFF /* QuizSelectedViewController.swift */,
 				78F6814820FE90B300075C50 /* QuizViewController.swift */,
 				783B23BD20FF0B6000490CFF /* QuizTableViewCell.swift */,
@@ -448,7 +442,6 @@
 				071ED4F020FDC7210039FDB2 /* FlashcardViewController.swift in Sources */,
 				78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */,
 				07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */,
-				78C33AB72100002500EC34BB /* Question.swift in Sources */,
 				78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
@@ -457,7 +450,6 @@
 				7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */,
 				07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */,
 				071ED4EE20FDC7150039FDB2 /* SettingsTabViewController.swift in Sources */,
-				78C33AB520FFF43F00EC34BB /* Test.swift in Sources */,
 				78340A5F20F694CD001D0746 /* InfoViewController.swift in Sources */,
 				783B23BE20FF0B6000490CFF /* QuizTableViewCell.swift in Sources */,
 				077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */,
