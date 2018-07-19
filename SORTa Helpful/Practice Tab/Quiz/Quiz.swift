@@ -55,8 +55,8 @@ class Question {
 class Quiz {
     private var questions = [Question]()
     
-    private var quizName : String
-    private var numberOfQuestions = 0
+    var quizName : String
+    var numberOfQuestions = 0
     private var numberOfQuestionsAnswered = 0
     private var numberOfQuestionsAnsweredCorrectly = 0
     private var numberOfQuestionsAnsweredIncorrectly = 0

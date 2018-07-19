@@ -52,10 +52,12 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         if let path = Bundle.main.path(forResource: jsonPath, ofType: "json") {
             do {
                 let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                
                 let json = try JSON(data: jsonData)
-                for elem in json{
-                    print(elem)
+                
+                var allQuizzes = [Quiz]()
+                for quizType in json{
+                    let quiz = createQuizFromJson(jsonData: quizType)
+                    allQuizzes.append(quiz)
                 }
             } catch let error {
                 // In the future add function that displays empty cells and prompts user to reload page
@@ -68,6 +70,28 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
        
     }
     
+    func createQuizFromJson(jsonData: (String, JSON)) -> Quiz{
+        let currentQuiz = Quiz(quizName: jsonData.0)
+        var quizQuestions = [Question]()
+        
+        for elem in jsonData.1{
+            let possibleAnsAsJsonArr = elem.1["possibleAnswers"].array!
+            let possibleAnsAsStringArr = convertJsonArrayToStringArray(jsonArray: possibleAnsAsJsonArr)
+            let correctAns = elem.1["correctAnswers"].string!
+            
+            let currentQuestion = Question(question: jsonData.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns)
+            quizQuestions.append(currentQuestion)
+        }
+        currentQuiz.addMultipleQuestions(questionsToAdd: quizQuestions)
+        
+        return currentQuiz
+    }
     
-
+    func convertJsonArrayToStringArray(jsonArray: [JSON]) -> [String]{
+        var tempStringArr = [String]()
+        for jsonElem in jsonArray{
+            tempStringArr.append(jsonElem.string!)
+        }
+        return tempStringArr
+    }
 }
