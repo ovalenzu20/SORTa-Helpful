@@ -22,7 +22,9 @@ class AlgorithmAnimationView: UIView {
         self.contentOffset = 10.0
         
         for i in 0..<data.count {
-            self.bars.append(Bar(value: data[i], offset: self.contentOffset))
+            let bar = Bar()
+            bar.value = data[i]
+            self.bars.append(bar)
         }
         
         self.barOffset = CGFloat(bars.count + 1)
@@ -32,35 +34,43 @@ class AlgorithmAnimationView: UIView {
         for i in 0..<bars.count{
             let barHeightScale = (CGFloat(bars[i].value) / numBars) * (self.frame.height - (self.contentOffset * 2))
             
-            bars[i].setPosition(x: 0.0, y: self.frame.height)
+            self.addSubview(bars[i])
+            bars[i].setText(value: bars[i].value)
+            bars[i].setPosition(position: CGPoint(x: 00.0, y: self.frame.height))
             bars[i].setSize(width: self.barWidth, height: barHeightScale)
-            bars[i].setFrame(index: i)
-            self.layer.addSublayer(bars[i].layer)
+            bars[i].setFrame(index: i, offset: self.contentOffset)
         }
     }
     
     
-//    func redrawGraph() {
-//        for i in 0..<self.bars.count {
-//            if self.bars[i].isBeingMoved {
-//                let animation = CABasicAnimation(keyPath: #keyPath(CALayer.position))
-//                self.bars[i].setColor(color: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1))
-//                self.bars[i].redraw()
-//                animation.fromValue = self.bars[i].layer.position
-//                animation.toValue   = self.bars[i].destinationPosition
-//                animation.repeatCount = 0
-//                self.bars[i].layer.add(animation, forKey: #keyPath(CALayer.position))
-//
-//            }
-//        }
-//
-//        for i in 0..<self.bars.count {
-//            if self.bars[i].isBeingMoved {
-//                self.bars[i].setColor(color: #colorLiteral(red: 0.1042397381, green: 0.3787302775, blue: 1, alpha: 1))
-//                self.bars[i].isBeingMoved = false
-//            }
-//        }
-//    }
+    func testAnimation() {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
+            self.BubbleSort()
+        })
+    }
+    
+    
+    func redrawGraph() {
+        for i in 0..<self.bars.count {
+            if self.bars[i].isBeingMoved {
+                let animation = CABasicAnimation(keyPath: #keyPath(CALayer.position))
+                self.bars[i].setColor(color: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1))
+                self.bars[i].redraw()
+                animation.fromValue = self.bars[i].layer.position
+                animation.toValue   = self.bars[i].destinationPosition
+                animation.repeatCount = 0
+                self.bars[i].layer.add(animation, forKey: #keyPath(CALayer.position))
+
+            }
+        }
+
+        for i in 0..<self.bars.count {
+            if self.bars[i].isBeingMoved {
+                self.bars[i].setColor(color: #colorLiteral(red: 0.1042397381, green: 0.3787302775, blue: 1, alpha: 1))
+                self.bars[i].isBeingMoved = false
+            }
+        }
+    }
     
     
     func BubbleSort() {
@@ -76,7 +86,7 @@ class AlgorithmAnimationView: UIView {
 //                    self.bars[i].destinationPosition     = self.bars[i - 1].layer.position
 //                    self.bars[i - 1].isBeingMoved        = true
 //                    self.bars[i - 1].destinationPosition = self.bars[i].layer.position
-//                    self.bars[i].swapCoords(bar: self.bars[i - 1])
+                    self.bars[i].swapPosition(bar: self.bars[i - 1])
                     lastSwapIndex = i
                 }
             }

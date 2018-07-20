@@ -77,6 +77,7 @@ class AlgorithmViewController: UIViewController {
     
     @IBAction func playAnimationButton(_ sender: UIButton) {
         algorithmAnimationView.BubbleSort()
+        algorithmAnimationView.testAnimation()
     }
     
     
