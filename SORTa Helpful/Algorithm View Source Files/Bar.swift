@@ -118,7 +118,6 @@ class Bar: AlgorithmSectionView {
         barLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         barLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         barLabel.translatesAutoresizingMaskIntoConstraints = false
-//        barLabel.frame = CGRect(x: 0, y: 0, width: self.layer.frame.width, height: 6)
     }
     
     

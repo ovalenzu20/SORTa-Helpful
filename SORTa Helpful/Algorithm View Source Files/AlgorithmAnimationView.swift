@@ -53,9 +53,6 @@ class AlgorithmAnimationView: UIView {
     
     func swapWithAnimation(i: Int, j: Int) {
         UIView.animate(withDuration: 1.0, delay: Double(i), options: .curveEaseOut, animations: {
-//            var bar1: bars[i]
-//            var bar2: bars[j]
-//            bar1.swapPosition(bar2)
             self.bars[i].swapPosition(bar: self.bars[j])
         })
     }
