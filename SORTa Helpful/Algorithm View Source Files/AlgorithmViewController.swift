@@ -62,7 +62,7 @@ class AlgorithmViewController: UIViewController {
     var algorithm: Algorithm?
     
  
-    @IBOutlet weak var algorithmAnimationView:     UIView!
+    @IBOutlet weak var algorithmAnimationView:     AlgorithmAnimationView!
     @IBOutlet weak var typeLabel:                  UILabel!
     @IBOutlet weak var bestCaseLabel:              UILabel!
     @IBOutlet weak var averageCaseLabel:           UILabel!
@@ -74,8 +74,9 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var algorithmScrollView:        UIScrollView!
     @IBOutlet weak var algorithmGraphView:         UIView!
     
+    
     @IBAction func playAnimationButton(_ sender: UIButton) {
-        
+        algorithmAnimationView.BubbleSort()
     }
     
     
@@ -83,32 +84,8 @@ class AlgorithmViewController: UIViewController {
     private let lineGraphViewArray = [LineChartView(), LineChartView(), LineChartView()]
     
     
-    var algorithmAnimation: AlgorithmAnimation!
-    private let animation = Animation(elements: [
-            Element(value: 4,  isBeingMoved: false),
-            Element(value: 3,  isBeingMoved: false),
-            Element(value: 5,  isBeingMoved: false),
-            Element(value: 9,  isBeingMoved: false),
-            Element(value: 1,  isBeingMoved: false),
-            Element(value: 8,  isBeingMoved: false),
-            Element(value: 2,  isBeingMoved: false),
-            Element(value: 7,  isBeingMoved: false),
-            Element(value: 10, isBeingMoved: false),
-            Element(value: 6,  isBeingMoved: false),
-        ])
-    
-    
     func setupAlgorithmAnimationView() {
-        let numElements = CGFloat(animation.elements.count)
-        
-        let barOffset: CGFloat = numElements + 1
-        
-        algorithmAnimation = AlgorithmAnimation(
-            animation: animation,
-            animationView: algorithmAnimationView,
-            barWidth: (algorithmAnimationView.frame.width / numElements) - (barOffset))
-        
-        algorithmAnimation.setupAnimationView(startY: algorithmAnimationView.frame.height)
+        algorithmAnimationView.setupAnimationView(data: [3, 1, 8, 2, 10, 4, 5, 7, 6, 9])
     }
     
     

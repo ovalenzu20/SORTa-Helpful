@@ -1226,16 +1226,24 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-vs-djg">
                                                 <rect key="frame" x="30" y="30" width="354" height="199"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-rr-oFz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="199"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[3, 1, 8, 2, 10, 4, 5, 7, 6, 9]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDS-rH-EbA">
+                                                        <rect key="frame" x="55.666666666666671" y="10" width="242.66666666666663" height="15.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-rr-oFz" customClass="AlgorithmAnimationView" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="35.333333333333329" width="354" height="163.66666666666669"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="YKs-rr-oFz" firstAttribute="top" secondItem="n3v-vs-djg" secondAttribute="top" id="CZd-6O-D6X"/>
+                                                    <constraint firstItem="CDS-rH-EbA" firstAttribute="centerX" secondItem="n3v-vs-djg" secondAttribute="centerX" id="5iE-jt-hGH"/>
                                                     <constraint firstAttribute="trailing" secondItem="YKs-rr-oFz" secondAttribute="trailing" id="IhL-xr-QKd"/>
+                                                    <constraint firstItem="YKs-rr-oFz" firstAttribute="top" secondItem="CDS-rH-EbA" secondAttribute="bottom" constant="10" id="fXS-cN-XrS"/>
                                                     <constraint firstAttribute="width" secondItem="n3v-vs-djg" secondAttribute="height" multiplier="16:9" id="kXq-pi-hbu"/>
+                                                    <constraint firstItem="CDS-rH-EbA" firstAttribute="top" secondItem="n3v-vs-djg" secondAttribute="top" constant="10" id="nMr-27-5Br"/>
                                                     <constraint firstItem="YKs-rr-oFz" firstAttribute="leading" secondItem="n3v-vs-djg" secondAttribute="leading" id="sCQ-x5-ZKr"/>
                                                     <constraint firstAttribute="bottom" secondItem="YKs-rr-oFz" secondAttribute="bottom" id="wvy-4H-XfX"/>
                                                 </constraints>
