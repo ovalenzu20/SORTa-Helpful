@@ -219,8 +219,8 @@
 		78F6814A20FE90BB00075C50 /* Practice Tab */ = {
 			isa = PBXGroup;
 			children = (
-				78F6B78920FEB585001FA42F /* PracticeViewController.swift */,
 				7846245020FED84900D4213B /* PracticeNavigationController.swift */,
+				78F6B78920FEB585001FA42F /* PracticeViewController.swift */,
 				783B23BB20FF0B2D00490CFF /* Quiz */,
 				783B23BC20FF0B3800490CFF /* Flashcard */,
 			);

@@ -20,6 +20,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var questionTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return currentQuiz!.numberOfQuestions //+ 1
     }
     
@@ -30,6 +31,24 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuizTableViewCell
         
         cell.setQuestionButtonLabels(quiz: currentQuiz!, questionNumber: indexPath.item)
+//
+//        let calculateScoreButton = UIButton()
+//
+//        cell.contentView.addSubview(calculateScoreButton)
+//        calculateScoreButton.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor).isActive = true
+//        calculateScoreButton.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
+//        calculateScoreButton.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: 10).isActive = true
+//        calculateScoreButton.topAnchor.constraint(equalTo: cell.answersStackView.bottomAnchor, constant: 20).isActive = true
+//
+//        cell.answersStackView.bottomAnchor.constraint(equalTo: calculateScoreButton.topAnchor, constant: 20).isActive = true
+//
+//        calculateScoreButton.titleLabel?.text = "CALCULATE SCORE"
+//        calculateScoreButton.titleLabel?.font = UIFont(name: "Roboto", size: 20)
+//        calculateScoreButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+//        calculateScoreButton.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+//        calculateScoreButton.widthAnchor.constraint(equalToConstant: 80)
+//        calculateScoreButton.heightAnchor.constraint(equalToConstant: 40.0)
+        
         return cell
     }
     
@@ -52,8 +71,15 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         questionTableView.delegate = self
         questionTableView.dataSource = self
         questionTableView.rowHeight = 200
+        
+        addCalculateScoreButton()
     }
-
+    
+    //goes into table view and adds to last cell
+    func addCalculateScoreButton(){
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

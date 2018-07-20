@@ -11,25 +11,74 @@ import UIKit
 
 @IBDesignable class QuizTableViewCell: UITableViewCell {
 
-    var quiz : Quiz?
+    var currentQuiz : Quiz?
+    var currentQuestionNumber = -1
     
     @IBOutlet weak var questionName: UILabel!
+    private var timesButtonWasClicked = 0
+    @IBOutlet var possibleAnswers: [UIButton]!
+    
+    @IBOutlet weak var answersStackView: UIStackView!
+    
+    
+    
+    func deselectAllOtherAnswers(currentAnswer: Int, answers: [UIButton]){
+        for ans in 0..<answers.count{
+            if ans != currentAnswer{
+                //if already selected, mark unselected
+                if answers[ans].isSelected == true {
+                    answers[ans].isSelected = false
+                    answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1215686275, blue: 0.1411764706, alpha: 1)
+                }
+            }
+        }
+    }
+    
+    func markCurrentAnswerAsSelected(currentAnswer: Int, answers: [UIButton]){
+        
+        if answers[currentAnswer].isSelected == false{
+            answers[currentAnswer].isSelected = true
+            answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+            print("currently marking as selected")
+        }
+    }
     
     @IBAction func answer1(_ sender: Any) {
+        let currentAnswer = 0
+        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
+        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
         
+        currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
     }
     
     @IBAction func answer2(_ sender: Any) {
+        let currentAnswer = 1
+        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
+        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
+        currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
+
     }
     
     @IBAction func answer3(_ sender: Any) {
+        let currentAnswer = 2
+        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
+        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
+        currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
+
     }
     
     @IBAction func answer4(_ sender: Any) {
+        let currentAnswer = 3
+        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
+        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
+        
+        currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
+
     }
     
-    @IBOutlet var possibleAnswers: [UIButton]!
+   
     
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,6 +109,8 @@ import UIKit
     
     func setQuestionButtonLabels(quiz: Quiz, questionNumber: Int)
     {
+        currentQuiz = quiz
+        currentQuestionNumber = questionNumber
         var answerIndex = 0
         let currentQuestion = quiz.questions[questionNumber]
         questionName.text! = currentQuestion.question

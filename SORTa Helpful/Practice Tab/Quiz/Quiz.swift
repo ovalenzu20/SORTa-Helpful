@@ -18,6 +18,7 @@ class Question {
     var question : String
     var possibleAnswers: [String]
     var correctAnswer: String
+    var inputAnswer = -1
     
     var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Spread Sort", "Radix Sort", "Cube Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Block Sort", "Heap Sort", "Bucket Sort", "Counting Sort"]
     
@@ -77,24 +78,6 @@ class Quiz {
         for q in questionsToAdd{
             addQuestion(question: q)
         }
-    }
-    
-    func answerQuestion(questionNumberToAnswer: Int, answer: String) throws -> Bool {
-        if questionNumberToAnswer < numberOfQuestions{
-            if questions[questionNumberToAnswer].correctAnswer == answer {
-                numberOfQuestionsAnswered += 1
-                numberOfQuestionsAnsweredCorrectly += 1
-                return true
-            }
-            
-            else {
-                numberOfQuestionsAnswered += 1
-                numberOfQuestionsAnsweredIncorrectly += 1
-                return false
-            }
-        }
-        //if questionNumberToAnswer > numberOfQuestions, throw exception
-        throw questionOutOfBoundsError.runtimeError("questionNumberToAnswer > numberOfQuestions")
     }
     
     //calculateScore() is called when the user clicks "Calculate Score"

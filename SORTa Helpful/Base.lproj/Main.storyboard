@@ -1608,7 +1608,7 @@
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="367" id="mgy-nG-9Qf" customClass="QuizTableViewCell" customModule="SORTa_Helpful" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="367" id="mgy-nG-9Qf" customClass="QuizTableViewCell" customModule="SORTa_Helpful" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mgy-nG-9Qf" id="6Ww-fX-f7E">
@@ -1747,6 +1747,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="answersStackView" destination="lNb-Z1-uHL" id="nEU-ER-Sh8"/>
                                             <outlet property="questionName" destination="Ft4-Nn-pE4" id="Ewc-YH-XKx"/>
                                             <outletCollection property="possibleAnswers" destination="CHn-GH-R6s" collectionClass="NSMutableArray" id="iUe-w7-OrN"/>
                                             <outletCollection property="possibleAnswers" destination="cq7-hJ-QFb" collectionClass="NSMutableArray" id="cCi-EL-W9a"/>
