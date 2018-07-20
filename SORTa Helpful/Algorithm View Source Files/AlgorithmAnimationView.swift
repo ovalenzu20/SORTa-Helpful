@@ -16,6 +16,7 @@ class AlgorithmAnimationView: UIView {
     private var contentOffset  : CGFloat = 0.0
     private var barOffset      : CGFloat = 0.0
     private var barWidth       : CGFloat = 0.0
+    private var animator       : UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 4.0, curve: .easeInOut)
     
     
     func setupAnimationView(data: [Int]) {
@@ -50,30 +51,58 @@ class AlgorithmAnimationView: UIView {
     }
     
     
-    func redrawGraph() {
-        for i in 0..<self.bars.count {
-            if self.bars[i].isBeingMoved {
-                let animation = CABasicAnimation(keyPath: #keyPath(CALayer.position))
-                self.bars[i].setColor(color: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1))
-                self.bars[i].redraw()
-                animation.fromValue = self.bars[i].layer.position
-                animation.toValue   = self.bars[i].destinationPosition
-                animation.repeatCount = 0
-                self.bars[i].layer.add(animation, forKey: #keyPath(CALayer.position))
-
-            }
-        }
-
-        for i in 0..<self.bars.count {
-            if self.bars[i].isBeingMoved {
-                self.bars[i].setColor(color: #colorLiteral(red: 0.1042397381, green: 0.3787302775, blue: 1, alpha: 1))
-                self.bars[i].isBeingMoved = false
-            }
-        }
+    func swapWithAnimation(i: Int, j: Int) {
+        UIView.animate(withDuration: 1.0, delay: Double(i), options: .curveEaseOut, animations: {
+//            var bar1: bars[i]
+//            var bar2: bars[j]
+//            bar1.swapPosition(bar2)
+            self.bars[i].swapPosition(bar: self.bars[j])
+        })
     }
     
     
     func BubbleSort() {
+//        self.animator = {
+//
+//            let animator = UIViewPropertyAnimator(duration: 1.5, curve: .easeInOut)
+//
+//            animator.addAnimations {
+//
+//                UIView.animateKeyframes(withDuration: 2, delay: 0, options: [.calculationModeLinear], animations: {
+//
+//                    // Step 1: make the capsule grow to large size
+//                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.1) {
+//                        capsule.bounds = capsuleFrameWide
+//                    }
+//
+//                    // enumerate over dots so they are slightly staggered
+//                    for i in 0..<self.bars.count {
+//                        let offsetDelay = TimeInterval(index) * 0.025
+//
+//                        // Step 2: move the dots to their default positions, and fade in
+//                        UIView.addKeyframe(withRelativeStartTime: 0.05 + offsetDelay, relativeDuration: 0.2) {
+//                            dot.transform = .identity
+//                            dot.alpha = 1.0
+//                        }
+//
+//                        // Step 3: fade out dots and translate to the right
+//                        UIView.addKeyframe(withRelativeStartTime: 0.8 + offsetDelay, relativeDuration: 0.2) {
+//
+//                            //dot.alpha = 0.0
+//                            dot.transform = offstageRight
+//                        }
+//                    }
+//
+//                    // Step 4: make capsure move to narrow width
+//                    UIView.addKeyframe(withRelativeStartTime: 0.875, relativeDuration: 0.1) {
+//                        capsule.bounds = capsuleFrameNarrow
+//                    }
+//                })
+//            }
+//
+//            return animator
+//        }
+        
         var sortedAboveIndex = self.bars.count
         
         repeat {
@@ -82,11 +111,12 @@ class AlgorithmAnimationView: UIView {
             for i in stride(from: 1, to: sortedAboveIndex, by: 1) {
                 if (bars[i - 1].value > bars[i].value) {
                     self.bars.swapAt(i, i - 1)
+                    self.swapWithAnimation(i: i, j: i - 1)
 //                    self.bars[i].isBeingMoved            = true
 //                    self.bars[i].destinationPosition     = self.bars[i - 1].layer.position
 //                    self.bars[i - 1].isBeingMoved        = true
 //                    self.bars[i - 1].destinationPosition = self.bars[i].layer.position
-                    self.bars[i].swapPosition(bar: self.bars[i - 1])
+//                    self.bars[i].swapPosition(bar: self.bars[i - 1])
                     lastSwapIndex = i
                 }
             }
