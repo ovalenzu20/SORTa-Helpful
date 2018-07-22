@@ -1597,10 +1597,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of quiz goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-ga-deF">
+                                <rect key="frame" x="77.666666666666686" y="40" width="259" height="23.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-hc-JPI">
-                                <rect key="frame" x="0.0" y="109.66666666666669" width="414" height="626.33333333333326"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="626.33333333333337"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ytC-Jm-Yd9">
+                                    <rect key="frame" x="0.0" y="473" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UE8-W0-MZB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                            <state key="normal" title="DONE WITH TEST">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.2627450980392157" green="0.43529411764705883" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="UE8-W0-MZB" secondAttribute="bottom" id="9J7-G9-Ou4"/>
+                                        <constraint firstItem="UE8-W0-MZB" firstAttribute="leading" secondItem="ytC-Jm-Yd9" secondAttribute="leading" id="IPT-h3-Sgg"/>
+                                        <constraint firstAttribute="trailing" secondItem="UE8-W0-MZB" secondAttribute="trailing" id="WKu-YQ-ebt"/>
+                                        <constraint firstItem="UE8-W0-MZB" firstAttribute="top" secondItem="ytC-Jm-Yd9" secondAttribute="top" id="gYf-cZ-CfI"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="445" id="mgy-nG-9Qf" customClass="QuizTableViewCell" customModule="SORTa_Helpful" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="445"/>
@@ -1802,22 +1828,16 @@
                                     <outlet property="delegate" destination="hL1-YQ-Zfk" id="Mtj-Sv-Dru"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of quiz goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-ga-deF">
-                                <rect key="frame" x="78" y="54.999999999999993" width="259" height="23.666666666666664"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OE6-s9-rWH" firstAttribute="trailing" secondItem="kgK-ga-deF" secondAttribute="trailing" constant="77" id="BrN-oo-EhH"/>
-                            <constraint firstItem="kgK-ga-deF" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" constant="78" id="Bve-UD-lq9"/>
-                            <constraint firstItem="DuB-hc-JPI" firstAttribute="top" secondItem="kgK-ga-deF" secondAttribute="bottom" constant="31" id="L7y-TI-wO9"/>
-                            <constraint firstItem="kgK-ga-deF" firstAttribute="top" secondItem="OE6-s9-rWH" secondAttribute="top" constant="35" id="LC7-J7-lhb"/>
-                            <constraint firstItem="DuB-hc-JPI" firstAttribute="trailing" secondItem="OE6-s9-rWH" secondAttribute="trailing" id="PZF-h6-KIu"/>
-                            <constraint firstItem="DuB-hc-JPI" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" id="k5w-dh-39t"/>
-                            <constraint firstAttribute="bottom" secondItem="DuB-hc-JPI" secondAttribute="bottom" id="wcy-EG-Suq"/>
+                            <constraint firstItem="OE6-s9-rWH" firstAttribute="bottom" secondItem="DuB-hc-JPI" secondAttribute="bottom" constant="0.67000000000000004" id="ji7-ZW-RTd"/>
+                            <constraint firstItem="kgK-ga-deF" firstAttribute="top" secondItem="OE6-s9-rWH" secondAttribute="top" constant="20" id="klX-sW-jnf"/>
+                            <constraint firstItem="DuB-hc-JPI" firstAttribute="trailing" secondItem="OE6-s9-rWH" secondAttribute="trailing" id="lDQ-vR-JKn"/>
+                            <constraint firstItem="DuB-hc-JPI" firstAttribute="top" secondItem="kgK-ga-deF" secondAttribute="bottom" constant="45.329999999999998" id="lfS-Iv-Y2m"/>
+                            <constraint firstItem="OE6-s9-rWH" firstAttribute="trailing" secondItem="kgK-ga-deF" secondAttribute="trailing" constant="77" id="m2o-VU-bwx"/>
+                            <constraint firstItem="kgK-ga-deF" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" constant="78" id="u2v-CM-7Hx"/>
+                            <constraint firstItem="DuB-hc-JPI" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" id="uII-OF-TCV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OE6-s9-rWH"/>
                     </view>
