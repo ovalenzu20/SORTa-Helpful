@@ -1598,25 +1598,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="110-D5-8WJ">
-                                <rect key="frame" x="20" y="61.000000000000007" width="135" height="29.333333333333336"/>
+                                <rect key="frame" x="20" y="50.000000000000007" width="135" height="29.333333333333336"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="25"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-hc-JPI">
-                                <rect key="frame" x="0.0" y="111.33333333333331" width="414" height="624.66666666666674"/>
+                                <rect key="frame" x="0.0" y="100.33333333333331" width="414" height="635.66666666666674"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="367" id="mgy-nG-9Qf" customClass="QuizTableViewCell" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="367"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="445" id="mgy-nG-9Qf" customClass="QuizTableViewCell" customModule="SORTa_Helpful" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="445"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mgy-nG-9Qf" id="6Ww-fX-f7E">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="366.66666666666669"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="444.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft4-Nn-pE4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                    <rect key="frame" x="0.0" y="10" width="414" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="Vj6-2I-0a6"/>
                                                     </constraints>
@@ -1624,130 +1624,177 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lNb-Z1-uHL">
-                                                    <rect key="frame" x="175.66666666666666" y="158" width="63" height="178"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hk4-fH-mUb">
+                                                    <rect key="frame" x="64" y="175" width="287" height="239"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-GH-R6s" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="63" height="40"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-vg-fzy" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="52.333333333333336"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-GH-R6s" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="52.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <state key="normal" title="Answer 1">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="answer1:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="1bS-dl-2wP"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.16862745098039217" green="0.16470588235294117" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="GIw-dk-4EO"/>
+                                                                <constraint firstAttribute="bottom" secondItem="CHn-GH-R6s" secondAttribute="bottom" id="SHs-nu-wPH"/>
+                                                                <constraint firstAttribute="trailing" secondItem="CHn-GH-R6s" secondAttribute="trailing" id="Ure-hY-DR3"/>
+                                                                <constraint firstItem="CHn-GH-R6s" firstAttribute="leading" secondItem="hhs-vg-fzy" secondAttribute="leading" id="dhE-GZ-OSg"/>
+                                                                <constraint firstItem="CHn-GH-R6s" firstAttribute="top" secondItem="hhs-vg-fzy" secondAttribute="top" id="vOb-6M-umm"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                                            <state key="normal" title="Answer 1">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="1"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="answer1:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="1bS-dl-2wP"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq7-hJ-QFb" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="46" width="63" height="40"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="siI-Td-X5L"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                                            <state key="normal" title="Answer 2">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="0.25"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="answer2:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="Itd-92-fXV"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ro-lT-4u3" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="92" width="63" height="40"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXN-sW-zUQ" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="62.333333333333343" width="287" height="52.333333333333343"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq7-hJ-QFb" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="52.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <state key="normal" title="Answer 2">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="answer2:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="Itd-92-fXV"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.16862745098039217" green="0.16470588235294117" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="nsE-7x-Rxq"/>
+                                                                <constraint firstItem="cq7-hJ-QFb" firstAttribute="top" secondItem="AXN-sW-zUQ" secondAttribute="top" id="7yL-iC-QPk"/>
+                                                                <constraint firstAttribute="bottom" secondItem="cq7-hJ-QFb" secondAttribute="bottom" id="Bbn-Co-cd3"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cq7-hJ-QFb" secondAttribute="trailing" id="PKK-Vo-h2c"/>
+                                                                <constraint firstItem="cq7-hJ-QFb" firstAttribute="leading" secondItem="AXN-sW-zUQ" secondAttribute="leading" id="v79-de-0BA"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                                            <state key="normal" title="Answer 3">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="answer3:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="Kfk-ry-DKT"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5h-ch-A8a" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="138" width="63" height="40"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-YH-4Fh" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="124.66666666666669" width="287" height="52"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ro-lT-4u3" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="52"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <state key="normal" title="Answer 3">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="answer3:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="Kfk-ry-DKT"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.16862745098039217" green="0.16470588235294117" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="gAN-tj-iFl"/>
+                                                                <constraint firstAttribute="trailing" secondItem="6ro-lT-4u3" secondAttribute="trailing" id="CVv-ap-XSE"/>
+                                                                <constraint firstItem="6ro-lT-4u3" firstAttribute="top" secondItem="HCu-YH-4Fh" secondAttribute="top" id="Ykg-0A-5MN"/>
+                                                                <constraint firstItem="6ro-lT-4u3" firstAttribute="leading" secondItem="HCu-YH-4Fh" secondAttribute="leading" id="fTD-Nx-7tQ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="6ro-lT-4u3" secondAttribute="bottom" id="l3t-6b-cPt"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                                            <state key="normal" title="Answer 4">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="answer4:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="gEt-1O-FOT"/>
-                                                            </connections>
-                                                        </button>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKu-9V-8lJ" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="186.66666666666669" width="287" height="52.333333333333343"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5h-ch-A8a" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="52.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                    <state key="normal" title="Answer 4">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="answer4:" destination="mgy-nG-9Qf" eventType="touchUpInside" id="gEt-1O-FOT"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.16862745098039217" green="0.16470588235294117" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="B5h-ch-A8a" firstAttribute="top" secondItem="jKu-9V-8lJ" secondAttribute="top" id="6gm-Dj-XNe"/>
+                                                                <constraint firstAttribute="trailing" secondItem="B5h-ch-A8a" secondAttribute="trailing" id="RRF-6d-YB9"/>
+                                                                <constraint firstItem="B5h-ch-A8a" firstAttribute="leading" secondItem="jKu-9V-8lJ" secondAttribute="leading" id="fpD-mv-Xcp"/>
+                                                                <constraint firstAttribute="bottom" secondItem="B5h-ch-A8a" secondAttribute="bottom" id="uTn-a7-GcA"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="Hk4-fH-mUb" firstAttribute="leading" secondItem="6Ww-fX-f7E" secondAttribute="leadingMargin" constant="44" id="AXN-fX-YCf"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ft4-Nn-pE4" secondAttribute="trailing" id="Gie-K2-7G5"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="lNb-Z1-uHL" secondAttribute="bottom" constant="20" id="VA0-J6-TB9"/>
-                                                <constraint firstItem="lNb-Z1-uHL" firstAttribute="top" secondItem="Ft4-Nn-pE4" secondAttribute="bottom" constant="8" id="Zdb-NJ-7GU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hk4-fH-mUb" secondAttribute="bottom" constant="20" id="Nyx-IF-QbI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hk4-fH-mUb" secondAttribute="trailing" constant="43" id="aEX-If-g5t"/>
                                                 <constraint firstItem="Ft4-Nn-pE4" firstAttribute="leading" secondItem="6Ww-fX-f7E" secondAttribute="leading" id="j5P-it-0vE"/>
-                                                <constraint firstItem="lNb-Z1-uHL" firstAttribute="centerX" secondItem="6Ww-fX-f7E" secondAttribute="centerX" id="oYv-D5-FcE"/>
-                                                <constraint firstItem="Ft4-Nn-pE4" firstAttribute="top" secondItem="6Ww-fX-f7E" secondAttribute="top" id="pAL-MN-aAz"/>
+                                                <constraint firstItem="Ft4-Nn-pE4" firstAttribute="top" secondItem="6Ww-fX-f7E" secondAttribute="top" constant="10" id="pAL-MN-aAz"/>
+                                                <constraint firstItem="Hk4-fH-mUb" firstAttribute="top" secondItem="Ft4-Nn-pE4" secondAttribute="bottom" constant="15" id="xtp-8O-V6O"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="answersStackView" destination="lNb-Z1-uHL" id="nEU-ER-Sh8"/>
                                             <outlet property="questionName" destination="Ft4-Nn-pE4" id="Ewc-YH-XKx"/>
                                             <outletCollection property="possibleAnswers" destination="CHn-GH-R6s" collectionClass="NSMutableArray" id="iUe-w7-OrN"/>
                                             <outletCollection property="possibleAnswers" destination="cq7-hJ-QFb" collectionClass="NSMutableArray" id="cCi-EL-W9a"/>
@@ -1765,7 +1812,7 @@
                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DuB-hc-JPI" firstAttribute="trailing" secondItem="OE6-s9-rWH" secondAttribute="trailing" id="PZF-h6-KIu"/>
-                            <constraint firstItem="110-D5-8WJ" firstAttribute="top" secondItem="OE6-s9-rWH" secondAttribute="top" constant="41" id="cAR-pz-DfT"/>
+                            <constraint firstItem="110-D5-8WJ" firstAttribute="top" secondItem="OE6-s9-rWH" secondAttribute="top" constant="30" id="cAR-pz-DfT"/>
                             <constraint firstItem="DuB-hc-JPI" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" id="k5w-dh-39t"/>
                             <constraint firstItem="110-D5-8WJ" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" constant="20" id="u8I-pc-o6R"/>
                             <constraint firstAttribute="bottom" secondItem="DuB-hc-JPI" secondAttribute="bottom" id="wcy-EG-Suq"/>

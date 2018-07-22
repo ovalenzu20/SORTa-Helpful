@@ -31,10 +31,12 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuizTableViewCell
         
         cell.setQuestionButtonLabels(quiz: currentQuiz!, questionNumber: indexPath.item)
-//
-//        let calculateScoreButton = UIButton()
-//
-//        cell.contentView.addSubview(calculateScoreButton)
+
+        let calculateScoreButton = UIButton()
+        calculateScoreButton.frame = CGRect(x: self.view.frame.size.width - 60, y: 60, width: 50, height: 50)
+        calculateScoreButton.setTitle("FINISH TEST", for: .normal)
+        self.view.addSubview(calculateScoreButton)
+        
 //        calculateScoreButton.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor).isActive = true
 //        calculateScoreButton.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
 //        calculateScoreButton.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: 10).isActive = true
@@ -59,6 +61,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        questionTableView.allowsSelection = false
         quizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
         print(quizIndex!)
         currentQuiz = quizzes?[quizIndex!]

@@ -28,7 +28,9 @@ import UIKit
                 //if already selected, mark unselected
                 if answers[ans].isSelected == true {
                     answers[ans].isSelected = false
-                    answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1215686275, blue: 0.1411764706, alpha: 1)
+                    print("answer.selected = false")
+                    answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
+                    print("color is switched to black again")
                 }
             }
         }
@@ -38,7 +40,7 @@ import UIKit
         
         if answers[currentAnswer].isSelected == false{
             answers[currentAnswer].isSelected = true
-            answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+//            answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
             print("currently marking as selected")
         }
     }
