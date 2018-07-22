@@ -1592,19 +1592,13 @@
         <!--Quiz Selected View Controller-->
         <scene sceneID="9Th-ba-tLM">
             <objects>
-                <viewController storyboardIdentifier="QuizSelectedViewController" id="hL1-YQ-Zfk" customClass="QuizSelectedViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizSelectedViewController" hidesBottomBarWhenPushed="YES" id="hL1-YQ-Zfk" customClass="QuizSelectedViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FHx-wv-nZl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="110-D5-8WJ">
-                                <rect key="frame" x="20" y="50.000000000000007" width="135" height="29.333333333333336"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="25"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-hc-JPI">
-                                <rect key="frame" x="0.0" y="100.33333333333331" width="414" height="635.66666666666674"/>
+                                <rect key="frame" x="0.0" y="109.66666666666669" width="414" height="626.33333333333326"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -1808,22 +1802,28 @@
                                     <outlet property="delegate" destination="hL1-YQ-Zfk" id="Mtj-Sv-Dru"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of quiz goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-ga-deF">
+                                <rect key="frame" x="78" y="54.999999999999993" width="259" height="23.666666666666664"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OE6-s9-rWH" firstAttribute="trailing" secondItem="kgK-ga-deF" secondAttribute="trailing" constant="77" id="BrN-oo-EhH"/>
+                            <constraint firstItem="kgK-ga-deF" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" constant="78" id="Bve-UD-lq9"/>
+                            <constraint firstItem="DuB-hc-JPI" firstAttribute="top" secondItem="kgK-ga-deF" secondAttribute="bottom" constant="31" id="L7y-TI-wO9"/>
+                            <constraint firstItem="kgK-ga-deF" firstAttribute="top" secondItem="OE6-s9-rWH" secondAttribute="top" constant="35" id="LC7-J7-lhb"/>
                             <constraint firstItem="DuB-hc-JPI" firstAttribute="trailing" secondItem="OE6-s9-rWH" secondAttribute="trailing" id="PZF-h6-KIu"/>
-                            <constraint firstItem="110-D5-8WJ" firstAttribute="top" secondItem="OE6-s9-rWH" secondAttribute="top" constant="30" id="cAR-pz-DfT"/>
                             <constraint firstItem="DuB-hc-JPI" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" id="k5w-dh-39t"/>
-                            <constraint firstItem="110-D5-8WJ" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" constant="20" id="u8I-pc-o6R"/>
                             <constraint firstAttribute="bottom" secondItem="DuB-hc-JPI" secondAttribute="bottom" id="wcy-EG-Suq"/>
-                            <constraint firstItem="DuB-hc-JPI" firstAttribute="top" secondItem="110-D5-8WJ" secondAttribute="bottom" constant="21" id="ynE-uJ-Bop"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OE6-s9-rWH"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="questionTableView" destination="DuB-hc-JPI" id="gj5-vi-ZEc"/>
-                        <outlet property="quizName" destination="110-D5-8WJ" id="NBP-sw-3Xr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Dn-W4-39h" userLabel="First Responder" sceneMemberID="firstResponder"/>

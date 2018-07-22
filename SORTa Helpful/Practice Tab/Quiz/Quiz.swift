@@ -57,6 +57,7 @@ class Quiz {
     var questions = [Question]()
     
     var quizName : String
+    var quizDescription : String?
     var numberOfQuestions = 0
     var numberOfQuestionsAnswered = 0
     var numberOfQuestionsAnsweredCorrectly = 0

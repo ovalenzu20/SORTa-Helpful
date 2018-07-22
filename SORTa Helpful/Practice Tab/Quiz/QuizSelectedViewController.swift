@@ -32,10 +32,10 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         
         cell.setQuestionButtonLabels(quiz: currentQuiz!, questionNumber: indexPath.item)
 
-        let calculateScoreButton = UIButton()
-        calculateScoreButton.frame = CGRect(x: self.view.frame.size.width - 60, y: 60, width: 50, height: 50)
-        calculateScoreButton.setTitle("FINISH TEST", for: .normal)
-        self.view.addSubview(calculateScoreButton)
+//        let calculateScoreButton = UIButton()
+//        calculateScoreButton.frame = CGRect(x: self.view.frame.size.width - 60, y: 60, width: 50, height: 50)
+//        calculateScoreButton.setTitle("FINISH TEST", for: .normal)
+//        self.view.addSubview(calculateScoreButton)
         
 //        calculateScoreButton.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor).isActive = true
 //        calculateScoreButton.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor).isActive = true
@@ -61,13 +61,16 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         questionTableView.allowsSelection = false
         quizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
         print(quizIndex!)
         currentQuiz = quizzes?[quizIndex!]
         
-        
-        quizName.text! = currentQuiz!.quizName  //set testName
+        self.title = currentQuiz!.quizName  //set testName
+        self.navigationItem.setHidesBackButton(true, animated:true);
+
+//        quizName.text! = currentQuiz!.quizName  //set testName
         
         
         
@@ -75,7 +78,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         questionTableView.dataSource = self
         questionTableView.rowHeight = 200
         
-        addCalculateScoreButton()
+        //addCalculateScoreButton()
     }
     
     //goes into table view and adds to last cell
@@ -83,6 +86,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
