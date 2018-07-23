@@ -1,5 +1,7 @@
 {
     "IDENTIFY ALGORITHMS": {
+        "description" : "Correctly identify the corresponding algorithms with the given psuedocode",
+        
         "bubble_sort": {
             "possibleAnswers" : ["Bubble Sort", "", "", ""],
             "correctAnswers"  : "Bubble Sort"

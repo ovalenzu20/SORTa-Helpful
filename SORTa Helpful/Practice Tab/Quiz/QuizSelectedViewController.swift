@@ -16,7 +16,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     var quizzes : [Quiz]?
     var currentQuiz : Quiz?
     
-    @IBOutlet weak var quizName: UILabel!
+    @IBOutlet weak var quizDescription: UILabel!
     @IBOutlet weak var questionTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,9 +40,10 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         
         questionTableView.allowsSelection = false
         quizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
-        print(quizIndex!)
+        print(quizzes!.count)
         currentQuiz = quizzes?[quizIndex!]
         
+        quizDescription.text! = currentQuiz!.quizDescription!
         self.title = currentQuiz!.quizName  //set testName
         self.navigationItem.setHidesBackButton(true, animated:true);
         
@@ -90,17 +91,19 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         let currentQuiz = Quiz(quizName: jsonData.0)
         var quizQuestions = [Question]()
         
-        
-        for elem in jsonData.1{
-            let possibleAnsAsJsonArr = elem.1["possibleAnswers"].array!
-            let possibleAnsAsStringArr = convertJsonArrayToStringArray(jsonArray: possibleAnsAsJsonArr)
-            let correctAns = elem.1["correctAnswers"].string!
-            
-            //TODO: get the question's name on the label
-            //elem.1 -> (STRING, JSON)
-            //elem.1.0 is what i what
-            let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns)
-            quizQuestions.append(currentQuestion)
+         
+        for elem in jsonData.1{     //jsonData = (String, JSON), elem = (String, JSON) too ##Dictionary inside dictionary
+            if elem.0 != "description"{
+                let possibleAnsAsJsonArr = elem.1["possibleAnswers"].array!
+                let possibleAnsAsStringArr = convertJsonArrayToStringArray(jsonArray: possibleAnsAsJsonArr)
+                let correctAns = elem.1["correctAnswers"].string!
+                
+                let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns)
+                quizQuestions.append(currentQuestion)
+            }
+            else if elem.0 == "description"{
+                currentQuiz.quizDescription = elem.1.string!
+            }
         }
         currentQuiz.addMultipleQuestions(questionsToAdd: quizQuestions)
         
