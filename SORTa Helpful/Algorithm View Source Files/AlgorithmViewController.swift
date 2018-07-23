@@ -30,7 +30,7 @@ class AlgorithmViewController: UIViewController {
         "Bucket Sort"     : "bucket_sort",
         "Pigeonhole Sort" : "pigeonhole_sort"
     ]
-
+    
     
     private let equationDict = [
         1  : { (x: Double) -> Double in
@@ -75,9 +75,22 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var algorithmGraphView:         UIView!
     
     
-    @IBAction func playAnimationButton(_ sender: UIButton) {
-        algorithmAnimationView.BubbleSort()
-        algorithmAnimationView.testAnimation()
+    @IBOutlet weak var playButton: UIButton!
+    @IBAction @objc func playAnimation(_ sender: UIButton) {
+        algorithmAnimationView.animator.startAnimation()
+    }
+    
+    
+    @IBOutlet weak var animationSlider: UISlider!
+    @IBAction @objc func slideThroughAnimation(_ sender: UISlider) {
+        algorithmAnimationView.layer.speed = sender.value
+    }
+    
+    
+    @IBOutlet weak var stopButton: UIButton!
+    @IBAction @objc func stopAnimation(_ sender: UIButton) {
+//        algorithmAnimationView.animator.stopAnimation(true)
+        algorithmAnimationView.animator.fractionComplete = 0
     }
     
     
@@ -86,9 +99,16 @@ class AlgorithmViewController: UIViewController {
     
     
     func setupAlgorithmAnimationView() {
-        algorithmAnimationView.setupAnimationView(data: [3, 1, 8, 2, 10, 4, 5, 7, 6, 9])
+        algorithmAnimationView.setupAnimationView(data: [3, 1, 8, 2, 10, 4, 5, 7, 6, 9], algorithm: (algorithm?.name)!)
     }
     
+    
+    func setupAnimationButtons() {
+        playButton.setImage(#imageLiteral(resourceName: "play-arrow"), for: .normal)
+        playButton.imageEdgeInsets = UIEdgeInsetsMake(12, 15, 12, 10)
+        stopButton.setImage(#imageLiteral(resourceName: "stop-button"), for: .normal)
+        stopButton.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13)
+    }
     
     
     func graphViewSetup() {
@@ -159,7 +179,13 @@ class AlgorithmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupAlgorithmAnimationView()
+        setupAnimationButtons()
+        playButton.addTarget(self, action: #selector(playAnimation), for: UIControlEvents.touchUpInside)
+//        animationSlider.addTarget(self, action: #selector(slideThroughAnimation), for: .valueChanged)
+        stopButton.addTarget(self, action: #selector(stopAnimation), for: UIControlEvents.touchUpInside)
+        
         graphViewSetup()
         
         let caseArray = [algorithm!.bestCase, algorithm!.averageCase, algorithm!.worstCase]
@@ -173,8 +199,8 @@ class AlgorithmViewController: UIViewController {
             let algoName = algorithm?.name
             self.title = algoName!.uppercased()
             
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Roboto-Bold", size: 20)!]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            let attributes = [NSAttributedStringKey.font: UIFont(name: "Roboto-Bold", size: 24)!, NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = attributes
             
             typeLabel.text        = algorithm?.algoType
             bestCaseLabel.text    = algorithm?.bestCase.0

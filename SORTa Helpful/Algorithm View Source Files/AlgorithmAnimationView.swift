@@ -16,10 +16,10 @@ class AlgorithmAnimationView: UIView {
     private var contentOffset  : CGFloat = 0.0
     private var barOffset      : CGFloat = 0.0
     private var barWidth       : CGFloat = 0.0
-    private var animator       : UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 4.0, curve: .easeInOut)
+    public var animator        : UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 8.0, curve: .easeInOut)
     
     
-    func setupAnimationView(data: [Int]) {
+    func setupAnimationView(data: [Int], algorithm: String) {
         self.contentOffset = 10.0
         
         for i in 0..<data.count {
@@ -41,86 +41,78 @@ class AlgorithmAnimationView: UIView {
             bars[i].setSize(width: self.barWidth, height: barHeightScale)
             bars[i].setFrame(index: i, offset: self.contentOffset)
         }
+        
+        self.animator = UIViewPropertyAnimator(duration: 8.0, curve: .linear)
+        self.animator.pausesOnCompletion = true
+        self.setAnimationFor(algorithm: algorithm)
     }
     
     
-    func testAnimation() {
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
+    func setAnimationFor(algorithm: String) {
+        switch algorithm {
+        case "Bubble Sort":
             self.BubbleSort()
-        })
+//            case "Selection Sort":
+//                self.SelectionSort()
+//            case "Insertion Sort":
+//                self.InsertionSort()
+//            case "Heap Sort":
+//                self.HeapSort()
+//            case "Cocktail Sort":
+//                self.CocktailSort()
+//            case "Block Sort":
+//                self.BlockSort()
+//            case "Merge Sort":
+//                self.MergeSort()
+//            case "Quick Sort":
+//                self.QuickSort()
+//            case "Cube Sort":
+//                self.CubeSort()
+//            case "Counting Sort":
+//                self.CountingSort()
+//            case "Radix Sort":
+//                self.RaidxSort()
+//            case "Spread Sort":
+//                self.SpreadSort()
+//            case "Bucket Sort":
+//                self.BucketSort()
+//            case "Pigeonhole Sort":
+//                self.PigeonholeSort()
+        default:
+            self.BubbleSort()
+        }
     }
     
     
-    func swapWithAnimation(i: Int, j: Int) {
-        UIView.animate(withDuration: 1.0, delay: Double(i), options: .curveEaseOut, animations: {
-            self.bars[i].swapPosition(bar: self.bars[j])
-        })
+    func deselectBars() {
+        for i in 0..<self.bars.count {
+            self.bars[i].deselectBar(withColor: #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1))
+        }
     }
     
     
     func BubbleSort() {
-//        self.animator = {
-//
-//            let animator = UIViewPropertyAnimator(duration: 1.5, curve: .easeInOut)
-//
-//            animator.addAnimations {
-//
-//                UIView.animateKeyframes(withDuration: 2, delay: 0, options: [.calculationModeLinear], animations: {
-//
-//                    // Step 1: make the capsule grow to large size
-//                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.1) {
-//                        capsule.bounds = capsuleFrameWide
-//                    }
-//
-//                    // enumerate over dots so they are slightly staggered
-//                    for i in 0..<self.bars.count {
-//                        let offsetDelay = TimeInterval(index) * 0.025
-//
-//                        // Step 2: move the dots to their default positions, and fade in
-//                        UIView.addKeyframe(withRelativeStartTime: 0.05 + offsetDelay, relativeDuration: 0.2) {
-//                            dot.transform = .identity
-//                            dot.alpha = 1.0
-//                        }
-//
-//                        // Step 3: fade out dots and translate to the right
-//                        UIView.addKeyframe(withRelativeStartTime: 0.8 + offsetDelay, relativeDuration: 0.2) {
-//
-//                            //dot.alpha = 0.0
-//                            dot.transform = offstageRight
-//                        }
-//                    }
-//
-//                    // Step 4: make capsure move to narrow width
-//                    UIView.addKeyframe(withRelativeStartTime: 0.875, relativeDuration: 0.1) {
-//                        capsule.bounds = capsuleFrameNarrow
-//                    }
-//                })
-//            }
-//
-//            return animator
-//        }
-        
         var sortedAboveIndex = self.bars.count
         
         repeat {
             var lastSwapIndex = 0
             
             for i in stride(from: 1, to: sortedAboveIndex, by: 1) {
-                if (bars[i - 1].value > bars[i].value) {
+                self.deselectBars()
+                self.bars[i].selectBar(withColor: #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1))
+                if (self.bars[i - 1].value > self.bars[i].value) {
                     self.bars.swapAt(i, i - 1)
-                    self.swapWithAnimation(i: i, j: i - 1)
-//                    self.bars[i].isBeingMoved            = true
-//                    self.bars[i].destinationPosition     = self.bars[i - 1].layer.position
-//                    self.bars[i - 1].isBeingMoved        = true
-//                    self.bars[i - 1].destinationPosition = self.bars[i].layer.position
-//                    self.bars[i].swapPosition(bar: self.bars[i - 1])
+                    self.bars[i].swapPosition(bar: self.bars[i - 1])
                     lastSwapIndex = i
+                    self.bars[lastSwapIndex].selectBar(withColor: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1))
                 }
             }
             
             sortedAboveIndex = lastSwapIndex
-            
+            self.bars[sortedAboveIndex].deselectBar(withColor: #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1))
         } while (sortedAboveIndex != 0)
+        
+        self.deselectBars()
     }
     
     
@@ -130,6 +122,7 @@ class AlgorithmAnimationView: UIView {
             
             while j > 0 && bars[j].value < bars[j - 1].value {
                 self.bars.swapAt(j - 1, j)
+                self.bars[j - 1].swapPosition(bar: self.bars[j])
                 j -= 1
             }
         }
@@ -172,6 +165,11 @@ class AlgorithmAnimationView: UIView {
     
     
     func CubeSort() {
+        
+    }
+    
+    
+    func CountingSort() {
         
     }
     
