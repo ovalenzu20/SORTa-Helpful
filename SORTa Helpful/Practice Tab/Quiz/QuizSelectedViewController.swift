@@ -53,7 +53,15 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    func sendQuizInfo(quiz: Quiz){
+        let quizVC = storyboard?.instantiateViewController(withIdentifier: "DoneWithQuizViewController") as? DoneWithQuizViewController
+        quizVC?.currentQuiz = quiz
+        self.navigationController?.pushViewController(quizVC!, animated: true)
+    }
     
+    @IBAction func clickedDoneWithTest(_ sender: Any) {
+        sendQuizInfo(quiz: currentQuiz!)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

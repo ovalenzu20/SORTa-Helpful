@@ -81,10 +81,24 @@ class Quiz {
         }
     }
     
-    //calculateScore() is called when the user clicks "Calculate Score"
+    func calculateAnswerStatistics(){
+        for q in questions{
+            if q.inputAnswer != -1{
+                if q.possibleAnswers[q.inputAnswer] == q.correctAnswer{
+                    numberOfQuestionsAnsweredCorrectly += 1
+                    numberOfQuestionsAnswered += 1
+                }
+                else {
+                    numberOfQuestionsAnsweredIncorrectly += 1
+                    numberOfQuestionsAnswered += 1
+                }
+            }
+        }
+    }
+    
     func calculateScore() -> Double
     {
-        
+        self.calculateAnswerStatistics()
         let quizScore = Double(numberOfQuestionsAnsweredCorrectly) / Double(numberOfQuestionsAnswered)
         let quizScoreRounded = round(quizScore, toDecimalPlaces: 2)
         return quizScoreRounded

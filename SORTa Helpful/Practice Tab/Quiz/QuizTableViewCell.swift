@@ -45,7 +45,7 @@ import UIKit
     }
     
     func markCurrentAnswerAsSelected(currentAnswer: Int, question: Question){
-        
+        print("Marking answer \(currentAnswer) as selected in question \(question.question)")
         if possibleAnswers[currentAnswer].isSelected == false{
             possibleAnswers[currentAnswer].isSelected = true
             possibleAnswers[currentAnswer].backgroundColor = #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1)

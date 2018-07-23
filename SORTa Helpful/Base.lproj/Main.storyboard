@@ -1494,9 +1494,9 @@
         <!--Quiz View Controller-->
         <scene sceneID="uXd-Wg-wPp">
             <objects>
-                <viewController id="SLS-ZC-twu" customClass="QuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizViewController" id="SLS-ZC-twu" customClass="QuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glB-LT-7xB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-gr-S92">
@@ -1620,7 +1620,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <segue destination="Jdw-af-FQu" kind="presentation" id="Uw0-PV-P9K"/>
+                                                <action selector="clickedDoneWithTest:" destination="hL1-YQ-Zfk" eventType="touchUpInside" id="j8a-fS-oz1"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -1863,7 +1863,7 @@
         <!--Done With Quiz View Controller-->
         <scene sceneID="rQC-ds-zxc">
             <objects>
-                <viewController modalPresentationStyle="overFullScreen" id="Jdw-af-FQu" customClass="DoneWithQuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoneWithQuizViewController" modalPresentationStyle="overFullScreen" id="Jdw-af-FQu" customClass="DoneWithQuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZf-y0-6aL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1909,9 +1909,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTs-wO-DuL">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="50"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
-                                                <state key="normal" title="Return to practice">
+                                                <state key="normal" title="Return to menu">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clickedReturnToMenu:" destination="Jdw-af-FQu" eventType="touchUpInside" id="DuF-2t-ORS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.16470588235294117" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1980,6 +1983,7 @@
                     <connections>
                         <outlet property="gradeDescription" destination="a4h-eX-F1P" id="xJ1-lB-iOk"/>
                         <outlet property="letterGrade" destination="tK5-a0-Jua" id="yIC-BH-zmF"/>
+                        <segue destination="SLS-ZC-twu" kind="show" identifier="QuizViewController" id="KuB-nW-CEq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaa-xK-EC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2110,4 +2114,7 @@
         <image name="stats icon 29x29" width="29" height="29"/>
         <image name="stop-button" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KuB-nW-CEq"/>
+    </inferredMetricsTieBreakers>
 </document>

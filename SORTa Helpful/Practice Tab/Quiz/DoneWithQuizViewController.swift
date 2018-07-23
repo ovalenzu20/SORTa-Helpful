@@ -14,9 +14,13 @@ class DoneWithQuizViewController: UIViewController {
     @IBOutlet weak var gradeDescription: UILabel!
     var currentQuiz : Quiz?
     
+    @IBAction func clickedReturnToMenu(_ sender: Any) {
+        performSegue(withIdentifier: "QuizViewController", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(currentQuiz!.questions)
         setUpLabels(quiz: currentQuiz!)
         // Do any additional setup after loading the view.
     }
