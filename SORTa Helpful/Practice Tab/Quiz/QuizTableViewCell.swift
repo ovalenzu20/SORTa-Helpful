@@ -18,61 +18,119 @@ import UIKit
     private var timesButtonWasClicked = 0
     @IBOutlet var possibleAnswers: [UIButton]!
     
-    @IBOutlet weak var answersStackView: UIStackView!
-    
-    
-    
-    func deselectAllOtherAnswers(currentAnswer: Int, answers: [UIButton]){
-        for ans in 0..<answers.count{
+    func deselectAllOtherAnswers(currentAnswer: Int){
+        for ans in 0..<possibleAnswers.count{
             if ans != currentAnswer{
-                //if already selected, mark unselected
-                if answers[ans].isSelected == true {
-                    answers[ans].isSelected = false
-                    print("answer.selected = false")
-                    answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
-                    print("color is switched to black again")
-                }
+                possibleAnswers[ans].isSelected = false
+                possibleAnswers[ans].backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
             }
         }
     }
     
-    func markCurrentAnswerAsSelected(currentAnswer: Int, answers: [UIButton]){
+    func unselectCurrentAnswer(answer: Int, question: Question){
+        possibleAnswers[answer].isSelected = false
+        possibleAnswers[answer].backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
+        question.inputAnswer = -1
         
-        if answers[currentAnswer].isSelected == false{
-            answers[currentAnswer].isSelected = true
-//            answers[currentAnswer].backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-            print("currently marking as selected")
+    }
+    
+    func otherAnswerIsSelected(currentAnswer: Int, question: Question) -> Bool{
+        
+        for ans in 0..<possibleAnswers.count{
+            if ans != currentAnswer && possibleAnswers[ans].isSelected{
+                return true
+            }
+        }
+        return false
+    }
+    
+    func markCurrentAnswerAsSelected(currentAnswer: Int, question: Question){
+        
+        if possibleAnswers[currentAnswer].isSelected == false{
+            possibleAnswers[currentAnswer].isSelected = true
+            possibleAnswers[currentAnswer].backgroundColor = #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1)
+            question.inputAnswer = currentAnswer
         }
     }
     
     @IBAction func answer1(_ sender: Any) {
         let currentAnswer = 0
-        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
-        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
+        let currentQuestion = currentQuiz!.questions[currentQuestionNumber]
+        
+        if possibleAnswers[currentAnswer].isSelected {
+            unselectCurrentAnswer(answer: currentAnswer, question: currentQuestion)
+        }
+        
+        else if otherAnswerIsSelected(currentAnswer: currentAnswer, question: currentQuestion) {
+            deselectAllOtherAnswers(currentAnswer: currentAnswer)
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
+        
+        else {
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
         
         currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
     }
     
     @IBAction func answer2(_ sender: Any) {
         let currentAnswer = 1
-        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
-        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
+        let currentQuestion = currentQuiz!.questions[currentQuestionNumber]
+        
+        if possibleAnswers[currentAnswer].isSelected {
+            unselectCurrentAnswer(answer: currentAnswer, question: currentQuestion)
+        }
+            
+        else if otherAnswerIsSelected(currentAnswer: currentAnswer, question: currentQuestion) {
+            deselectAllOtherAnswers(currentAnswer: currentAnswer)
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
+            
+        else {
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
+        
         currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
 
     }
     
     @IBAction func answer3(_ sender: Any) {
         let currentAnswer = 2
-        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
-        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
+        let currentQuestion = currentQuiz!.questions[currentQuestionNumber]
+        
+        if possibleAnswers[currentAnswer].isSelected {
+            unselectCurrentAnswer(answer: currentAnswer, question: currentQuestion)
+        }
+            
+        else if otherAnswerIsSelected(currentAnswer: currentAnswer, question: currentQuestion) {
+            deselectAllOtherAnswers(currentAnswer: currentAnswer)
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
+            
+        else {
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
+        
         currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
 
     }
     
     @IBAction func answer4(_ sender: Any) {
         let currentAnswer = 3
-        deselectAllOtherAnswers(currentAnswer: currentAnswer, answers: possibleAnswers)
-        markCurrentAnswerAsSelected(currentAnswer: currentAnswer, answers: possibleAnswers)
+        let currentQuestion = currentQuiz!.questions[currentQuestionNumber]
+        
+        if possibleAnswers[currentAnswer].isSelected {
+            unselectCurrentAnswer(answer: currentAnswer, question: currentQuestion)
+        }
+            
+        else if otherAnswerIsSelected(currentAnswer: currentAnswer, question: currentQuestion) {
+            deselectAllOtherAnswers(currentAnswer: currentAnswer)
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
+            
+        else {
+            markCurrentAnswerAsSelected(currentAnswer: currentAnswer, question: currentQuestion)
+        }
         
         currentQuiz!.questions[currentQuestionNumber].inputAnswer = currentAnswer
 
