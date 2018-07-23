@@ -53,6 +53,7 @@
 		783B23BE20FF0B6000490CFF /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B23BD20FF0B6000490CFF /* QuizTableViewCell.swift */; };
 		7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245020FED84900D4213B /* PracticeNavigationController.swift */; };
 		7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */; };
+		784A3E1521055AE3004EE73D /* DoneWithQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */; };
 		78C33AB320FFF38100EC34BB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C33AB220FFF38100EC34BB /* Quiz.swift */; };
 		78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6814820FE90B300075C50 /* QuizViewController.swift */; };
 		78F6B78A20FEB585001FA42F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B78920FEB585001FA42F /* PracticeViewController.swift */; };
@@ -110,6 +111,7 @@
 		783B23BD20FF0B6000490CFF /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		7846245020FED84900D4213B /* PracticeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNavigationController.swift; sourceTree = "<group>"; };
 		7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashcardChosenViewController.swift; path = "SORTa Helpful/Practice Tab/Flashcard/FlashcardChosenViewController.swift"; sourceTree = SOURCE_ROOT; };
+		784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWithQuizViewController.swift; sourceTree = "<group>"; };
 		78C33AB220FFF38100EC34BB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		78F6814820FE90B300075C50 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		78F6B78920FEB585001FA42F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				783B23B920FF054900490CFF /* QuizSelectedViewController.swift */,
 				78F6814820FE90B300075C50 /* QuizViewController.swift */,
 				783B23BD20FF0B6000490CFF /* QuizTableViewCell.swift */,
+				784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				783B23BA20FF054900490CFF /* QuizSelectedViewController.swift in Sources */,
 				07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */,
 				78F6B78A20FEB585001FA42F /* PracticeViewController.swift in Sources */,
+				784A3E1521055AE3004EE73D /* DoneWithQuizViewController.swift in Sources */,
 				0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */,
 				07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */,
 				78C33AB320FFF38100EC34BB /* Quiz.swift in Sources */,
