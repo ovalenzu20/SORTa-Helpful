@@ -799,13 +799,13 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="1431"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F2-l4-ssG" userLabel="Embedded View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1095.3333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1094.6666666666667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7M-s4-Pdf" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="20" width="374" height="303.33333333333331"/>
+                                                <rect key="frame" x="20" y="20" width="374" height="302.66666666666669"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANIMATION SPEED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wih-lN-0rC">
-                                                        <rect key="frame" x="135" y="279" width="104" height="14.333333333333314"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIZE OF DATASET:    50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wih-lN-0rC">
+                                                        <rect key="frame" x="125" y="279" width="124.33333333333331" height="14.333333333333314"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -839,10 +839,12 @@
                                                                     <action selector="playAnimation:" destination="zIs-93-VYW" eventType="touchUpInside" id="X2e-jg-9In"/>
                                                                 </connections>
                                                             </button>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.5" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ui9-gV-c2h">
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ui9-gV-c2h">
                                                                 <rect key="frame" x="64" y="0.0" width="226" height="51"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="minimumTrackTintColor" red="0.26274509800000001" green="0.43529411759999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="thumbTintColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="slideThroughAnimation:" destination="zIs-93-VYW" eventType="valueChanged" id="c1O-bu-qRJ"/>
                                                                 </connections>
@@ -897,16 +899,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfH-vF-kCA" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="1003.6666666666666" width="374" height="71.666666666666629"/>
+                                                <rect key="frame" x="20" y="1002.9999999999999" width="374" height="71.666666666666629"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pseudocode" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-jE-UQd">
-                                                        <rect key="frame" x="10" y="50.000000000000114" width="354" height="11.666666666666664"/>
+                                                        <rect key="frame" x="10" y="50" width="354" height="11.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="10"/>
                                                         <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PSEUDOCODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFH-eQ-HKR">
-                                                        <rect key="frame" x="10.000000000000007" y="10.000000000000114" width="108.66666666666669" height="20"/>
+                                                        <rect key="frame" x="10.000000000000007" y="10" width="108.66666666666669" height="20"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -935,7 +937,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-hx-eLz" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="909.33333333333337" width="374" height="74.333333333333371"/>
+                                                <rect key="frame" x="20" y="908.66666666666663" width="374" height="74.333333333333371"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm information" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-58-klp">
                                                         <rect key="frame" x="10" y="50" width="354" height="14.333333333333329"/>
@@ -973,7 +975,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vH1-l1-xn5" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="343.33333333333331" width="374" height="102"/>
+                                                <rect key="frame" x="20" y="342.66666666666669" width="374" height="102"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IjV-Gp-bYT">
                                                         <rect key="frame" x="10" y="50" width="354" height="42"/>
@@ -1071,13 +1073,28 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-41-I7M">
-                                                        <rect key="frame" x="138.66666666666666" y="13" width="15" height="15"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-41-I7M" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                        <rect key="frame" x="138.66666666666666" y="12" width="15" height="15"/>
+                                                        <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="7Jj-uU-zve"/>
                                                             <constraint firstAttribute="width" constant="15" id="Pgj-El-NgD"/>
                                                         </constraints>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.80000000000000004"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <segue destination="Lnf-ZK-uae" kind="presentation" id="1tm-Hl-mdj"/>
                                                         </connections>
@@ -1085,7 +1102,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="L3L-41-I7M" firstAttribute="top" secondItem="vH1-l1-xn5" secondAttribute="top" constant="13" id="0f7-mW-0ta"/>
+                                                    <constraint firstItem="L3L-41-I7M" firstAttribute="top" secondItem="vH1-l1-xn5" secondAttribute="top" constant="12" id="0f7-mW-0ta"/>
                                                     <constraint firstItem="IjV-Gp-bYT" firstAttribute="top" secondItem="pG2-ua-hNh" secondAttribute="bottom" constant="20" id="4qE-MM-GCc"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pG2-ua-hNh" secondAttribute="trailing" constant="20" symbolic="YES" id="C7P-kF-HFd"/>
                                                     <constraint firstItem="IjV-Gp-bYT" firstAttribute="leading" secondItem="vH1-l1-xn5" secondAttribute="leading" constant="10" id="GBG-nY-zuK"/>
@@ -1108,7 +1125,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-vb-4Bz" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="465.33333333333326" width="374" height="424"/>
+                                                <rect key="frame" x="20" y="464.66666666666674" width="374" height="424"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrl-uc-NsU">
                                                         <rect key="frame" x="10" y="10" width="354" height="354"/>
@@ -1118,7 +1135,7 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YDz-Ju-OwL">
-                                                        <rect key="frame" x="20" y="384.00000000000006" width="334" height="20"/>
+                                                        <rect key="frame" x="20" y="383.99999999999994" width="334" height="20"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-6O-iOE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="20"/>
@@ -1271,24 +1288,16 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-vs-djg">
                                                 <rect key="frame" x="30" y="30" width="354" height="199"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[3, 1, 8, 2, 10, 4, 5, 7, 6, 9]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDS-rH-EbA">
-                                                        <rect key="frame" x="55.666666666666671" y="4.0000000000000009" width="242.66666666666663" height="15.333333333333336"/>
-                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-rr-oFz" customClass="AlgorithmAnimationView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="29.333333333333329" width="354" height="169.66666666666669"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-rr-oFz" customClass="ArrayStackView" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="199"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="CDS-rH-EbA" firstAttribute="centerX" secondItem="n3v-vs-djg" secondAttribute="centerX" id="5iE-jt-hGH"/>
+                                                    <constraint firstItem="YKs-rr-oFz" firstAttribute="top" secondItem="n3v-vs-djg" secondAttribute="top" id="6Jy-af-yH4"/>
                                                     <constraint firstAttribute="trailing" secondItem="YKs-rr-oFz" secondAttribute="trailing" id="IhL-xr-QKd"/>
-                                                    <constraint firstItem="YKs-rr-oFz" firstAttribute="top" secondItem="CDS-rH-EbA" secondAttribute="bottom" constant="10" id="fXS-cN-XrS"/>
                                                     <constraint firstAttribute="width" secondItem="n3v-vs-djg" secondAttribute="height" multiplier="16:9" id="kXq-pi-hbu"/>
-                                                    <constraint firstItem="CDS-rH-EbA" firstAttribute="top" secondItem="n3v-vs-djg" secondAttribute="top" constant="4" id="nMr-27-5Br"/>
                                                     <constraint firstItem="YKs-rr-oFz" firstAttribute="leading" secondItem="n3v-vs-djg" secondAttribute="leading" id="sCQ-x5-ZKr"/>
                                                     <constraint firstAttribute="bottom" secondItem="YKs-rr-oFz" secondAttribute="bottom" id="wvy-4H-XfX"/>
                                                 </constraints>
@@ -1340,12 +1349,13 @@
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="aboutAlgorithmSectionLabel" destination="Dld-R0-kAn" id="AdJ-XP-7Lj"/>
-                        <outlet property="algorithmAnimationView" destination="YKs-rr-oFz" id="OpO-6O-APs"/>
+                        <outlet property="algorithmArrayView" destination="YKs-rr-oFz" id="VED-I3-oQh"/>
                         <outlet property="algorithmGraphView" destination="hrl-uc-NsU" id="ljR-pd-oUC"/>
                         <outlet property="algorithmScrollView" destination="A0T-Zu-vGW" id="SbG-nr-XD4"/>
                         <outlet property="animationSlider" destination="Ui9-gV-c2h" id="rNK-3V-Vq5"/>
                         <outlet property="averageCaseLabel" destination="t7G-TN-UDN" id="MPE-xD-Gq5"/>
                         <outlet property="bestCaseLabel" destination="fDS-rg-2Ne" id="Zh5-pf-t6f"/>
+                        <outlet property="datasetSizeLabel" destination="Wih-lN-0rC" id="a6X-CX-4VP"/>
                         <outlet property="infoLabel" destination="ddr-58-klp" id="hgX-NV-4T7"/>
                         <outlet property="memoryLabel" destination="p9f-sF-eLl" id="4ss-cw-mCe"/>
                         <outlet property="playButton" destination="bJl-2x-0Fs" id="PFM-fi-FcB"/>
@@ -1378,6 +1388,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuV-RN-QE2" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
                                         <rect key="frame" x="177.33333333333334" y="310" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="SnT-j4-Qcf"/>
                                             <constraint firstAttribute="height" constant="30" id="WQL-mX-gbg"/>
@@ -1388,11 +1399,17 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>

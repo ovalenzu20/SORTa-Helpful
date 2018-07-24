@@ -16,7 +16,7 @@ class AlgorithmAnimationView: UIView {
     private var contentOffset  : CGFloat = 0.0
     private var barOffset      : CGFloat = 0.0
     private var barWidth       : CGFloat = 0.0
-    public var animator        : UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 8.0, curve: .easeInOut)
+    public  var animator       : UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 8.0, curve: .easeInOut)
     
     
     func setupAnimationView(data: [Int], algorithm: String) {
@@ -45,6 +45,11 @@ class AlgorithmAnimationView: UIView {
         self.animator = UIViewPropertyAnimator(duration: 8.0, curve: .linear)
         self.animator.pausesOnCompletion = true
         self.setAnimationFor(algorithm: algorithm)
+    }
+    
+    
+    func redraw() {
+        self.setNeedsDisplay()
     }
     
     
@@ -98,34 +103,34 @@ class AlgorithmAnimationView: UIView {
             var lastSwapIndex = 0
             
             for i in stride(from: 1, to: sortedAboveIndex, by: 1) {
-                self.deselectBars()
-                self.bars[i].selectBar(withColor: #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1))
-                if (self.bars[i - 1].value > self.bars[i].value) {
+                if (self.bars[i - 1] > self.bars[i]) {
                     self.bars.swapAt(i, i - 1)
-                    self.bars[i].swapPosition(bar: self.bars[i - 1])
+                    
+                    UIView.animate(withDuration: 0.4, delay: Double(i), options: .curveLinear, animations: {
+                        self.bars[i].swapPosition(bar: self.bars[i - 1])
+                    }, completion: {(finished) in
+                        self.redraw()
+                    })
+                    
                     lastSwapIndex = i
-                    self.bars[lastSwapIndex].selectBar(withColor: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1))
                 }
             }
             
             sortedAboveIndex = lastSwapIndex
-            self.bars[sortedAboveIndex].deselectBar(withColor: #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1))
         } while (sortedAboveIndex != 0)
-        
-        self.deselectBars()
     }
     
     
     func InsertionSort() {
-        for i in 1..<bars.count {
-            var j = i
-            
-            while j > 0 && bars[j].value < bars[j - 1].value {
-                self.bars.swapAt(j - 1, j)
-                self.bars[j - 1].swapPosition(bar: self.bars[j])
-                j -= 1
-            }
-        }
+//        for i in 1..<bars.count {
+//            var j = i
+//
+//            while j > 0 && bars[j].value < bars[j - 1].value {
+//                self.bars.swapAt(j - 1, j)
+//                self.bars[j - 1].swapPosition(bar: self.bars[j])
+//                j -= 1
+//            }
+//        }
     }
     
     

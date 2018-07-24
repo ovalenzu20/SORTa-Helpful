@@ -347,8 +347,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let searchCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as! SearchCell
         
         let currentAlgorithm = searchedAlgorithms[indexPath.item]

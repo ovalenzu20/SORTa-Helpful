@@ -62,7 +62,8 @@ class AlgorithmViewController: UIViewController {
     var algorithm: Algorithm?
     
  
-    @IBOutlet weak var algorithmAnimationView:     AlgorithmAnimationView!
+    @IBOutlet weak var datasetSizeLabel: UILabel!
+    @IBOutlet weak var algorithmArrayView:         ArrayStackView!
     @IBOutlet weak var typeLabel:                  UILabel!
     @IBOutlet weak var bestCaseLabel:              UILabel!
     @IBOutlet weak var averageCaseLabel:           UILabel!
@@ -77,20 +78,21 @@ class AlgorithmViewController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
     @IBAction @objc func playAnimation(_ sender: UIButton) {
-        algorithmAnimationView.animator.startAnimation()
+//        algorithmAnimationView.animator.startAnimation()
     }
     
     
     @IBOutlet weak var animationSlider: UISlider!
     @IBAction @objc func slideThroughAnimation(_ sender: UISlider) {
-        algorithmAnimationView.layer.speed = sender.value
+        datasetSizeLabel.text = "SIZE OF DATASET:   \(Int(sender.value) * 10)"
+        self.resetAnimation()
     }
     
     
     @IBOutlet weak var stopButton: UIButton!
     @IBAction @objc func stopAnimation(_ sender: UIButton) {
-//        algorithmAnimationView.animator.stopAnimation(true)
-        algorithmAnimationView.animator.fractionComplete = 0
+//        algorithmAnimationView.animator.fractionComplete = 0
+//        algorithmAnimationView.animator.pauseAnimation()
     }
     
     
@@ -98,8 +100,47 @@ class AlgorithmViewController: UIViewController {
     private let lineGraphViewArray = [LineChartView(), LineChartView(), LineChartView()]
     
     
+    private func randomArray(length: Int, max: Int) -> [Int] {
+        var array = [Int]()
+        
+        let min = max / 30
+        for _ in 1...length {
+            let randomDiff = Int(arc4random_uniform(UInt32(max - min)))
+            array.append(min + randomDiff)
+        }
+        
+        return array
+    }
+    
+    
+    func resetAnimation() {
+        
+    }
+    
+    
     func setupAlgorithmAnimationView() {
-        algorithmAnimationView.setupAnimationView(data: [3, 1, 8, 2, 10, 4, 5, 7, 6, 9], algorithm: (algorithm?.name)!)
+        var array = self.randomArray(length: Int(animationSlider.value) * 10, max: 100)
+        algorithmArrayView.setup()
+        
+        var isSorted: Bool
+        
+        repeat {
+            isSorted = true
+            
+            // Check each value in the array
+            for i in 0..<array.count - 1 {
+                
+                // Compare current value to the next
+                if array[i] > array[i + 1] {
+                    
+                    // Swap if needed
+                    array.swapAt(i, i + 1)
+                    algorithmArrayView.update(with: array)
+                    isSorted = false
+                }
+            }
+        } while (!isSorted)
+//        algorithmAnimationView.setupAnimationView(data: [3, 1, 8, 2, 10, 4, 5, 7, 6, 9], algorithm: (algorithm?.name)!)
     }
     
     
@@ -182,9 +223,9 @@ class AlgorithmViewController: UIViewController {
         
         setupAlgorithmAnimationView()
         setupAnimationButtons()
-        playButton.addTarget(self, action: #selector(playAnimation), for: UIControlEvents.touchUpInside)
+//        playButton.addTarget(self, action: #selector(playAnimation), for: UIControlEvents.touchUpInside)
 //        animationSlider.addTarget(self, action: #selector(slideThroughAnimation), for: .valueChanged)
-        stopButton.addTarget(self, action: #selector(stopAnimation), for: UIControlEvents.touchUpInside)
+//        stopButton.addTarget(self, action: #selector(stopAnimation), for: UIControlEvents.touchUpInside)
         
         graphViewSetup()
         
