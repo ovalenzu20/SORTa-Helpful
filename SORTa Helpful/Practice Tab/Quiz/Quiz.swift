@@ -15,6 +15,7 @@ enum questionOutOfBoundsError : Error {
 
 
 class Question {
+    var belongsToQuiz : String
     var question : String
     var possibleAnswers: [String]
     var correctAnswer: String
@@ -22,11 +23,12 @@ class Question {
     
     var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Spread Sort", "Radix Sort", "Cube Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Block Sort", "Heap Sort", "Bucket Sort", "Counting Sort"]
     
-    init (question : String, possibleAnswers: [String], correctAnswer: String)
+    init (question : String, possibleAnswers: [String], correctAnswer: String, belongsToQuiz: String)
     {
         self.question = question
         self.possibleAnswers = possibleAnswers
         self.correctAnswer = correctAnswer
+        self.belongsToQuiz = belongsToQuiz
         
         self.possibleAnswers = randomizeAnswers(answersToRandomize: possibleAnswers, allAlgorithms: allPossibleAlgorithms)
     }

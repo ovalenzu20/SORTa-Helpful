@@ -25,8 +25,9 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let questionPerCell = currentQuiz!.questions[indexPath.item]
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuizTableViewCell
-        cell.setQuestionButtonLabels(quiz: currentQuiz!, questionNumber: indexPath.item)
+        cell.setQuestionButtonLabels(question: questionPerCell)
         return cell
     }
     
@@ -40,7 +41,6 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
         
         questionTableView.allowsSelection = false
         quizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
-        print(quizzes!.count)
         currentQuiz = quizzes?[quizIndex!]
         
         quizDescription.text! = currentQuiz!.quizDescription!
@@ -106,7 +106,7 @@ class QuizSelectedViewController: UIViewController, UITableViewDelegate, UITable
                 let possibleAnsAsStringArr = convertJsonArrayToStringArray(jsonArray: possibleAnsAsJsonArr)
                 let correctAns = elem.1["correctAnswers"].string!
                 
-                let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns)
+                let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns, belongsToQuiz: currentQuiz.quizName)
                 quizQuestions.append(currentQuestion)
             }
             else if elem.0 == "description"{
