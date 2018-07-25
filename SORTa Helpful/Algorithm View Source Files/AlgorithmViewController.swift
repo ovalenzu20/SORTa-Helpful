@@ -76,9 +76,18 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var algorithmGraphView:         UIView!
     
     
+    var isPlaying: Bool = false
     @IBOutlet weak var playButton: UIButton!
     @IBAction @objc func playAnimation(_ sender: UIButton) {
-//        algorithmAnimationView.animator.startAnimation()
+        if isPlaying {
+            isPlaying = false
+            self.resetAnimation()
+            algorithmArrayView.runAlgorithmAnimation(algorithm: (algorithm?.name)!)
+        }
+        else {
+            isPlaying = true
+            algorithmArrayView.runAlgorithmAnimation(algorithm: (algorithm?.name)!)
+        }
     }
     
     
@@ -91,8 +100,7 @@ class AlgorithmViewController: UIViewController {
     
     @IBOutlet weak var stopButton: UIButton!
     @IBAction @objc func stopAnimation(_ sender: UIButton) {
-//        algorithmAnimationView.animator.fractionComplete = 0
-//        algorithmAnimationView.animator.pauseAnimation()
+        
     }
     
     
@@ -114,33 +122,13 @@ class AlgorithmViewController: UIViewController {
     
     
     func resetAnimation() {
-        
+        setupAlgorithmAnimationView()
     }
     
     
     func setupAlgorithmAnimationView() {
-        var array = self.randomArray(length: Int(animationSlider.value) * 10, max: 100)
-        algorithmArrayView.setup()
-        
-        var isSorted: Bool
-        
-        repeat {
-            isSorted = true
-            
-            // Check each value in the array
-            for i in 0..<array.count - 1 {
-                
-                // Compare current value to the next
-                if array[i] > array[i + 1] {
-                    
-                    // Swap if needed
-                    array.swapAt(i, i + 1)
-                    algorithmArrayView.update(with: array)
-                    isSorted = false
-                }
-            }
-        } while (!isSorted)
-//        algorithmAnimationView.setupAnimationView(data: [3, 1, 8, 2, 10, 4, 5, 7, 6, 9], algorithm: (algorithm?.name)!)
+        let array = self.randomArray(length: Int(animationSlider.value) * 10, max: 100)
+        algorithmArrayView.setup(array: array)
     }
     
     

@@ -57,32 +57,32 @@ class AlgorithmAnimationView: UIView {
         switch algorithm {
         case "Bubble Sort":
             self.BubbleSort()
-//            case "Selection Sort":
-//                self.SelectionSort()
-//            case "Insertion Sort":
-//                self.InsertionSort()
-//            case "Heap Sort":
-//                self.HeapSort()
-//            case "Cocktail Sort":
-//                self.CocktailSort()
-//            case "Block Sort":
-//                self.BlockSort()
-//            case "Merge Sort":
-//                self.MergeSort()
-//            case "Quick Sort":
-//                self.QuickSort()
-//            case "Cube Sort":
-//                self.CubeSort()
-//            case "Counting Sort":
-//                self.CountingSort()
-//            case "Radix Sort":
-//                self.RaidxSort()
-//            case "Spread Sort":
-//                self.SpreadSort()
-//            case "Bucket Sort":
-//                self.BucketSort()
-//            case "Pigeonhole Sort":
-//                self.PigeonholeSort()
+            //            case "Selection Sort":
+            //                self.SelectionSort()
+            //            case "Insertion Sort":
+            //                self.InsertionSort()
+            //            case "Heap Sort":
+            //                self.HeapSort()
+            //            case "Cocktail Sort":
+            //                self.CocktailSort()
+            //            case "Block Sort":
+            //                self.BlockSort()
+            //            case "Merge Sort":
+            //                self.MergeSort()
+            //            case "Quick Sort":
+            //                self.QuickSort()
+            //            case "Cube Sort":
+            //                self.CubeSort()
+            //            case "Counting Sort":
+            //                self.CountingSort()
+            //            case "Radix Sort":
+            //                self.RaidxSort()
+            //            case "Spread Sort":
+            //                self.SpreadSort()
+            //            case "Bucket Sort":
+            //                self.BucketSort()
+            //            case "Pigeonhole Sort":
+        //                self.PigeonholeSort()
         default:
             self.BubbleSort()
         }
@@ -122,15 +122,15 @@ class AlgorithmAnimationView: UIView {
     
     
     func InsertionSort() {
-//        for i in 1..<bars.count {
-//            var j = i
-//
-//            while j > 0 && bars[j].value < bars[j - 1].value {
-//                self.bars.swapAt(j - 1, j)
-//                self.bars[j - 1].swapPosition(bar: self.bars[j])
-//                j -= 1
-//            }
-//        }
+        //        for i in 1..<bars.count {
+        //            var j = i
+        //
+        //            while j > 0 && bars[j].value < bars[j - 1].value {
+        //                self.bars.swapAt(j - 1, j)
+        //                self.bars[j - 1].swapPosition(bar: self.bars[j])
+        //                j -= 1
+        //            }
+        //        }
     }
     
     
