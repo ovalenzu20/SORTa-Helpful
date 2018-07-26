@@ -42,7 +42,7 @@ class QuizViewController: UIViewController {
     }
     
     func sendTestType(currentQuizIndex: Int){
-        let quizVC = storyboard?.instantiateViewController(withIdentifier: "QuizSelectedViewController") as? QuizSelectedViewController
+        let quizVC = storyboard?.instantiateViewController(withIdentifier: "QuizSelectedVC") as? QuizSelectedVC
         quizVC?.quizIndex = currentQuizIndex
         self.navigationController?.pushViewController(quizVC!, animated: true)
     }

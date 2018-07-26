@@ -1592,32 +1592,46 @@
             </objects>
             <point key="canvasLocation" x="-1371" y="1610"/>
         </scene>
-        <!--Quiz Selected View Controller-->
+        <!--Quiz SelectedVC-->
         <scene sceneID="9Th-ba-tLM">
             <objects>
-                <viewController storyboardIdentifier="QuizSelectedViewController" hidesBottomBarWhenPushed="YES" id="hL1-YQ-Zfk" customClass="QuizSelectedViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizSelectedVC" hidesBottomBarWhenPushed="YES" id="hL1-YQ-Zfk" customClass="QuizSelectedVC" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FHx-wv-nZl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of quiz goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-ga-deF">
-                                <rect key="frame" x="20" y="40" width="374" height="23.666666666666671"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sE8-yz-P7u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.1647058824" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AkN-8h-YHQ">
+                                    <size key="itemSize" width="114" height="93"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizCell" id="qoY-gO-K5o" customClass="QuizCVCell" customModule="SORTa_Helpful" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="114" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hL1-YQ-Zfk" id="l96-eQ-lW7"/>
+                                    <outlet property="delegate" destination="hL1-YQ-Zfk" id="bV2-C9-N5c"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kgK-ga-deF" firstAttribute="top" secondItem="OE6-s9-rWH" secondAttribute="top" constant="20" id="klX-sW-jnf"/>
-                            <constraint firstItem="OE6-s9-rWH" firstAttribute="trailing" secondItem="kgK-ga-deF" secondAttribute="trailing" constant="20" id="m2o-VU-bwx"/>
-                            <constraint firstItem="kgK-ga-deF" firstAttribute="leading" secondItem="OE6-s9-rWH" secondAttribute="leading" constant="20" id="u2v-CM-7Hx"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OE6-s9-rWH"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="quizDescription" destination="kgK-ga-deF" id="oIo-ET-9EH"/>
+                        <outlet property="quizCV" destination="sE8-yz-P7u" id="Jrv-iX-1K5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Dn-W4-39h" userLabel="First Responder" sceneMemberID="firstResponder"/>

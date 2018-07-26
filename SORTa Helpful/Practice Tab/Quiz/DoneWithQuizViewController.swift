@@ -31,7 +31,8 @@ class DoneWithQuizViewController: UIViewController {
     }
     
     func calculateLetterGrade(quiz: Quiz) -> String{
-        let gradePercentage = quiz.calculateScore()
+        let gradePercentage = 0.06
+//            quiz.calculateScore()
 
         if gradePercentage >= 0.97{
             return "A+"

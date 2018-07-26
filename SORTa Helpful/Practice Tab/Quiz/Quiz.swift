@@ -18,8 +18,12 @@ class Question {
     var belongsToQuiz : String
     var question : String
     var possibleAnswers: [String]
-    var correctAnswer: String
-    var inputAnswer = -1
+    var correctAnswer: Int
+    var incorrectAnswer = -1
+    var isAnswered : Bool?
+    var inputAnswer : Int?
+    
+    
     
     var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Spread Sort", "Radix Sort", "Cube Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Block Sort", "Heap Sort", "Bucket Sort", "Counting Sort"]
     
@@ -27,10 +31,11 @@ class Question {
     {
         self.question = question
         self.possibleAnswers = possibleAnswers
-        self.correctAnswer = correctAnswer
         self.belongsToQuiz = belongsToQuiz
-        
+        self.correctAnswer = possibleAnswers.index(of: correctAnswer)!
         self.possibleAnswers = randomizeAnswers(answersToRandomize: possibleAnswers, allAlgorithms: allPossibleAlgorithms)
+        
+        
     }
     
     func randomizeAnswers(answersToRandomize: [String], allAlgorithms: [String]) -> [String]
@@ -83,28 +88,28 @@ class Quiz {
         }
     }
     
-    func calculateAnswerStatistics(){
-        for q in questions{
-            if q.inputAnswer != -1{
-                if q.possibleAnswers[q.inputAnswer] == q.correctAnswer{
-                    numberOfQuestionsAnsweredCorrectly += 1
-                    numberOfQuestionsAnswered += 1
-                }
-                else {
-                    numberOfQuestionsAnsweredIncorrectly += 1
-                    numberOfQuestionsAnswered += 1
-                }
-            }
-        }
-    }
-    
-    func calculateScore() -> Double
-    {
-        self.calculateAnswerStatistics()
-        let quizScore = Double(numberOfQuestionsAnsweredCorrectly) / Double(numberOfQuestionsAnswered)
-        let quizScoreRounded = round(quizScore, toDecimalPlaces: 2)
-        return quizScoreRounded
-    }
+//    func calculateAnswerStatistics(){
+//        for q in questions{
+//            if q.inputAnswer != -1{
+//                if q.inputAnswer == q.correctAnswer{
+//                    numberOfQuestionsAnsweredCorrectly += 1
+//                    numberOfQuestionsAnswered += 1
+//                }
+//                else {
+//                    numberOfQuestionsAnsweredIncorrectly += 1
+//                    numberOfQuestionsAnswered += 1
+//                }
+//            }
+//        }
+//    }
+//
+//    func calculateScore() -> Double
+//    {
+//        self.calculateAnswerStatistics()
+//        let quizScore = Double(numberOfQuestionsAnsweredCorrectly) / Double(numberOfQuestionsAnswered)
+//        let quizScoreRounded = round(quizScore, toDecimalPlaces: 2)
+//        return quizScoreRounded
+//    }
     
     func round(_ value: Double, toDecimalPlaces places: Int) -> Double {
         let divisor = pow(10.0, Double(places))
