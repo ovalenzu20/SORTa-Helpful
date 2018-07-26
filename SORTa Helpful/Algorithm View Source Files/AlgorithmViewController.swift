@@ -110,9 +110,8 @@ class AlgorithmViewController: UIViewController {
     
     func setupAlgorithmAnimationView() {
         let array = self.randomArray(length: 50, max: 100)
-        print("AlgorithmArrayView.width  = \(algorithmArrayView.layer.frame.width)")
-        print("AlgorithmArrayView.height = \(algorithmArrayView.layer.frame.height)")
         algorithmArrayView.setup(array: array, width: algorithmArrayView.layer.frame.width, height: algorithmArrayView.layer.frame.height)
+        algorithmArrayView.update(with: array, hIndex: -1)
     }
     
     

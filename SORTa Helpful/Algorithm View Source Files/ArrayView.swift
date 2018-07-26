@@ -12,7 +12,7 @@ import Dispatch
 public class ArrayStackView: UIView {
     private var viewWidth          : CGFloat        = 0
     private var viewHeight         : CGFloat        = 0
-    private let delayInSeconds     : Double         = 0.001
+    private var delayInSeconds     : Double         = 0.001
     private var array              : [Int]          = []
     public  var updateOperations   : OperationQueue = OperationQueue()
     
@@ -118,8 +118,8 @@ public class ArrayStackView: UIView {
             //                self.QuickSort()
             //            case "Cube Sort":
             //                self.CubeSort()
-            //            case "Counting Sort":
-            //                self.CountingSort()
+        case "Counting Sort":
+            self.CountingSort()
         case "Radix Sort":
             self.RadixSort()
             //            case "Spread Sort":
@@ -287,11 +287,48 @@ public class ArrayStackView: UIView {
     
     
     func CountingSort() {
+        self.delayInSeconds = 0.01
+        let maxElement = self.array.max() ?? 0
         
+        var countArray = [Int](repeating: 0, count: Int(maxElement + 1))
+        
+        var i: Int = 0
+        for element in self.array {
+            self.update(with: self.array, hIndex: i)
+            countArray[element] += 1
+            i += 1
+        }
+        
+        i = 0
+        for index in 1 ..< countArray.count {
+            self.update(with: self.array, hIndex: i)
+            let sum = countArray[index] + countArray[index - 1]
+            countArray[index] = sum
+            i += 1
+        }
+        
+        
+        var sortedArray = [Int](repeating: 0, count: array.count)
+        
+        i = 0
+        for element in self.array {
+            self.update(with: self.array, hIndex: i)
+            countArray[element] -= 1
+            sortedArray[countArray[element]] = element
+            i += 1
+        }
+        
+        for i in 0..<sortedArray.count {
+            self.update(with: self.array, hIndex: i)
+            self.array[i] = sortedArray[i]
+        }
+        
+        self.update(with: self.array, hIndex: -1)
     }
     
     
     func RadixSort() {
+        self.delayInSeconds = 0.01
         let radix = 10  //Here we define our radix to be 10
         var done = false
         var index: Int
@@ -304,7 +341,7 @@ public class ArrayStackView: UIView {
             }
             
             for number in self.array {
-                self.update(with: self.array, hIndex: number)
+//                self.update(with: self.array, hIndex: number)
                 index = number / digit  //Which bucket will we access?
                 buckets[index % radix].append(number)
                 
@@ -326,7 +363,6 @@ public class ArrayStackView: UIView {
             }
             
             digit *= radix  //Move to the next digit
-            self.update(with: self.array, hIndex: -1)
         }
         
         self.update(with: self.array, hIndex: -1)
@@ -339,7 +375,41 @@ public class ArrayStackView: UIView {
     
     
     func PigeonholeSort() {
+        var min = self.array[0]
+        var max = self.array[0]
         
+        for i in 0..<self.array.count {
+            if (self.array[i] < min) {
+                min = self.array[i]
+            }
+            if (self.array[i] > max) {
+                max = self.array[i]
+            }
+        }
+        
+        var range = max - min + 1 // Find range
+        
+        // Create an array of vectors. Size of array
+        // range. Each vector represents a hole that
+        // is going to contain matching elements.
+        var holes: [Int] = Array(repeating: -1, count: range)
+        
+        // Traverse through input array and put every
+        // element in its respective hole
+//        for (int i = 0; i < n; i++) {
+//            holes[arr[i]-min].push_back(arr[i])
+//        }
+//
+//        // Traverse through all holes one by one. For
+//        // every hole, take its elements and put in
+//        // array.
+//        int index = 0;  // index in sorted array
+//        for (int i = 0; i < range; i++)
+//        {
+//            vector<int>::iterator it
+//            for (it = holes[i].begin(); it != holes[i].end(); ++it)
+//            arr[index++]  = *it
+//        }
     }
 }
 
