@@ -14,9 +14,9 @@
 		0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */; };
 		073C04492106E09F00823376 /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C04482106E09F00823376 /* ArrayView.swift */; };
 		073C044B2106E18200823376 /* DelayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C044A2106E18200823376 /* DelayOperation.swift */; };
+		073C044D2109955600823376 /* UIButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C044C2109955600823376 /* UIButtonCustom.swift */; };
 		0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767647820FAFDA9005B7136 /* SearchTextField.swift */; };
 		076DF76120FEEF2A00368E14 /* ComplexitiesPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DF76020FEEF2A00368E14 /* ComplexitiesPopupViewController.swift */; };
-		076DF76520FFAEB300368E14 /* AlgorithmAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DF76420FFAEB300368E14 /* AlgorithmAnimationView.swift */; };
 		076DF76721003FEB00368E14 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DF76621003FEB00368E14 /* Bar.swift */; };
 		07794B9C20F565E2001D4B12 /* algorithmInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 07794B9B20F565E2001D4B12 /* algorithmInfo.json */; };
 		077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */; };
@@ -67,9 +67,9 @@
 		0734E70720FBEF780046E0DE /* AlgorithmSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmSectionView.swift; sourceTree = "<group>"; };
 		073C04482106E09F00823376 /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
 		073C044A2106E18200823376 /* DelayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayOperation.swift; sourceTree = "<group>"; };
+		073C044C2109955600823376 /* UIButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonCustom.swift; sourceTree = "<group>"; };
 		0767647820FAFDA9005B7136 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		076DF76020FEEF2A00368E14 /* ComplexitiesPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexitiesPopupViewController.swift; sourceTree = "<group>"; };
-		076DF76420FFAEB300368E14 /* AlgorithmAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmAnimationView.swift; sourceTree = "<group>"; };
 		076DF76621003FEB00368E14 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		07794B9B20F565E2001D4B12 /* algorithmInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algorithmInfo.json; sourceTree = "<group>"; };
 		077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +133,6 @@
 			children = (
 				077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */,
 				076DF76020FEEF2A00368E14 /* ComplexitiesPopupViewController.swift */,
-				076DF76420FFAEB300368E14 /* AlgorithmAnimationView.swift */,
 				076DF76621003FEB00368E14 /* Bar.swift */,
 				073C04482106E09F00823376 /* ArrayView.swift */,
 				073C044A2106E18200823376 /* DelayOperation.swift */,
@@ -240,6 +239,7 @@
 				78340A8520F6ABC9001D0746 /* Search Tab Source Files */,
 				07794B9A20F565CC001D4B12 /* SupportingFiles */,
 				78F9846420E84F770017DCCC /* Info.plist */,
+				073C044C2109955600823376 /* UIButtonCustom.swift */,
 			);
 			path = "SORTa Helpful";
 			sourceTree = "<group>";
@@ -410,12 +410,12 @@
 				071ED4F020FDC7210039FDB2 /* FlashcardViewController.swift in Sources */,
 				78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */,
 				07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */,
+				073C044D2109955600823376 /* UIButtonCustom.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				076DF76120FEEF2A00368E14 /* ComplexitiesPopupViewController.swift in Sources */,
 				78340A8A20F6C0A9001D0746 /* ScrollViewController.swift in Sources */,
 				073C04492106E09F00823376 /* ArrayView.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
-				076DF76520FFAEB300368E14 /* AlgorithmAnimationView.swift in Sources */,
 				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,
 				07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */,
 				071ED4EE20FDC7150039FDB2 /* SettingsTabViewController.swift in Sources */,

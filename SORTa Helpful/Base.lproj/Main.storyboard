@@ -804,7 +804,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7M-s4-Pdf" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="20" width="374" height="277.66666666666669"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJl-2x-0Fs" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJl-2x-0Fs" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
                                                         <rect key="frame" x="50" y="219" width="274" height="50"/>
                                                         <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -1024,7 +1024,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-41-I7M" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-41-I7M" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
                                                         <rect key="frame" x="138.66666666666666" y="12" width="15" height="15"/>
                                                         <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -1047,6 +1047,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="viewAboutComplexities:" destination="zIs-93-VYW" eventType="touchUpInside" id="Fzl-KQ-ang"/>
                                                             <segue destination="Lnf-ZK-uae" kind="presentation" id="1tm-Hl-mdj"/>
                                                         </connections>
                                                     </button>
@@ -1300,6 +1301,7 @@
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="aboutAlgorithmSectionLabel" destination="Dld-R0-kAn" id="AdJ-XP-7Lj"/>
+                        <outlet property="aboutComplexitiesButton" destination="L3L-41-I7M" id="8Xc-vh-RLe"/>
                         <outlet property="algorithmArrayView" destination="YKs-rr-oFz" id="VED-I3-oQh"/>
                         <outlet property="algorithmGraphView" destination="hrl-uc-NsU" id="ljR-pd-oUC"/>
                         <outlet property="algorithmScrollView" destination="A0T-Zu-vGW" id="SbG-nr-XD4"/>

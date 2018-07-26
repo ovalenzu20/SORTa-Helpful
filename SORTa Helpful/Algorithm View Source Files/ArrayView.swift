@@ -108,8 +108,8 @@ public class ArrayStackView: UIView {
             self.InsertionSort()
             //            case "Heap Sort":
             //                self.HeapSort()
-            //            case "Cocktail Sort":
-            //                self.CocktailSort()
+        case "Cocktail Sort":
+            self.CocktailSort()
             //            case "Block Sort":
             //                self.BlockSort()
         case "Merge Sort":
@@ -135,6 +135,7 @@ public class ArrayStackView: UIView {
     
     
     func BubbleSort() {
+        self.delayInSeconds = 0.001
         var isSorted: Bool
         
         repeat {
@@ -156,11 +157,12 @@ public class ArrayStackView: UIView {
     
     
     func InsertionSort() {
-        for x in 1..<self.array.count {         // 2
+        self.delayInSeconds = 0.001
+        for x in 1..<self.array.count {
             var y = x
             self.update(with: self.array, hIndex: y - 1)
             
-            while y > 0 && self.array[y] < self.array[y - 1] { // 3
+            while y > 0 && self.array[y] < self.array[y - 1] {
                 self.update(with: self.array, hIndex: y - 1)
                 self.array.swapAt(y - 1, y)
                 self.update(with: self.array, hIndex: -1)
@@ -178,6 +180,7 @@ public class ArrayStackView: UIView {
     
     
     func SelectionSort() {
+        self.delayInSeconds = 0.001
         for x in 0 ..< self.array.count - 1 {
             var lowest = x
             for y in x + 1 ..< self.array.count {
@@ -204,7 +207,49 @@ public class ArrayStackView: UIView {
     
     
     func CocktailSort() {
+        self.delayInSeconds = 0.001
+        var swapped = true
+        var start = 0
+        var end = self.array.count - 1
         
+        while swapped {
+            swapped = false
+            
+            
+            for i in start..<end {
+                self.update(with: self.array, hIndex: i)
+                
+                if self.array[i] > self.array[i + 1] {
+                    self.array.swapAt(i, i + 1)
+                    self.update(with: self.array, hIndex: -1)
+                    swapped = true
+                }
+            }
+            
+            if (!swapped) {
+                break
+            }
+            
+            swapped = false
+            end -= 1
+            
+            var i = end - 1
+            
+            while i >= start {
+                self.update(with: self.array, hIndex: i)
+                if (self.array[i] > self.array[i + 1]) {
+                    self.array.swapAt(i, i + 1);
+                    self.update(with: self.array, hIndex: -1)
+                    swapped = true;
+                }
+                
+                i -= 1
+            }
+            
+            start += 1
+        }
+        
+        self.update(with: self.array, hIndex: -1)
     }
     
     
@@ -329,23 +374,23 @@ public class ArrayStackView: UIView {
     
     func RadixSort() {
         self.delayInSeconds = 0.01
-        let radix = 10  //Here we define our radix to be 10
+        let radix = 10
         var done = false
         var index: Int
-        var digit = 1  //Which digit are we on?
-        while !done {  //While our  sorting is not completed
-            done = true  //Assume it is done for now
-            var buckets: [[Int]] = []  //Our sorting subroutine is bucket sort, so let us predefine our buckets
+        var digit = 1
+        while !done {
+            done = true
+            var buckets: [[Int]] = []
             for _ in 1...radix {
                 buckets.append([])
             }
             
             for number in self.array {
-//                self.update(with: self.array, hIndex: number)
-                index = number / digit  //Which bucket will we access?
+                self.update(with: self.array, hIndex: number)
+                index = number / digit
                 buckets[index % radix].append(number)
                 
-                if done && index > 0 {  //If we arent done, continue to finish, otherwise we are done
+                if done && index > 0 {
                     done = false
                 }
             }
@@ -362,7 +407,7 @@ public class ArrayStackView: UIView {
                 }
             }
             
-            digit *= radix  //Move to the next digit
+            digit *= radix
         }
         
         self.update(with: self.array, hIndex: -1)
@@ -375,29 +420,30 @@ public class ArrayStackView: UIView {
     
     
     func PigeonholeSort() {
-        var min = self.array[0]
-        var max = self.array[0]
-        
-        for i in 0..<self.array.count {
-            if (self.array[i] < min) {
-                min = self.array[i]
-            }
-            if (self.array[i] > max) {
-                max = self.array[i]
-            }
-        }
-        
-        var range = max - min + 1 // Find range
-        
-        // Create an array of vectors. Size of array
-        // range. Each vector represents a hole that
-        // is going to contain matching elements.
-        var holes: [Int] = Array(repeating: -1, count: range)
-        
-        // Traverse through input array and put every
-        // element in its respective hole
+//        var min = self.array[0]
+//        var max = self.array[0]
+//
+//        for i in 0..<self.array.count {
+//            self.update(with: self.array, hIndex: i)
+//            if (self.array[i] < min) {
+//                min = self.array[i]
+//            }
+//            if (self.array[i] > max) {
+//                max = self.array[i]
+//            }
+//        }
+//
+//        var range = max - min + 1 // Find range
+//
+//        // Create an array of vectors. Size of array
+//        // range. Each vector represents a hole that
+//        // is going to contain matching elements.
+//        var holes: [[Int]] = Array(Array(repeating: -1, count: range))
+//
+//        // Traverse through input array and put every
+//        // element in its respective hole
 //        for (int i = 0; i < n; i++) {
-//            holes[arr[i]-min].push_back(arr[i])
+//            holes[arr[i] - min].push_back(arr[i])
 //        }
 //
 //        // Traverse through all holes one by one. For

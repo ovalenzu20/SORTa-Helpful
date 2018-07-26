@@ -74,11 +74,17 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var algorithmScrollView:        UIScrollView!
     @IBOutlet weak var algorithmGraphView:         UIView!
     
+    @IBOutlet weak var aboutComplexitiesButton: UIButtonCustom!
+    @IBAction func viewAboutComplexities(_ sender: UIButtonCustom) {
+        aboutComplexitiesButton.isHighlighted = true
+    }
+    
     
     var wasPlayed: Bool = false
     @IBOutlet weak var playButton: UIButton!
     @IBAction @objc func playAnimation(_ sender: UIButton) {
         if algorithmArrayView.updateOperations.operationCount == 0 {
+            playButton.isHighlighted = true
             self.resetAnimation()
             algorithmArrayView.runAlgorithmAnimation(algorithm: (algorithm?.name)!)
         }
