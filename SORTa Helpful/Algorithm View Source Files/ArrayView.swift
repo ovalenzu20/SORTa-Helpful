@@ -10,46 +10,46 @@ import UIKit
 import Dispatch
 
 public class ArrayStackView: UIView {
-    private let viewWidth: CGFloat = 400
-    private let viewHeight: CGFloat = 300
-    private let delayInSeconds: Double = 0.003
-    
-    private var array: [Int] = []
-    private let updateOperations = OperationQueue()
-//    private var delayOperation: DelayOperation? = nil
+    private var viewWidth          : CGFloat        = 0
+    private var viewHeight         : CGFloat        = 0
+    private let delayInSeconds     : Double         = 0.001
+    private var array              : [Int]          = []
+    public  var updateOperations   : OperationQueue = OperationQueue()
     
     
-    public func setup(array: [Int]) {
-//        let delayOperation = DelayOperation(self.delayInSeconds)
-        for i in 0..<array.count {
-            self.array.append(array[i])
-        }
-        
+    public func setup(array: [Int], width: CGFloat, height: CGFloat) {
+        self.array      = Array(array)
+        self.viewWidth  = width
+        self.viewHeight = height
         self.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight)
         self.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         updateOperations.maxConcurrentOperationCount = 1
     }
     
-    /// Add an Operation to re-draw bars after a delay.
-    public func update(with values: [Int]) {
+    
+    public func update(with values: [Int], hIndex: Int) {
         let updateOperation = BlockOperation { [weak self] in
-            self?.drawBars(with: values)
+            self?.drawBars(with: values, hIndex: hIndex)
         }
         updateOperations.addOperation(DelayOperation(self.delayInSeconds))
         updateOperations.addOperation(updateOperation)
     }
     
     
-    private func drawBars(with values: [Int]) {
+    private func drawBars(with values: [Int], hIndex: Int) {
         if subviews.count != values.count {
             addSubviews(values.count)
         }
         
         for (index, bar) in subviews.enumerated() {
-            configure(bar, at: index, values: values)
+            if index == hIndex {
+                configure(bar, at: index, values: values, isHighlightedBar: true)
+            }
+            else {
+                configure(bar, at: index, values: values, isHighlightedBar: false)
+            }
         }
         
-        // Force the playground to re-render.
         CATransaction.flush()
     }
     
@@ -66,7 +66,8 @@ public class ArrayStackView: UIView {
         }
     }
     
-    private func configure(_ bar: UIView, at index: Int, values: [Int]) {
+    
+    private func configure(_ bar: UIView, at index: Int, values: [Int], isHighlightedBar: Bool) {
         let barWidth = frame.width / CGFloat(values.count)
         
         let x = barWidth * CGFloat(index)
@@ -77,43 +78,50 @@ public class ArrayStackView: UIView {
         let height = frame.height * percentage
         
         bar.frame = CGRect(x: x, y: frame.height - height, width: barWidth, height: height)
-        
-//        let borderWidth: CGFloat = bar.frame.width/12
-//        bar.layer.borderWidth = borderWidth
-        bar.layer.borderColor = UIColor.black.cgColor
-        bar.backgroundColor = barColor(for: percentage)
+        if isHighlightedBar {
+            bar.backgroundColor = .red
+        }
+        else {
+            bar.backgroundColor = barColor(for: percentage)
+        }
     }
+    
     
     private func barColor(for percentage: CGFloat) -> UIColor {
         return UIColor(hue: percentage, saturation: 0.6, brightness: 1.0, alpha: 1.0)
     }
     
     
+    func reset() {
+        self.updateOperations.cancelAllOperations()
+        self.updateOperations = OperationQueue()
+    }
+    
     
     func runAlgorithmAnimation(algorithm: String) {
         switch algorithm {
         case "Bubble Sort":
             self.BubbleSort()
-            //            case "Selection Sort":
-            //                self.SelectionSort()
-            //            case "Insertion Sort":
-            //                self.InsertionSort()
+        case "Selection Sort":
+            self.SelectionSort()
+        case "Insertion Sort":
+            self.InsertionSort()
             //            case "Heap Sort":
             //                self.HeapSort()
             //            case "Cocktail Sort":
             //                self.CocktailSort()
             //            case "Block Sort":
             //                self.BlockSort()
-            //            case "Merge Sort":
-            //                self.MergeSort()
+        case "Merge Sort":
+            self.MergeSort(from: 0, a: &self.array)
             //            case "Quick Sort":
             //                self.QuickSort()
             //            case "Cube Sort":
             //                self.CubeSort()
             //            case "Counting Sort":
             //                self.CountingSort()
-            //            case "Radix Sort":
-            //                self.RadixSort()
+        case "Radix Sort":
+            self.RadixSort()
             //            case "Spread Sort":
             //                self.SpreadSort()
             //            case "Bucket Sort":
@@ -122,7 +130,7 @@ public class ArrayStackView: UIView {
             //                self.PigeonholeSort()
         default:
             self.BubbleSort()
-        }        
+        }
     }
     
     
@@ -133,18 +141,34 @@ public class ArrayStackView: UIView {
             isSorted = true
             
             for i in 0..<self.array.count - 1 {
-                if array[i] > array[i + 1] {
+                self.update(with: self.array, hIndex: i)
+                
+                if self.array[i] > self.array[i + 1] {
                     self.array.swapAt(i, i + 1)
-                    self.update(with: array)
+                    self.update(with: self.array, hIndex: -1)
                     isSorted = false
                 }
             }
         } while (!isSorted)
+        
+        self.update(with: self.array, hIndex: -1)
     }
     
     
     func InsertionSort() {
+        for x in 1..<self.array.count {         // 2
+            var y = x
+            self.update(with: self.array, hIndex: y - 1)
+            
+            while y > 0 && self.array[y] < self.array[y - 1] { // 3
+                self.update(with: self.array, hIndex: y - 1)
+                self.array.swapAt(y - 1, y)
+                self.update(with: self.array, hIndex: -1)
+                y -= 1
+            }
+        }
         
+        self.update(with: self.array, hIndex: -1)
     }
     
     
@@ -154,7 +178,23 @@ public class ArrayStackView: UIView {
     
     
     func SelectionSort() {
+        for x in 0 ..< self.array.count - 1 {
+            var lowest = x
+            for y in x + 1 ..< self.array.count {
+                self.update(with: self.array, hIndex: y)
+                
+                if self.array[y] < self.array[lowest] {
+                    lowest = y
+                }
+            }
+            
+            if x != lowest {
+                self.array.swapAt(x, lowest)
+                self.update(with: self.array, hIndex: -1)
+            }
+        }
         
+        self.update(with: self.array, hIndex: -1)
     }
     
     
@@ -168,8 +208,66 @@ public class ArrayStackView: UIView {
     }
     
     
-    func MergeSort() {
+    private func merge(from start: Int, _ left: [Int], _ right: [Int]) -> [Int] {
+        var leftIndex = 0
+        var rightIndex = 0
         
+        var orderedArray: [Int] = []
+        
+        while leftIndex < left.count && rightIndex < right.count {
+            let leftElement = left[leftIndex]
+            let rightElement = right[rightIndex]
+            
+            if leftElement < rightElement {
+                orderedArray.append(leftElement)
+                leftIndex += 1
+            } else if leftElement > rightElement {
+                orderedArray.append(rightElement)
+                rightIndex += 1
+            } else {
+                orderedArray.append(leftElement)
+                leftIndex += 1
+                orderedArray.append(rightElement)
+                rightIndex += 1
+            }
+            
+            // Update Method A - Update after each element was appended
+            let remainingLeft  = Array(left[leftIndex   ..< left.count])
+            let remainingRight = Array(right[rightIndex ..< right.count])
+            let newValues      = orderedArray + remainingLeft + remainingRight
+            
+            self.array.replace(newValues, startingIndex: start)
+//            self.update(with: self.array)
+        }
+        
+        while leftIndex < left.count {
+            orderedArray.append(left[leftIndex])
+            leftIndex += 1
+        }
+        
+        while rightIndex < right.count {
+            orderedArray.append(right[rightIndex])
+            rightIndex += 1
+        }
+        
+        return orderedArray
+    }
+    
+    // Note the 'start' param is used for display, not the algorithm.
+    func MergeSort(from start: Int, a: inout [Int]) {
+        guard a.count > 1 else { return }
+        
+        let midIndex = a.count / 2
+        var left = Array(self.array[0 ..< midIndex])
+        var right = Array(self.array[midIndex ..< a.count])
+        
+        MergeSort(from: start, a: &left)
+        MergeSort(from: start + midIndex, a: &right)
+        
+        self.array = merge(from: start, left, right)
+        
+        // Update Method B - Only update after merging two arrays
+        // arrayView.replaceValues(newValues: a, startingFrom: start)
     }
     
     
@@ -193,8 +291,45 @@ public class ArrayStackView: UIView {
     }
     
     
-    func RaidxSort() {
+    func RadixSort() {
+        let radix = 10  //Here we define our radix to be 10
+        var done = false
+        var index: Int
+        var digit = 1  //Which digit are we on?
+        while !done {  //While our  sorting is not completed
+            done = true  //Assume it is done for now
+            var buckets: [[Int]] = []  //Our sorting subroutine is bucket sort, so let us predefine our buckets
+            for _ in 1...radix {
+                buckets.append([])
+            }
+            
+            for number in self.array {
+                self.update(with: self.array, hIndex: number)
+                index = number / digit  //Which bucket will we access?
+                buckets[index % radix].append(number)
+                
+                if done && index > 0 {  //If we arent done, continue to finish, otherwise we are done
+                    done = false
+                }
+            }
+            
+            var i = 0
+            
+            for j in 0..<radix {
+                let bucket = buckets[j]
+                for number in bucket {
+                    self.update(with: self.array, hIndex: i)
+                    self.array[i] = number
+                    
+                    i += 1
+                }
+            }
+            
+            digit *= radix  //Move to the next digit
+            self.update(with: self.array, hIndex: -1)
+        }
         
+        self.update(with: self.array, hIndex: -1)
     }
     
     
@@ -207,3 +342,22 @@ public class ArrayStackView: UIView {
         
     }
 }
+
+
+public extension Array where Iterator.Element == Int {
+    public mutating func replace(_ newValues: [Int], startingIndex: Int) {
+        let newSubRange = startingIndex..<(startingIndex + newValues.count)
+        self.replaceSubrange(newSubRange, with: newValues)
+    }
+}
+
+
+//extension Heap {
+//    public mutating func sort() -> [T] {
+//        for i in stride(from: (elements.count - 1), through: 1, by: -1) {
+//            swap(&elements[0], &elements[i])
+//            shiftDown(0, heapSize: i)
+//        }
+//        return elements
+//    }
+//}

@@ -62,7 +62,6 @@ class AlgorithmViewController: UIViewController {
     var algorithm: Algorithm?
     
  
-    @IBOutlet weak var datasetSizeLabel: UILabel!
     @IBOutlet weak var algorithmArrayView:         ArrayStackView!
     @IBOutlet weak var typeLabel:                  UILabel!
     @IBOutlet weak var bestCaseLabel:              UILabel!
@@ -76,31 +75,13 @@ class AlgorithmViewController: UIViewController {
     @IBOutlet weak var algorithmGraphView:         UIView!
     
     
-    var isPlaying: Bool = false
+    var wasPlayed: Bool = false
     @IBOutlet weak var playButton: UIButton!
     @IBAction @objc func playAnimation(_ sender: UIButton) {
-        if isPlaying {
-            isPlaying = false
+        if algorithmArrayView.updateOperations.operationCount == 0 {
             self.resetAnimation()
             algorithmArrayView.runAlgorithmAnimation(algorithm: (algorithm?.name)!)
         }
-        else {
-            isPlaying = true
-            algorithmArrayView.runAlgorithmAnimation(algorithm: (algorithm?.name)!)
-        }
-    }
-    
-    
-    @IBOutlet weak var animationSlider: UISlider!
-    @IBAction @objc func slideThroughAnimation(_ sender: UISlider) {
-        datasetSizeLabel.text = "SIZE OF DATASET:   \(Int(sender.value) * 10)"
-        self.resetAnimation()
-    }
-    
-    
-    @IBOutlet weak var stopButton: UIButton!
-    @IBAction @objc func stopAnimation(_ sender: UIButton) {
-        
     }
     
     
@@ -122,21 +103,16 @@ class AlgorithmViewController: UIViewController {
     
     
     func resetAnimation() {
+        algorithmArrayView.reset()
         setupAlgorithmAnimationView()
     }
     
     
     func setupAlgorithmAnimationView() {
-        let array = self.randomArray(length: Int(animationSlider.value) * 10, max: 100)
-        algorithmArrayView.setup(array: array)
-    }
-    
-    
-    func setupAnimationButtons() {
-        playButton.setImage(#imageLiteral(resourceName: "play-arrow"), for: .normal)
-        playButton.imageEdgeInsets = UIEdgeInsetsMake(12, 15, 12, 10)
-        stopButton.setImage(#imageLiteral(resourceName: "stop-button"), for: .normal)
-        stopButton.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13)
+        let array = self.randomArray(length: 50, max: 100)
+        print("AlgorithmArrayView.width  = \(algorithmArrayView.layer.frame.width)")
+        print("AlgorithmArrayView.height = \(algorithmArrayView.layer.frame.height)")
+        algorithmArrayView.setup(array: array, width: algorithmArrayView.layer.frame.width, height: algorithmArrayView.layer.frame.height)
     }
     
     
@@ -210,18 +186,12 @@ class AlgorithmViewController: UIViewController {
         super.viewDidLoad()
         
         setupAlgorithmAnimationView()
-        setupAnimationButtons()
-//        playButton.addTarget(self, action: #selector(playAnimation), for: UIControlEvents.touchUpInside)
-//        animationSlider.addTarget(self, action: #selector(slideThroughAnimation), for: .valueChanged)
-//        stopButton.addTarget(self, action: #selector(stopAnimation), for: UIControlEvents.touchUpInside)
-        
         graphViewSetup()
         
         let caseArray = [algorithm!.bestCase, algorithm!.averageCase, algorithm!.worstCase]
-        let colors: [UIColor] = [#colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1), #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1), #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)]
         
         for i in 0..<caseArray.count {
-            drawGraphData(caseKey: caseArray[i].1, lineGraphView: lineGraphViewArray[i], lineColor: colors[i])
+            drawGraphData(caseKey: caseArray[i].1, lineGraphView: lineGraphViewArray[i], lineColor: self.colors[i])
         }
         
         if algorithm != nil {
