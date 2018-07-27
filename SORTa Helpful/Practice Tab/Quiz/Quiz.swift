@@ -20,7 +20,7 @@ class Question {
     var possibleAnswers: [String]
     var correctAnswer: Int
     var incorrectAnswer = -1
-    var isAnswered : Bool?
+    var isAnswered = false
     var inputAnswer : Int?
     
     

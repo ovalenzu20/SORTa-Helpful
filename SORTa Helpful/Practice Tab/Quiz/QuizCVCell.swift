@@ -14,7 +14,6 @@ protocol QuizCVCellDelegate: class {
 }
 
 class QuizCVCell: UICollectionViewCell {
-    var currentQuestion: Question?
     weak var delegate: QuizCVCellDelegate?
 
     var btn1: UIButton!
@@ -24,10 +23,11 @@ class QuizCVCell: UICollectionViewCell {
     
     var btnsArray = [UIButton]()
     
-    
-    var question: Question? {
+    var questionLabel : UILabel = UILabel()
+
+    var currentQuestion: Question? {
         didSet {
-            guard let unwrappedQue = question else { return }
+            guard let unwrappedQue = currentQuestion else { return }
             
             questionLabel.text = unwrappedQue.question
             btn1.setTitle(unwrappedQue.possibleAnswers[0], for: .normal)
@@ -35,7 +35,7 @@ class QuizCVCell: UICollectionViewCell {
             btn3.setTitle(unwrappedQue.possibleAnswers[2], for: .normal)
             btn4.setTitle(unwrappedQue.possibleAnswers[3], for: .normal)
             let answerIndex = unwrappedQue.correctAnswer
-            if unwrappedQue.isAnswered! {
+            if unwrappedQue.isAnswered {
                 btnsArray[answerIndex].backgroundColor = UIColor.green
                 if unwrappedQue.incorrectAnswer >= 0 {
                     btnsArray[unwrappedQue.incorrectAnswer].backgroundColor = UIColor.red
@@ -47,10 +47,8 @@ class QuizCVCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        questionLabel = createQuestionLabel(question: currentQuestion!)
         setupViews()
         btnsArray = [btn1, btn2, btn3, btn4]
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -59,8 +57,8 @@ class QuizCVCell: UICollectionViewCell {
     }
     
     @objc func btnOptionAction(sender: UIButton) {
-        guard let unwrappedQue = question else { return }
-        if !unwrappedQue.isAnswered! {
+        guard let unwrappedQue = currentQuestion else { return }
+        if !unwrappedQue.isAnswered {
             delegate?.didChooseAnswer(btnIndex: sender.tag)
         }
     }
@@ -73,15 +71,14 @@ class QuizCVCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        addSubview(imgView)
-        imgView.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive=true
-        imgView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive=true
-        imgView.widthAnchor.constraint(equalToConstant: 150).isActive=true
-        imgView.heightAnchor.constraint(equalTo: imgView.widthAnchor).isActive=true
-        
+//        addSubview(imgView)
+//        imgView.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive=true
+//        imgView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive=true
+//        imgView.widthAnchor.constraint(equalToConstant: 150).isActive=true
+//        imgView.heightAnchor.constraint(equalTo: imgView.widthAnchor).isActive=true
         
         addSubview(questionLabel)
-        questionLabel.topAnchor.constraint(equalTo: imgView.bottomAnchor).isActive=true
+        questionLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive=true
         questionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 12).isActive=true
         questionLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -12).isActive=true
         questionLabel.heightAnchor.constraint(equalToConstant: 150).isActive=true
@@ -123,28 +120,18 @@ class QuizCVCell: UICollectionViewCell {
         return btn
     }
     
-    let imgView: UIImageView = {
-        let v=UIImageView()
-        v.image = #imageLiteral(resourceName: "search icon 29x29")
-        v.contentMode = .scaleAspectFit
-        v.translatesAutoresizingMaskIntoConstraints=false
-        return v
-    }()
     
-    var questionLabel : UILabel = UILabel()
-    
-    func createQuestionLabel(question: Question) -> UILabel{
-        let lbl = UILabel()
-        lbl.text = getPseudocodeFromFile(question: question)
-        lbl.textColor = UIColor.black
-        lbl.textAlignment = .center
-        lbl.font = UIFont.systemFont(ofSize: 16)
-        lbl.numberOfLines = 4
-        lbl.translatesAutoresizingMaskIntoConstraints=false
-        return lbl
+    func createQuestionLabel(){
+        questionLabel.text! = currentQuestion!.question
+        if currentQuestion!.belongsToQuiz == "IDENTIFY ALGORITHMS"{
+            let psuedocode = getPseudocodeFromFile(question: currentQuestion!)
+            questionLabel.numberOfLines = 100
+            questionLabel.text! = psuedocode
+            questionLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            questionLabel.font = questionLabel.font.withSize(12)
+            questionLabel.textAlignment = NSTextAlignment.left
+        }
     }
-    
-    
     
     func getPseudocodeFromFile(question: Question) -> String {
         let fileUrl = Bundle.main.path(forResource: question.question, ofType: "txt")

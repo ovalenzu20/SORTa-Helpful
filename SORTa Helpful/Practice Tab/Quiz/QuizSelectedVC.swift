@@ -15,9 +15,8 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     var currentQuiz: Quiz?
     var score: Int = 0
     var currentQuestionNumber = 1
-    @IBOutlet weak var quizCV: UICollectionView!
-    
-    
+    var quizCV: UICollectionView!
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentQuiz!.questions.count
     }
@@ -25,7 +24,10 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! QuizCVCell
         cell.currentQuestion = currentQuiz!.questions[indexPath.item]
-//        cell.delegate = self
+        cell.createQuestionLabel()
+        
+
+        cell.delegate = self
         return cell
     }
     
@@ -35,11 +37,25 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         currentQuiz = allQuizzes[quizIndex!]
         self.title = currentQuiz!.quizName
         
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        
+        quizCV = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), collectionViewLayout: layout)
+        quizCV.delegate = self
+        quizCV.dataSource = self
+        quizCV.register(QuizCVCell.self, forCellWithReuseIdentifier: "quizCell")
         quizCV.showsHorizontalScrollIndicator = false
         quizCV.translatesAutoresizingMaskIntoConstraints=false
+        quizCV.backgroundColor = UIColor.white
         quizCV.isPagingEnabled = true
         quizCV.delegate = self
         quizCV.dataSource = self
+        
+        self.view.addSubview(quizCV)
         
         setupViews()
         
@@ -175,8 +191,6 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
                     let quiz = createQuizFromJson(jsonData: quizType)
                     allQuizzes.append(quiz)
                 }
-                
-                
             } catch let error {
                 // In the future add function that displays empty cells and prompts user to reload page
                 print("parse error: \(error.localizedDescription)")
@@ -207,7 +221,6 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
         currentQuiz.addMultipleQuestions(questionsToAdd: quizQuestions)
-        
         return currentQuiz
     }
     
@@ -218,9 +231,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         return tempStringArr
     }
-
 }
-
 
 extension QuizSelectedVC: QuizCVCellDelegate {
     func didChooseAnswer(btnIndex: Int) {
@@ -229,12 +240,11 @@ extension QuizSelectedVC: QuizCVCellDelegate {
         currentQuiz?.questions[index.item].isAnswered = true
         if currentQuiz?.questions[index.item].correctAnswer != btnIndex {
             currentQuiz?.questions[index.item].incorrectAnswer = btnIndex
-            score -= 1
+            
         } else {
             score += 1
         }
-        
-        lblScore.text = "Score: \(score) / \(currentQuiz?.questions.count)"
+        lblScore.text = "Score: \(score) / \(currentQuiz!.questions.count)"
         quizCV.reloadItems(at: [index])
     }
     
