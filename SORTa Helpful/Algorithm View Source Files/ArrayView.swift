@@ -126,8 +126,8 @@ public class ArrayStackView: UIView {
             //                self.SpreadSort()
             //            case "Bucket Sort":
             //                self.BucketSort()
-            //            case "Pigeonhole Sort":
-            //                self.PigeonholeSort()
+        case "Pigeonhole Sort":
+            self.PigeonholeSort()
         default:
             self.BubbleSort()
         }
@@ -420,42 +420,42 @@ public class ArrayStackView: UIView {
     
     
     func PigeonholeSort() {
-//        var min = self.array[0]
-//        var max = self.array[0]
-//
-//        for i in 0..<self.array.count {
-//            self.update(with: self.array, hIndex: i)
-//            if (self.array[i] < min) {
-//                min = self.array[i]
-//            }
-//            if (self.array[i] > max) {
-//                max = self.array[i]
-//            }
-//        }
-//
-//        var range = max - min + 1 // Find range
-//
-//        // Create an array of vectors. Size of array
-//        // range. Each vector represents a hole that
-//        // is going to contain matching elements.
-//        var holes: [[Int]] = Array(Array(repeating: -1, count: range))
-//
-//        // Traverse through input array and put every
-//        // element in its respective hole
-//        for (int i = 0; i < n; i++) {
-//            holes[arr[i] - min].push_back(arr[i])
-//        }
-//
-//        // Traverse through all holes one by one. For
-//        // every hole, take its elements and put in
-//        // array.
-//        int index = 0;  // index in sorted array
-//        for (int i = 0; i < range; i++)
-//        {
-//            vector<int>::iterator it
-//            for (it = holes[i].begin(); it != holes[i].end(); ++it)
-//            arr[index++]  = *it
-//        }
+        self.delayInSeconds = 0.01
+        var min = self.array[0]
+        var max = self.array[0]
+
+        for i in 0..<self.array.count {
+            self.update(with: self.array, hIndex: i)
+            if (self.array[i] < min) {
+                min = self.array[i]
+            }
+            if (self.array[i] > max) {
+                max = self.array[i]
+            }
+        }
+
+        let range = max - min + 1
+        var holes: [Int] = Array(repeating: 0, count: range)
+        
+        for x in 0..<self.array.count {
+            self.update(with: self.array, hIndex: x)
+            holes[self.array[x] - min] = holes[self.array[x] - min] + 1
+        }
+        
+        var i = 0;
+        
+        for count in 0..<range {
+            while holes[count] > 0 {
+                self.update(with: self.array, hIndex: i)
+                holes[count] -= 1
+                self.array[i] = count + min
+                i += 1
+            }
+            
+            self.update(with: self.array, hIndex: -1)
+        }
+        
+        self.update(with: self.array, hIndex: -1)
     }
 }
 
