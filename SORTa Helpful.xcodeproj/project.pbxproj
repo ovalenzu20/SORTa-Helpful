@@ -28,7 +28,7 @@
 		07DD2E7F20F972F400699EF2 /* block_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7E20F972F400699EF2 /* block_sort.txt */; };
 		07DD2E8320F9731600699EF2 /* merge_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8220F9731600699EF2 /* merge_sort.txt */; };
 		07DD2E8520F9732200699EF2 /* quick_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8420F9732200699EF2 /* quick_sort.txt */; };
-		07DD2E8720F9733000699EF2 /* cube_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8620F9733000699EF2 /* cube_sort.txt */; };
+		07DD2E8720F9733000699EF2 /* shell_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8620F9733000699EF2 /* shell_sort.txt */; };
 		07DD2E8920F9734B00699EF2 /* counting_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8820F9734B00699EF2 /* counting_sort.txt */; };
 		07DD2E8B20F9735900699EF2 /* radix_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8A20F9735900699EF2 /* radix_sort.txt */; };
 		07DD2E8D20F9736B00699EF2 /* spread_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8C20F9736B00699EF2 /* spread_sort.txt */; };
@@ -81,7 +81,7 @@
 		07DD2E7E20F972F400699EF2 /* block_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = block_sort.txt; sourceTree = "<group>"; };
 		07DD2E8220F9731600699EF2 /* merge_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = merge_sort.txt; sourceTree = "<group>"; };
 		07DD2E8420F9732200699EF2 /* quick_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = quick_sort.txt; sourceTree = "<group>"; };
-		07DD2E8620F9733000699EF2 /* cube_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube_sort.txt; sourceTree = "<group>"; };
+		07DD2E8620F9733000699EF2 /* shell_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = shell_sort.txt; sourceTree = "<group>"; };
 		07DD2E8820F9734B00699EF2 /* counting_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = counting_sort.txt; sourceTree = "<group>"; };
 		07DD2E8A20F9735900699EF2 /* radix_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = radix_sort.txt; sourceTree = "<group>"; };
 		07DD2E8C20F9736B00699EF2 /* spread_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = spread_sort.txt; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				07DD2E7E20F972F400699EF2 /* block_sort.txt */,
 				07DD2E8220F9731600699EF2 /* merge_sort.txt */,
 				07DD2E8420F9732200699EF2 /* quick_sort.txt */,
-				07DD2E8620F9733000699EF2 /* cube_sort.txt */,
+				07DD2E8620F9733000699EF2 /* shell_sort.txt */,
 				07DD2E8820F9734B00699EF2 /* counting_sort.txt */,
 				07DD2E8A20F9735900699EF2 /* radix_sort.txt */,
 				07DD2E8C20F9736B00699EF2 /* spread_sort.txt */,
@@ -336,7 +336,7 @@
 				78340A8120F6994E001D0746 /* Roboto-Bold.ttf in Resources */,
 				78340A8020F6994E001D0746 /* Roboto-BlackItalic.ttf in Resources */,
 				07DD2E7520F9729000699EF2 /* bubble_sort.txt in Resources */,
-				07DD2E8720F9733000699EF2 /* cube_sort.txt in Resources */,
+				07DD2E8720F9733000699EF2 /* shell_sort.txt in Resources */,
 				07DD2E8D20F9736B00699EF2 /* spread_sort.txt in Resources */,
 				78340A7F20F6994E001D0746 /* Roboto-Italic.ttf in Resources */,
 				78340A7720F6994E001D0746 /* Roboto-Medium.ttf in Resources */,

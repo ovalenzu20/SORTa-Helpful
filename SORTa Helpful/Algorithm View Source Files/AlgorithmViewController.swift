@@ -23,7 +23,7 @@ class AlgorithmViewController: UIViewController {
         "Block Sort"      : "block_sort",
         "Merge Sort"      : "merge_sort",
         "Quick Sort"      : "quick_sort",
-        "Cube Sort"       : "cube_sort",
+        "Shell Sort"      : "shell_sort",
         "Counting Sort"   : "counting_sort",
         "Radix Sort"      : "radix_sort",
         "Spread Sort"     : "spread_sort",
@@ -115,7 +115,7 @@ class AlgorithmViewController: UIViewController {
     
     
     func setupAlgorithmAnimationView() {
-        let array = self.randomArray(length: 50, max: 100)
+        let array = self.randomArray(length: 70, max: 100)
         algorithmArrayView.setup(array: array, width: algorithmArrayView.layer.frame.width, height: algorithmArrayView.layer.frame.height)
         algorithmArrayView.update(with: array, hIndex: -1)
     }

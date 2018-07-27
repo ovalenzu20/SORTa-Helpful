@@ -72,14 +72,14 @@
         "memory": "O(log(n))",
         "info": "Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm, serving as a systematic method for placing the elements of an array in order."
     },
-    "Cube Sort": {
+    "Shell Sort": {
         "algoClass": "Comparison",
         "algoType": "In-place",
-        "bestCase": ["O(n)", 1],
+        "bestCase": ["O(nlogn)", 6],
         "averageCase": ["O(nlogn)", 6],
-        "worstCase": ["O(nlogn)", 6],
-        "memory": "O(n)",
-        "info": "Cubesort's algorithm uses a specialized binary search on each axis to find the location to insert an element. When an axis grows too large it is split. Locality of reference is optimal as only four binary searches are performed on small arrays for each insertion. By using many small dynamic arrays the high cost for insertion on single large arrays is avoided."
+        "worstCase": ["O(n²)", 10],
+        "memory": "O(1)",
+        "info": "Shell sort is a generalization of insertion sort that allows the exchange of items that are far apart. The idea is to arrange the list of elements so that, starting anywhere, considering every hth element gives a sorted list. Such a list is said to be h-sorted. Equivalently, it can be thought of as h interleaved lists, each individually sorted."
     },
     "Counting Sort": {
         "algoClass": "Non-comparison",

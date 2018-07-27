@@ -116,8 +116,8 @@ public class ArrayStackView: UIView {
             self.MergeSort(from: 0, a: &self.array)
             //            case "Quick Sort":
             //                self.QuickSort()
-            //            case "Cube Sort":
-            //                self.CubeSort()
+        case "Shell Sort":
+            self.ShellSort()
         case "Counting Sort":
             self.CountingSort()
         case "Radix Sort":
@@ -135,7 +135,7 @@ public class ArrayStackView: UIView {
     
     
     func BubbleSort() {
-        self.delayInSeconds = 0.001
+        self.delayInSeconds = 0.0001
         var isSorted: Bool
         
         repeat {
@@ -157,7 +157,7 @@ public class ArrayStackView: UIView {
     
     
     func InsertionSort() {
-        self.delayInSeconds = 0.001
+        self.delayInSeconds = 0.0001
         for x in 1..<self.array.count {
             var y = x
             self.update(with: self.array, hIndex: y - 1)
@@ -168,6 +168,10 @@ public class ArrayStackView: UIView {
                 self.update(with: self.array, hIndex: -1)
                 y -= 1
             }
+        }
+        
+        for i in 0..<self.array.count {
+            self.update(with: self.array, hIndex: i)
         }
         
         self.update(with: self.array, hIndex: -1)
@@ -326,8 +330,32 @@ public class ArrayStackView: UIView {
     }
     
     
-    func CubeSort() {
+    func ShellSort() {
+        self.delayInSeconds = 0.01
+        let n = self.array.count
+        var gap = n / 2
         
+        while gap > 0 {
+            for i in gap..<n {
+                self.update(with: self.array, hIndex: i)
+                let temp = self.array[i]
+                
+                var j = i
+                while j >= gap && self.array[j - gap] > temp {
+                    self.array[j] = self.array[j - gap]
+                    self.update(with: self.array, hIndex: j)
+                    j -= gap
+                }
+                
+                
+                self.array[j] = temp
+                self.update(with: self.array, hIndex: j)
+            }
+            
+            gap /= 2
+        }
+        
+        self.update(with: self.array, hIndex: -1)
     }
     
     
@@ -386,7 +414,6 @@ public class ArrayStackView: UIView {
             }
             
             for number in self.array {
-                self.update(with: self.array, hIndex: number)
                 index = number / digit
                 buckets[index % radix].append(number)
                 
