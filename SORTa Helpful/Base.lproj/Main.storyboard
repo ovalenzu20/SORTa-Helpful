@@ -1336,7 +1336,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuV-RN-QE2" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuV-RN-QE2" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
                                         <rect key="frame" x="177.33333333333334" y="310" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1479,6 +1479,7 @@
                     </view>
                     <connections>
                         <outlet property="bigoInfoLabel" destination="Ykq-p4-Xuk" id="7gv-lz-uxX"/>
+                        <outlet property="exitButton" destination="PuV-RN-QE2" id="f9Z-Kx-271"/>
                         <outlet property="omegaInfoLabel" destination="5Pz-5P-NaN" id="L0X-d0-MMf"/>
                         <outlet property="thetaInfoLabel" destination="jAO-F4-MuC" id="in7-Aw-E76"/>
                     </connections>

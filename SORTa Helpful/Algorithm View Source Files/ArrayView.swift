@@ -9,6 +9,7 @@
 import UIKit
 import Dispatch
 
+
 public class ArrayStackView: UIView {
     private var viewWidth          : CGFloat        = 0
     private var viewHeight         : CGFloat        = 0
@@ -114,8 +115,8 @@ public class ArrayStackView: UIView {
             //                self.BlockSort()
         case "Merge Sort":
             self.MergeSort(from: 0, a: &self.array)
-            //            case "Quick Sort":
-            //                self.QuickSort()
+        case "Quick Sort":
+            self.QuickSort()
         case "Shell Sort":
             self.ShellSort()
         case "Counting Sort":
@@ -178,8 +179,61 @@ public class ArrayStackView: UIView {
     }
     
     
-    func QuickSort() {
+    private func qsPartition(low: Int, high: Int) -> Int {
+        var i = low - 1
+        let pivot = self.array[high]
         
+        for j in low..<high {
+            self.update(with: self.array, hIndex: j)
+            if self.array[j] <= pivot {
+                i += 1
+                self.array.swapAt(i, j)
+                self.update(with: self.array, hIndex: -1)
+            }
+        }
+        
+        self.array.swapAt(i + 1, high)
+        self.update(with: self.array, hIndex: -1)
+        
+        return i + 1
+    }
+    
+    
+    func QuickSort() {
+        self.delayInSeconds = 0.01
+        var low = 0
+        var high = self.array.count - 1
+        let size = high - low + 1
+        var stack = Array(repeating: 0, count: size)
+        var top = -1
+        
+        top += 1
+        stack[top] = low
+        top += 1
+        stack[top] = high
+        
+        while top >= 0 {
+            high = stack[top]
+            top -= 1
+            low = stack[top]
+            top -= 1
+            
+            let p = self.qsPartition(low: low, high: high)
+            
+            if p - 1 > low {
+                top += 1
+                stack[top] = low
+                top += 1
+                stack[top] = p - 1
+            }
+            
+            if p + 1 < high {
+                top += 1
+                stack[top] = p + 1
+                top += 1
+                stack[top] = high
+            }
+        }
     }
     
     

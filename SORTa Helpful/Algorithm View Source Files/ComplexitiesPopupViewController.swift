@@ -13,8 +13,10 @@ class ComplexitiesPopupViewController: UIViewController {
     @IBOutlet weak var bigoInfoLabel:  UILabel!
     @IBOutlet weak var thetaInfoLabel: UILabel!
     @IBOutlet weak var omegaInfoLabel: UILabel!
+    @IBOutlet weak var exitButton: UIButtonCustom!
     
     @IBAction func dismissPopupButton(_ sender: SearchFilterButton) {
+        exitButton.isHighlighted = true
         dismiss(animated: true)
     }
     
