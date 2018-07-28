@@ -114,7 +114,7 @@ public class ArrayStackView: UIView {
             //            case "Block Sort":
             //                self.BlockSort()
         case "Merge Sort":
-            self.MergeSort(from: 0, a: &self.array)
+            self.MergeSort(l: 0, r: self.array.count - 1)
         case "Quick Sort":
             self.QuickSort()
         case "Shell Sort":
@@ -134,7 +134,8 @@ public class ArrayStackView: UIView {
         }
     }
     
-    
+    //********************************************************************************************************************************************
+
     func BubbleSort() {
         self.delayInSeconds = 0.0001
         var isSorted: Bool
@@ -156,7 +157,8 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
-    
+    //********************************************************************************************************************************************
+
     func InsertionSort() {
         self.delayInSeconds = 0.0001
         for x in 1..<self.array.count {
@@ -178,7 +180,8 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
-    
+    //********************************************************************************************************************************************
+
     private func qsPartition(low: Int, high: Int) -> Int {
         var i = low - 1
         let pivot = self.array[high]
@@ -198,7 +201,8 @@ public class ArrayStackView: UIView {
         return i + 1
     }
     
-    
+    //********************************************************************************************************************************************
+
     func QuickSort() {
         self.delayInSeconds = 0.01
         var low = 0
@@ -236,7 +240,8 @@ public class ArrayStackView: UIView {
         }
     }
     
-    
+    //********************************************************************************************************************************************
+
     func SelectionSort() {
         self.delayInSeconds = 0.001
         for x in 0 ..< self.array.count - 1 {
@@ -258,11 +263,13 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
-    
+    //********************************************************************************************************************************************
+
     func HeapSort() {
         
     }
     
+    //********************************************************************************************************************************************
     
     func CocktailSort() {
         self.delayInSeconds = 0.001
@@ -310,80 +317,85 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    //********************************************************************************************************************************************
     
-    private func merge(from start: Int, _ left: [Int], _ right: [Int]) -> [Int] {
-        var leftIndex = 0
-        var rightIndex = 0
+    private func merge(l: Int, m: Int, r: Int) {
+        let n1 = m - l + 1
+        let n2 = r - m
+        var L = Array(repeating: 0, count: n1)
+        var R = Array(repeating: 0, count: n2)
         
-        var orderedArray: [Int] = []
+        for i in 0..<n1 {
+            L[i] = self.array[l + i]
+        }
         
-        while leftIndex < left.count && rightIndex < right.count {
-            let leftElement = left[leftIndex]
-            let rightElement = right[rightIndex]
-            
-            if leftElement < rightElement {
-                orderedArray.append(leftElement)
-                leftIndex += 1
-            } else if leftElement > rightElement {
-                orderedArray.append(rightElement)
-                rightIndex += 1
-            } else {
-                orderedArray.append(leftElement)
-                leftIndex += 1
-                orderedArray.append(rightElement)
-                rightIndex += 1
+        for i in 0..<n2 {
+            R[i] = self.array[m + i + 1]
+        }
+        
+        var i = 0
+        var j = 0
+        var k = l
+        
+        while i < n1 && j < n2 {
+            if L[i] > R[j] {
+                self.array[k] = R[j]
+                self.update(with: self.array, hIndex: k)
+                j += 1
+            }
+            else {
+                self.array[k] = L[i]
+                self.update(with: self.array, hIndex: k)
+                i += 1
             }
             
-            // Update Method A - Update after each element was appended
-            let remainingLeft  = Array(left[leftIndex   ..< left.count])
-            let remainingRight = Array(right[rightIndex ..< right.count])
-            let newValues      = orderedArray + remainingLeft + remainingRight
+            k += 1
+        }
+        
+        while i < n1 {
+            self.array[k] = L[i]
+            self.update(with: self.array, hIndex: k)
+            i += 1
+            k += 1
+        }
+        
+        while j < n2 {
+            self.array[k] = R[j]
+            self.update(with: self.array, hIndex: k)
+            j += 1
+            k += 1
+        }
+    }
+    
+    
+    func MergeSort(l: Int, r: Int) {
+        self.delayInSeconds = 0.01
+        
+        if l < r {
+            let m = (l + (r - 1))/2
             
-            self.array.replace(newValues, startingIndex: start)
-//            self.update(with: self.array)
+            MergeSort(l: l, r: m)
+            MergeSort(l: m + 1, r: r)
+            self.merge(l: l, m: m, r: r)
         }
         
-        while leftIndex < left.count {
-            orderedArray.append(left[leftIndex])
-            leftIndex += 1
-        }
-        
-        while rightIndex < right.count {
-            orderedArray.append(right[rightIndex])
-            rightIndex += 1
-        }
-        
-        return orderedArray
+        self.update(with: self.array, hIndex: -1)
     }
     
-    // Note the 'start' param is used for display, not the algorithm.
-    func MergeSort(from start: Int, a: inout [Int]) {
-        guard a.count > 1 else { return }
-        
-        let midIndex = a.count / 2
-        var left = Array(self.array[0 ..< midIndex])
-        var right = Array(self.array[midIndex ..< a.count])
-        
-        MergeSort(from: start, a: &left)
-        MergeSort(from: start + midIndex, a: &right)
-        
-        self.array = merge(from: start, left, right)
-        
-        // Update Method B - Only update after merging two arrays
-        // arrayView.replaceValues(newValues: a, startingFrom: start)
-    }
-    
+    //********************************************************************************************************************************************
     
     func BlockSort() {
         
     }
     
-    
+    //********************************************************************************************************************************************
+
     func BucketSort() {
         
     }
     
-    
+    //********************************************************************************************************************************************
+
     func ShellSort() {
         self.delayInSeconds = 0.01
         let n = self.array.count
@@ -412,7 +424,8 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
-    
+    //********************************************************************************************************************************************
+
     func CountingSort() {
         self.delayInSeconds = 0.01
         let maxElement = self.array.max() ?? 0
@@ -453,7 +466,8 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
-    
+    //********************************************************************************************************************************************
+
     func RadixSort() {
         self.delayInSeconds = 0.01
         let radix = 10
@@ -494,12 +508,14 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
-    
+    //********************************************************************************************************************************************
+
     func SpreadSort() {
         
     }
     
-    
+    //********************************************************************************************************************************************
+
     func PigeonholeSort() {
         self.delayInSeconds = 0.01
         var min = self.array[0]
