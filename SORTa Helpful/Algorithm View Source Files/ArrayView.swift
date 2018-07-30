@@ -533,6 +533,7 @@ public class ArrayStackView: UIView {
         var sortedArray = [Int](repeating: 0, count: array.count)
         
         i = 0
+        
         for element in self.array {
             self.update(with: self.array, hIndex: i)
             countArray[element] -= 1
