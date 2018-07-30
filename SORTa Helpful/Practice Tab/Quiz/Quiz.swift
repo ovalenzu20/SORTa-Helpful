@@ -18,7 +18,7 @@ class Question {
     var belongsToQuiz : String
     var question : String
     var possibleAnswers: [String]
-    var correctAnswer: Int
+    var correctAnswer: String
     var incorrectAnswer = -1
     var isAnswered = false
     var inputAnswer : Int?
@@ -32,8 +32,29 @@ class Question {
         self.question = question
         self.possibleAnswers = possibleAnswers
         self.belongsToQuiz = belongsToQuiz
-        self.correctAnswer = possibleAnswers.index(of: correctAnswer)!
+        self.correctAnswer = correctAnswer
         self.possibleAnswers = randomizeAnswers(answersToRandomize: possibleAnswers, allAlgorithms: allPossibleAlgorithms)
+        
+        print(self.possibleAnswers)
+        print(self.possibleAnswers)
+
+        print(self.possibleAnswers)
+
+        print(self.possibleAnswers)
+        print(self.possibleAnswers)
+        print(self.possibleAnswers)
+        print(self.possibleAnswers)
+
+        print(self.correctAnswer)
+        print(self.correctAnswer)
+        print(self.correctAnswer)
+        print(self.correctAnswer)
+        print(self.correctAnswer)
+        print(self.correctAnswer)
+
+        print(self.correctAnswer)
+
+
         
         
     }
@@ -43,15 +64,20 @@ class Question {
         var randomPossibleAnswers = [String]()
         var allAlgorithmsShuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allAlgorithms) as! [String]
         
-        for elem in 0..<answersToRandomize.count{
-            if elem == 0 {
+        var currentElem = 0
+        while randomPossibleAnswers.count < 4{
+            if currentElem == 0 {
                 randomPossibleAnswers.append(answersToRandomize[0])
             }
-            else if elem > 0 {
+            else {
                 let lastElem = allAlgorithmsShuffled.removeLast()
-                randomPossibleAnswers.append(lastElem)
+                if !randomPossibleAnswers.contains(lastElem){
+                    randomPossibleAnswers.append(lastElem)
+                }
             }
+            currentElem += 1
         }
+        
         //shuffle final result
         let shuffledRandomPossibleAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: randomPossibleAnswers) as! [String]
         

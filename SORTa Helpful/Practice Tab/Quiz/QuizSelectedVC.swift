@@ -237,7 +237,11 @@ extension QuizSelectedVC: QuizCVCellDelegate {
         let centerIndex = getCenterIndex()
         guard let index = centerIndex else { return }
         currentQuiz?.questions[index.item].isAnswered = true
-        if currentQuiz?.questions[index.item].correctAnswer != btnIndex {
+        let currentQ = currentQuiz!.questions[index.item]
+        let answerIndex = currentQ.possibleAnswers.index(of: currentQ.correctAnswer)!
+        
+        
+        if answerIndex != btnIndex {
             currentQuiz?.questions[index.item].incorrectAnswer = btnIndex
             
         } else {
