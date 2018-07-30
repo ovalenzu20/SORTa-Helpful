@@ -1,10 +1,16 @@
-do {
-    swapped = false
+func sort(arr):
+    n = len(arr)
+    gap = n / 2
 
-    for i = 1 to indexOfLastUnsortedElement - 1 {
-        if leftElement > rightElement
-            swap(leftElement, rightElement)
-            swapped = true
-    }
+    while gap > 0:
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
 
-} while swapped
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+
+            arr[j] = temp
+
+        gap /= 2
