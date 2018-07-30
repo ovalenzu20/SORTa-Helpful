@@ -1,1 +1,8 @@
-func sort(arr):
+func sort(arr, left, right):
+    if left < right:
+        mid = (left + (r - 1))/ 2
+
+        sort(arr, left, mid)
+        sort(arr, mid + 1, right)
+        
+        merge(arr, left, mid, right)
