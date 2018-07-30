@@ -1,10 +1,15 @@
-do {
-    swapped = false
+func sort(arr):
+    n = len(arr)
 
-    for i = 1 to indexOfLastUnsortedElement - 1 {
-        if leftElement > rightElement
-            swap(leftElement, rightElement)
-            swapped = true
-    }
+    for i in range(1, n):
+        j = i - 1
+        selected = arr[i]
 
-} while swapped
+        // Find location where selected sould be inserted
+        location = binarySearch(arr, selected, 0, j)
+
+        while j >= location:
+            arr[j + 1] = arr[j]
+            j -= 1
+
+        arr[j+1] = selected
