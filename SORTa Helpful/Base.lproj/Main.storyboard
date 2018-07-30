@@ -1235,7 +1235,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-vs-djg">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-vs-djg" userLabel="Algorithm Animation View">
                                                 <rect key="frame" x="30" y="30" width="354" height="199"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-rr-oFz" customClass="ArrayStackView" customModule="SORTa_Helpful" customModuleProvider="target">
@@ -1267,7 +1267,7 @@
                                             <constraint firstItem="n3v-vs-djg" firstAttribute="top" secondItem="P7M-s4-Pdf" secondAttribute="top" constant="10" id="OY5-NJ-GXy"/>
                                             <constraint firstAttribute="trailing" secondItem="xp4-hx-eLz" secondAttribute="trailing" constant="20" id="PDl-nc-h5N"/>
                                             <constraint firstItem="CfH-vF-kCA" firstAttribute="top" secondItem="xp4-hx-eLz" secondAttribute="bottom" constant="20" id="aeE-Sf-JpF"/>
-                                            <constraint firstItem="bJl-2x-0Fs" firstAttribute="top" secondItem="YKs-rr-oFz" secondAttribute="bottom" constant="10" id="bpS-aS-XUb"/>
+                                            <constraint firstItem="bJl-2x-0Fs" firstAttribute="top" secondItem="n3v-vs-djg" secondAttribute="bottom" constant="10" id="bFn-A7-IGS"/>
                                             <constraint firstItem="xp4-hx-eLz" firstAttribute="leading" secondItem="1F2-l4-ssG" secondAttribute="leading" constant="20" id="ehn-La-tgK"/>
                                             <constraint firstAttribute="trailing" secondItem="WOO-vb-4Bz" secondAttribute="trailing" constant="20" id="h3j-ox-e8t"/>
                                             <constraint firstItem="P7M-s4-Pdf" firstAttribute="top" secondItem="1F2-l4-ssG" secondAttribute="top" constant="20" id="hiU-ma-CMZ"/>

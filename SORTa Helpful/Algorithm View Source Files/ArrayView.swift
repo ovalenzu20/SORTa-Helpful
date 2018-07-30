@@ -448,6 +448,7 @@ public class ArrayStackView: UIView {
     
     
     func CombSort() {
+        self.delayInSeconds = 0.01
         let n = self.array.count
         
         var gap = n
@@ -630,6 +631,7 @@ public class ArrayStackView: UIView {
     
     
     func BinaryInsertionSort() {
+        self.delayInSeconds = 0.0001
         var loc: Int, j: Int, selected: Int
         
         for i in 1..<self.array.count {

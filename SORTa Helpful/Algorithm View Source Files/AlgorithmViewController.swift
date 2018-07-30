@@ -211,7 +211,7 @@ class AlgorithmViewController: UIViewController {
             worstCaseLabel.text   = algorithm?.worstCase.0
             memoryLabel.text      = algorithm?.memory
             infoLabel.text        = algorithm?.info
-            aboutAlgorithmSectionLabel.text = "ABOUT " +  (algorithm?.name)!.uppercased()
+            aboutAlgorithmSectionLabel.text = "ABOUT " + (algorithm?.name)!.uppercased()
             pseudocodeLabel.text  = getPseudocodeFromFile(algoName: (algorithm?.name)!)
         }
     }
