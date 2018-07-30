@@ -88,6 +88,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             quizDoneVC?.score = score
             quizDoneVC?.totalScore = currentQuiz!.questions.count
 //            self.present(quizDoneVC!, animated: true, completion: nil)
+            quizDoneVC?.view.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
             self.navigationController?.pushViewController(quizDoneVC!, animated: true)
             return
         }
