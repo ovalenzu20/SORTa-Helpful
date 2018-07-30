@@ -20,7 +20,6 @@ class AlgorithmViewController: UIViewController {
         "Insertion Sort"       : "insertion_sort",
         "Heap Sort"            : "heap_sort",
         "Cocktail Sort"        : "cocktail_sort",
-        "Block Sort"           : "block_sort",
         "Merge Sort"           : "merge_sort",
         "Quick Sort"           : "quick_sort",
         "Shell Sort"           : "shell_sort",

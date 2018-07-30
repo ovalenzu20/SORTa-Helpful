@@ -25,7 +25,6 @@
 		07DD2E7920F972BB00699EF2 /* insertion_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7820F972BB00699EF2 /* insertion_sort.txt */; };
 		07DD2E7B20F972D100699EF2 /* heap_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7A20F972D100699EF2 /* heap_sort.txt */; };
 		07DD2E7D20F972E100699EF2 /* cocktail_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7C20F972E100699EF2 /* cocktail_sort.txt */; };
-		07DD2E7F20F972F400699EF2 /* block_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7E20F972F400699EF2 /* block_sort.txt */; };
 		07DD2E8320F9731600699EF2 /* merge_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8220F9731600699EF2 /* merge_sort.txt */; };
 		07DD2E8520F9732200699EF2 /* quick_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8420F9732200699EF2 /* quick_sort.txt */; };
 		07DD2E8720F9733000699EF2 /* shell_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8620F9733000699EF2 /* shell_sort.txt */; };
@@ -78,7 +77,6 @@
 		07DD2E7820F972BB00699EF2 /* insertion_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = insertion_sort.txt; sourceTree = "<group>"; };
 		07DD2E7A20F972D100699EF2 /* heap_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = heap_sort.txt; sourceTree = "<group>"; };
 		07DD2E7C20F972E100699EF2 /* cocktail_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = cocktail_sort.txt; sourceTree = "<group>"; };
-		07DD2E7E20F972F400699EF2 /* block_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = block_sort.txt; sourceTree = "<group>"; };
 		07DD2E8220F9731600699EF2 /* merge_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = merge_sort.txt; sourceTree = "<group>"; };
 		07DD2E8420F9732200699EF2 /* quick_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = quick_sort.txt; sourceTree = "<group>"; };
 		07DD2E8620F9733000699EF2 /* shell_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = shell_sort.txt; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				07DD2E7820F972BB00699EF2 /* insertion_sort.txt */,
 				07DD2E7A20F972D100699EF2 /* heap_sort.txt */,
 				07DD2E7C20F972E100699EF2 /* cocktail_sort.txt */,
-				07DD2E7E20F972F400699EF2 /* block_sort.txt */,
 				07DD2E8220F9731600699EF2 /* merge_sort.txt */,
 				07DD2E8420F9732200699EF2 /* quick_sort.txt */,
 				07DD2E8620F9733000699EF2 /* shell_sort.txt */,
@@ -343,7 +340,6 @@
 				78340A7C20F6994E001D0746 /* Roboto-BoldItalic.ttf in Resources */,
 				78F9845E20E84F760017DCCC /* Main.storyboard in Resources */,
 				07DD2E9120F9739100699EF2 /* pigeonhole_sort.txt in Resources */,
-				07DD2E7F20F972F400699EF2 /* block_sort.txt in Resources */,
 				071ED4E820FDC44B0039FDB2 /* Assets.xcassets in Resources */,
 				78340A7A20F6994E001D0746 /* Connoisseurs.ttf in Resources */,
 				07DD2E7920F972BB00699EF2 /* insertion_sort.txt in Resources */,

@@ -132,8 +132,10 @@ public class ArrayStackView: UIView {
         }
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     func BubbleSort() {
         self.delayInSeconds = 0.0001
         var isSorted: Bool
@@ -155,8 +157,10 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     func InsertionSort() {
         self.delayInSeconds = 0.0001
         for x in 1..<self.array.count {
@@ -178,8 +182,10 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     private func qsPartition(low: Int, high: Int) -> Int {
         var i = low - 1
         let pivot = self.array[high]
@@ -199,8 +205,10 @@ public class ArrayStackView: UIView {
         return i + 1
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     func QuickSort() {
         self.delayInSeconds = 0.01
         var low = 0
@@ -238,8 +246,10 @@ public class ArrayStackView: UIView {
         }
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     func SelectionSort() {
         self.delayInSeconds = 0.001
         for x in 0 ..< self.array.count - 1 {
@@ -261,7 +271,9 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
+    
     
     private func heapify(n: Int, i: Int) {
         var largest = i
@@ -284,7 +296,6 @@ public class ArrayStackView: UIView {
     }
     
     
-    
     func HeapSort() {
         self.delayInSeconds = 0.01
         let n = self.array.count
@@ -304,7 +315,9 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
+    
     
     func CocktailSort() {
         self.delayInSeconds = 0.001
@@ -352,7 +365,9 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
+    
     
     private func merge(l: Int, m: Int, r: Int) {
         let n1 = m - l + 1
@@ -489,8 +504,10 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     func CountingSort() {
         self.delayInSeconds = 0.01
         let maxElement = self.array.max() ?? 0
@@ -531,8 +548,10 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     func RadixSort() {
         self.delayInSeconds = 0.01
         let radix = 10
@@ -572,6 +591,7 @@ public class ArrayStackView: UIView {
         
         self.update(with: self.array, hIndex: -1)
     }
+    
     
     //********************************************************************************************************************************************
     
@@ -629,8 +649,10 @@ public class ArrayStackView: UIView {
         }
     }
     
+    
     //********************************************************************************************************************************************
 
+    
     func PigeonholeSort() {
         self.delayInSeconds = 0.01
         var min = self.array[0]
