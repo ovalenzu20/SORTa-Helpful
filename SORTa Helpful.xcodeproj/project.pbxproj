@@ -31,8 +31,8 @@
 		07DD2E8720F9733000699EF2 /* shell_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8620F9733000699EF2 /* shell_sort.txt */; };
 		07DD2E8920F9734B00699EF2 /* counting_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8820F9734B00699EF2 /* counting_sort.txt */; };
 		07DD2E8B20F9735900699EF2 /* radix_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8A20F9735900699EF2 /* radix_sort.txt */; };
-		07DD2E8D20F9736B00699EF2 /* spread_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8C20F9736B00699EF2 /* spread_sort.txt */; };
-		07DD2E8F20F9737E00699EF2 /* bucket_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8E20F9737E00699EF2 /* bucket_sort.txt */; };
+		07DD2E8D20F9736B00699EF2 /* binary_insertion_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8C20F9736B00699EF2 /* binary_insertion_sort.txt */; };
+		07DD2E8F20F9737E00699EF2 /* comb_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E8E20F9737E00699EF2 /* comb_sort.txt */; };
 		07DD2E9120F9739100699EF2 /* pigeonhole_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E9020F9739100699EF2 /* pigeonhole_sort.txt */; };
 		07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237AF20E9CD06000D22DE /* SearchCell.swift */; };
 		07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B520E9DCA9000D22DE /* SearchViewController.swift */; };
@@ -84,8 +84,8 @@
 		07DD2E8620F9733000699EF2 /* shell_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = shell_sort.txt; sourceTree = "<group>"; };
 		07DD2E8820F9734B00699EF2 /* counting_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = counting_sort.txt; sourceTree = "<group>"; };
 		07DD2E8A20F9735900699EF2 /* radix_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = radix_sort.txt; sourceTree = "<group>"; };
-		07DD2E8C20F9736B00699EF2 /* spread_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = spread_sort.txt; sourceTree = "<group>"; };
-		07DD2E8E20F9737E00699EF2 /* bucket_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bucket_sort.txt; sourceTree = "<group>"; };
+		07DD2E8C20F9736B00699EF2 /* binary_insertion_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = binary_insertion_sort.txt; sourceTree = "<group>"; };
+		07DD2E8E20F9737E00699EF2 /* comb_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = comb_sort.txt; sourceTree = "<group>"; };
 		07DD2E9020F9739100699EF2 /* pigeonhole_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = pigeonhole_sort.txt; sourceTree = "<group>"; };
 		07E237AF20E9CD06000D22DE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		07E237B520E9DCA9000D22DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 				07DD2E8620F9733000699EF2 /* shell_sort.txt */,
 				07DD2E8820F9734B00699EF2 /* counting_sort.txt */,
 				07DD2E8A20F9735900699EF2 /* radix_sort.txt */,
-				07DD2E8C20F9736B00699EF2 /* spread_sort.txt */,
-				07DD2E8E20F9737E00699EF2 /* bucket_sort.txt */,
+				07DD2E8C20F9736B00699EF2 /* binary_insertion_sort.txt */,
+				07DD2E8E20F9737E00699EF2 /* comb_sort.txt */,
 				07DD2E9020F9739100699EF2 /* pigeonhole_sort.txt */,
 			);
 			path = SupportingFiles;
@@ -324,7 +324,7 @@
 				07DD2E7B20F972D100699EF2 /* heap_sort.txt in Resources */,
 				78340A7820F6994E001D0746 /* Roboto-Thin.ttf in Resources */,
 				78340A7620F6994E001D0746 /* Roboto-Regular.ttf in Resources */,
-				07DD2E8F20F9737E00699EF2 /* bucket_sort.txt in Resources */,
+				07DD2E8F20F9737E00699EF2 /* comb_sort.txt in Resources */,
 				07DD2E8920F9734B00699EF2 /* counting_sort.txt in Resources */,
 				07DD2E8B20F9735900699EF2 /* radix_sort.txt in Resources */,
 				78F9846320E84F770017DCCC /* LaunchScreen.storyboard in Resources */,
@@ -337,7 +337,7 @@
 				78340A8020F6994E001D0746 /* Roboto-BlackItalic.ttf in Resources */,
 				07DD2E7520F9729000699EF2 /* bubble_sort.txt in Resources */,
 				07DD2E8720F9733000699EF2 /* shell_sort.txt in Resources */,
-				07DD2E8D20F9736B00699EF2 /* spread_sort.txt in Resources */,
+				07DD2E8D20F9736B00699EF2 /* binary_insertion_sort.txt in Resources */,
 				78340A7F20F6994E001D0746 /* Roboto-Italic.ttf in Resources */,
 				78340A7720F6994E001D0746 /* Roboto-Medium.ttf in Resources */,
 				78340A7C20F6994E001D0746 /* Roboto-BoldItalic.ttf in Resources */,

@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -441,11 +442,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="190" height="120"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-ul-rq2">
-                                                            <rect key="frame" x="9.9999999999999929" y="10" width="109.33333333333331" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="UWu-fG-5l4"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-ul-rq2">
+                                                            <rect key="frame" x="10" y="10.000000000000002" width="162" height="17.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -465,9 +463,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="KBC-I8-YnK" secondAttribute="trailing" constant="10" id="0Id-Y5-wxq"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kg5-ul-rq2" secondAttribute="trailing" symbolic="YES" id="CSN-CO-px9"/>
                                                     <constraint firstItem="Kg5-ul-rq2" firstAttribute="top" secondItem="f8k-pf-NfJ" secondAttribute="top" constant="10" id="Hx0-U6-K1j"/>
                                                     <constraint firstAttribute="bottom" secondItem="KBC-I8-YnK" secondAttribute="bottom" constant="10" id="MFc-TK-fdG"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="Kg5-ul-rq2" secondAttribute="trailing" constant="10" id="ctq-bb-QgA"/>
                                                     <constraint firstItem="KBC-I8-YnK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f8k-pf-NfJ" secondAttribute="leading" symbolic="YES" id="hTR-4N-DnJ"/>
                                                     <constraint firstItem="Kg5-ul-rq2" firstAttribute="leading" secondItem="f8k-pf-NfJ" secondAttribute="leading" constant="10" id="jAi-bv-qs3"/>
                                                 </constraints>
@@ -814,7 +812,7 @@
                                                         <state key="normal" title="PLAY ANIMATION"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="25"/>
+                                                                <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -823,7 +821,7 @@
                                                                 <real key="value" value="3"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                <real key="value" value="0.25"/>
+                                                                <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>

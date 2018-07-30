@@ -107,12 +107,12 @@ public class ArrayStackView: UIView {
             self.SelectionSort()
         case "Insertion Sort":
             self.InsertionSort()
-            //            case "Heap Sort":
-            //                self.HeapSort()
+        case "Heap Sort":
+            self.HeapSort()
+        case "Binary Insertion Sort":
+            self.BinaryInsertionSort()
         case "Cocktail Sort":
             self.CocktailSort()
-            //            case "Block Sort":
-            //                self.BlockSort()
         case "Merge Sort":
             self.MergeSort(l: 0, r: self.array.count - 1)
         case "Quick Sort":
@@ -123,10 +123,8 @@ public class ArrayStackView: UIView {
             self.CountingSort()
         case "Radix Sort":
             self.RadixSort()
-            //            case "Spread Sort":
-            //                self.SpreadSort()
-            //            case "Bucket Sort":
-            //                self.BucketSort()
+        case "Comb Sort":
+            self.CombSort()
         case "Pigeonhole Sort":
             self.PigeonholeSort()
         default:
@@ -264,9 +262,46 @@ public class ArrayStackView: UIView {
     }
     
     //********************************************************************************************************************************************
-
-    func HeapSort() {
+    
+    private func heapify(n: Int, i: Int) {
+        var largest = i
+        let left = 2 * i + 1
+        let right = 2 * i + 2
         
+        if left < n && self.array[i] < self.array[left] {
+            largest = left
+        }
+        
+        if right < n && self.array[largest] < self.array[right] {
+            largest = right
+        }
+        
+        if largest != i {
+            self.array.swapAt(i, largest)
+            self.update(with: self.array, hIndex: -1)
+            self.heapify(n: n, i: largest)
+        }
+    }
+    
+    
+    
+    func HeapSort() {
+        self.delayInSeconds = 0.01
+        let n = self.array.count
+        
+        for i in stride(from: n, to: -1, by: -1) {
+            self.update(with: self.array, hIndex: i)
+            self.heapify(n: n, i: i)
+        }
+        
+        for i in stride(from: n - 1, to: 0, by: -1) {
+            self.update(with: self.array, hIndex: i)
+            self.array.swapAt(i, 0)
+            self.update(with: self.array, hIndex: -1)
+            self.heapify(n: i, i: 0)
+        }
+        
+        self.update(with: self.array, hIndex: -1)
     }
     
     //********************************************************************************************************************************************
@@ -382,20 +417,50 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
     
+    
     //********************************************************************************************************************************************
     
-    func BlockSort() {
+    
+    private func getNextGap(gap: Int) -> Int {
+        let gap = (gap * 10) / 13
         
+        if gap < 1 {
+            return 1
+        }
+        
+        return gap
     }
+    
+    
+    func CombSort() {
+        let n = self.array.count
+        
+        var gap = n
+        
+        var swapped = true
+        
+        while gap != 1 || swapped == true {
+        
+            gap = getNextGap(gap: gap)
+            swapped = false
+            
+            for i in 0..<(n - gap) {
+                self.update(with: self.array, hIndex: i)
+                if self.array[i] > self.array[i + gap] {
+                    self.array.swapAt(i, i + gap)
+                    self.update(with: self.array, hIndex: -1)
+                    swapped = true
+                }
+            }
+        }
+        
+        self.update(with: self.array, hIndex: -1)
+    }
+    
     
     //********************************************************************************************************************************************
 
-    func BucketSort() {
-        
-    }
     
-    //********************************************************************************************************************************************
-
     func ShellSort() {
         self.delayInSeconds = 0.01
         let n = self.array.count
@@ -509,9 +574,59 @@ public class ArrayStackView: UIView {
     }
     
     //********************************************************************************************************************************************
-
-    func SpreadSort() {
+    
+    
+    private func binarySearch(val: Int, start: Int, end: Int) -> Int {
+        if start == end {
+            self.update(with: self.array, hIndex: start)
+            
+            if self.array[start] > val {
+                return start
+            }
+            else {
+                return start + 1
+            }
+        }
+    
+        if start > end {
+            return start
+        }
         
+        let mid = (start + end)/2
+        
+        self.update(with: self.array, hIndex: mid)
+        
+        if self.array[mid] < val {
+            return binarySearch(val: val, start: mid + 1, end: end)
+        }
+        else if self.array[mid] > val {
+            return binarySearch(val: val, start: start, end: mid - 1)
+        }
+        else {
+            return mid
+        }
+    }
+    
+    
+    func BinaryInsertionSort() {
+        var loc: Int, j: Int, selected: Int
+        
+        for i in 1..<self.array.count {
+            j = i - 1
+            self.update(with: self.array, hIndex: i)
+            selected = self.array[i]
+            
+            loc = self.binarySearch(val: selected, start: 0, end: j)
+            
+            while (j >= loc) {
+                self.array[j+1] = self.array[j]
+                self.update(with: self.array, hIndex: -1)
+                j -= 1
+            }
+            
+            self.array[j+1] = selected
+            self.update(with: self.array, hIndex: -1)
+        }
     }
     
     //********************************************************************************************************************************************
@@ -555,22 +670,3 @@ public class ArrayStackView: UIView {
         self.update(with: self.array, hIndex: -1)
     }
 }
-
-
-public extension Array where Iterator.Element == Int {
-    public mutating func replace(_ newValues: [Int], startingIndex: Int) {
-        let newSubRange = startingIndex..<(startingIndex + newValues.count)
-        self.replaceSubrange(newSubRange, with: newValues)
-    }
-}
-
-
-//extension Heap {
-//    public mutating func sort() -> [T] {
-//        for i in stride(from: (elements.count - 1), through: 1, by: -1) {
-//            swap(&elements[0], &elements[i])
-//            shiftDown(0, heapSize: i)
-//        }
-//        return elements
-//    }
-//}

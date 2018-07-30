@@ -15,20 +15,20 @@ import SpriteKit
 class AlgorithmViewController: UIViewController {
     
     private let algorithmFiles: [String: String] = [
-        "Bubble Sort"     : "bubble_sort",
-        "Selection Sort"  : "selection_sort",
-        "Insertion Sort"  : "insertion_sort",
-        "Heap Sort"       : "heap_sort",
-        "Cocktail Sort"   : "cocktail_sort",
-        "Block Sort"      : "block_sort",
-        "Merge Sort"      : "merge_sort",
-        "Quick Sort"      : "quick_sort",
-        "Shell Sort"      : "shell_sort",
-        "Counting Sort"   : "counting_sort",
-        "Radix Sort"      : "radix_sort",
-        "Spread Sort"     : "spread_sort",
-        "Bucket Sort"     : "bucket_sort",
-        "Pigeonhole Sort" : "pigeonhole_sort"
+        "Bubble Sort"          : "bubble_sort",
+        "Selection Sort"       : "selection_sort",
+        "Insertion Sort"       : "insertion_sort",
+        "Heap Sort"            : "heap_sort",
+        "Cocktail Sort"        : "cocktail_sort",
+        "Block Sort"           : "block_sort",
+        "Merge Sort"           : "merge_sort",
+        "Quick Sort"           : "quick_sort",
+        "Shell Sort"           : "shell_sort",
+        "Counting Sort"        : "counting_sort",
+        "Radix Sort"           : "radix_sort",
+        "Binary Insertion Sort" : "binary_insertion_sort",
+        "Comb Sort"            : "comb_sort",
+        "Pigeonhole Sort"      : "pigeonhole_sort"
     ]
     
     
