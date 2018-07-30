@@ -24,9 +24,8 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! QuizCVCell
         cell.currentQuestion = currentQuiz!.questions[indexPath.item]
-        cell.createQuestionLabel()
+//        cell.createQuestionLabel()
         
-
         cell.delegate = self
         return cell
     }
@@ -50,7 +49,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         quizCV.register(QuizCVCell.self, forCellWithReuseIdentifier: "quizCell")
         quizCV.showsHorizontalScrollIndicator = false
         quizCV.translatesAutoresizingMaskIntoConstraints=false
-        quizCV.backgroundColor = UIColor.white
+        quizCV.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
         quizCV.isPagingEnabled = true
         quizCV.delegate = self
         quizCV.dataSource = self
@@ -144,7 +143,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         let btn=UIButton()
         btn.setTitle("< Previous", for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
-        btn.backgroundColor=UIColor.orange
+        btn.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnPrevNextAction), for: .touchUpInside)
         return btn
@@ -154,7 +153,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         let btn=UIButton()
         btn.setTitle("Next >", for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
-        btn.backgroundColor=UIColor.purple
+        btn.backgroundColor = #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1)
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnPrevNextAction), for: .touchUpInside)
         return btn
