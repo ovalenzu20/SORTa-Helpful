@@ -14,13 +14,20 @@ class DoneWithQuizViewController: UIViewController {
     @IBOutlet weak var gradeDescription: UILabel!
     var currentQuiz : Quiz?
     
+    var score = 0
+    var totalScore = 0
+    
+    
     @IBAction func clickedReturnToMenu(_ sender: Any) {
-        performSegue(withIdentifier: "QuizViewController", sender: self)
+//        let mainMenu = storyboard?.instantiateViewController(withIdentifier: "PracticeViewController") as? PracticeViewController
+//        navigationController?.pushViewController(mainMenu!, animated: true)
+////        performSegue(withIdentifier: "QuizViewController", sender: self)
+        self.navigationController?.popToRootViewController(animated: true)
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(currentQuiz!.questions)
         setUpLabels(quiz: currentQuiz!)
         // Do any additional setup after loading the view.
     }
@@ -30,9 +37,20 @@ class DoneWithQuizViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func calculateLetterGrade(quiz: Quiz) -> String{
-        let gradePercentage = 0.06
-//            quiz.calculateScore()
+    func calculateScore() -> Float{
+        let quizScore = Double(score) / Double(totalScore)
+        let quizScoreRounded = round(quizScore, toDecimalPlaces: 2)
+        return Float(quizScoreRounded)
+    }
+    
+    func round(_ value: Double, toDecimalPlaces places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return Darwin.round(value * divisor) / divisor
+    }
+    
+    func calculateLetterGrade() -> String{
+        let gradePercentage = calculateScore()
+
 
         if gradePercentage >= 0.97{
             return "A+"
@@ -84,9 +102,9 @@ class DoneWithQuizViewController: UIViewController {
     }
     
     func setUpLabels(quiz: Quiz){
-        letterGrade.text! = calculateLetterGrade(quiz: quiz)
-        let correctlyAnswered = quiz.numberOfQuestionsAnsweredCorrectly
-        let numberOfQuestions = quiz.numberOfQuestions
+        letterGrade.text! = calculateLetterGrade()
+        let correctlyAnswered = score
+        let numberOfQuestions = totalScore
         gradeDescription.text! = "You correctly answered \(correctlyAnswered) out of \(numberOfQuestions) questions"
     }
 

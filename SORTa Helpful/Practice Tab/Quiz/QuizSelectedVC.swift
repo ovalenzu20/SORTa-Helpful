@@ -79,12 +79,16 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+   
+    
     @objc func btnPrevNextAction(sender: UIButton) {
         if sender == btnNext && currentQuestionNumber == currentQuiz!.questions.count {
-//            let v = ResultVC()
-//            v.score = score
-//            v.totalScore = currentQuiz!.questions.count
-//            self.navigationController?.pushViewController(v, animated: false)
+            let quizDoneVC = storyboard?.instantiateViewController(withIdentifier: "DoneWithQuizViewController") as? DoneWithQuizViewController
+            quizDoneVC?.currentQuiz = currentQuiz
+            quizDoneVC?.score = score
+            quizDoneVC?.totalScore = currentQuiz!.questions.count
+//            self.present(quizDoneVC!, animated: true, completion: nil)
+            self.navigationController?.pushViewController(quizDoneVC!, animated: true)
             return
         }
         

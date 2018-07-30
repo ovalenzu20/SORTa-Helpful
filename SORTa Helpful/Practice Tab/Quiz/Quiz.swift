@@ -113,34 +113,9 @@ class Quiz {
             addQuestion(question: q)
         }
     }
+
     
-//    func calculateAnswerStatistics(){
-//        for q in questions{
-//            if q.inputAnswer != -1{
-//                if q.inputAnswer == q.correctAnswer{
-//                    numberOfQuestionsAnsweredCorrectly += 1
-//                    numberOfQuestionsAnswered += 1
-//                }
-//                else {
-//                    numberOfQuestionsAnsweredIncorrectly += 1
-//                    numberOfQuestionsAnswered += 1
-//                }
-//            }
-//        }
-//    }
-//
-//    func calculateScore() -> Double
-//    {
-//        self.calculateAnswerStatistics()
-//        let quizScore = Double(numberOfQuestionsAnsweredCorrectly) / Double(numberOfQuestionsAnswered)
-//        let quizScoreRounded = round(quizScore, toDecimalPlaces: 2)
-//        return quizScoreRounded
-//    }
     
-    func round(_ value: Double, toDecimalPlaces places: Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return Darwin.round(value * divisor) / divisor
-    }
     
 }
 

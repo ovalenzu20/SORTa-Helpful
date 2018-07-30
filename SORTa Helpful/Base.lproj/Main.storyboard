@@ -1497,7 +1497,7 @@
             <objects>
                 <viewController storyboardIdentifier="QuizViewController" id="SLS-ZC-twu" customClass="QuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glB-LT-7xB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-gr-S92">
@@ -1606,7 +1606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Dn-W4-39h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1975.36231884058" y="2264.6739130434785"/>
+            <point key="canvasLocation" x="-1638" y="2329"/>
         </scene>
         <!--Done With Quiz View Controller-->
         <scene sceneID="rQC-ds-zxc">
@@ -1617,7 +1617,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwf-Bh-EIB" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="15" y="156.33333333333337" width="384" height="424"/>
+                                <rect key="frame" x="15" y="173.33333333333337" width="384" height="391"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-a0-Jua">
                                         <rect key="frame" x="151.33333333333334" y="20" width="81.333333333333343" height="82.333333333333329"/>
@@ -1625,34 +1625,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6I-G5-xbF">
-                                        <rect key="frame" x="20" y="206.99999999999997" width="344" height="29.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You correctly answered ? out of ? questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-eX-F1P">
+                                        <rect key="frame" x="20" y="114.33333333333336" width="344" height="58.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIq-m6-xps">
-                                        <rect key="frame" x="60" y="256.33333333333337" width="264" height="50"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-mY-wAd">
-                                                <rect key="frame" x="0.0" y="0.0" width="264" height="50"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
-                                                <state key="normal" title="View missed answers">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.16862745098039217" green="0.16470588235294117" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="bEy-mY-wAd" secondAttribute="bottom" id="04b-YO-f9U"/>
-                                            <constraint firstItem="bEy-mY-wAd" firstAttribute="top" secondItem="cIq-m6-xps" secondAttribute="top" id="4BT-DD-7rp"/>
-                                            <constraint firstAttribute="height" constant="50" id="LnP-7m-Tw1"/>
-                                            <constraint firstItem="bEy-mY-wAd" firstAttribute="leading" secondItem="cIq-m6-xps" secondAttribute="leading" id="oH5-B2-NIu"/>
-                                            <constraint firstAttribute="trailing" secondItem="bEy-mY-wAd" secondAttribute="trailing" id="q1e-on-zCN"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOy-Ig-EWR">
-                                        <rect key="frame" x="60" y="344" width="264" height="50"/>
+                                        <rect key="frame" x="60" y="296" width="264" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTs-wO-DuL">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="50"/>
@@ -1674,27 +1654,16 @@
                                             <constraint firstItem="UTs-wO-DuL" firstAttribute="leading" secondItem="DOy-Ig-EWR" secondAttribute="leading" id="iYv-FV-66i"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You correctly answered ? out of ? questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-eX-F1P">
-                                        <rect key="frame" x="20" y="114.33333333333336" width="344" height="58.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="UTs-wO-DuL" secondAttribute="bottom" constant="30" id="0W8-mx-1Qs"/>
+                                    <constraint firstAttribute="bottom" secondItem="UTs-wO-DuL" secondAttribute="bottom" constant="45" id="0W8-mx-1Qs"/>
                                     <constraint firstItem="a4h-eX-F1P" firstAttribute="leading" secondItem="Pwf-Bh-EIB" secondAttribute="leading" constant="20" id="1ZG-zw-d4u"/>
-                                    <constraint firstItem="E6I-G5-xbF" firstAttribute="top" secondItem="a4h-eX-F1P" secondAttribute="bottom" constant="34" id="3Lo-lN-cfM"/>
-                                    <constraint firstItem="E6I-G5-xbF" firstAttribute="leading" secondItem="Pwf-Bh-EIB" secondAttribute="leading" constant="20" id="3p6-Ig-L9i"/>
                                     <constraint firstAttribute="trailing" secondItem="DOy-Ig-EWR" secondAttribute="trailing" constant="60" id="6oM-68-Zkd"/>
                                     <constraint firstItem="a4h-eX-F1P" firstAttribute="top" secondItem="tK5-a0-Jua" secondAttribute="bottom" constant="12.000000000000014" id="77L-r2-iaa"/>
                                     <constraint firstItem="DOy-Ig-EWR" firstAttribute="leading" secondItem="Pwf-Bh-EIB" secondAttribute="leading" constant="60" id="FXD-Ue-14q"/>
+                                    <constraint firstItem="UTs-wO-DuL" firstAttribute="top" secondItem="a4h-eX-F1P" secondAttribute="bottom" constant="123" id="SiZ-fg-fYC"/>
                                     <constraint firstItem="tK5-a0-Jua" firstAttribute="top" secondItem="Pwf-Bh-EIB" secondAttribute="top" constant="20" id="Y0v-Eq-IJ8"/>
-                                    <constraint firstItem="cIq-m6-xps" firstAttribute="top" secondItem="E6I-G5-xbF" secondAttribute="bottom" constant="20" id="YsP-JF-h6S"/>
-                                    <constraint firstItem="cIq-m6-xps" firstAttribute="leading" secondItem="Pwf-Bh-EIB" secondAttribute="leading" constant="60" id="dPM-IQ-IBW"/>
-                                    <constraint firstAttribute="trailing" secondItem="E6I-G5-xbF" secondAttribute="trailing" constant="20" id="gUb-0b-mmm"/>
-                                    <constraint firstAttribute="trailing" secondItem="cIq-m6-xps" secondAttribute="trailing" constant="60" id="iTQ-dy-Irb"/>
                                     <constraint firstAttribute="trailing" secondItem="a4h-eX-F1P" secondAttribute="trailing" constant="20" id="mP5-PW-cMk"/>
                                     <constraint firstItem="tK5-a0-Jua" firstAttribute="centerX" secondItem="Pwf-Bh-EIB" secondAttribute="centerX" id="oF9-vy-RBj"/>
                                 </constraints>
@@ -1710,21 +1679,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akD-6U-EgJ">
-                                <rect key="frame" x="197" y="472.66666666666669" width="20" height="17.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="os5-rK-Hby" firstAttribute="trailing" secondItem="Pwf-Bh-EIB" secondAttribute="trailing" constant="15" id="HHl-lU-BdK"/>
-                            <constraint firstItem="akD-6U-EgJ" firstAttribute="top" secondItem="cIq-m6-xps" secondAttribute="bottom" constant="10" id="Iwg-XO-dJA"/>
                             <constraint firstItem="Pwf-Bh-EIB" firstAttribute="centerY" secondItem="SZf-y0-6aL" secondAttribute="centerY" id="OTC-C4-p6H"/>
                             <constraint firstItem="Pwf-Bh-EIB" firstAttribute="centerX" secondItem="SZf-y0-6aL" secondAttribute="centerX" id="VaZ-bl-B3P"/>
-                            <constraint firstItem="akD-6U-EgJ" firstAttribute="centerX" secondItem="SZf-y0-6aL" secondAttribute="centerX" id="dTW-Xx-Qhl"/>
                             <constraint firstItem="Pwf-Bh-EIB" firstAttribute="leading" secondItem="os5-rK-Hby" secondAttribute="leading" constant="15" id="txM-q0-YyI"/>
-                            <constraint firstItem="UTs-wO-DuL" firstAttribute="top" secondItem="akD-6U-EgJ" secondAttribute="bottom" constant="10" id="xzN-gy-1kC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="os5-rK-Hby"/>
                     </view>
@@ -1756,7 +1717,7 @@
         <!--Practice View Controller-->
         <scene sceneID="Mqc-pd-CAj">
             <objects>
-                <viewController id="pzA-42-VsY" customClass="PracticeViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PracticeViewController" id="pzA-42-VsY" customClass="PracticeViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yjm-iz-lsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1878,6 +1839,6 @@
         <image name="stop-button" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KuB-nW-CEq"/>
+        <segue reference="jC9-Zd-71F"/>
     </inferredMetricsTieBreakers>
 </document>
