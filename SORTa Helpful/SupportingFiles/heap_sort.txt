@@ -1,10 +1,9 @@
-do {
-    swapped = false
+func sort(arr):
+    n = len(arr)
 
-    for i = 1 to indexOfLastUnsortedElement - 1 {
-        if leftElement > rightElement
-            swap(leftElement, rightElement)
-            swapped = true
-    }
+    for i in range(n, -1, -1):
+        heapify(arr, n, i)
 
-} while swapped
+    for i in range(n - 1, 0, -1):
+        swap(arr[i], arr[0])
+        heapify(arr, i, 0)

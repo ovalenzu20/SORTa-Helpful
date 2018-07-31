@@ -1,10 +1,20 @@
-do {
-    swapped = false
+func sort(arr, low, high):
+    if low < high:
+        partitionIndex = partition(arr, low, high)
 
-    for i = 1 to indexOfLastUnsortedElement - 1 {
-        if leftElement > rightElement
-            swap(leftElement, rightElement)
-            swapped = true
-    }
+        sort(arr, low, partitionIndex - 1)
+        sort(arr, partitionIndex + 1, high)
 
-} while swapped
+
+func partition(arr, low, high):
+    i = low - 1
+    pivot = arr[high]
+
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            swap(arr[i], arr[j])
+
+    swap(arr[i + 1], arr[high])
+
+    return i + 1
