@@ -24,8 +24,6 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! QuizCVCell
         cell.currentQuestion = currentQuiz!.questions[indexPath.item]
-//        cell.createQuestionLabel()
-        
         cell.delegate = self
         return cell
     }
@@ -80,15 +78,12 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-   
-    
     @objc func btnPrevNextAction(sender: UIButton) {
         if sender == btnNext && currentQuestionNumber == currentQuiz!.questions.count {
             let quizDoneVC = storyboard?.instantiateViewController(withIdentifier: "DoneWithQuizViewController") as? DoneWithQuizViewController
             quizDoneVC?.currentQuiz = currentQuiz
             quizDoneVC?.score = score
             quizDoneVC?.totalScore = currentQuiz!.questions.count
-//            self.present(quizDoneVC!, animated: true, completion: nil)
             quizDoneVC?.view.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
             self.navigationController?.pushViewController(quizDoneVC!, animated: true)
             return
