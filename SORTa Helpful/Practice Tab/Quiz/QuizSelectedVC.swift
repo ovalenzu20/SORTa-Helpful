@@ -80,6 +80,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @objc func btnPrevNextAction(sender: UIButton) {
         if sender == btnNext && currentQuestionNumber == currentQuiz!.questions.count {
+            btnNext.setTitle("See Quiz Results", for: .normal)
             let quizDoneVC = storyboard?.instantiateViewController(withIdentifier: "DoneWithQuizViewController") as? DoneWithQuizViewController
             quizDoneVC?.currentQuiz = currentQuiz
             quizDoneVC?.score = score
@@ -143,6 +144,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     let btnPrev: UIButton = {
         let btn=UIButton()
         btn.setTitle("< Previous", for: .normal)
+        btn.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 18)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
         btn.translatesAutoresizingMaskIntoConstraints=false
@@ -153,6 +155,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     let btnNext: UIButton = {
         let btn=UIButton()
         btn.setTitle("Next >", for: .normal)
+        btn.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 18)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1)
         btn.translatesAutoresizingMaskIntoConstraints=false
@@ -163,9 +166,9 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     let lblQueNumber: UILabel = {
         let lbl=UILabel()
         lbl.text="0 / 0"
+        lbl.font = UIFont(name: "Roboto-Regular", size: 16)
         lbl.textColor=UIColor.gray
         lbl.textAlignment = .left
-        lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.translatesAutoresizingMaskIntoConstraints=false
         return lbl
     }()
@@ -175,7 +178,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         lbl.text="0 / 0"
         lbl.textColor=UIColor.gray
         lbl.textAlignment = .right
-        lbl.font = UIFont.systemFont(ofSize: 16)
+        lbl.font = UIFont(name: "Roboto-Regular", size: 16)
         lbl.translatesAutoresizingMaskIntoConstraints=false
         return lbl
     }()
