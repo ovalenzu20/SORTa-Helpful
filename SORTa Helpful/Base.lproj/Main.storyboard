@@ -299,7 +299,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.26274509800000001" green="0.43529411759999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22745098039215686" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.97450533419999996" green="1" blue="0.9581733791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="qYr-20-YCp" firstAttribute="leading" secondItem="0c7-CD-6H7" secondAttribute="leading" constant="80" id="0Dm-c4-Sdb"/>
@@ -319,21 +319,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXX-Qi-Qvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-524" y="1610"/>
-        </scene>
-        <!--Flashcard Chosen View Controller-->
-        <scene sceneID="exl-9P-kto">
-            <objects>
-                <viewController id="cOQ-Q6-ewp" customClass="FlashcardChosenViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="q2V-BK-IvY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="NsH-lJ-hX6"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EYT-GP-hIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="120" y="1357"/>
         </scene>
         <!--Info-->
         <scene sceneID="L6D-8F-7HO">
@@ -579,7 +564,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.2627450980392157" green="0.43529411764705883" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22745098039215686" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xnm-bP-cs3" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="Byl-mW-fmu"/>
@@ -1699,21 +1684,6 @@
             </objects>
             <point key="canvasLocation" x="-2700" y="2913.5869565217395"/>
         </scene>
-        <!--Missed Answers View Controller-->
-        <scene sceneID="3Ig-aa-aO8">
-            <objects>
-                <viewController id="WTY-Be-g0d" customClass="MissedAnswersViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VvI-Mh-itb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="4sd-Bo-4BV"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yzv-0F-NyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1371" y="2914"/>
-        </scene>
         <!--Practice View Controller-->
         <scene sceneID="Mqc-pd-CAj">
             <objects>
@@ -1724,7 +1694,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSE-1E-rkh">
                                 <rect key="frame" x="0.0" y="360" width="414" height="327"/>
-                                <color key="backgroundColor" red="0.26274509800000001" green="0.43529411759999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.22745098039215686" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="100"/>
                                 <state key="normal" image="flashcards"/>
                                 <connections>

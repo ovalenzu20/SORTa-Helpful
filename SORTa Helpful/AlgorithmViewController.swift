@@ -141,7 +141,7 @@ class AlgorithmViewController: UIViewController {
         return pseudoCodeString
     }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         graphViewSetup()

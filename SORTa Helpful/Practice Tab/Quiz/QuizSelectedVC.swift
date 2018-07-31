@@ -32,6 +32,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         let allQuizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
         currentQuiz = allQuizzes[quizIndex!]
         self.title = currentQuiz!.quizName

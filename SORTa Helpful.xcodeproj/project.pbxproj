@@ -50,9 +50,7 @@
 		78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */; };
 		783B23B820FEE51300490CFF /* allQuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 783B23B720FEE51300490CFF /* allQuizQuestions.json */; };
 		7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245020FED84900D4213B /* PracticeNavigationController.swift */; };
-		7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */; };
 		784A3E1521055AE3004EE73D /* DoneWithQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */; };
-		784A3E1721058A4D004EE73D /* MissedAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A3E1621058A4D004EE73D /* MissedAnswersViewController.swift */; };
 		78575D0221093C0500648F41 /* QuizSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78575D0121093C0500648F41 /* QuizSelectedVC.swift */; };
 		78575D0421093C8D00648F41 /* QuizCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78575D0321093C8D00648F41 /* QuizCVCell.swift */; };
 		78C33AB320FFF38100EC34BB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C33AB220FFF38100EC34BB /* Quiz.swift */; };
@@ -109,9 +107,7 @@
 		78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTableCell.swift; sourceTree = "<group>"; };
 		783B23B720FEE51300490CFF /* allQuizQuestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = allQuizQuestions.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		7846245020FED84900D4213B /* PracticeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNavigationController.swift; sourceTree = "<group>"; };
-		7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashcardChosenViewController.swift; path = "SORTa Helpful/Practice Tab/Flashcard/FlashcardChosenViewController.swift"; sourceTree = SOURCE_ROOT; };
 		784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWithQuizViewController.swift; sourceTree = "<group>"; };
-		784A3E1621058A4D004EE73D /* MissedAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissedAnswersViewController.swift; sourceTree = "<group>"; };
 		78575D0121093C0500648F41 /* QuizSelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSelectedVC.swift; sourceTree = "<group>"; };
 		78575D0321093C8D00648F41 /* QuizCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCVCell.swift; sourceTree = "<group>"; };
 		78C33AB220FFF38100EC34BB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
@@ -207,7 +203,6 @@
 				78575D0121093C0500648F41 /* QuizSelectedVC.swift */,
 				78F6814820FE90B300075C50 /* QuizViewController.swift */,
 				784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */,
-				784A3E1621058A4D004EE73D /* MissedAnswersViewController.swift */,
 				78575D0321093C8D00648F41 /* QuizCVCell.swift */,
 			);
 			path = Quiz;
@@ -216,7 +211,6 @@
 		783B23BC20FF0B3800490CFF /* Flashcard */ = {
 			isa = PBXGroup;
 			children = (
-				7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */,
 				071ED4EF20FDC7210039FDB2 /* FlashcardViewController.swift */,
 			);
 			path = Flashcard;
@@ -453,13 +447,11 @@
 				78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
-				7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */,
 				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,
 				7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */,
 				07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */,
 				071ED4EE20FDC7150039FDB2 /* SettingsTabViewController.swift in Sources */,
 				78340A5F20F694CD001D0746 /* InfoViewController.swift in Sources */,
-				784A3E1721058A4D004EE73D /* MissedAnswersViewController.swift in Sources */,
 				077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
