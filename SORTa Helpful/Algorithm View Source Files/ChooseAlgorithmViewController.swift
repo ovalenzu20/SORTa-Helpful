@@ -10,11 +10,17 @@ import UIKit
 
 class ChooseAlgorithmViewController: UIViewController {
     @IBOutlet weak var algoNameLabel: UILabel!
-    @IBOutlet weak var selectAlgorithmPickerView: UIPickerView!
+    @IBOutlet weak var selectAlgorithmPickerView: AlgorithmPickerView!
     
     @IBAction func nextButton(_ sender: UIButtonCustom) {
         
     }
+    
+    
+    private func setupPickerView() {
+//        selectAlgorithmPickerView.
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
