@@ -1,10 +1,33 @@
-do {
-    swapped = false
+func sort(arr):
+    maxElement = max(arr)
 
-    for i = 1 to indexOfLastUnsortedElement - 1 {
-        if leftElement > rightElement
-            swap(leftElement, rightElement)
-            swapped = true
-    }
+    countArray = [0 for _ in range(0, maxElement + 1)]
 
-} while swapped
+    i = 0
+
+    for element in arr:
+        countArray[element] += 1
+        i += 1
+
+
+    i = 0
+
+    for index in range(1, len(countArray)):
+        sum = countArray[index] + countArray[index - 1]
+        countArray[index] = sum
+        i += 1
+
+
+
+    sortedArray = [0 for _ in range(0, len(arr))]
+
+    i = 0
+
+    for element in arr:
+        countArray[element] -= 1
+        sortedArray[countArray[element]] = element
+        i += 1
+
+
+    for i in range(0, len(sortedArray)):
+        arr[i] = sortedArray[i]

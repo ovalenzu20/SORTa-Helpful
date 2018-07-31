@@ -1,23 +1,29 @@
 //
-//  SearchCell.swift
+//  UIButtonCustom.swift
 //  SORTa Helpful
 //
-//  Created by Teran on 7/1/18.
+//  Created by Teran on 7/25/18.
 //  Copyright © 2018 OB Devs. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-
-@IBDesignable class SearchCell: UICollectionViewCell {
-    
-    @IBOutlet weak var algoNameLabel: UILabel!
-    @IBOutlet weak var complexityLabel: UILabel!
-    
+@IBDesignable class UIButtonCustom: UIButton {
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            self.layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor = .white {
+        didSet {
+            self.layer.borderColor = borderColor.cgColor
         }
     }
     
@@ -41,7 +47,6 @@ import UIKit
         }
     }
     
-    
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
@@ -54,14 +59,5 @@ import UIKit
                 }, completion: nil)
             }
         }
-    }
-    
-    
-    func setSearchButtonLabels(cellData: Algorithm) {
-        algoNameLabel.text! = cellData.name.uppercased()
-    }
-    
-    func setComplexityLabel(complexity: String) {
-        complexityLabel.text! = complexity
     }
 }

@@ -338,7 +338,6 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
            searchCell.setComplexityLabel(complexity: "")
         }
         
-//        searchCell.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         return searchCell
     }
     
@@ -350,9 +349,12 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let searchCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as! SearchCell
+        
         let currentAlgorithm = searchedAlgorithms[indexPath.item]
         searchCell.isHighlighted = true
+        
         let algorithmVC = storyboard?.instantiateViewController(withIdentifier: "AlgorithmViewController") as? AlgorithmViewController
+        
         algorithmVC?.algorithm = currentAlgorithm
         self.navigationController?.pushViewController(algorithmVC!, animated: true)
     }
