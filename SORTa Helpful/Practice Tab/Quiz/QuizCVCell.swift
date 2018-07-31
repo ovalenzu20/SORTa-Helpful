@@ -39,9 +39,9 @@ class QuizCVCell: UICollectionViewCell {
             btn4.setTitle(unwrappedQue.possibleAnswers[3], for: .normal)
             let answerIndex = unwrappedQue.possibleAnswers.index(of: unwrappedQue.correctAnswer)!
             if unwrappedQue.isAnswered {
-                btnsArray[answerIndex].backgroundColor = UIColor.green
+                btnsArray[answerIndex].backgroundColor = #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1)
                 if unwrappedQue.incorrectAnswer >= 0 {
-                    btnsArray[unwrappedQue.incorrectAnswer].backgroundColor = UIColor.red
+                    btnsArray[unwrappedQue.incorrectAnswer].backgroundColor = #colorLiteral(red: 0.8585642699, green: 0.1764705882, blue: 0.1254901961, alpha: 1)
                 }
             }
         }

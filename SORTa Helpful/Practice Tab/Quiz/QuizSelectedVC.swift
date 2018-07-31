@@ -158,7 +158,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         let btn=UIButton()
         btn.setTitle("Next >", for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 0.262745098, green: 0.4352941176, blue: 1, alpha: 1)
+        btn.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.3921568627, blue: 1, alpha: 1)
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnPrevNextAction), for: .touchUpInside)
         return btn
