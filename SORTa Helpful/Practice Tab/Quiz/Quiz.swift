@@ -18,7 +18,7 @@ class Question {
     var isAnswered = false
     var inputAnswer : Int?
     
-    var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Spread Sort", "Radix Sort", "Cube Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Block Sort", "Heap Sort", "Bucket Sort", "Counting Sort"]
+    var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Shell Sort", "Radix Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Comb Sort", "Heap Sort", "Binary Insertion Sort", "Counting Sort"]
     
     init (question : String, possibleAnswers: [String], correctAnswer: String, belongsToQuiz: String)
     {

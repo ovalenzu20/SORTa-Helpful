@@ -32,7 +32,7 @@
             
         },
         
-        "block_sort": {
+        "comb_sort": {
             "possibleAnswers" : ["Block Sort", " ", " ", " "],
             "correctAnswers"  : "Block Sort"
             
@@ -50,12 +50,6 @@
             
         },
         
-        "cube_sort": {
-            "possibleAnswers" : ["Cube Sort", " ", " ", " "],
-            "correctAnswers"  : "Cube Sort"
-            
-        },
-        
         "counting_sort": {
             "possibleAnswers" : ["Counting Sort", " ", " ", " "],
             "correctAnswers"  : "Counting Sort"
@@ -68,15 +62,15 @@
             
         },
         
-        "spread_sort": {
-            "possibleAnswers" : ["Spread Sort", " ", " ", " "],
-            "correctAnswers"  : "Spread Sort"
+        "binary_insertion_sort": {
+            "possibleAnswers" : ["Binary Insertion Sort", " ", " ", " "],
+            "correctAnswers"  : "Binary Insertion Sort"
             
         },
         
-        "bucket_sort": {
-            "possibleAnswers" : ["Bucket Sort", " ", " ", " "],
-            "correctAnswers"  : "Bucket Sort"
+        "shell_sort": {
+            "possibleAnswers" : ["Shell Sort", " ", " ", " "],
+            "correctAnswers"  : "Shell Sort"
             
         },
         
@@ -84,7 +78,7 @@
             "possibleAnswers" : ["Pigeonhole Sort", " ", " ", " "],
             "correctAnswers"  : "Pigeonhole Sort"
             
-        },
+        }
     },
     
     "IDENTIFY COMPLEXITIES": {
