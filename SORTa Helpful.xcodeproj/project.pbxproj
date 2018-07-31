@@ -21,6 +21,7 @@
 		07794B9C20F565E2001D4B12 /* algorithmInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 07794B9B20F565E2001D4B12 /* algorithmInfo.json */; };
 		077CAD6820F46DAA00E99899 /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */; };
 		07CF4311210FB5B700789DFE /* CompareAlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF4310210FB5B700789DFE /* CompareAlgorithmsViewController.swift */; };
+		07CF4313210FE8BD00789DFE /* ChooseAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF4312210FE8BD00789DFE /* ChooseAlgorithmViewController.swift */; };
 		07DD2E7520F9729000699EF2 /* bubble_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7420F9729000699EF2 /* bubble_sort.txt */; };
 		07DD2E7720F972A400699EF2 /* selection_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7620F972A400699EF2 /* selection_sort.txt */; };
 		07DD2E7920F972BB00699EF2 /* insertion_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7820F972BB00699EF2 /* insertion_sort.txt */; };
@@ -74,6 +75,7 @@
 		07794B9B20F565E2001D4B12 /* algorithmInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algorithmInfo.json; sourceTree = "<group>"; };
 		077CAD6720F46DAA00E99899 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
 		07CF4310210FB5B700789DFE /* CompareAlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareAlgorithmsViewController.swift; sourceTree = "<group>"; };
+		07CF4312210FE8BD00789DFE /* ChooseAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAlgorithmViewController.swift; sourceTree = "<group>"; };
 		07DD2E7420F9729000699EF2 /* bubble_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bubble_sort.txt; sourceTree = "<group>"; };
 		07DD2E7620F972A400699EF2 /* selection_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = selection_sort.txt; sourceTree = "<group>"; };
 		07DD2E7820F972BB00699EF2 /* insertion_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = insertion_sort.txt; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				073C04482106E09F00823376 /* ArrayView.swift */,
 				073C044A2106E18200823376 /* DelayOperation.swift */,
 				07CF4310210FB5B700789DFE /* CompareAlgorithmsViewController.swift */,
+				07CF4312210FE8BD00789DFE /* ChooseAlgorithmViewController.swift */,
 			);
 			path = "Algorithm View Source Files";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				076DF76120FEEF2A00368E14 /* ComplexitiesPopupViewController.swift in Sources */,
 				78340A8A20F6C0A9001D0746 /* ScrollViewController.swift in Sources */,
 				073C04492106E09F00823376 /* ArrayView.swift in Sources */,
+				07CF4313210FE8BD00789DFE /* ChooseAlgorithmViewController.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
 				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,
 				07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */,

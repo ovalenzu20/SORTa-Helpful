@@ -1,5 +1,5 @@
 //
-//  CompareAlgorithmsViewController.swift
+//  ChooseAlgorithmViewController.swift
 //  SORTa Helpful
 //
 //  Created by Teran on 7/30/18.
@@ -8,26 +8,13 @@
 
 import UIKit
 
-class CompareAlgorithmsViewController: UIViewController {
+class ChooseAlgorithmViewController: UIViewController {
+    @IBOutlet weak var algoNameLabel: UILabel!
+    @IBOutlet weak var selectAlgorithmPickerView: UIPickerView!
     
-    @IBOutlet weak var primaryAlgoLabel   : UILabel!
-    @IBOutlet weak var secondaryAlgoLabel : UILabel!
-    
-    @IBOutlet weak var primaryAnimationView   : ArrayStackView!
-    @IBOutlet weak var secondaryAnimationView : ArrayStackView!
-    
-    
-    private func setupAnimationViews() {
-        primaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
-        secondaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
-    }
-    
-    
-    
-    @IBAction func exitPopupView(_ sender: UIButtonCustom) {
+    @IBAction func nextButton(_ sender: UIButtonCustom) {
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

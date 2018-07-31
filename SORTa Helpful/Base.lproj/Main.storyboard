@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -334,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nnf-ux-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857" y="496"/>
+            <point key="canvasLocation" x="3659" y="496"/>
         </scene>
         <!--Home-->
         <scene sceneID="A7b-hY-kEV">
@@ -830,7 +829,7 @@
                                                             <action selector="playAnimation:" destination="zIs-93-VYW" eventType="touchUpInside" id="X2e-jg-9In"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHa-Qd-wIh" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHa-Qd-wIh" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
                                                         <rect key="frame" x="158" y="219" width="200" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="F8n-Xd-bd0"/>
@@ -1343,6 +1342,88 @@
             </objects>
             <point key="canvasLocation" x="879.71014492753625" y="-115.7608695652174"/>
         </scene>
+        <!--Choose Algorithm View Controller-->
+        <scene sceneID="Da2-3U-vN0">
+            <objects>
+                <viewController id="Iot-sa-hK5" customClass="ChooseAlgorithmViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="skw-o4-NNK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWZ-rb-ygu">
+                                <rect key="frame" x="0.0" y="182" width="414" height="372"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1i-Vg-FC1">
+                                        <rect key="frame" x="0.0" y="82" width="414" height="216"/>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT AN ALGORITHM TO COMPARE TO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0a-eQ-1pK">
+                                        <rect key="frame" x="84" y="20" width="247" height="16"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQP-Lb-67U" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="318" width="65" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="BYb-XG-Fz1"/>
+                                            <constraint firstAttribute="height" constant="34" id="Drn-KO-Xdb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <state key="normal" title="NEXT"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButton:" destination="Iot-sa-hK5" eventType="touchUpInside" id="2Go-s3-VX7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALGORITHM NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMf-MH-tRe">
+                                        <rect key="frame" x="150" y="46" width="114" height="16"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pQP-Lb-67U" firstAttribute="top" secondItem="J1i-Vg-FC1" secondAttribute="bottom" constant="20" id="Du0-gc-ojh"/>
+                                    <constraint firstAttribute="bottom" secondItem="pQP-Lb-67U" secondAttribute="bottom" constant="20" id="KCG-16-vyG"/>
+                                    <constraint firstItem="N0a-eQ-1pK" firstAttribute="centerX" secondItem="pWZ-rb-ygu" secondAttribute="centerX" id="W3J-hf-SjT"/>
+                                    <constraint firstAttribute="trailing" secondItem="J1i-Vg-FC1" secondAttribute="trailing" id="f53-lQ-UJw"/>
+                                    <constraint firstItem="J1i-Vg-FC1" firstAttribute="leading" secondItem="pWZ-rb-ygu" secondAttribute="leading" id="fbS-vr-07D"/>
+                                    <constraint firstItem="N0a-eQ-1pK" firstAttribute="top" secondItem="pWZ-rb-ygu" secondAttribute="top" constant="20" id="ghQ-qs-ACO"/>
+                                    <constraint firstItem="J1i-Vg-FC1" firstAttribute="top" secondItem="ZMf-MH-tRe" secondAttribute="bottom" constant="20" id="jlW-Eg-dCW"/>
+                                    <constraint firstItem="ZMf-MH-tRe" firstAttribute="top" secondItem="N0a-eQ-1pK" secondAttribute="bottom" constant="10" id="mkr-Or-m0O"/>
+                                    <constraint firstItem="ZMf-MH-tRe" firstAttribute="centerX" secondItem="pWZ-rb-ygu" secondAttribute="centerX" id="vtY-Fz-lwY"/>
+                                    <constraint firstItem="pQP-Lb-67U" firstAttribute="centerX" secondItem="pWZ-rb-ygu" secondAttribute="centerX" id="xxI-i3-pKW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pWZ-rb-ygu" firstAttribute="trailing" secondItem="ryK-O6-Xj3" secondAttribute="trailing" id="Ns6-1G-m8n"/>
+                            <constraint firstItem="pWZ-rb-ygu" firstAttribute="centerY" secondItem="skw-o4-NNK" secondAttribute="centerY" id="YeZ-6C-Dht"/>
+                            <constraint firstItem="pWZ-rb-ygu" firstAttribute="leading" secondItem="ryK-O6-Xj3" secondAttribute="leading" id="twq-gV-FU3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ryK-O6-Xj3"/>
+                    </view>
+                    <connections>
+                        <outlet property="algoNameLabel" destination="ZMf-MH-tRe" id="x4O-5U-GVA"/>
+                        <outlet property="selectAlgorithmPickerView" destination="J1i-Vg-FC1" id="ZGU-gR-2J3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJH-ao-gph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="-427.17391304347831"/>
+        </scene>
         <!--Compare Algorithms View Controller-->
         <scene sceneID="XaF-ge-IdU">
             <objects>
@@ -1478,7 +1559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYr-NU-dlq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773.913043478261" y="-471.19565217391306"/>
+            <point key="canvasLocation" x="2655" y="-426"/>
         </scene>
         <!--Complexities Popup View Controller-->
         <scene sceneID="Kf7-yJ-e3l">
