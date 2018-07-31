@@ -17,10 +17,10 @@ class CompareAlgorithmsViewController: UIViewController {
     @IBOutlet weak var secondaryAnimationView : ArrayStackView!
     
     
-    private func setupAnimationViews() {
-        primaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
-        secondaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
-    }
+//    private func setupAnimationViews() {
+//        primaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+//        secondaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+//    }
     
     
     

@@ -10,7 +10,7 @@ import UIKit
 
 class ChooseAlgorithmViewController: UIViewController {
     @IBOutlet weak var algoNameLabel: UILabel!
-    @IBOutlet weak var selectAlgorithmPickerView: AlgorithmPickerView!
+    @IBOutlet weak var selectAlgorithmPickerView: CustomPickerView!
     
     @IBAction func nextButton(_ sender: UIButtonCustom) {
         

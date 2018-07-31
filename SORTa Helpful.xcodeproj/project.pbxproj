@@ -23,6 +23,7 @@
 		07CF4311210FB5B700789DFE /* CompareAlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF4310210FB5B700789DFE /* CompareAlgorithmsViewController.swift */; };
 		07CF4313210FE8BD00789DFE /* ChooseAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF4312210FE8BD00789DFE /* ChooseAlgorithmViewController.swift */; };
 		07CF43152110E3A700789DFE /* AlgorithmPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF43142110E3A700789DFE /* AlgorithmPickerView.swift */; };
+		07CF43172111098E00789DFE /* FlashcardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF43162111098E00789DFE /* FlashcardCell.swift */; };
 		07DD2E7520F9729000699EF2 /* bubble_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7420F9729000699EF2 /* bubble_sort.txt */; };
 		07DD2E7720F972A400699EF2 /* selection_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7620F972A400699EF2 /* selection_sort.txt */; };
 		07DD2E7920F972BB00699EF2 /* insertion_sort.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DD2E7820F972BB00699EF2 /* insertion_sort.txt */; };
@@ -87,6 +88,7 @@
 		07CF4310210FB5B700789DFE /* CompareAlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareAlgorithmsViewController.swift; sourceTree = "<group>"; };
 		07CF4312210FE8BD00789DFE /* ChooseAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAlgorithmViewController.swift; sourceTree = "<group>"; };
 		07CF43142110E3A700789DFE /* AlgorithmPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmPickerView.swift; sourceTree = "<group>"; };
+		07CF43162111098E00789DFE /* FlashcardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardCell.swift; sourceTree = "<group>"; };
 		07DD2E7420F9729000699EF2 /* bubble_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bubble_sort.txt; sourceTree = "<group>"; };
 		07DD2E7620F972A400699EF2 /* selection_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = selection_sort.txt; sourceTree = "<group>"; };
 		07DD2E7820F972BB00699EF2 /* insertion_sort.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = insertion_sort.txt; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				7846245220FEE1E400D4213B /* FlashcardChosenViewController.swift */,
 				071ED4EF20FDC7210039FDB2 /* FlashcardViewController.swift */,
+				07CF43162111098E00789DFE /* FlashcardCell.swift */,
 			);
 			path = Flashcard;
 			sourceTree = "<group>";
@@ -468,19 +471,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				78575D0221093C0500648F41 /* QuizSelectedVC.swift in Sources */,
+				076DF76721003FEB00368E14 /* Bar.swift in Sources */,
+				073C044B2106E18200823376 /* DelayOperation.swift in Sources */,
+				07CF43152110E3A700789DFE /* AlgorithmPickerView.swift in Sources */,
 				07E237B620E9DCA9000D22DE /* SearchViewController.swift in Sources */,
 				78F6B78A20FEB585001FA42F /* PracticeViewController.swift in Sources */,
 				784A3E1521055AE3004EE73D /* DoneWithQuizViewController.swift in Sources */,
 				0767647920FAFDA9005B7136 /* SearchTextField.swift in Sources */,
 				78575D0421093C8D00648F41 /* QuizCVCell.swift in Sources */,
+				07CF4311210FB5B700789DFE /* CompareAlgorithmsViewController.swift in Sources */,
 				07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */,
 				78C33AB320FFF38100EC34BB /* Quiz.swift in Sources */,
 				071ED4F020FDC7210039FDB2 /* FlashcardViewController.swift in Sources */,
 				78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */,
 				07E237B020E9CD06000D22DE /* SearchCell.swift in Sources */,
 				78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */,
+				073C044D2109955600823376 /* UIButtonCustom.swift in Sources */,
 				78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */,
+				076DF76120FEEF2A00368E14 /* ComplexitiesPopupViewController.swift in Sources */,
+				073C04492106E09F00823376 /* ArrayView.swift in Sources */,
+				07CF4313210FE8BD00789DFE /* ChooseAlgorithmViewController.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
+				07CF43172111098E00789DFE /* FlashcardCell.swift in Sources */,
 				7846245320FEE1E400D4213B /* FlashcardChosenViewController.swift in Sources */,
 				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,
 				7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */,
