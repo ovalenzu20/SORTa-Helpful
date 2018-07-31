@@ -9,11 +9,6 @@
 import Foundation
 import GameplayKit
 
-enum questionOutOfBoundsError : Error {
-    case runtimeError(String)
-}
-
-
 class Question {
     var belongsToQuiz : String
     var question : String
@@ -22,8 +17,6 @@ class Question {
     var incorrectAnswer = -1
     var isAnswered = false
     var inputAnswer : Int?
-    
-    
     
     var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Spread Sort", "Radix Sort", "Cube Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Block Sort", "Heap Sort", "Bucket Sort", "Counting Sort"]
     
@@ -34,37 +27,14 @@ class Question {
         self.belongsToQuiz = belongsToQuiz
         self.correctAnswer = correctAnswer
         self.possibleAnswers = randomizeAnswers(answersToRandomize: possibleAnswers, allAlgorithms: allPossibleAlgorithms)
-        
-        print(self.possibleAnswers)
-        print(self.possibleAnswers)
-
-        print(self.possibleAnswers)
-
-        print(self.possibleAnswers)
-        print(self.possibleAnswers)
-        print(self.possibleAnswers)
-        print(self.possibleAnswers)
-
-        print(self.correctAnswer)
-        print(self.correctAnswer)
-        print(self.correctAnswer)
-        print(self.correctAnswer)
-        print(self.correctAnswer)
-        print(self.correctAnswer)
-
-        print(self.correctAnswer)
-
-
-        
-        
     }
     
     func randomizeAnswers(answersToRandomize: [String], allAlgorithms: [String]) -> [String]
     {
         var randomPossibleAnswers = [String]()
         var allAlgorithmsShuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allAlgorithms) as! [String]
-        
         var currentElem = 0
+        
         while randomPossibleAnswers.count < 4{
             if currentElem == 0 {
                 randomPossibleAnswers.append(answersToRandomize[0])
@@ -77,7 +47,6 @@ class Question {
             }
             currentElem += 1
         }
-        
         //shuffle final result
         let shuffledRandomPossibleAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: randomPossibleAnswers) as! [String]
         
@@ -88,15 +57,12 @@ class Question {
 
 class Quiz {
     var questions = [Question]()
-    
     var quizName : String
     var quizDescription : String?
     var numberOfQuestions = 0
     var numberOfQuestionsAnswered = 0
     var numberOfQuestionsAnsweredCorrectly = 0
     var numberOfQuestionsAnsweredIncorrectly = 0
-    
-    
     
     init (quizName: String)
     {
@@ -113,10 +79,6 @@ class Quiz {
             addQuestion(question: q)
         }
     }
-
-    
-    
-    
 }
 
 
