@@ -83,9 +83,9 @@ extension FlashcardChosenViewController: UICollectionViewDelegate {
 //        return algorithmCollection.count
 //    }
 //
-////    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-////        re
-////    }
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        re
+//    }
 //}
 
 

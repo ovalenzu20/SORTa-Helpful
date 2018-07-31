@@ -45,15 +45,6 @@
         "memory": "O(1)",
         "info": "Cocktail shaker sort, also known as bidirectional bubble sort, cocktail sort, shaker sort (which can also refer to a variant of selection sort), ripple sort, shuffle sort, or shuttle sort, is a variation of bubble sort that is both a stable sorting algorithm and a comparison sort. The algorithm differs from a bubble sort in that it sorts in both directions on each pass through the list. This sorting algorithm is only marginally more difficult to implement than a bubble sort, and solves the problem of turtles in bubble sorts."
     },
-    "Block Sort": {
-        "algoClass": "Comparison",
-        "algoType": "In-place",
-        "bestCase": ["O(n)", 1],
-        "averageCase": ["O(nlogn)", 6],
-        "worstCase": ["O(nlogn)", 6],
-        "memory": "O(1)",
-        "info": "Block sort, or block merge sort, is a sorting algorithm combining at least two merge operations with an insertion sort to arrive at O(n log n) in-place stable sorting. It gets its name from the observation that merging two sorted lists, A and B, is equivalent to breaking A into evenly sized blocks, inserting each A block into B under special rules, and merging AB pairs."
-    },
     "Merge Sort": {
         "algoClass": "Comparison",
         "algoType": "In-place",

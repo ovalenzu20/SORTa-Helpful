@@ -10,16 +10,26 @@ import UIKit
 
 
 class FlashcardCell: UICollectionViewCell {
+    var isFlipped = false
+    
     var algorithmNameLabel: UILabel = {
         let label = UILabel()
-        
+        label.textColor     = .white
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        label.font = UIFont(name: "Roboto-Regular", size: 40)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     
     var algorithmInfoLabel: UILabel = {
         let label = UILabel()
-        
+        label.textColor     = .white
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        label.font = UIFont(name: "Roboto-Regular", size: 40)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -35,7 +45,12 @@ class FlashcardCell: UICollectionViewCell {
     
     
     func flipCard() {
-        
+        if isFlipped {
+            
+        }
+        else {
+            
+        }
     }
     
     
