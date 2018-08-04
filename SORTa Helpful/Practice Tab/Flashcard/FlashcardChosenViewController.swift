@@ -55,6 +55,7 @@ class FlashcardChosenViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 1
+        
         self.flashcardCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), collectionViewLayout: layout)
     }
     
@@ -63,7 +64,7 @@ class FlashcardChosenViewController: UIViewController {
         super.viewDidLoad()
         flashcardCollectionView.delegate   = self
 //        flashcardCollectionView.dataSource = self
-        
+        self.readAlgorithmJsonData()
         self.setupFlashcardCollectionView()
     }
 

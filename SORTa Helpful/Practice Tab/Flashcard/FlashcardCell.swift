@@ -35,24 +35,29 @@ class FlashcardCell: UICollectionViewCell {
     
     
     func setupNameView() {
-        self.addSubview(algorithmNameLabel)
+        self.addSubview(self.algorithmNameLabel)
     }
     
     
     func setupInfoView() {
-        
+        self.addSubview(self.algorithmInfoLabel)
     }
     
     
     func flipCard() {
         if isFlipped {
-            
+            isFlipped = false
+            self.willRemoveSubview(self.algorithmInfoLabel)
+            self.setupInfoView()
+            self.backgroundColor = #colorLiteral(red: 0.3279073238, green: 0.53362149, blue: 1, alpha: 1)
+            UIView.transition(with: self, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         }
         else {
-            
+            isFlipped = true
+            self.willRemoveSubview(self.algorithmNameLabel)
+            self.setupNameView()
+            self.backgroundColor = #colorLiteral(red: 0.3279073238, green: 0.53362149, blue: 1, alpha: 1)
+            UIView.transition(with: self, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
         }
     }
-    
-    
-    
 }
