@@ -18,12 +18,6 @@ class Question {
     var isAnswered = false
     var inputAnswer : Int?
     
-    var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Shell Sort", "Radix Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Comb Sort", "Heap Sort", "Binary Insertion Sort", "Counting Sort"]
-    
-    var allPossibleRuntimes = ["O(1), O(n), O(n^2), O(logn), O(nlogn), O(n^3), O(2^n), O(n!)"]
-
-    var allPossibleTypes = ["Stable, In-place, Divide & Conquer, All of the Above, Stable & In Place"]
-    
     
     init (question : String, possibleAnswers: [String], correctAnswer: String, belongsToQuiz: String)
     {
@@ -31,32 +25,8 @@ class Question {
         self.possibleAnswers = possibleAnswers
         self.belongsToQuiz = belongsToQuiz
         self.correctAnswer = correctAnswer
-        self.possibleAnswers = randomizeAnswers(answersToRandomize: possibleAnswers, allAlgorithms: allPossibleAlgorithms)
     }
     
-    func randomizeAnswers(answersToRandomize: [String], allAlgorithms: [String]) -> [String]
-    {
-        var randomPossibleAnswers = [String]()
-        var allAlgorithmsShuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allAlgorithms) as! [String]
-        var currentElem = 0
-        
-        while randomPossibleAnswers.count < 4{
-            if currentElem == 0 {
-                randomPossibleAnswers.append(answersToRandomize[0])
-            }
-            else {
-                let lastElem = allAlgorithmsShuffled.removeLast()
-                if !randomPossibleAnswers.contains(lastElem){
-                    randomPossibleAnswers.append(lastElem)
-                }
-            }
-            currentElem += 1
-        }
-        //shuffle final result
-        let shuffledRandomPossibleAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: randomPossibleAnswers) as! [String]
-        
-        return shuffledRandomPossibleAnswers
-    }
     
 }
 

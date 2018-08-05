@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import GameplayKit
 
 class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -17,6 +18,13 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     var currentQuestionNumber = 1
     var quizCV: UICollectionView!
 
+    var allPossibleAlgorithms = ["Insertion Sort", "Selection Sort", "Comb Sort", "Merge Sort", "Quick Sort", "Bubble Sort", "Binary Insertion Sort", "Radix Sort", "Counting Sort", "Cocktail Sort", "Heap Sort", "Insertion Sort", "Pigeonhole Sort"]
+    var allPossibleTypes = ["Stable","In Place", "Stable & In Place", "Divide & Conquer"]
+    var allPossibleRuntimes = ["O(1)", "O(n)", "O(n^2)", "O(nlogn)","O(logn)","O(n^3)","O(2^n)","O(n!)"]
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentQuiz!.questions.count
     }
@@ -219,6 +227,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let correctAns = elem.1["correctAnswers"].string!
                 
                 let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns, belongsToQuiz: currentQuiz.quizName)
+                mixPossibleAnswers(question: currentQuestion)
                 
                 quizQuestions.append(currentQuestion)
             }
@@ -230,12 +239,40 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         return currentQuiz
     }
     
+    func randomizeAnswers(answersToRandomize: [String], allAlgorithms: [String]) -> [String]
+    {
+        var randomPossibleAnswers = [String]()
+        var allAlgorithmsShuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allAlgorithms) as! [String]
+        var currentElem = 0
+        
+        while randomPossibleAnswers.count < 4{
+            if currentElem == 0 {
+                randomPossibleAnswers.append(answersToRandomize[0])
+            }
+            else {
+                let lastElem = allAlgorithmsShuffled.removeLast()
+                if !randomPossibleAnswers.contains(lastElem){
+                    randomPossibleAnswers.append(lastElem)
+                }
+            }
+            currentElem += 1
+        }
+        //shuffle final result
+        let shuffledRandomPossibleAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: randomPossibleAnswers) as! [String]
+        
+        return shuffledRandomPossibleAnswers
+    }
+    
     func convertJsonArrayToStringArray(jsonArray: [JSON]) -> [String]{
         var tempStringArr = [String]()
         for jsonElem in jsonArray{
             tempStringArr.append(jsonElem.string!)
         }
         return tempStringArr
+    }
+    
+    func mixPossibleAnswers(question : Question){
+        
     }
 }
 
