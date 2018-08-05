@@ -1,18 +1,20 @@
 //
-//  flashcardViewController.swift
+//  PracticeViewController.swift
 //  SORTa Helpful
 //
-//  Created by Omar Valenzuela on 7/15/18.
+//  Created by Omar Valenzuela on 7/17/18.
 //  Copyright © 2018 OB Devs. All rights reserved.
 //
 
 import UIKit
 
-class flashcardViewController: UITabBarController {
+class PracticeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +22,6 @@ class flashcardViewController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

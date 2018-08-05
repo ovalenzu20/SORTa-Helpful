@@ -1,15 +1,34 @@
 //
-//  flashcardViewController.swift
+//  CompareAlgorithmsViewController.swift
 //  SORTa Helpful
 //
-//  Created by Omar Valenzuela on 7/15/18.
+//  Created by Teran on 7/30/18.
 //  Copyright © 2018 OB Devs. All rights reserved.
 //
 
 import UIKit
 
-class FlashcardViewController: UITabBarController {
-
+class CompareAlgorithmsViewController: UIViewController {
+    
+    @IBOutlet weak var primaryAlgoLabel   : UILabel!
+    @IBOutlet weak var secondaryAlgoLabel : UILabel!
+    
+    @IBOutlet weak var primaryAnimationView   : ArrayStackView!
+    @IBOutlet weak var secondaryAnimationView : ArrayStackView!
+    
+    
+//    private func setupAnimationViews() {
+//        primaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+//        secondaryAnimationView.setup(array: <#T##[Int]#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+//    }
+    
+    
+    
+    @IBAction func exitPopupView(_ sender: UIButtonCustom) {
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

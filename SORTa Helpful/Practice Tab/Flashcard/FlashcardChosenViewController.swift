@@ -1,31 +1,28 @@
 //
-//  InfoViewController.swift
+//  FlashcardChosenViewController.swift
 //  SORTa Helpful
 //
-//  Created by Omar Valenzuela on 7/11/18.
+//  Created by Omar Valenzuela on 7/17/18.
 //  Copyright © 2018 OB Devs. All rights reserved.
 //
 
 import UIKit
 import SwiftyJSON
 
-class InfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    @IBOutlet weak var algorithmTableView: UITableView!
 
-    private var algorithmCollection : [Algorithm] = []
+class FlashcardChosenViewController: UIViewController {
+    var flashcardCollectionView: UICollectionView!
+    var algorithmCollection: [Algorithm]!
+    
     
     func readAlgorithmJsonData() {
         if let path = Bundle.main.path(forResource: "algorithmInfo", ofType: "json") {
             do {
-                let data    = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                let jsonObj = try JSON(data: data)
-                
+                let data     = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj  = try JSON(data: data)
                 let algoDict = jsonObj.dictionaryValue
                 
                 for (algorithmName, algorithmData) in algoDict {
-                    
                     let algoClass        = algorithmData["algoClass"].stringValue
                     let algoType         = algorithmData["algoType"].stringValue
                     let bestCaseArray    = algorithmData["bestCase"].arrayValue
@@ -50,25 +47,65 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return algorithmCollection.count
+    
+    private func setupFlashcardCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        self.flashcardCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), collectionViewLayout: layout)
     }
     
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentAlgorithm = algorithmCollection[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "algorithmCell") as! AlgorithmTableCell
-        cell.setAlgorithmLabels(cellData: currentAlgorithm)
-        return cell 
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        algorithmTableView.delegate = self
-        algorithmTableView.dataSource = self
-        readAlgorithmJsonData()
-        algorithmTableView.rowHeight = 210
+        flashcardCollectionView.delegate   = self
+//        flashcardCollectionView.dataSource = self
+        
+        self.setupFlashcardCollectionView()
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
+
+
+extension FlashcardChosenViewController: UICollectionViewDelegate {
+    
+}
+
+
+//extension FlashcardChosenViewController: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return algorithmCollection.count
+//    }
+//
+////    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+////        re
+////    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -23,7 +23,7 @@ class SettingsTabViewController: UIViewController {
         return mailComposerVC
     }
     
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeViewController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
         controller.dismiss(animated: true, completion: nil)
     }
     
