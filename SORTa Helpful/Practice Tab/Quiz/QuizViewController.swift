@@ -11,18 +11,14 @@ import UIKit
 class QuizViewController: UIViewController {
 
     @IBAction func identifyAlgorithm(_ sender: Any) {
-        sendTestType(currentQuizIndex: 4)
-    }
-    
-    @IBAction func identifyComplexities(_ sender: Any) {
         sendTestType(currentQuizIndex: 3)
     }
     
-    @IBAction func identifyTypes(_ sender: Any) {
+    @IBAction func identifyComplexities(_ sender: Any) {
         sendTestType(currentQuizIndex: 2)
     }
     
-    @IBAction func situationMatching(_ sender: Any) {
+    @IBAction func identifyTypes(_ sender: Any) {
         sendTestType(currentQuizIndex: 1)
     }
     

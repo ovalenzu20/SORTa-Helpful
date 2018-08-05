@@ -110,7 +110,7 @@ class QuizCVCell: UICollectionViewCell {
         lbl.textColor=UIColor.white
         lbl.numberOfLines = 100
         lbl.textAlignment = .left
-        lbl.font = UIFont(name: "Roboto", size: 16)
+        lbl.font = UIFont(name: "Roboto", size: 15)
         lbl.translatesAutoresizingMaskIntoConstraints=false
         return lbl
     }()
@@ -119,7 +119,7 @@ class QuizCVCell: UICollectionViewCell {
         let btn = UIButton()
         btn.tag = tag
         btn.setTitle("Option", for: .normal)
-        btn.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 18)
+        btn.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 15)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
         btn.layer.borderWidth = 1
@@ -136,6 +136,12 @@ class QuizCVCell: UICollectionViewCell {
             let psuedocode = getPseudocodeFromFile(question: currentQuestion!)
             questionLabel.numberOfLines = 100
             questionLabel.text! = psuedocode
+            questionLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            questionLabel.font = questionLabel.font.withSize(12)
+            questionLabel.textAlignment = NSTextAlignment.left
+        }
+        else{
+            questionLabel.text! = currentQuestion!.question
             questionLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             questionLabel.font = questionLabel.font.withSize(12)
             questionLabel.textAlignment = NSTextAlignment.left

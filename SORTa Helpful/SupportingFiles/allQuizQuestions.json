@@ -33,14 +33,14 @@
         },
         
         "comb_sort": {
-            "possibleAnswers" : ["Block Sort", " ", " ", " "],
-            "correctAnswers"  : "Block Sort"
+            "possibleAnswers" : ["Comb Sort", " ", " ", " "],
+            "correctAnswers"  : "Comb Sort"
             
         },
         
         "merge_sort": {
-            "possibleAnswers" : ["Block Sort", " ", " ", " "],
-            "correctAnswers"  : "Block Sort"
+            "possibleAnswers" : ["Merge Sort", " ", " ", " "],
+            "correctAnswers"  : "Merge Sort"
             
         },
         
@@ -82,12 +82,68 @@
     },
     
     "IDENTIFY COMPLEXITIES": {
+        "description" : "Correctly match the following algorithm with the following complexity",
+        
+        "Correctly identify the BEST CASE complexity for Merge Sort": {
+            "possibleAnswers" : ["O(nlogn)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(nlogn)"
+        },
+        
+        "Question1": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
+        "Question2": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
+        "Question": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
+        "Question": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
+        "Question": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
+        "Question": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
+        "Question": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
+        "Question": {
+            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "ans1"
+            
+        },
+        
         "Question": {
             "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
             "correctAnswers"  : "ans1"
             
         }
     },
+    
     
     "IDENTIFY TYPES": {
         "Question": {
@@ -97,13 +153,6 @@
         }
     },
     
-    "SITUATION MATCHING": {
-        "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
-            "correctAnswers"  : "ans1"
-            
-        }
-    },
     
     "MIXED TEST": {
         "Question": {

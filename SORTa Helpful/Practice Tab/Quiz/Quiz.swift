@@ -20,6 +20,11 @@ class Question {
     
     var allPossibleAlgorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Shell Sort", "Radix Sort", "Pigeonhole Sort", "Merge Sort", "Quick Sort", "Cocktail Sort", "Comb Sort", "Heap Sort", "Binary Insertion Sort", "Counting Sort"]
     
+    var allPossibleRuntimes = ["O(1), O(n), O(n^2), O(logn), O(nlogn), O(n^3), O(2^n), O(n!)"]
+
+    var allPossibleTypes = ["Stable, In-place, Divide & Conquer, All of the Above, Stable & In Place"]
+    
+    
     init (question : String, possibleAnswers: [String], correctAnswer: String, belongsToQuiz: String)
     {
         self.question = question

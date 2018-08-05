@@ -34,6 +34,8 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         let allQuizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
         currentQuiz = allQuizzes[quizIndex!]
         self.title = currentQuiz!.quizName
+        print(currentQuiz!)
+        print(quizIndex!)
         
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -217,6 +219,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let correctAns = elem.1["correctAnswers"].string!
                 
                 let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns, belongsToQuiz: currentQuiz.quizName)
+                
                 quizQuestions.append(currentQuestion)
             }
             else if elem.0 == "description"{
