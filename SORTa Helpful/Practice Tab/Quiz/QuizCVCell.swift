@@ -84,16 +84,16 @@ class QuizCVCell: UICollectionViewCell {
     func setupViews() {
         
         addSubview(questionLabel)
-        questionLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive=true
+        questionLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive=true
         questionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 25).isActive=true
         questionLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -12).isActive=true
-        questionLabel.heightAnchor.constraint(equalToConstant: 300).isActive=true
+        questionLabel.heightAnchor.constraint(equalToConstant: 350).isActive=true
         
         let btnWidth: CGFloat = 150
         let btnHeight: CGFloat = 50
         btn1 = getButton(tag: 0)
         addSubview(btn1)
-        NSLayoutConstraint.activate([btn1.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 0), btn1.rightAnchor.constraint(equalTo: self.centerXAnchor, constant: -10), btn1.widthAnchor.constraint(equalToConstant: btnWidth), btn1.heightAnchor.constraint(equalToConstant: btnHeight)])
+        NSLayoutConstraint.activate([btn1.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 50), btn1.rightAnchor.constraint(equalTo: self.centerXAnchor, constant: -10), btn1.widthAnchor.constraint(equalToConstant: btnWidth), btn1.heightAnchor.constraint(equalToConstant: btnHeight)])
         btn1.addTarget(self, action: #selector(btnOptionAction), for: .touchUpInside)
         
         btn2 = getButton(tag: 1)
