@@ -11,52 +11,30 @@ import UIKit
 
 class FlashcardCell: UICollectionViewCell {
     var isFlipped = false
-    
-    var algorithmNameLabel: UILabel = {
-        let label = UILabel()
-        label.textColor     = .white
-        label.numberOfLines = 2
-        label.textAlignment = .center
-        label.font = UIFont(name: "Roboto-Regular", size: 40)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    var nameText: String!
+    var infoText: String!
     
     
-    var algorithmInfoLabel: UILabel = {
-        let label = UILabel()
-        label.textColor     = .white
-        label.numberOfLines = 2
-        label.textAlignment = .center
-        label.font = UIFont(name: "Roboto-Regular", size: 40)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    @IBOutlet weak var infoLabel: UILabel!
     
     
-    func setupNameView() {
-        self.addSubview(self.algorithmNameLabel)
-    }
-    
-    
-    func setupInfoView() {
-        self.addSubview(self.algorithmInfoLabel)
+    func setupLabelText(name: String, info: String) {
+        self.nameText = name
+        self.infoText = info
     }
     
     
     func flipCard() {
         if isFlipped {
             isFlipped = false
-            self.willRemoveSubview(self.algorithmInfoLabel)
-            self.setupInfoView()
-            self.backgroundColor = #colorLiteral(red: 0.3279073238, green: 0.53362149, blue: 1, alpha: 1)
+            infoLabel.text = self.nameText
+            self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             UIView.transition(with: self, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         }
         else {
             isFlipped = true
-            self.willRemoveSubview(self.algorithmNameLabel)
-            self.setupNameView()
-            self.backgroundColor = #colorLiteral(red: 0.3279073238, green: 0.53362149, blue: 1, alpha: 1)
+            infoLabel.text = self.infoText
+            self.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1215686275, blue: 0.1450980392, alpha: 1)
             UIView.transition(with: self, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
         }
     }

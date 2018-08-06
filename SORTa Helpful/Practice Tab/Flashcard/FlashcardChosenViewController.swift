@@ -11,83 +11,129 @@ import SwiftyJSON
 
 
 class FlashcardChosenViewController: UIViewController {
-    var flashcardCollectionView: UICollectionView!
-    var algorithmCollection: [Algorithm]!
+    var fcType: String!
+    var flashcardCollectionView : UICollectionView!
+    var categoryCollection      : [Algorithm]!
+    var randomCollection        : [(String, String)]!
+    
+    private var cellsPerScreen  : CGFloat = 1
+    private var cellHeight      : CGFloat = 200.0
+    private var widthConstraint : CGFloat = 20
     
     
-    func readAlgorithmJsonData() {
-        if let path = Bundle.main.path(forResource: "algorithmInfo", ofType: "json") {
-            do {
-                let data     = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                let jsonObj  = try JSON(data: data)
-                let algoDict = jsonObj.dictionaryValue
-                
-                for (algorithmName, algorithmData) in algoDict {
-                    let algoClass        = algorithmData["algoClass"].stringValue
-                    let algoType         = algorithmData["algoType"].stringValue
-                    let bestCaseArray    = algorithmData["bestCase"].arrayValue
-                    let bestCase         = (bestCaseArray[0].stringValue, bestCaseArray[1].intValue)
-                    let averageCaseArray = algorithmData["averageCase"].arrayValue
-                    let averageCase      = (averageCaseArray[0].stringValue, averageCaseArray[1].intValue)
-                    let worstCaseArray   = algorithmData["worstCase"].arrayValue
-                    let worstCase        = (worstCaseArray[0].stringValue, worstCaseArray[1].intValue)
-                    let memory           = algorithmData["memory"].stringValue
-                    let info             = algorithmData["info"].stringValue
-                    
-                    algorithmCollection.append(Algorithm(name: algorithmName, algoClass: algoClass, algoType: algoType, bestCase: bestCase, averageCase: averageCase, worstCase: worstCase, memory: memory, info: info))
-                }
-                
-            } catch let error {
-                // In the future add function that displays empty cells and prompts user to reload page
-                print("parse error: \(error.localizedDescription)")
-            }
-        } else {
-            // In the future add function that displays empty cells and prompts user to reload page
-            print("Invalid filename/path.")
-        }
+    func refreshCellView() {
+        let collectionWidth = (view.frame.size.width - widthConstraint) / cellsPerScreen
+        let layout = flashcardCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: collectionWidth, height: cellHeight)
     }
     
     
     private func setupFlashcardCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 1
-        layout.minimumInteritemSpacing = 1
         
-        self.flashcardCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), collectionViewLayout: layout)
+    }
+    
+    
+    fileprivate func createRandomFlashcardCollection() {
+        self.randomCollection = []
+        
+        for algorithm in self.categoryCollection {
+            self.randomCollection.append(self.chooseRandomProperty(algorithmInfo: algorithm))
+        }
+    }
+    
+    
+    fileprivate func chooseRandomProperty(algorithmInfo: Algorithm) -> (String, String) {
+        let properties = ["best case", "average case", "worst case", "memory", "type"]
+        let randomPropIndex = Int(arc4random_uniform(UInt32(properties.count - 1)))
+        let randomProp = properties[randomPropIndex]
+        
+        switch randomProp {
+        case "best case":
+            return (algorithmInfo.name, algorithmInfo.bestCase.0)
+        case "average case":
+            return (algorithmInfo.name, algorithmInfo.averageCase.0)
+        case "worst case":
+            return (algorithmInfo.name, algorithmInfo.worstCase.0)
+        case "memory":
+            return (algorithmInfo.name, algorithmInfo.memory)
+        case "type":
+            return (algorithmInfo.name, algorithmInfo.algoType)
+        default:
+            return (algorithmInfo.name, algorithmInfo.bestCase.0)
+        }
+    }
+    
+    
+    fileprivate func getFlachcardLabels(algorithmInfo: Algorithm) -> (String, String) {
+        switch self.fcType {
+        case "best case":
+            return (algorithmInfo.name, algorithmInfo.bestCase.0)
+        case "average case":
+            return (algorithmInfo.name, algorithmInfo.averageCase.0)
+        case "worst case":
+            return (algorithmInfo.name, algorithmInfo.worstCase.0)
+        case "memory":
+            return (algorithmInfo.name, algorithmInfo.memory)
+        case "type":
+            return (algorithmInfo.name, algorithmInfo.algoType)
+        default:
+            return (algorithmInfo.name, algorithmInfo.bestCase.0)
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        flashcardCollectionView.delegate   = self
-//        flashcardCollectionView.dataSource = self
-        self.readAlgorithmJsonData()
         self.setupFlashcardCollectionView()
+        
+        if self.fcType == "random" {
+            self.createRandomFlashcardCollection()
+        }
+        
+        flashcardCollectionView.delegate   = self
+        flashcardCollectionView.dataSource = self
+        
+        self.refreshCellView()
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
 
 
-extension FlashcardChosenViewController: UICollectionViewDelegate {
+extension FlashcardChosenViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let flashcard = collectionView.dequeueReusableCell(withReuseIdentifier: "FlashcardCell", for: indexPath) as! FlashcardCell
+        flashcard.flipCard()
+        
+        
+    }
     
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categoryCollection.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let flashcardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlashcardCell", for: indexPath) as! FlashcardCell
+        
+        var algoInfo: (String, String)!
+        
+        if fcType == "random" {
+            algoInfo = randomCollection[indexPath.item]
+            
+        }
+        else {
+            algoInfo = self.getFlachcardLabels(algorithmInfo: categoryCollection[indexPath.item])
+        }
+        
+        flashcardCell.setupLabelText(name: algoInfo.0, info: algoInfo.1)
+        
+        return flashcardCell
+    }
 }
-
-
-//extension FlashcardChosenViewController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return algorithmCollection.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        re
-//    }
-//}
 
 
 
