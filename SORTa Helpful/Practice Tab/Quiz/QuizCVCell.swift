@@ -30,16 +30,14 @@ class QuizCVCell: UICollectionViewCell {
                 questionLabel.text = getPseudocodeFromFile(question: unwrappedQue)
             }
             else {
+                questionLabel.text = unwrappedQue.question
                 if unwrappedQue.question.contains("_"){
-                    questionLabel.text = unwrappedQue.question
                     questionLabel.textAlignment = .left
                 }
-                else{
-                    questionLabel.text = unwrappedQue.question
-                    questionLabel.textAlignment = .center
-                    questionLabel.font = UIFont(name: "Roboto", size: 20)
-                }
-                
+//                else{
+//                    questionLabel.textAlignment = .center
+//                    questionLabel.font = UIFont(name: "Roboto", size: 20)
+//                }
             }
             btn1.setTitle(unwrappedQue.possibleAnswers[0], for: .normal)
             btn2.setTitle(unwrappedQue.possibleAnswers[1], for: .normal)
@@ -57,7 +55,6 @@ class QuizCVCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupViews()
         btnsArray = [btn1, btn2, btn3, btn4]
     }
@@ -136,24 +133,6 @@ class QuizCVCell: UICollectionViewCell {
         btn.clipsToBounds=true
         btn.translatesAutoresizingMaskIntoConstraints=false
         return btn
-    }
-
-    func createQuestionLabel(){
-        questionLabel.text! = currentQuestion!.question
-        if currentQuestion!.belongsToQuiz == "IDENTIFY ALGORITHMS"{
-            let psuedocode = getPseudocodeFromFile(question: currentQuestion!)
-            questionLabel.numberOfLines = 100
-            questionLabel.text! = psuedocode
-            questionLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            questionLabel.font = questionLabel.font.withSize(12)
-            questionLabel.textAlignment = NSTextAlignment.left
-        }
-        else{
-            questionLabel.text! = currentQuestion!.question
-            questionLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            questionLabel.font = questionLabel.font.withSize(12)
-            questionLabel.textAlignment = NSTextAlignment.left
-        }
     }
     
     func getPseudocodeFromFile(question: Question) -> String {
