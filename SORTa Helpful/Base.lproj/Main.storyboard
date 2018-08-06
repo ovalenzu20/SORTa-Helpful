@@ -590,46 +590,45 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdU-Un-ntu">
-                                <rect key="frame" x="73" y="621" width="122" height="30"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                <state key="normal" title="Omar Valenzuela"/>
-                                <connections>
-                                    <action selector="didClickOmarValenzuela:" destination="qAZ-07-7VZ" eventType="touchUpInside" id="sdD-PA-ox0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVC-zL-1jK">
-                                <rect key="frame" x="197" y="627" width="25" height="17.666666666666629"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQM-Cu-mev">
-                                <rect key="frame" x="229" y="621" width="97" height="30"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                <state key="normal" title="Brandon Teran"/>
-                                <connections>
-                                    <action selector="didClickBrandonTeran:" destination="qAZ-07-7VZ" eventType="touchUpInside" id="VcO-0n-e2p"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-X8-qwF">
+                                <rect key="frame" x="84" y="623" width="246" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdU-Un-ntu">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="30"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="Omar Valenzuela"/>
+                                        <connections>
+                                            <action selector="didClickOmarValenzuela:" destination="qAZ-07-7VZ" eventType="touchUpInside" id="sdD-PA-ox0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVC-zL-1jK">
+                                        <rect key="frame" x="119" y="0.0" width="25" height="30"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQM-Cu-mev">
+                                        <rect key="frame" x="149" y="0.0" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="Brandon Teran"/>
+                                        <connections>
+                                            <action selector="didClickBrandonTeran:" destination="qAZ-07-7VZ" eventType="touchUpInside" id="VcO-0n-e2p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Eln-ws-mOf" firstAttribute="top" secondItem="7gg-My-oAm" secondAttribute="bottom" constant="206.66999999999999" id="4Vo-cY-Gdn"/>
-                            <constraint firstItem="Eln-ws-mOf" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="160.66999999999999" id="8X8-nu-37T"/>
+                            <constraint firstItem="1kM-iC-wnR" firstAttribute="bottom" secondItem="pFF-X8-qwF" secondAttribute="bottom" constant="34" id="7gE-qJ-X14"/>
+                            <constraint firstItem="Eln-ws-mOf" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="9ec-oI-yPy"/>
                             <constraint firstItem="xnm-bP-cs3" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="Byl-mW-fmu"/>
-                            <constraint firstItem="aVC-zL-1jK" firstAttribute="top" secondItem="Eln-ws-mOf" secondAttribute="bottom" constant="5.6699999999999999" id="FAK-O2-IQw"/>
-                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="XQM-Cu-mev" secondAttribute="trailing" constant="88" id="GhK-uG-zH0"/>
                             <constraint firstItem="xnm-bP-cs3" firstAttribute="top" secondItem="1kM-iC-wnR" secondAttribute="top" constant="66" id="MPT-bj-xVX"/>
-                            <constraint firstItem="XQM-Cu-mev" firstAttribute="leading" secondItem="aVC-zL-1jK" secondAttribute="trailing" constant="7" id="NmF-IB-aOE"/>
                             <constraint firstItem="7gg-My-oAm" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="OYJ-hq-e4Y"/>
-                            <constraint firstItem="pdU-Un-ntu" firstAttribute="top" secondItem="Eln-ws-mOf" secondAttribute="bottom" constant="-0.33333333333325754" id="RKy-Ee-soF"/>
-                            <constraint firstItem="1kM-iC-wnR" firstAttribute="trailing" secondItem="Eln-ws-mOf" secondAttribute="trailing" constant="160.66999999999999" id="UMj-Ga-472"/>
-                            <constraint firstItem="aVC-zL-1jK" firstAttribute="leading" secondItem="pdU-Un-ntu" secondAttribute="trailing" constant="2" id="VnU-68-kUA"/>
+                            <constraint firstItem="pFF-X8-qwF" firstAttribute="top" secondItem="Eln-ws-mOf" secondAttribute="bottom" constant="1.6699999999999999" id="adL-Np-SzX"/>
+                            <constraint firstItem="pFF-X8-qwF" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="c3A-7A-yjj"/>
                             <constraint firstItem="7gg-My-oAm" firstAttribute="centerY" secondItem="EGS-3g-dUO" secondAttribute="centerY" id="imZ-Dh-L1V"/>
-                            <constraint firstItem="pdU-Un-ntu" firstAttribute="leading" secondItem="1kM-iC-wnR" secondAttribute="leading" constant="73" id="ljV-aa-fbN"/>
-                            <constraint firstItem="XQM-Cu-mev" firstAttribute="top" secondItem="Eln-ws-mOf" secondAttribute="bottom" id="qUz-MF-L02"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1kM-iC-wnR"/>
                     </view>
