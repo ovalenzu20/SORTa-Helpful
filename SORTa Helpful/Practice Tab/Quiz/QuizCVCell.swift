@@ -30,8 +30,16 @@ class QuizCVCell: UICollectionViewCell {
                 questionLabel.text = getPseudocodeFromFile(question: unwrappedQue)
             }
             else {
-                questionLabel.text = unwrappedQue.question
-                questionLabel.textAlignment = .center
+                if unwrappedQue.question.contains("_"){
+                    questionLabel.text = unwrappedQue.question
+                    questionLabel.textAlignment = .left
+                }
+                else{
+                    questionLabel.text = unwrappedQue.question
+                    questionLabel.textAlignment = .center
+                    questionLabel.font = UIFont(name: "Roboto", size: 20)
+                }
+                
             }
             btn1.setTitle(unwrappedQue.possibleAnswers[0], for: .normal)
             btn2.setTitle(unwrappedQue.possibleAnswers[1], for: .normal)

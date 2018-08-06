@@ -20,7 +20,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     var allPossibleAlgorithms = ["Insertion Sort", "Selection Sort", "Comb Sort", "Merge Sort", "Quick Sort", "Bubble Sort", "Binary Insertion Sort", "Radix Sort", "Counting Sort", "Cocktail Sort", "Heap Sort", "Insertion Sort", "Pigeonhole Sort"]
     var allPossibleTypes = ["Stable","In Place", "Stable & In Place", "Divide & Conquer"]
-    var allPossibleRuntimes = ["O(1)", "O(n)", "O(n^2)", "O(nlogn)","O(logn)","O(n^3)","O(2^n)","O(n!)"]
+    var allPossibleRuntimes = ["O(1)", "O(n)", "O(n²)", "O(nlogn)","O(logn)","O(n³)","O(2ⁿ)","O(n!)"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentQuiz!.questions.count
