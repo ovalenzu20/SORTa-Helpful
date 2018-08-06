@@ -18,7 +18,6 @@ class Question {
     var isAnswered = false
     var inputAnswer : Int?
     
-    
     init (question : String, possibleAnswers: [String], correctAnswer: String, belongsToQuiz: String)
     {
         self.question = question

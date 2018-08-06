@@ -11,19 +11,19 @@ import UIKit
 class QuizViewController: UIViewController {
 
     @IBAction func identifyAlgorithm(_ sender: Any) {
-        sendTestType(currentQuizIndex: 3)
-    }
-    
-    @IBAction func identifyComplexities(_ sender: Any) {
         sendTestType(currentQuizIndex: 2)
     }
     
-    @IBAction func identifyTypes(_ sender: Any) {
+    @IBAction func identifyComplexities(_ sender: Any) {
         sendTestType(currentQuizIndex: 1)
     }
     
-    @IBAction func mixedTest(_ sender: Any) {
+    @IBAction func identifyTypes(_ sender: Any) {
         sendTestType(currentQuizIndex: 0)
+    }
+    
+    @IBAction func mixedTest(_ sender: Any) {
+        sendTestType(currentQuizIndex: 3)
     }
     
     override func viewDidLoad() {

@@ -154,7 +154,7 @@
     },
     
     
-    "MIXED TEST": {
+    "MIXED QUIZ": {
         "Question": {
             "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
             "correctAnswers"  : "ans1"
