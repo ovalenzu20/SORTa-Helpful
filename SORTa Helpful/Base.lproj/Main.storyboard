@@ -39,10 +39,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="exg-QA-fL2">
-                                <rect key="frame" x="74" y="232" width="284" height="229"/>
+                                <rect key="frame" x="74" y="200" width="284" height="226"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYG-9i-E9X">
                                         <rect key="frame" x="0.0" y="0.0" width="284" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <state key="normal" backgroundImage="NOTIFICATION SETTING"/>
                                         <connections>
                                             <action selector="didClickNotificationSettings:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="rOZ-d3-74x"/>
@@ -50,6 +51,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KF-up-IDa">
                                         <rect key="frame" x="0.0" y="69" width="182" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <state key="normal" backgroundImage="GIVE FEEDBACK"/>
                                         <connections>
                                             <action selector="didClickGiveFeedback:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="ZMe-ba-eN6"/>
@@ -57,13 +59,15 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9L-3x-xej">
                                         <rect key="frame" x="0.0" y="138" width="152" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <state key="normal" backgroundImage="VIEW GITHUB"/>
                                         <connections>
                                             <action selector="didClickViewGithub:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="6Tw-J7-xSp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-Hm-W7s">
-                                        <rect key="frame" x="0.0" y="207" width="267" height="22"/>
+                                        <rect key="frame" x="0.0" y="207" width="267" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <state key="normal" image="CONTACT DEVELOPERS"/>
                                         <connections>
                                             <action selector="didClickContactDevelopers:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="J28-H0-8Z8"/>
@@ -93,7 +97,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="exg-QA-fL2" firstAttribute="top" secondItem="dh6-Db-Jhz" secondAttribute="bottom" constant="112" id="5FH-AK-eDs"/>
+                            <constraint firstItem="exg-QA-fL2" firstAttribute="top" secondItem="dh6-Db-Jhz" secondAttribute="bottom" constant="80" id="5FH-AK-eDs"/>
                             <constraint firstItem="2KF-up-IDa" firstAttribute="leading" secondItem="jF4-Gp-clT" secondAttribute="leading" constant="74" id="GQ1-ck-1xs"/>
                             <constraint firstItem="jF4-Gp-clT" firstAttribute="bottom" secondItem="TQV-wJ-0rb" secondAttribute="bottom" constant="10" id="KAl-2c-w7g"/>
                             <constraint firstItem="jF4-Gp-clT" firstAttribute="trailing" secondItem="6Cx-8T-Ty4" secondAttribute="trailing" constant="5" id="Qwy-eQ-3VG"/>
