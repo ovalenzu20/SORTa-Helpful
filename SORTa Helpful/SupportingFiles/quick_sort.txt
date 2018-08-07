@@ -1,20 +1,16 @@
 func sort(arr, low, high):
     if low < high:
         partitionIndex = partition(arr, low, high)
-
         sort(arr, low, partitionIndex - 1)
         sort(arr, partitionIndex + 1, high)
-
 
 func partition(arr, low, high):
     i = low - 1
     pivot = arr[high]
-
     for j in range(low, high):
         if arr[j] <= pivot:
             i += 1
             swap(arr[i], arr[j])
 
     swap(arr[i + 1], arr[high])
-
     return i + 1

@@ -1,13 +1,11 @@
 func sort(arr):
-    n = len(arr)
-
-    for i in range(1, n):
+    for i in range(1, len(arr)):
         j = i - 1
         selected = arr[i]
 
         // Find location where selected sould be inserted
-        location = binarySearch(arr, selected, 0, j)
 
+        location = binarySearch(arr, selected, 0, j)
         while j >= location:
             arr[j + 1] = arr[j]
             j -= 1
