@@ -618,7 +618,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.22745098039215686" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1kM-iC-wnR" firstAttribute="bottom" secondItem="pFF-X8-qwF" secondAttribute="bottom" constant="34" id="7gE-qJ-X14"/>
@@ -1982,7 +1982,7 @@
             <objects>
                 <viewController storyboardIdentifier="QuizViewController" id="SLS-ZC-twu" customClass="QuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glB-LT-7xB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-gr-S92">
@@ -2203,7 +2203,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zSE-1E-rkh" firstAttribute="leading" secondItem="uzj-Fo-GTB" secondAttribute="leading" id="2RH-56-Tis"/>
                             <constraint firstItem="DNB-Y4-5Qs" firstAttribute="trailing" secondItem="uzj-Fo-GTB" secondAttribute="trailing" id="JnP-qL-e7q"/>
@@ -2296,6 +2296,6 @@
         <image name="stats icon 29x29" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KuB-nW-CEq"/>
+        <segue reference="jC9-Zd-71F"/>
     </inferredMetricsTieBreakers>
 </document>
