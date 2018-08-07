@@ -11,7 +11,7 @@ import SwiftyJSON
 
 
 class FlashcardViewController: UIViewController {
-    var algorithmCollection: [Algorithm]!
+    var algorithmCollection: [(Algorithm, Int)]!
     
     
     @IBAction func bestCaseFlachcards(_ sender: UIButton) {
@@ -55,6 +55,7 @@ class FlashcardViewController: UIViewController {
                 let data     = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj  = try JSON(data: data)
                 let algoDict = jsonObj.dictionaryValue
+                var index = 0
                 
                 for (algorithmName, algorithmData) in algoDict {
                     let algoClass        = algorithmData["algoClass"].stringValue
@@ -68,7 +69,9 @@ class FlashcardViewController: UIViewController {
                     let memory           = algorithmData["memory"].stringValue
                     let info             = algorithmData["info"].stringValue
                     
-                    algorithmCollection.append(Algorithm(name: algorithmName, algoClass: algoClass, algoType: algoType, bestCase: bestCase, averageCase: averageCase, worstCase: worstCase, memory: memory, info: info))
+                    algorithmCollection.append((Algorithm(name: algorithmName, algoClass: algoClass, algoType: algoType, bestCase: bestCase, averageCase: averageCase, worstCase: worstCase, memory: memory, info: info), index))
+                    
+                    index += 1
                 }
                 
             } catch let error {
