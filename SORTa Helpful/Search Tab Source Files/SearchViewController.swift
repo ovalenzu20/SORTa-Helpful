@@ -289,7 +289,7 @@ class SearchViewController: UIViewController {
         
         self.view.addGestureRecognizer(tap)
         cellLayoutButton.setImage(#imageLiteral(resourceName: "list-menu"), for: .normal)
-        isGridView      = false
+        isGridView = false
         
         searchTextField.attributedPlaceholder = NSAttributedString(string:"Search for an algorithm", attributes: [
             NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Roboto", size: 14)!])
