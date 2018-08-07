@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var fcType: String!
+    var flashcardCollectionView : UICollectionView!
+    
     
     var fcTypeTitleLabel : UILabel = {
         let label = UILabel()
@@ -23,14 +25,11 @@ class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate,
     }()
     
     
-    var flashcardCollectionView : UICollectionView!
-    
-    var fcProgressView          : UIProgressView = {
-        var progressView = UIProgressView()
+    var fcProgressView : UIProgressView = {
+        var progressView = UIProgressView(progressViewStyle: UIProgressViewStyle.default)
         progressView.progress = 0.0
         progressView.progressTintColor = #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1)
         progressView.trackTintColor    = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        progressView.backgroundColor   = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         return progressView
     }()
     
@@ -75,7 +74,7 @@ class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate,
         self.title = "\(fcType!.uppercased()) FLASHCARDS"
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 20, right: 0)
         layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
@@ -84,7 +83,7 @@ class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate,
         flashcardCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), collectionViewLayout: layout)
         
         
-        flashcardCollectionView.backgroundColor = #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1)
+        flashcardCollectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         flashcardCollectionView.isPagingEnabled = true
         flashcardCollectionView.showsHorizontalScrollIndicator = false
         flashcardCollectionView.register(FlashcardCell.self, forCellWithReuseIdentifier: "FlashcardCell")
