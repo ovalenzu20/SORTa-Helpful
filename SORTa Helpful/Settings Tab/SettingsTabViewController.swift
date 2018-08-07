@@ -10,30 +10,40 @@ import UIKit
 import MessageUI
 import SafariServices
 
-class SettingsTabViewController: UIViewController {
+class SettingsTabViewController: UIViewController, MFMailComposeViewControllerDelegate{
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+        mailComposerVC.mailComposeDelegate = self
         
         mailComposerVC.setToRecipients(["ovalenzu@uci.edu", "bteran@uci.edu"])
         mailComposerVC.setSubject("SORTa Helpful - Contact")
-        mailComposerVC.setMessageBody("Thank you for contacting us! We are more than happy to answer any questions or concersn you may have.", isHTML: false)
         
         return mailComposerVC
     }
     
-    func mailComposeViewController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
-        controller.dismiss(animated: true, completion: nil)
-    }
     
     func showSendMailErrorAlert() {
         let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        
         sendMailErrorAlert.addAction(cancelAction)
+        
         present(sendMailErrorAlert, animated: true, completion: nil)
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didClickContactDevelopers(_ sender: Any) {
+        let mail = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mail, animated: true, completion: nil)
+        } else {
+            showSendMailErrorAlert()
+        }
+    }
+    
     
     @IBAction func didClickNotificationSettings(_ sender: Any) {
     }
@@ -47,14 +57,6 @@ class SettingsTabViewController: UIViewController {
         present(svc, animated: true, completion: nil)
     }
     
-    @IBAction func didClickContactDevelopers(_ sender: Any) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
-        }
-    }
     
     
     
