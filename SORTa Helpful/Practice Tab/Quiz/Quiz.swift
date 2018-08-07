@@ -53,6 +53,10 @@ class Quiz {
             addQuestion(question: q)
         }
     }
+    
+    func shuffleAllQuestions(){
+        self.questions = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: questions) as! [Question]
+    }
 }
 
 

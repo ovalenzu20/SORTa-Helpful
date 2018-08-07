@@ -38,6 +38,7 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.navigationItem.hidesBackButton = true
         let allQuizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
         currentQuiz = allQuizzes[quizIndex!]
+        currentQuiz!.shuffleAllQuestions()
         self.title = currentQuiz!.quizName
         
         
