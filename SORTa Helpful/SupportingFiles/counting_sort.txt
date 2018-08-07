@@ -1,33 +1,16 @@
-func sort(arr):
-    maxElement = max(arr)
+func sort(arr, target, range):
+    counters = arr of int from 0 - range -1
+    initialize all counters to 0
 
-    countArray = [0 for _ in range(0, maxElement + 1)]
+    for each element in arr:
+        counters[element.key]++
 
-    i = 0
+    offsets = arr of int from 0 - range -1
+    initialize all offsets to 0
 
-    for element in arr:
-        countArray[element] += 1
-        i += 1
+    for i in 1 .. range - 1:
+        offsets[i] = offsets[i - 1] + counters[i - 1]
 
-
-    i = 0
-
-    for index in range(1, len(countArray)):
-        sum = countArray[index] + countArray[index - 1]
-        countArray[index] = sum
-        i += 1
-
-
-
-    sortedArray = [0 for _ in range(0, len(arr))]
-
-    i = 0
-
-    for element in arr:
-        countArray[element] -= 1
-        sortedArray[countArray[element]] = element
-        i += 1
-
-
-    for i in range(0, len(sortedArray)):
-        arr[i] = sortedArray[i]
+    for i in 0 .. source.length - 1:
+        target[offsets[arr[i].key]] = arr[i]
+        offsets[arr[i].key] += 1

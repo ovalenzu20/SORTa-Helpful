@@ -2,8 +2,6 @@ func sort(arr):
     minElement = min(arr)
     maxElement = max(arr)
     size = maxElement - minElement + 1
-
-    // Array containing zeroes
     holes = [0] * size
 
     for x in arr:

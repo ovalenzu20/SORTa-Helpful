@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import GameplayKit
 
 class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -17,6 +18,10 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     var currentQuestionNumber = 1
     var quizCV: UICollectionView!
 
+    var allPossibleAlgorithms = ["Insertion Sort", "Selection Sort", "Comb Sort", "Merge Sort", "Quick Sort", "Bubble Sort", "Binary Insertion Sort", "Radix Sort", "Counting Sort", "Cocktail Sort", "Heap Sort", "Insertion Sort", "Pigeonhole Sort"]
+    var allPossibleTypes = ["Stable","In Place", "Stable & In Place", "Divide & Conquer"]
+    var allPossibleRuntimes = ["O(1)", "O(n)", "O(n²)", "O(nlogn)","O(logn)","O(n³)","O(2ⁿ)","O(n!)"]
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentQuiz!.questions.count
     }
@@ -33,7 +38,9 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.navigationItem.hidesBackButton = true
         let allQuizzes = loadQuizFromJSONData(jsonPath: "allQuizQuestions")
         currentQuiz = allQuizzes[quizIndex!]
+        currentQuiz!.shuffleAllQuestions()
         self.title = currentQuiz!.quizName
+        
         
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -191,9 +198,13 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let json = try JSON(data: jsonData)
                 
                 for quizType in json{
-                    let quiz = createQuizFromJson(jsonData: quizType)
-                    allQuizzes.append(quiz)
+                    if quizType.0 != "MIXED QUIZ"{
+                        let quiz = createQuizFromJson(jsonData: quizType)
+                        allQuizzes.append(quiz)
+                    }
                 }
+                allQuizzes.append(generateMixedQuiz(allQuizzes: allQuizzes))
+
             } catch let error {
                 // In the future add function that displays empty cells and prompts user to reload page
                 print("parse error: \(error.localizedDescription)")
@@ -203,6 +214,31 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             print("Invalid filename/path.")
         }
         return allQuizzes
+    }
+    
+    func containsQuestion(quiz: Quiz, question: Question) -> Bool{
+        for q in quiz.questions{
+            if q.question == question.question{
+                return true
+            }
+        }
+        return false
+    }
+    
+    func generateMixedQuiz(allQuizzes: [Quiz]) -> Quiz{
+        let mixedQuiz = Quiz(quizName: "MIXED QUIZ")
+        
+        while mixedQuiz.numberOfQuestions < 10{
+            let randomQuizNumber = arc4random_uniform(2) + 1; //a number from 1-3
+            let randomQuiz = allQuizzes[Int(randomQuizNumber)]
+            let randomQuestionNumber = arc4random_uniform(UInt32(randomQuiz.numberOfQuestions))
+            let randomQuestion = randomQuiz.questions[Int(randomQuestionNumber)]
+            
+            if !containsQuestion(quiz: mixedQuiz, question: randomQuestion){
+                mixedQuiz.addQuestion(question: randomQuestion)
+            }
+        }
+        return mixedQuiz
     }
     
     func createQuizFromJson(jsonData: (String, JSON)) -> Quiz{
@@ -217,6 +253,8 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let correctAns = elem.1["correctAnswers"].string!
                 
                 let currentQuestion = Question(question: elem.0, possibleAnswers: possibleAnsAsStringArr, correctAnswer: correctAns, belongsToQuiz: currentQuiz.quizName)
+                mixPossibleAnswers(question: currentQuestion)
+                
                 quizQuestions.append(currentQuestion)
             }
             else if elem.0 == "description"{
@@ -227,6 +265,30 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         return currentQuiz
     }
     
+    func randomizeAnswers(answersToRandomize: [String], answersToMixIn: [String]) -> [String]
+    {
+        var randomPossibleAnswers = [String]()
+        var allAlgorithmsShuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: answersToMixIn) as! [String]
+        var currentElem = 0
+        
+        while randomPossibleAnswers.count < 4{
+            if currentElem == 0 {
+                randomPossibleAnswers.append(answersToRandomize[0])
+            }
+            else {
+                let lastElem = allAlgorithmsShuffled.removeLast()
+                if !randomPossibleAnswers.contains(lastElem){
+                    randomPossibleAnswers.append(lastElem)
+                }
+            }
+            currentElem += 1
+        }
+        //shuffle final result
+        let shuffledRandomPossibleAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: randomPossibleAnswers) as! [String]
+        
+        return shuffledRandomPossibleAnswers
+    }
+    
     func convertJsonArrayToStringArray(jsonArray: [JSON]) -> [String]{
         var tempStringArr = [String]()
         for jsonElem in jsonArray{
@@ -234,6 +296,26 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         return tempStringArr
     }
+    
+    func findQuestionCategory(question: Question) -> [String]{
+        switch question.belongsToQuiz {
+        case "IDENTIFY ALGORITHMS":
+            return self.allPossibleAlgorithms
+        case "IDENTIFY COMPLEXITIES":
+            return self.allPossibleRuntimes
+        case "IDENTIFY TYPES":
+            return self.allPossibleTypes
+        default:
+            return [""]
+        }
+    }
+    
+    func mixPossibleAnswers(question : Question){
+        let answersToMixIn = findQuestionCategory(question: question)
+        question.possibleAnswers = randomizeAnswers(answersToRandomize: question.possibleAnswers, answersToMixIn: answersToMixIn)
+    }
+    
+    
 }
 
 extension QuizSelectedVC: QuizCVCellDelegate {

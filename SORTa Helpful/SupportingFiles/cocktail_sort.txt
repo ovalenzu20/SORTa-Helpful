@@ -1,27 +1,16 @@
 func sort(arr):
-    n = len(arr)
-    swapped = True
-    start = 0
-    end = n - 1
+    swapped = true
+    while swapped:
+        swapped = false
+        for each i in start to end of arr:
+            if arr[i] > arr[i + 1]:
+                swap(arr[i], A[i + 1])
+                swapped = true
 
-    while (swapped == True):
-        swapped = False
+        if not swapped: break
+        swapped = false
 
-        for i in range (start, end):
-            if (arr[i] > arr[i + 1]) :
-                swap(arr[i], arr[i + 1])
-                swapped = True
-
-        if (swapped == False):
-            break
-
-        swapped = False
-        end = end - 1
-
-
-        for i in range(end - 1, start - 1, -1):
+        for i in end-1 to start-1 of arr:
             if (arr[i] > arr[i + 1]):
                 swap(arr[i], arr[i + 1])
-                swapped = True
-
-        start += 1
+                swapped = true

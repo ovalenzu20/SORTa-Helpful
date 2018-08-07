@@ -42,6 +42,7 @@
 		07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* Algorithm.swift */; };
 		07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */; };
 		437F4DDD6997F81958F92691 /* Pods_SORTa_Helpful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */; };
+		7820167321190B65003D008B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820167221190B65003D008B /* HomeVC.swift */; };
 		78340A5F20F694CD001D0746 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A5E20F694CD001D0746 /* InfoViewController.swift */; };
 		78340A7620F6994E001D0746 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */; };
 		78340A7720F6994E001D0746 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A6B20F6994D001D0746 /* Roboto-Medium.ttf */; };
@@ -107,6 +108,7 @@
 		1AF56050F3C46720A02D58A9 /* Pods-SORTa Helpful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.debug.xcconfig"; sourceTree = "<group>"; };
 		44FFDBD99D5B968B369C1992 /* Pods-SORTa Helpful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.release.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.release.xcconfig"; sourceTree = "<group>"; };
 		71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SORTa_Helpful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7820167221190B65003D008B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		78340A5E20F694CD001D0746 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		78340A6B20F6994D001D0746 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				78340A8220F6995F001D0746 /* Fonts */,
 				78F9845C20E84F760017DCCC /* Main.storyboard */,
+				7820167221190B65003D008B /* HomeVC.swift */,
 				071ED4E720FDC4480039FDB2 /* Assets.xcassets */,
 				78F9846120E84F770017DCCC /* LaunchScreen.storyboard */,
 				78F9845820E84F760017DCCC /* AppDelegate.swift */,
@@ -485,6 +488,7 @@
 				076DF76120FEEF2A00368E14 /* ComplexitiesPopupViewController.swift in Sources */,
 				073C04492106E09F00823376 /* ArrayView.swift in Sources */,
 				07CF4313210FE8BD00789DFE /* ChooseAlgorithmViewController.swift in Sources */,
+				7820167321190B65003D008B /* HomeVC.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
 				07CF43172111098E00789DFE /* FlashcardCell.swift in Sources */,
 				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,

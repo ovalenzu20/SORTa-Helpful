@@ -47,7 +47,7 @@
     },
     "Merge Sort": {
         "algoClass": "Comparison",
-        "algoType": "In-place",
+        "algoType": "Divide & Conquer and Stable",
         "bestCase": ["O(nlogn)", 6],
         "averageCase": ["O(nlogn)", 6],
         "worstCase": ["O(nlogn)", 6],

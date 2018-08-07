@@ -33,14 +33,14 @@
         },
         
         "comb_sort": {
-            "possibleAnswers" : ["Block Sort", " ", " ", " "],
-            "correctAnswers"  : "Block Sort"
+            "possibleAnswers" : ["Comb Sort", " ", " ", " "],
+            "correctAnswers"  : "Comb Sort"
             
         },
         
         "merge_sort": {
-            "possibleAnswers" : ["Block Sort", " ", " ", " "],
-            "correctAnswers"  : "Block Sort"
+            "possibleAnswers" : ["Merge Sort", " ", " ", " "],
+            "correctAnswers"  : "Merge Sort"
             
         },
         
@@ -82,35 +82,134 @@
     },
     
     "IDENTIFY COMPLEXITIES": {
-        "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
-            "correctAnswers"  : "ans1"
+        "description" : "Correctly match the following algorithm with the following complexity",
+        
+        "Correctly identify the BEST CASE complexity for MERGE SORT": {
+            "possibleAnswers" : ["O(nlogn)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(nlogn)"
+        },
+        
+        "Correctly identify the AVERAGE CASE complexity for QUICK SORT": {
+            "possibleAnswers" : ["O(nlogn)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(nlogn)"
+            
+        },
+        
+        "Correctly identify the WORST CASE complexity for COMB SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
+            
+        },
+        
+        "Correctly identify the AVERAGE CASE complexity for PIGEONHOLE": {
+            "possibleAnswers" : ["O(n+2ᵏ)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n+2ᵏ)"
+            
+        },
+        
+        "Correctly identify the BEST CASE complexity for RADIX SORT": {
+            "possibleAnswers" : ["O(n)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n)"
+            
+        },
+        
+        "Correctly identify the BEST CASE complexity for COUNTING SORT": {
+            "possibleAnswers" : ["O(n)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n)"
+            
+        },
+        
+        "Correctly identify the AVERAGE CASE complexity for HEAP SORT": {
+            "possibleAnswers" : ["O(nlogn)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(nlogn)"
+            
+        },
+        
+        "Correctly identify the WORST CASE complexity for INSERTION SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
+            
+        },
+        
+        "Correctly identify the WORST CASE complexity for SELECTION SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
+            
+        },
+        
+        "Correctly identify the AVERAGE CASE complexity for BUBBLE SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
             
         }
     },
+    
     
     "IDENTIFY TYPES": {
-        "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
-            "correctAnswers"  : "ans1"
+        "Correctly identify the TYPE for MERGE SORT": {
+            "possibleAnswers" : ["Divide & Conquer and Stable", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "Divide & Conquer and Stable"
+        },
+        
+        "Correctly identify the TYPE  for QUICK SORT": {
+            "possibleAnswers" : ["O(nlogn)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(nlogn)"
+            
+        },
+        
+        "Correctly identify the TYPE for COMB SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
+            
+        },
+        
+        "Correctly identify the TYPE for PIGEONHOLE SORT": {
+            "possibleAnswers" : ["O(n+2ᵏ)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n+2ᵏ)"
+            
+        },
+        
+        "Correctly identify the TYPE for RADIX SORT": {
+            "possibleAnswers" : ["O(n)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n)"
+            
+        },
+        
+        "Correctly identify the TYPE for COUNTING SORT": {
+            "possibleAnswers" : ["O(n)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n)"
+            
+        },
+        
+        "Correctly identify the TYPE for HEAP SORT": {
+            "possibleAnswers" : ["O(nlogn)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(nlogn)"
+            
+        },
+        
+        "Correctly identify the TYPE for INSERTION SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
+            
+        },
+        
+        "Correctly identify the TYPE for SELECTION SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
+            
+        },
+        
+        "Correctly identify the TYPE for BUBBLE SORT": {
+            "possibleAnswers" : ["O(n²)", "ans2", "ans3", "ans4"],
+            "correctAnswers"  : "O(n²)"
             
         }
+    
     },
     
-    "SITUATION MATCHING": {
-        "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
-            "correctAnswers"  : "ans1"
-            
-        }
-    },
     
-    "MIXED TEST": {
-        "Question": {
-            "possibleAnswers" : ["ans1", "ans2", "ans3", "ans4"],
-            "correctAnswers"  : "ans1"
-            
-        }
+    "MIXED QUIZ": {
+        
     }
     
 }

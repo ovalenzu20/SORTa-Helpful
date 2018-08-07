@@ -31,7 +31,13 @@ class QuizCVCell: UICollectionViewCell {
             }
             else {
                 questionLabel.text = unwrappedQue.question
-                questionLabel.textAlignment = .center
+                if unwrappedQue.question.contains("_"){
+                    questionLabel.textAlignment = .left
+                }
+//                else{
+//                    questionLabel.textAlignment = .center
+//                    questionLabel.font = UIFont(name: "Roboto", size: 20)
+//                }
             }
             btn1.setTitle(unwrappedQue.possibleAnswers[0], for: .normal)
             btn2.setTitle(unwrappedQue.possibleAnswers[1], for: .normal)
@@ -49,7 +55,6 @@ class QuizCVCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupViews()
         btnsArray = [btn1, btn2, btn3, btn4]
     }
@@ -76,16 +81,16 @@ class QuizCVCell: UICollectionViewCell {
     func setupViews() {
         
         addSubview(questionLabel)
-        questionLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive=true
+        questionLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive=true
         questionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 25).isActive=true
         questionLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -12).isActive=true
-        questionLabel.heightAnchor.constraint(equalToConstant: 300).isActive=true
+        questionLabel.heightAnchor.constraint(equalToConstant: 330).isActive=true
         
         let btnWidth: CGFloat = 150
         let btnHeight: CGFloat = 50
         btn1 = getButton(tag: 0)
         addSubview(btn1)
-        NSLayoutConstraint.activate([btn1.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 0), btn1.rightAnchor.constraint(equalTo: self.centerXAnchor, constant: -10), btn1.widthAnchor.constraint(equalToConstant: btnWidth), btn1.heightAnchor.constraint(equalToConstant: btnHeight)])
+        NSLayoutConstraint.activate([btn1.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 35), btn1.rightAnchor.constraint(equalTo: self.centerXAnchor, constant: -10), btn1.widthAnchor.constraint(equalToConstant: btnWidth), btn1.heightAnchor.constraint(equalToConstant: btnHeight)])
         btn1.addTarget(self, action: #selector(btnOptionAction), for: .touchUpInside)
         
         btn2 = getButton(tag: 1)
@@ -110,7 +115,7 @@ class QuizCVCell: UICollectionViewCell {
         lbl.textColor=UIColor.white
         lbl.numberOfLines = 100
         lbl.textAlignment = .left
-        lbl.font = UIFont(name: "Roboto", size: 16)
+        lbl.font = UIFont(name: "Roboto", size: 15)
         lbl.translatesAutoresizingMaskIntoConstraints=false
         return lbl
     }()
@@ -119,7 +124,7 @@ class QuizCVCell: UICollectionViewCell {
         let btn = UIButton()
         btn.tag = tag
         btn.setTitle("Option", for: .normal)
-        btn.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 18)
+        btn.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 15)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.1647058824, blue: 0.2, alpha: 1)
         btn.layer.borderWidth = 1
@@ -128,18 +133,6 @@ class QuizCVCell: UICollectionViewCell {
         btn.clipsToBounds=true
         btn.translatesAutoresizingMaskIntoConstraints=false
         return btn
-    }
-
-    func createQuestionLabel(){
-        questionLabel.text! = currentQuestion!.question
-        if currentQuestion!.belongsToQuiz == "IDENTIFY ALGORITHMS"{
-            let psuedocode = getPseudocodeFromFile(question: currentQuestion!)
-            questionLabel.numberOfLines = 100
-            questionLabel.text! = psuedocode
-            questionLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            questionLabel.font = questionLabel.font.withSize(12)
-            questionLabel.textAlignment = NSTextAlignment.left
-        }
     }
     
     func getPseudocodeFromFile(question: Question) -> String {
