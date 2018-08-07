@@ -224,15 +224,18 @@ class QuizSelectedVC: UIViewController, UICollectionViewDelegate, UICollectionVi
                 currentQuiz.quizDescription = elem.1.string!
             }
         }
+        
         currentQuiz.addMultipleQuestions(questionsToAdd: quizQuestions)
         return currentQuiz
     }
     
     func convertJsonArrayToStringArray(jsonArray: [JSON]) -> [String]{
         var tempStringArr = [String]()
+        
         for jsonElem in jsonArray{
             tempStringArr.append(jsonElem.string!)
         }
+        
         return tempStringArr
     }
 }
@@ -245,13 +248,13 @@ extension QuizSelectedVC: QuizCVCellDelegate {
         let currentQ = currentQuiz!.questions[index.item]
         let answerIndex = currentQ.possibleAnswers.index(of: currentQ.correctAnswer)!
         
-        
         if answerIndex != btnIndex {
             currentQuiz?.questions[index.item].incorrectAnswer = btnIndex
             
         } else {
             score += 1
         }
+        
         lblScore.text = "Score: \(score) / \(currentQuiz!.questions.count)"
         quizCV.reloadItems(at: [index])
     }

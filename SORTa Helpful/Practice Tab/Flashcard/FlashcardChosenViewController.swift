@@ -10,26 +10,108 @@ import UIKit
 import SwiftyJSON
 
 
-class FlashcardChosenViewController: UIViewController {
+class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var fcType: String!
+    
+    var fcTypeTitleLabel : UILabel = {
+        let label = UILabel()
+        label.textColor = #colorLiteral(red: 0.9725490196, green: 1, blue: 0.9568627451, alpha: 1)
+        label.numberOfLines = 1
+        label.textAlignment = .center
+        label.font = UIFont(name: "Connoisseurs", size: 82)
+        return label
+    }()
+    
+    
     var flashcardCollectionView : UICollectionView!
+    
+    var fcProgressView          : UIProgressView = {
+        var progressView = UIProgressView()
+        progressView.progress = 0.0
+        progressView.progressTintColor = #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1)
+        progressView.trackTintColor    = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        progressView.backgroundColor   = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        return progressView
+    }()
+    
+    var fcProgressLabel         : UILabel = {
+        let label = UILabel()
+        label.text = "1 / 13"
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.numberOfLines = 1
+        label.textAlignment = .center
+        label.font = UIFont(name: "Roboto-Light", size: 14)
+        return label
+    }()
+
     var categoryCollection      : [Algorithm]!
     var randomCollection        : [(String, String)]!
     
-    private var cellsPerScreen  : CGFloat = 1
-    private var cellHeight      : CGFloat = 200.0
-    private var widthConstraint : CGFloat = 20
     
-    
-    func refreshCellView() {
-        let collectionWidth = (view.frame.size.width - widthConstraint) / cellsPerScreen
-        let layout = flashcardCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: collectionWidth, height: cellHeight)
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categoryCollection.count
     }
     
     
-    private func setupFlashcardCollectionView() {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let flashcardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlashcardCell", for: indexPath) as! FlashcardCell
+        var algoInfo: (String, String)!
         
+        if fcType == "random" {
+            algoInfo = randomCollection[indexPath.item]
+        }
+        else {
+            algoInfo = self.getFlachcardLabels(algorithmInfo: categoryCollection[indexPath.item])
+        }
+        
+        flashcardCell.setupLabelText(name: algoInfo.0, info: algoInfo.1)
+        flashcardCell.setCardTextToName()
+        
+        return flashcardCell
+    }
+    
+    
+    private func setupViews() {
+        self.title = "\(fcType!.uppercased()) FLASHCARDS"
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        
+        flashcardCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), collectionViewLayout: layout)
+        
+        
+        flashcardCollectionView.backgroundColor = #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1)
+        flashcardCollectionView.isPagingEnabled = true
+        flashcardCollectionView.showsHorizontalScrollIndicator = false
+        flashcardCollectionView.register(FlashcardCell.self, forCellWithReuseIdentifier: "FlashcardCell")
+        flashcardCollectionView.delegate   = self
+        flashcardCollectionView.dataSource = self
+        
+        self.view.addSubview(flashcardCollectionView)
+        self.view.addSubview(fcProgressView)
+        self.view.addSubview(fcProgressLabel)
+        
+        flashcardCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        fcProgressView.translatesAutoresizingMaskIntoConstraints          = false
+        fcProgressLabel.translatesAutoresizingMaskIntoConstraints         = false
+
+        flashcardCollectionView.centerYAnchor.constraint(equalTo:  self.view.centerYAnchor).isActive  = true
+        flashcardCollectionView.leadingAnchor.constraint(equalTo:  self.view.leadingAnchor).isActive  = true
+        flashcardCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        flashcardCollectionView.heightAnchor.constraint(equalToConstant: 340).isActive                = true
+        
+        fcProgressView.leadingAnchor.constraint(equalTo:  self.view.leadingAnchor,              constant:  40).isActive = true
+        fcProgressView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,             constant: -40).isActive = true
+        fcProgressView.topAnchor.constraint(equalTo:      flashcardCollectionView.bottomAnchor, constant:  20).isActive = true
+        fcProgressView.heightAnchor.constraint(equalToConstant: 16).isActive                                            = true
+        
+        fcProgressLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        fcProgressLabel.bottomAnchor.constraint(equalTo:  flashcardCollectionView.topAnchor, constant: -20).isActive = true
+        fcProgressLabel.widthAnchor.constraint(equalToConstant: 80).isActive = true
     }
     
     
@@ -84,16 +166,11 @@ class FlashcardChosenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupFlashcardCollectionView()
+        self.setupViews()
         
         if self.fcType == "random" {
             self.createRandomFlashcardCollection()
         }
-        
-        flashcardCollectionView.delegate   = self
-        flashcardCollectionView.dataSource = self
-        
-        self.refreshCellView()
     }
     
     
@@ -101,42 +178,6 @@ class FlashcardChosenViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
-
-
-extension FlashcardChosenViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let flashcard = collectionView.dequeueReusableCell(withReuseIdentifier: "FlashcardCell", for: indexPath) as! FlashcardCell
-        flashcard.flipCard()
-        
-        
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryCollection.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let flashcardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlashcardCell", for: indexPath) as! FlashcardCell
-        
-        var algoInfo: (String, String)!
-        
-        if fcType == "random" {
-            algoInfo = randomCollection[indexPath.item]
-            
-        }
-        else {
-            algoInfo = self.getFlachcardLabels(algorithmInfo: categoryCollection[indexPath.item])
-        }
-        
-        flashcardCell.setupLabelText(name: algoInfo.0, info: algoInfo.1)
-        
-        return flashcardCell
-    }
-}
-
-
-
 
 
 
