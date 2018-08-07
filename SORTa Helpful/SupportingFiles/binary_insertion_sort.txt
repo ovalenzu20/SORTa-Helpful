@@ -3,9 +3,8 @@ func sort(arr):
         j = i - 1
         selected = arr[i]
 
-        // Find location where selected sould be inserted
-
         location = binarySearch(arr, selected, 0, j)
+
         while j >= location:
             arr[j + 1] = arr[j]
             j -= 1

@@ -1,16 +1,16 @@
 func sort(arr, target, range):
-    counters = an array of integers with indices 0 .. range - 1
+    counters = arr of int from 0 - range -1
     initialize all counters to 0
 
     for each element in arr:
         counters[element.key]++
 
-    offsets = an array of integers with indices 0 .. range - 1
+    offsets = arr of int from 0 - range -1
     initialize all offsets to 0
 
     for i in 1 .. range - 1:
         offsets[i] = offsets[i - 1] + counters[i - 1]
 
     for i in 0 .. source.length - 1:
-        target[offsets[source[i].key]] = arr[i]
+        target[offsets[arr[i].key]] = arr[i]
         offsets[arr[i].key] += 1
