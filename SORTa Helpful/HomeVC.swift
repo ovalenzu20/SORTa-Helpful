@@ -12,11 +12,19 @@ import SafariServices
 
 class HomeVC: UIViewController {
     
+    
+    @IBAction func didSelectCodePathOrg(_ sender: Any) {
+        let codePathURL = URL(string: "https://codepath.org/classes")
+        let svc = SFSafariViewController(url: codePathURL!)
+        present(svc, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

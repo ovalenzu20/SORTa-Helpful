@@ -94,6 +94,3 @@ class FlashcardViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
-
-
-

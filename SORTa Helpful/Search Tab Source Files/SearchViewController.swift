@@ -391,12 +391,3 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         return true
     }
 }
-
-
-
-
-
-
-
-
-
