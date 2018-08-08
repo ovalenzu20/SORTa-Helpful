@@ -16,14 +16,14 @@ class FlashcardCell: UICollectionViewCell {
     
     var flashcardButton : UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1215686275, blue: 0.1450980392, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.1725490196, green: 0.1607843137, blue: 0.2078431373, alpha: 1)
         button.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.5
         return button
     }()
     
-    var infoLabel       : UILabel = {
+    var infoLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         lbl.numberOfLines = 6
@@ -73,7 +73,7 @@ class FlashcardCell: UICollectionViewCell {
     
     
     func setupLabelText(name: String, info: String) {
-        self.nameText = name
+        self.nameText = name.uppercased()
         self.infoText = info
     }
     
@@ -92,13 +92,13 @@ class FlashcardCell: UICollectionViewCell {
         if self.isFlipped {
             self.isFlipped = false
             self.infoLabel.text = self.nameText
-            self.flashcardButton.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1215686275, blue: 0.1450980392, alpha: 1)
+            self.flashcardButton.backgroundColor = #colorLiteral(red: 0.1725490196, green: 0.1607843137, blue: 0.2078431373, alpha: 1)
             UIView.transition(with: self.flashcardButton, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         }
         else {
             self.isFlipped = true
             self.infoLabel.text = self.infoText
-            self.flashcardButton.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.1215686275, blue: 0.1450980392, alpha: 1)
+            self.flashcardButton.backgroundColor = #colorLiteral(red: 0.1725490196, green: 0.1607843137, blue: 0.2078431373, alpha: 1)
             UIView.transition(with: self.flashcardButton, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
         }
     }
