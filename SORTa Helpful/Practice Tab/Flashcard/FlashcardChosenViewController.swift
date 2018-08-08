@@ -13,31 +13,30 @@ import SwiftyJSON
 class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var fcType: String!
     var flashcardCollectionView : UICollectionView!
-    var categoryCollection      : [(Algorithm, Int)]!
+    var categoryCollection      : [Algorithm]!
     var randomCollection        : [(String, String)]!
-    var fcProgressDict : [String: Int] = [:]
     
     
-    var fcProgressView : UIProgressView = {
-        var progressView = UIProgressView(progressViewStyle: UIProgressViewStyle.default)
-        progressView.progress = 0.0
-        progressView.layer.cornerRadius = 8
-        progressView.clipsToBounds = true
-        progressView.progressTintColor = #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1)
-        progressView.trackTintColor    = #colorLiteral(red: 0.1676258147, green: 0.1638127565, blue: 0.2031261921, alpha: 1)
-        return progressView
-    }()
-    
-    
-    var fcProgressLabel : UILabel = {
-        let label = UILabel()
-        label.text = "1 / 13"
-        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        label.numberOfLines = 1
-        label.textAlignment = .center
-        label.font = UIFont(name: "Roboto-Light", size: 14)
-        return label
-    }()
+//    var fcProgressView : UIProgressView = {
+//        var progressView = UIProgressView(progressViewStyle: UIProgressViewStyle.default)
+//        progressView.progress = 0.0
+//        progressView.layer.cornerRadius = 8
+//        progressView.clipsToBounds = true
+//        progressView.progressTintColor = #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1)
+//        progressView.trackTintColor    = #colorLiteral(red: 0.1676258147, green: 0.1638127565, blue: 0.2031261921, alpha: 1)
+//        return progressView
+//    }()
+//
+//
+//    var fcProgressLabel : UILabel = {
+//        let label = UILabel()
+//        label.text = "1 / 13"
+//        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//        label.numberOfLines = 1
+//        label.textAlignment = .center
+//        label.font = UIFont(name: "Roboto-Light", size: 14)
+//        return label
+//    }()
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,36 +45,22 @@ class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate,
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(indexPath.item)
+        
         let flashcardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlashcardCell", for: indexPath) as! FlashcardCell
+        
         var algoInfo: (String, String)!
         
         if fcType == "random" {
             algoInfo = randomCollection[indexPath.item]
         }
         else {
-            algoInfo = self.getFlachcardLabels(algorithmInfo: categoryCollection[indexPath.item].0)
+            algoInfo = self.getFlachcardLabels(algorithmInfo: categoryCollection[indexPath.item])
         }
         
         flashcardCell.setupLabelText(name: algoInfo.0, info: algoInfo.1)
         flashcardCell.setCardTextToName()
-        let index = self.findAlgoIndex(algoName: flashcardCell.nameText.uppercased())
-        fcProgressView.setProgress(Float(index + 1) / Float(categoryCollection.count), animated: true)
-        fcProgressLabel.text = "\(index + 1) / \(categoryCollection.count)"
         
         return flashcardCell
-    }
-    
-    
-    private func findAlgoIndex(algoName: String) -> Int {
-//        print("\(algoName)")
-        for (algo, index) in categoryCollection {
-            if algo.name.uppercased() == algoName {
-                return index
-            }
-        }
-        
-        return 0
     }
     
     
@@ -99,33 +84,33 @@ class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate,
         flashcardCollectionView.dataSource = self
         
         self.view.addSubview(flashcardCollectionView)
-        self.view.addSubview(fcProgressView)
-        self.view.addSubview(fcProgressLabel)
+//        self.view.addSubview(fcProgressView)
+//        self.view.addSubview(fcProgressLabel)
         
         flashcardCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        fcProgressView.translatesAutoresizingMaskIntoConstraints          = false
-        fcProgressLabel.translatesAutoresizingMaskIntoConstraints         = false
+//        fcProgressView.translatesAutoresizingMaskIntoConstraints          = false
+//        fcProgressLabel.translatesAutoresizingMaskIntoConstraints         = false
 
         flashcardCollectionView.centerYAnchor.constraint(equalTo:  self.view.centerYAnchor).isActive  = true
         flashcardCollectionView.leadingAnchor.constraint(equalTo:  self.view.leadingAnchor).isActive  = true
         flashcardCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         flashcardCollectionView.heightAnchor.constraint(equalToConstant: 340).isActive                = true
         
-        fcProgressView.leadingAnchor.constraint(equalTo:  self.view.leadingAnchor,              constant:  40).isActive = true
-        fcProgressView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,             constant: -40).isActive = true
-        fcProgressView.topAnchor.constraint(equalTo:      flashcardCollectionView.bottomAnchor, constant:  20).isActive = true
-        fcProgressView.heightAnchor.constraint(equalToConstant: 16).isActive                                            = true
-        
-        fcProgressLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        fcProgressLabel.bottomAnchor.constraint(equalTo:  flashcardCollectionView.topAnchor, constant: -20).isActive = true
-        fcProgressLabel.widthAnchor.constraint(equalToConstant: 80).isActive = true
+//        fcProgressView.leadingAnchor.constraint(equalTo:  self.view.leadingAnchor,              constant:  40).isActive = true
+//        fcProgressView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,             constant: -40).isActive = true
+//        fcProgressView.topAnchor.constraint(equalTo:      flashcardCollectionView.bottomAnchor, constant:  20).isActive = true
+//        fcProgressView.heightAnchor.constraint(equalToConstant: 16).isActive                                            = true
+//
+//        fcProgressLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        fcProgressLabel.bottomAnchor.constraint(equalTo:  flashcardCollectionView.topAnchor, constant: -20).isActive = true
+//        fcProgressLabel.widthAnchor.constraint(equalToConstant: 80).isActive = true
     }
     
     
     fileprivate func createRandomFlashcardCollection() {
         self.randomCollection = []
         
-        for (algorithm, _) in self.categoryCollection {
+        for algorithm in self.categoryCollection {
             self.randomCollection.append(self.chooseRandomProperty(algorithmInfo: algorithm))
         }
     }

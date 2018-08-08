@@ -46,6 +46,12 @@ class FlashcardCell: UICollectionViewCell {
     }
     
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.infoLabel.text = nil
+    }
+    
+    
     private func setupSubviewConstraints() {
         
     }
