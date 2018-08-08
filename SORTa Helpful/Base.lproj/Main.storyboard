@@ -2232,19 +2232,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSE-1E-rkh">
-                                <rect key="frame" x="0.0" y="360" width="414" height="327"/>
-                                <color key="backgroundColor" red="0.22745098039215686" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="344" width="414" height="343"/>
+                                <color key="backgroundColor" white="0.16749237804878048" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="100"/>
                                 <state key="normal" image="flashcards"/>
                                 <connections>
                                     <segue destination="GeX-zu-uOD" kind="show" id="3N3-Pk-NeC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-Y4-5Qs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5N-Zw-09I">
+                                <rect key="frame" x="0.0" y="343" width="414" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="FrI-n1-NIS"/>
+                                    <constraint firstAttribute="height" constant="1" id="P6Z-Ch-vwi"/>
                                 </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-Y4-5Qs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="343"/>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="100"/>
                                 <state key="normal" image="quizWord"/>
                                 <connections>
@@ -2254,13 +2258,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zSE-1E-rkh" firstAttribute="leading" secondItem="uzj-Fo-GTB" secondAttribute="leading" id="2RH-56-Tis"/>
-                            <constraint firstItem="DNB-Y4-5Qs" firstAttribute="trailing" secondItem="uzj-Fo-GTB" secondAttribute="trailing" id="JnP-qL-e7q"/>
-                            <constraint firstItem="zSE-1E-rkh" firstAttribute="trailing" secondItem="uzj-Fo-GTB" secondAttribute="trailing" id="K5U-fR-io5"/>
-                            <constraint firstItem="zSE-1E-rkh" firstAttribute="top" secondItem="DNB-Y4-5Qs" secondAttribute="bottom" id="Qw5-GG-Bm4"/>
-                            <constraint firstItem="DNB-Y4-5Qs" firstAttribute="leading" secondItem="uzj-Fo-GTB" secondAttribute="leading" id="cZ1-rt-zHg"/>
-                            <constraint firstItem="DNB-Y4-5Qs" firstAttribute="top" secondItem="Yjm-iz-lsn" secondAttribute="top" id="hXI-Ty-cDU"/>
-                            <constraint firstItem="zSE-1E-rkh" firstAttribute="bottom" secondItem="uzj-Fo-GTB" secondAttribute="bottom" id="zns-t4-b9d"/>
+                            <constraint firstItem="zSE-1E-rkh" firstAttribute="bottom" secondItem="uzj-Fo-GTB" secondAttribute="bottom" id="1Dx-x4-O0C"/>
+                            <constraint firstItem="zSE-1E-rkh" firstAttribute="leading" secondItem="uzj-Fo-GTB" secondAttribute="leading" id="8NX-Xr-MLH"/>
+                            <constraint firstItem="DNB-Y4-5Qs" firstAttribute="trailing" secondItem="uzj-Fo-GTB" secondAttribute="trailing" id="DTJ-eM-3gR"/>
+                            <constraint firstItem="DNB-Y4-5Qs" firstAttribute="leading" secondItem="uzj-Fo-GTB" secondAttribute="leading" id="N93-fA-9Qr"/>
+                            <constraint firstAttribute="trailing" secondItem="e5N-Zw-09I" secondAttribute="trailing" id="aaF-NC-ZWH"/>
+                            <constraint firstItem="e5N-Zw-09I" firstAttribute="top" secondItem="DNB-Y4-5Qs" secondAttribute="bottom" id="bww-Ew-vJo"/>
+                            <constraint firstItem="zSE-1E-rkh" firstAttribute="trailing" secondItem="uzj-Fo-GTB" secondAttribute="trailing" id="dfB-WR-Qn3"/>
+                            <constraint firstItem="DNB-Y4-5Qs" firstAttribute="top" secondItem="Yjm-iz-lsn" secondAttribute="top" id="e89-Q4-lq5"/>
+                            <constraint firstItem="e5N-Zw-09I" firstAttribute="centerY" secondItem="Yjm-iz-lsn" secondAttribute="centerY" id="f63-Qd-9FE"/>
+                            <constraint firstItem="zSE-1E-rkh" firstAttribute="top" secondItem="e5N-Zw-09I" secondAttribute="bottom" id="rcT-PH-mO7"/>
+                            <constraint firstItem="e5N-Zw-09I" firstAttribute="leading" secondItem="Yjm-iz-lsn" secondAttribute="leading" id="yko-Ot-y97"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uzj-Fo-GTB"/>
                     </view>
