@@ -7,8 +7,8 @@ In future versions, we plan to implement the following features:
     - Add small tutorial through animation pop-ups & include a welcome message for first time users to explain what SORTa Helpful is.
 
   - Search Tab:
-    - Compare to another algorithms (visualization)
-    - Place the "About Algorithm" above runtimes
+    - Compare two algorithm visualizations
+    - Reorganize algorthm view
     
   - Practice Tab:
     - Quiz:
