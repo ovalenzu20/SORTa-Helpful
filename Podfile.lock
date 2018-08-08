@@ -2,21 +2,25 @@ PODS:
   - Charts (3.1.1):
     - Charts/Core (= 3.1.1)
   - Charts/Core (3.1.1)
+  - SwiftSVG (2.1.5)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Charts
+  - SwiftSVG (~> 2.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Charts
+    - SwiftSVG
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  SwiftSVG: 9d78f41396a921c210ce9898ada05c85d412acb8
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: c60de5d2ba63047766cd536bc08873a9be972e0e
+PODFILE CHECKSUM: 02b439d6e49f2237ff20b6f2747f4bbe4bfcbc2b
 
 COCOAPODS: 1.5.3

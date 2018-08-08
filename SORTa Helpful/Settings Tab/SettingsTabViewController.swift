@@ -22,7 +22,6 @@ class SettingsTabViewController: UIViewController, MFMailComposeViewControllerDe
         return mailComposerVC
     }
     
-    
     func showSendMailErrorAlert() {
         let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -44,7 +43,6 @@ class SettingsTabViewController: UIViewController, MFMailComposeViewControllerDe
         }
     }
     
-    
     @IBAction func didClickNotificationSettings(_ sender: Any) {
     }
     
@@ -58,7 +56,18 @@ class SettingsTabViewController: UIViewController, MFMailComposeViewControllerDe
     }
     
     
+    @IBAction func didClickOmarValenzuela(_ sender: Any) {
+        let omarsLinkedIn = URL(string: "https://www.linkedin.com/in/omar-valenzuela-63bba114a/")
+        let svc = SFSafariViewController(url: omarsLinkedIn!)
+        present(svc, animated: true, completion: nil)
+    }
     
+    
+    @IBAction func didClickBrandonTeran(_ sender: Any) {
+        let brandonsLinkedIn = URL(string: "https://www.linkedin.com/in/brandon-teran-736593139/")
+        let svc = SFSafariViewController(url: brandonsLinkedIn!)
+        present(svc, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

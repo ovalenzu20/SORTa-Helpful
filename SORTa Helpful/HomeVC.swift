@@ -9,24 +9,12 @@
 import UIKit
 import SafariServices
 
+
 class HomeVC: UIViewController {
-    
-    @IBAction func didClickOmarValenzuela(_ sender: Any) {
-        let omarsLinkedIn = URL(string: "https://www.linkedin.com/in/omar-valenzuela-63bba114a/")
-        let svc = SFSafariViewController(url: omarsLinkedIn!)
-        present(svc, animated: true, completion: nil)
-    }
-    
-    
-    @IBAction func didClickBrandonTeran(_ sender: Any) {
-        let brandonsLinkedIn = URL(string: "https://www.linkedin.com/in/brandon-teran-736593139/")
-        let svc = SFSafariViewController(url: brandonsLinkedIn!)
-        present(svc, animated: true, completion: nil)
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     

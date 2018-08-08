@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/omarvalenzuela/Developer/SORTa Helpful/SORTa Helpful/Practice Tab/Flashcard/FlashcardChosenViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:SORTa Helpful.xcodeproj">
    </FileRef>
    <FileRef

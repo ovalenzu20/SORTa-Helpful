@@ -42,7 +42,6 @@
 		07E237B820E9DDB3000D22DE /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B720E9DDB3000D22DE /* Algorithm.swift */; };
 		07E237BA20E9E6E7000D22DE /* SearchFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E237B920E9E6E7000D22DE /* SearchFilterButton.swift */; };
 		437F4DDD6997F81958F92691 /* Pods_SORTa_Helpful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */; };
-		7814C53F211A723A00F4840E /* FlashcardChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814C53E211A723A00F4840E /* FlashcardChosenViewController.swift */; };
 		7820167321190B65003D008B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820167221190B65003D008B /* HomeVC.swift */; };
 		78340A5F20F694CD001D0746 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A5E20F694CD001D0746 /* InfoViewController.swift */; };
 		78340A7620F6994E001D0746 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */; };
@@ -59,11 +58,13 @@
 		78340A8120F6994E001D0746 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78340A7520F6994E001D0746 /* Roboto-Bold.ttf */; };
 		78340A8C20F6C33A001D0746 /* AlgorithmTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */; };
 		783B23B820FEE51300490CFF /* allQuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 783B23B720FEE51300490CFF /* allQuizQuestions.json */; };
+		784577F7211A8465007E7E96 /* codepath.svg in Resources */ = {isa = PBXBuildFile; fileRef = 784577F6211A8464007E7E96 /* codepath.svg */; };
 		7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846245020FED84900D4213B /* PracticeNavigationController.swift */; };
 		784A3E1521055AE3004EE73D /* DoneWithQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */; };
 		78575D0221093C0500648F41 /* QuizSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78575D0121093C0500648F41 /* QuizSelectedVC.swift */; };
 		78575D0421093C8D00648F41 /* QuizCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78575D0321093C8D00648F41 /* QuizCVCell.swift */; };
 		78C33AB320FFF38100EC34BB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C33AB220FFF38100EC34BB /* Quiz.swift */; };
+		78C788FB211A87560046FFD7 /* FlashcardChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C788FA211A87560046FFD7 /* FlashcardChosenViewController.swift */; };
 		78F6814920FE90B300075C50 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6814820FE90B300075C50 /* QuizViewController.swift */; };
 		78F6B78A20FEB585001FA42F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B78920FEB585001FA42F /* PracticeViewController.swift */; };
 		78F9845920E84F760017DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9845820E84F760017DCCC /* AppDelegate.swift */; };
@@ -109,7 +110,6 @@
 		1AF56050F3C46720A02D58A9 /* Pods-SORTa Helpful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.debug.xcconfig"; sourceTree = "<group>"; };
 		44FFDBD99D5B968B369C1992 /* Pods-SORTa Helpful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SORTa Helpful.release.xcconfig"; path = "Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful.release.xcconfig"; sourceTree = "<group>"; };
 		71CA84ADD969411A5D402A7E /* Pods_SORTa_Helpful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SORTa_Helpful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7814C53E211A723A00F4840E /* FlashcardChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashcardChosenViewController.swift; path = "/Users/omarvalenzuela/Developer/SORTa Helpful/SORTa Helpful/Practice Tab/Flashcard/FlashcardChosenViewController.swift"; sourceTree = "<absolute>"; };
 		7820167221190B65003D008B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		78340A5E20F694CD001D0746 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		78340A6A20F6994D001D0746 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -126,11 +126,13 @@
 		78340A7520F6994E001D0746 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		78340A8B20F6C33A001D0746 /* AlgorithmTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTableCell.swift; sourceTree = "<group>"; };
 		783B23B720FEE51300490CFF /* allQuizQuestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = allQuizQuestions.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		784577F6211A8464007E7E96 /* codepath.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = codepath.svg; path = ../../../../Downloads/codepath.svg; sourceTree = "<group>"; };
 		7846245020FED84900D4213B /* PracticeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNavigationController.swift; sourceTree = "<group>"; };
 		784A3E1421055AE3004EE73D /* DoneWithQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneWithQuizViewController.swift; sourceTree = "<group>"; };
 		78575D0121093C0500648F41 /* QuizSelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSelectedVC.swift; sourceTree = "<group>"; };
 		78575D0321093C8D00648F41 /* QuizCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCVCell.swift; sourceTree = "<group>"; };
 		78C33AB220FFF38100EC34BB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		78C788FA211A87560046FFD7 /* FlashcardChosenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlashcardChosenViewController.swift; path = ../../../../../Documents/FlashcardChosenViewController.swift; sourceTree = "<group>"; };
 		78F6814820FE90B300075C50 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		78F6B78920FEB585001FA42F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		78F9845520E84F760017DCCC /* SORTa Helpful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SORTa Helpful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				783B23B720FEE51300490CFF /* allQuizQuestions.json */,
+				784577F6211A8464007E7E96 /* codepath.svg */,
 				07794B9B20F565E2001D4B12 /* algorithmInfo.json */,
 				07DD2E7420F9729000699EF2 /* bubble_sort.txt */,
 				07DD2E7620F972A400699EF2 /* selection_sort.txt */,
@@ -245,8 +248,8 @@
 		783B23BC20FF0B3800490CFF /* Flashcard */ = {
 			isa = PBXGroup;
 			children = (
+				78C788FA211A87560046FFD7 /* FlashcardChosenViewController.swift */,
 				071ED4EF20FDC7210039FDB2 /* FlashcardViewController.swift */,
-				7814C53E211A723A00F4840E /* FlashcardChosenViewController.swift */,
 				07CF43162111098E00789DFE /* FlashcardCell.swift */,
 			);
 			path = Flashcard;
@@ -407,6 +410,7 @@
 				07DD2E7520F9729000699EF2 /* bubble_sort.txt in Resources */,
 				07DD2E8720F9733000699EF2 /* shell_sort.txt in Resources */,
 				07DD2E8D20F9736B00699EF2 /* binary_insertion_sort.txt in Resources */,
+				784577F7211A8465007E7E96 /* codepath.svg in Resources */,
 				78340A7F20F6994E001D0746 /* Roboto-Italic.ttf in Resources */,
 				78340A7720F6994E001D0746 /* Roboto-Medium.ttf in Resources */,
 				78340A7C20F6994E001D0746 /* Roboto-BoldItalic.ttf in Resources */,
@@ -451,11 +455,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SORTa Helpful/Pods-SORTa Helpful-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSVG/SwiftSVG.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSVG.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,7 +499,7 @@
 				07CF4313210FE8BD00789DFE /* ChooseAlgorithmViewController.swift in Sources */,
 				7820167321190B65003D008B /* HomeVC.swift in Sources */,
 				0715185020EC1DD6007C49D0 /* UIViewExtensions.swift in Sources */,
-				7814C53F211A723A00F4840E /* FlashcardChosenViewController.swift in Sources */,
+				78C788FB211A87560046FFD7 /* FlashcardChosenViewController.swift in Sources */,
 				07CF43172111098E00789DFE /* FlashcardCell.swift in Sources */,
 				0734E70820FBEF780046E0DE /* AlgorithmSectionView.swift in Sources */,
 				7846245120FED84900D4213B /* PracticeNavigationController.swift in Sources */,
