@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="adg-S0-vkp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gZ-ik-uEL">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -635,6 +635,82 @@
             </objects>
             <point key="canvasLocation" x="-525" y="2328"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DLD-O3-Kdr">
+            <objects>
+                <viewController storyboardIdentifier="page1" id="BZQ-oh-PgE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hII-RF-VqP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2u-lI-k3j" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="122" y="656" width="170" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="START LEARNING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T2u-lI-k3j" firstAttribute="width" secondItem="T2u-lI-k3j" secondAttribute="height" multiplier="17:4" id="1SX-vf-AHu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="coC-tq-fqh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DR2-iT-bzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3188" y="-765"/>
+        </scene>
+        <!--Intro Page View Controller-->
+        <scene sceneID="dmy-Li-pd6">
+            <objects>
+                <pageViewController storyboardIdentifier="IntroPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="3gZ-ik-uEL" customClass="IntroPageViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0K-u3-B2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4136" y="64"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hJr-ST-XL2">
+            <objects>
+                <viewController storyboardIdentifier="page2" id="JUZ-Nz-Leq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M1E-Ps-PTd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwz-Su-JBX" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="122" y="652" width="170" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rwz-Su-JBX" secondAttribute="height" multiplier="17:4" id="9zN-Sl-7VP"/>
+                                </constraints>
+                                <state key="normal" title="START LEARNING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mkx-R1-9ti" firstAttribute="bottom" secondItem="Rwz-Su-JBX" secondAttribute="bottom" constant="60" id="1EY-2a-KhG"/>
+                            <constraint firstItem="Rwz-Su-JBX" firstAttribute="centerX" secondItem="M1E-Ps-PTd" secondAttribute="centerX" id="hLX-gg-xEM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mkx-R1-9ti"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kI-vq-LAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3187" y="69"/>
+        </scene>
         <!--Home-->
         <scene sceneID="A7b-hY-kEV">
             <objects>
@@ -644,7 +720,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sorta helpful" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-bP-cs3">
-                                <rect key="frame" x="101" y="86" width="212" height="79"/>
+                                <rect key="frame" x="101" y="80" width="212" height="79"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-My-oAm">
                                 <rect key="frame" x="143" y="290" width="128" height="107"/>
@@ -697,7 +773,7 @@
                         <constraints>
                             <constraint firstItem="3J3-ge-29q" firstAttribute="top" secondItem="aj9-QO-XpR" secondAttribute="bottom" constant="8" id="2us-fH-8dk"/>
                             <constraint firstItem="xnm-bP-cs3" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="Byl-mW-fmu"/>
-                            <constraint firstItem="xnm-bP-cs3" firstAttribute="top" secondItem="1kM-iC-wnR" secondAttribute="top" constant="66" id="MPT-bj-xVX"/>
+                            <constraint firstItem="xnm-bP-cs3" firstAttribute="top" secondItem="1kM-iC-wnR" secondAttribute="top" constant="60" id="MPT-bj-xVX"/>
                             <constraint firstItem="7gg-My-oAm" firstAttribute="centerX" secondItem="EGS-3g-dUO" secondAttribute="centerX" id="OYJ-hq-e4Y"/>
                             <constraint firstItem="3J3-ge-29q" firstAttribute="leading" secondItem="aj9-QO-XpR" secondAttribute="trailing" constant="-116" id="btT-Ur-dHt"/>
                             <constraint firstItem="7gg-My-oAm" firstAttribute="centerY" secondItem="EGS-3g-dUO" secondAttribute="centerY" id="imZ-Dh-L1V"/>
@@ -710,7 +786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTu-Yj-d8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1836.2318840579712" y="-757.33695652173924"/>
+            <point key="canvasLocation" x="-1503" y="-672"/>
         </scene>
         <!--Search-->
         <scene sceneID="840-PH-Z3P">
@@ -2031,7 +2107,7 @@
             <objects>
                 <viewController storyboardIdentifier="QuizViewController" id="SLS-ZC-twu" customClass="QuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glB-LT-7xB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-gr-S92">
@@ -2221,7 +2297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaa-xK-EC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2700" y="2913.5869565217395"/>
+            <point key="canvasLocation" x="-2193" y="2327"/>
         </scene>
         <!--Practice View Controller-->
         <scene sceneID="Mqc-pd-CAj">
@@ -2308,6 +2384,43 @@
             </objects>
             <point key="canvasLocation" x="-752" y="-426"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="tst-zU-PTJ">
+            <objects>
+                <viewController storyboardIdentifier="page3" id="ZAM-ND-FWf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="seA-jo-I5M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZp-kz-qPq" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="122" y="636" width="170" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dZp-kz-qPq" secondAttribute="height" multiplier="16:3" constant="-43.333333333333314" id="BuN-ry-H1P"/>
+                                    <constraint firstAttribute="width" constant="170" id="ZmQ-AX-TzW"/>
+                                </constraints>
+                                <state key="normal" title="START LEARNING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dZp-kz-qPq" firstAttribute="centerX" secondItem="seA-jo-I5M" secondAttribute="centerX" id="2J3-xa-jmE"/>
+                            <constraint firstItem="fqe-ar-ahc" firstAttribute="bottom" secondItem="dZp-kz-qPq" secondAttribute="bottom" constant="60" id="888-KN-3Mo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fqe-ar-ahc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZM4-oU-7Ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3178.2608695652175" y="892.66304347826099"/>
+        </scene>
         <!--Practice-->
         <scene sceneID="IBQ-gJ-eCd">
             <objects>
@@ -2350,6 +2463,6 @@
         <image name="stats icon 29x29" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jC9-Zd-71F"/>
+        <segue reference="KuB-nW-CEq"/>
     </inferredMetricsTieBreakers>
 </document>
