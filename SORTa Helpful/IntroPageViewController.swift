@@ -14,7 +14,7 @@ class IntroPageViewController: UIPageViewController {
     
     func configurePageControl() {
         // The total number of pages that are available is based on how many available colors we have.
-        introPageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
+        introPageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width, height: 50))
         self.introPageControl.numberOfPages = introPages.count
         self.introPageControl.currentPage = 0
         self.introPageControl.tintColor = UIColor.black
@@ -74,27 +74,16 @@ class IntroPageViewController: UIPageViewController {
 
 extension IntroPageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
-        guard let viewControllerIndex = introPages.index(of: viewController) else { return nil }
-        
-        let previousIndex = viewControllerIndex - 1
-        
-        guard previousIndex >= 0 else { return introPages.last }
-        guard introPages.count > previousIndex else { return nil }
-        
-        return introPages[previousIndex]
+        let currentIndex = introPages.index(of: viewController)!
+        let previousIndex = currentIndex - 1
+        return (previousIndex == -1) ? nil : introPages[previousIndex]
     }
     
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = introPages.index(of: viewController) else { return nil }
-        
-        let nextIndex = viewControllerIndex + 1
-        
-        guard nextIndex < introPages.count else { return introPages.first }
-        guard introPages.count > nextIndex else { return nil }
-        
-        return introPages[nextIndex]
+        let currentIndex = introPages.index(of: viewController)!
+        let nextIndex = currentIndex + 1
+        return (nextIndex == introPages.count) ? nil : introPages[nextIndex]
     }
     
     
