@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5813BF8388828B73D8C91C2CA3833D41"
+               BlueprintIdentifier = "4613B520C2290C19D661671C9D7CDB13"
                BuildableName = "Pods_SORTa_Helpful.framework"
                BlueprintName = "Pods-SORTa Helpful"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5813BF8388828B73D8C91C2CA3833D41"
+            BlueprintIdentifier = "4613B520C2290C19D661671C9D7CDB13"
             BuildableName = "Pods_SORTa_Helpful.framework"
             BlueprintName = "Pods-SORTa Helpful"
             ReferencedContainer = "container:Pods.xcodeproj">
