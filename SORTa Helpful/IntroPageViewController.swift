@@ -10,8 +10,7 @@ import UIKit
 
 class IntroPageViewController: UIPageViewController {
     var introPageControl = UIPageControl()
-    
-    
+
     func configurePageControl() {
         // The total number of pages that are available is based on how many available colors we have.
         introPageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width, height: 50))

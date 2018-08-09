@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gZ-ik-uEL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -192,7 +192,7 @@
             <objects>
                 <viewController id="GeX-zu-uOD" customClass="FlashcardViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ta4-DG-Gas">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE A CATEGORY TO PRACTICE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw4-cc-qH0">
@@ -205,10 +205,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-20-YCp">
-                                <rect key="frame" x="80" y="179" width="254" height="517"/>
+                                <rect key="frame" x="80" y="179" width="254" height="468"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-UM-lxq" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="67"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="60"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="BEST CASE"/>
                                         <userDefinedRuntimeAttributes>
@@ -236,7 +236,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-e1-TEF" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="75" width="254" height="67"/>
+                                        <rect key="frame" x="0.0" y="68" width="254" height="60"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="AVERAGE CASE"/>
                                         <userDefinedRuntimeAttributes>
@@ -264,7 +264,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-zV-UWB" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="150" width="254" height="67"/>
+                                        <rect key="frame" x="0.0" y="136" width="254" height="60"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="WORST CASE"/>
                                         <userDefinedRuntimeAttributes>
@@ -292,7 +292,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-tD-O6q" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="225" width="254" height="67"/>
+                                        <rect key="frame" x="0.0" y="204" width="254" height="60"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="TYPE"/>
                                         <userDefinedRuntimeAttributes>
@@ -320,7 +320,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-D1-Aop" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="300" width="254" height="67"/>
+                                        <rect key="frame" x="0.0" y="272" width="254" height="60"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="MEMORY"/>
                                         <userDefinedRuntimeAttributes>
@@ -348,7 +348,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-4u-Udn" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="375" width="254" height="67"/>
+                                        <rect key="frame" x="0.0" y="340" width="254" height="60"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="RANDOM MIX"/>
                                         <userDefinedRuntimeAttributes>
@@ -376,7 +376,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-dl-nBg" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="450" width="254" height="67"/>
+                                        <rect key="frame" x="0.0" y="408" width="254" height="60"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="CHEAT SHEET"/>
                                         <userDefinedRuntimeAttributes>
@@ -457,14 +457,14 @@
             <objects>
                 <viewController id="3VP-yc-dRD" customClass="InfoViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ru-ny-YBQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gw6-yn-V0J">
-                                <rect key="frame" x="0.0" y="136" width="414" height="600"/>
+                                <rect key="frame" x="0.0" y="136" width="414" height="551"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="slK-Ed-6qV">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="580"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="531"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="algorithmCell" rowHeight="210" id="1My-dx-MMY" customClass="AlgorithmTableCell" customModule="SORTa_Helpful" customModuleProvider="target">
@@ -2182,7 +2182,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="VVb-2l-z76">
             <objects>
-                <tabBarController id="adg-S0-vkp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="adg-S0-vkp" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="3B6-Ob-tWs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2317,16 +2317,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwf-Bh-EIB" customClass="AlgorithmSectionView" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="15" y="172.66666666666663" width="384" height="391"/>
+                                <rect key="frame" x="15" y="173" width="384" height="391"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-a0-Jua">
-                                        <rect key="frame" x="151.66666666666666" y="20" width="81.333333333333343" height="82.333333333333329"/>
+                                        <rect key="frame" x="152" y="20" width="81.333333333333314" height="82.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="70"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You correctly answered ? out of ? questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-eX-F1P">
-                                        <rect key="frame" x="20" y="114.33333333333336" width="344" height="58.666666666666671"/>
+                                        <rect key="frame" x="20" y="114.33333333333333" width="344" height="58.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2404,11 +2404,11 @@
             <objects>
                 <viewController storyboardIdentifier="PracticeViewController" id="pzA-42-VsY" customClass="PracticeViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yjm-iz-lsn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSE-1E-rkh">
-                                <rect key="frame" x="0.0" y="368.66666666666674" width="414" height="367.33333333333326"/>
+                                <rect key="frame" x="0.0" y="344" width="414" height="343"/>
                                 <color key="backgroundColor" white="0.16749237804878048" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="100"/>
                                 <state key="normal" image="flashcards"/>
@@ -2417,14 +2417,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5N-Zw-09I">
-                                <rect key="frame" x="0.0" y="367.66666666666669" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="343" width="414" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="P6Z-Ch-vwi"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-Y4-5Qs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="367.66666666666669"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="343"/>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="100"/>
                                 <state key="normal" image="quizWord"/>
                                 <connections>
@@ -2484,33 +2484,14 @@
             </objects>
             <point key="canvasLocation" x="-752" y="-426"/>
         </scene>
-        <!--View Controller-->
+        <!--Start LearningVC-->
         <scene sceneID="tst-zU-PTJ">
             <objects>
-                <viewController storyboardIdentifier="page3" id="ZAM-ND-FWf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page3" id="ZAM-ND-FWf" customClass="startLearningVC" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="seA-jo-I5M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZp-kz-qPq" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="122" y="636" width="170" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dZp-kz-qPq" secondAttribute="height" multiplier="16:3" constant="-43.333333333333314" id="BuN-ry-H1P"/>
-                                    <constraint firstAttribute="width" constant="170" id="ZmQ-AX-TzW"/>
-                                </constraints>
-                                <state key="normal" title="START LEARNING">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="rfn-Y9-RCI" kind="show" id="m1F-2D-mYK"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TURN SORTA HELPFUL INTO DEFINITELY HELPFUL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zi-dR-igl">
                                 <rect key="frame" x="25" y="87" width="364" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2563,6 +2544,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZp-kz-qPq" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
+                                <rect key="frame" x="122" y="636" width="170" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dZp-kz-qPq" secondAttribute="height" multiplier="16:3" constant="-43.333333333333314" id="BuN-ry-H1P"/>
+                                    <constraint firstAttribute="width" constant="170" id="ZmQ-AX-TzW"/>
+                                </constraints>
+                                <state key="normal" title="START LEARNING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startLearning:" destination="ZAM-ND-FWf" eventType="touchUpInside" id="Dak-4L-gIR"/>
+                                    <segue destination="adg-S0-vkp" kind="show" id="dJu-0U-89O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -2579,7 +2580,7 @@
         <!--Practice-->
         <scene sceneID="IBQ-gJ-eCd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rfn-Y9-RCI" customClass="PracticeNavigationController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PracticeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="rfn-Y9-RCI" customClass="PracticeNavigationController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Practice" image="Practice-Outline" selectedImage="Practice-Filled" id="Jlw-o5-5zI"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
@@ -2618,7 +2619,6 @@
         <image name="stats icon 29x29" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m1F-2D-mYK"/>
         <segue reference="KuB-nW-CEq"/>
     </inferredMetricsTieBreakers>
 </document>
