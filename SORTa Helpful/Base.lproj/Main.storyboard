@@ -39,30 +39,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="exg-QA-fL2">
-                                <rect key="frame" x="69" y="200" width="276" height="260"/>
+                                <rect key="frame" x="78" y="200" width="258" height="114"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYG-9i-E9X">
-                                        <rect key="frame" x="0.0" y="0.0" width="276" height="41"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
-                                        <state key="normal" title="NOTIFICATION SETTINGS">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didClickNotificationSettings:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="rOZ-d3-74x"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KF-up-IDa">
-                                        <rect key="frame" x="0.0" y="73" width="276" height="41"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
-                                        <state key="normal" title="GIVE FEEDBACK">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didClickGiveFeedback:" destination="Sdo-qc-Pa6" eventType="touchUpInside" id="ZMe-ba-eN6"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9L-3x-xej">
-                                        <rect key="frame" x="0.0" y="146" width="276" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="41"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                         <state key="normal" title="VIEW GITHUB">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-Hm-W7s">
-                                        <rect key="frame" x="0.0" y="219" width="276" height="41"/>
+                                        <rect key="frame" x="0.0" y="73" width="258" height="41"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                         <state key="normal" title="CONTACT DEVELOPERS"/>
                                         <connections>
@@ -83,8 +63,6 @@
                                 <constraints>
                                     <constraint firstItem="Vy9-Hm-W7s" firstAttribute="centerX" secondItem="exg-QA-fL2" secondAttribute="centerX" id="I4Q-lb-p0L"/>
                                     <constraint firstItem="I9L-3x-xej" firstAttribute="centerX" secondItem="exg-QA-fL2" secondAttribute="centerX" id="TDu-GU-pUP"/>
-                                    <constraint firstItem="BYG-9i-E9X" firstAttribute="centerX" secondItem="exg-QA-fL2" secondAttribute="centerX" id="YF8-15-EOQ"/>
-                                    <constraint firstItem="2KF-up-IDa" firstAttribute="centerX" secondItem="exg-QA-fL2" secondAttribute="centerX" id="k1P-iV-UTj"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh6-Db-Jhz">
