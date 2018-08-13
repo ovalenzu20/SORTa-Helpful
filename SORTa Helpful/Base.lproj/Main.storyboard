@@ -613,31 +613,19 @@
             </objects>
             <point key="canvasLocation" x="-525" y="2328"/>
         </scene>
-        <!--View Controller-->
+        <!--First Page View Controller-->
         <scene sceneID="DLD-O3-Kdr">
             <objects>
-                <viewController storyboardIdentifier="page1" id="BZQ-oh-PgE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page1" id="BZQ-oh-PgE" customClass="FirstPageViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hII-RF-VqP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2u-lI-k3j" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="122" y="636" width="170" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="O7S-Uc-YPA"/>
-                                </constraints>
-                                <state key="normal" title="GOT IT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKA-Qk-viz">
-                                <rect key="frame" x="50.000000000000007" y="60" width="104.66666666666669" height="60"/>
+                                <rect key="frame" x="50" y="60" width="140" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="h6H-zS-pbX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Connoisseurs" family="Connoisseurs" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -651,15 +639,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-aL-URD">
-                                <rect key="frame" x="50" y="328.66666666666669" width="314" height="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-aL-URD">
+                                <rect key="frame" x="50" y="324.66666666666669" width="314" height="80"/>
                                 <string key="text">SORTa Helpful is an iOS app to help computer science/software engineering students learn, visualize, and master various sorting algorithms.</string>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT IS SORTA HELPFUL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-PQ-Qd6">
-                                <rect key="frame" x="50" y="284.66666666666669" width="198" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT IS SORTA HELPFUL?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-PQ-Qd6">
+                                <rect key="frame" x="104" y="284.66666666666669" width="206" height="20"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -668,18 +656,14 @@
                         <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XKA-Qk-viz" firstAttribute="leading" secondItem="coC-tq-fqh" secondAttribute="leading" constant="50" id="023-OI-Cow"/>
-                            <constraint firstItem="T2u-lI-k3j" firstAttribute="width" secondItem="T2u-lI-k3j" secondAttribute="height" multiplier="17:4" id="1SX-vf-AHu"/>
-                            <constraint firstItem="coC-tq-fqh" firstAttribute="bottom" secondItem="T2u-lI-k3j" secondAttribute="bottom" constant="60" id="Cfx-V1-ivv"/>
                             <constraint firstItem="P7U-JX-B4v" firstAttribute="centerX" secondItem="hII-RF-VqP" secondAttribute="centerX" id="Cxb-vM-fuv"/>
-                            <constraint firstItem="ie6-PQ-Qd6" firstAttribute="leading" secondItem="coC-tq-fqh" secondAttribute="leading" constant="50" id="Mmj-yN-P7o"/>
                             <constraint firstItem="P7U-JX-B4v" firstAttribute="top" secondItem="XKA-Qk-viz" secondAttribute="bottom" constant="-29" id="P5S-wu-RuN"/>
-                            <constraint firstAttribute="trailing" secondItem="8aL-aL-URD" secondAttribute="trailing" constant="50" id="bXV-aa-eqQ"/>
-                            <constraint firstItem="8aL-aL-URD" firstAttribute="centerY" secondItem="hII-RF-VqP" secondAttribute="centerY" id="d85-Xb-Dgh"/>
+                            <constraint firstItem="ie6-PQ-Qd6" firstAttribute="top" secondItem="P7U-JX-B4v" secondAttribute="bottom" constant="108.66666666666669" id="R0Q-Nt-mKh"/>
                             <constraint firstItem="XKA-Qk-viz" firstAttribute="top" secondItem="coC-tq-fqh" secondAttribute="top" constant="40" id="kTg-Vp-tbk"/>
-                            <constraint firstItem="8aL-aL-URD" firstAttribute="leading" secondItem="hII-RF-VqP" secondAttribute="leading" constant="50" id="pxO-dL-SOE"/>
-                            <constraint firstItem="8aL-aL-URD" firstAttribute="centerX" secondItem="hII-RF-VqP" secondAttribute="centerX" id="ukg-1d-eDy"/>
-                            <constraint firstItem="8aL-aL-URD" firstAttribute="top" secondItem="ie6-PQ-Qd6" secondAttribute="bottom" constant="24" id="x1E-zx-nbe"/>
-                            <constraint firstItem="T2u-lI-k3j" firstAttribute="centerX" secondItem="hII-RF-VqP" secondAttribute="centerX" id="yYR-ih-oAy"/>
+                            <constraint firstItem="coC-tq-fqh" firstAttribute="trailing" secondItem="8aL-aL-URD" secondAttribute="trailing" constant="50" id="loy-tr-MOQ"/>
+                            <constraint firstItem="8aL-aL-URD" firstAttribute="leading" secondItem="coC-tq-fqh" secondAttribute="leading" constant="50" id="oC6-HZ-1p6"/>
+                            <constraint firstItem="8aL-aL-URD" firstAttribute="top" secondItem="ie6-PQ-Qd6" secondAttribute="bottom" constant="20" id="vlc-Ot-w8o"/>
+                            <constraint firstItem="ie6-PQ-Qd6" firstAttribute="centerX" secondItem="hII-RF-VqP" secondAttribute="centerX" id="xum-iX-4lQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="coC-tq-fqh"/>
                     </view>
@@ -704,36 +688,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwz-Su-JBX" customClass="UIButtonCustom" customModule="SORTa_Helpful" customModuleProvider="target">
-                                <rect key="frame" x="122" y="636" width="170" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Rwz-Su-JBX" secondAttribute="height" multiplier="17:4" id="9zN-Sl-7VP"/>
-                                    <constraint firstAttribute="width" constant="170" id="yUs-ve-fww"/>
-                                </constraints>
-                                <state key="normal" title="SOUNDS GREAT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHY SHOULD I USE SORTA HELPFUL?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giE-ff-nVa">
                                 <rect key="frame" x="62.333333333333343" y="86" width="290.33333333333326" height="20"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aan-Xw-Nai">
-                                <rect key="frame" x="40" y="466.00000000000006" width="334" height="99.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aan-Xw-Nai">
+                                <rect key="frame" x="40" y="486.00000000000006" width="334" height="99.666666666666686"/>
                                 <string key="text">Given the importance of sorting algorithms, SORTa Helpful will help strengthen your foundation amongst not only sorting algorithms, but as well as the concepts described above.</string>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qro-xv-Jav">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qro-xv-Jav">
                                 <rect key="frame" x="40" y="181.33333333333334" width="334" height="99.666666666666657"/>
                                 <string key="text">Sorting algorithms are prevalent in introductory computer science classes, where the abundance of algorithms provides a gentle introduction to a variety of core algorithm concepts such as:</string>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
@@ -743,56 +711,62 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="hSq-7L-OTp">
                                 <rect key="frame" x="67" y="301" width="280.33333333333331" height="135"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big O Notation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-Rt-SIp">
-                                        <rect key="frame" x="0.0" y="0.0" width="106" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big O Notation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-Rt-SIp">
+                                        <rect key="frame" x="0.0" y="0.0" width="280.33333333333331" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Divide and Conquer Algorithms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om9-oo-3kT">
-                                        <rect key="frame" x="0.0" y="23" width="226.66666666666666" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Divide and Conquer Algorithms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om9-oo-3kT">
+                                        <rect key="frame" x="0.0" y="23" width="280.33333333333331" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Structures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbY-gm-8zZ">
-                                        <rect key="frame" x="0.0" y="46" width="115" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Structures" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbY-gm-8zZ">
+                                        <rect key="frame" x="0.0" y="46" width="280.33333333333331" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best, worst, and average case analysis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-89-5Jx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best, worst, and average case analysis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-89-5Jx">
                                         <rect key="frame" x="0.0" y="69" width="280.33333333333331" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time-space tradeoffs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqX-2V-vTH">
-                                        <rect key="frame" x="0.0" y="92" width="156.66666666666666" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time-space tradeoffs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqX-2V-vTH">
+                                        <rect key="frame" x="0.0" y="92" width="280.33333333333331" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upper and lower bounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiG-L6-8Gn">
-                                        <rect key="frame" x="0.0" y="115" width="179" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upper and lower bounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiG-L6-8Gn">
+                                        <rect key="frame" x="0.0" y="115" width="280.33333333333331" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="fqX-2V-vTH" firstAttribute="centerX" secondItem="hSq-7L-OTp" secondAttribute="centerX" id="5r2-XA-KFa"/>
+                                    <constraint firstItem="2Wi-Rt-SIp" firstAttribute="centerX" secondItem="hSq-7L-OTp" secondAttribute="centerX" id="AIB-AV-JW7"/>
+                                    <constraint firstItem="YbY-gm-8zZ" firstAttribute="centerX" secondItem="hSq-7L-OTp" secondAttribute="centerX" id="EIY-rR-6dS"/>
+                                    <constraint firstItem="om9-oo-3kT" firstAttribute="centerX" secondItem="hSq-7L-OTp" secondAttribute="centerX" id="NRP-3v-wQ4"/>
+                                    <constraint firstItem="gnQ-89-5Jx" firstAttribute="centerX" secondItem="hSq-7L-OTp" secondAttribute="centerX" id="PyR-rS-axY"/>
+                                    <constraint firstItem="xiG-L6-8Gn" firstAttribute="centerX" secondItem="hSq-7L-OTp" secondAttribute="centerX" id="zbK-Gf-3iM"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mkx-R1-9ti" firstAttribute="bottom" secondItem="Rwz-Su-JBX" secondAttribute="bottom" constant="60" id="1EY-2a-KhG"/>
                             <constraint firstItem="Qro-xv-Jav" firstAttribute="centerX" secondItem="M1E-Ps-PTd" secondAttribute="centerX" id="1hg-0s-xMl"/>
-                            <constraint firstItem="aan-Xw-Nai" firstAttribute="top" secondItem="hSq-7L-OTp" secondAttribute="bottom" constant="30" id="9jc-NR-qyG"/>
+                            <constraint firstItem="aan-Xw-Nai" firstAttribute="top" secondItem="hSq-7L-OTp" secondAttribute="bottom" constant="50" id="9jc-NR-qyG"/>
                             <constraint firstItem="hSq-7L-OTp" firstAttribute="top" secondItem="Qro-xv-Jav" secondAttribute="bottom" constant="20" id="Doj-oz-JnM"/>
                             <constraint firstItem="aan-Xw-Nai" firstAttribute="centerX" secondItem="M1E-Ps-PTd" secondAttribute="centerX" id="Ftc-0p-Mio"/>
                             <constraint firstItem="giE-ff-nVa" firstAttribute="centerX" secondItem="M1E-Ps-PTd" secondAttribute="centerX" id="OPM-43-4kg"/>
                             <constraint firstAttribute="trailing" secondItem="Qro-xv-Jav" secondAttribute="trailing" constant="40" id="RKl-DV-St4"/>
                             <constraint firstItem="giE-ff-nVa" firstAttribute="top" secondItem="mkx-R1-9ti" secondAttribute="top" constant="66" id="e9s-HN-Mfx"/>
-                            <constraint firstItem="Rwz-Su-JBX" firstAttribute="centerX" secondItem="M1E-Ps-PTd" secondAttribute="centerX" id="hLX-gg-xEM"/>
                             <constraint firstItem="hSq-7L-OTp" firstAttribute="centerX" secondItem="M1E-Ps-PTd" secondAttribute="centerX" id="hUX-Or-i0E"/>
                             <constraint firstItem="Qro-xv-Jav" firstAttribute="leading" secondItem="M1E-Ps-PTd" secondAttribute="leading" constant="40" id="jZx-j0-yN6"/>
                             <constraint firstAttribute="trailing" secondItem="aan-Xw-Nai" secondAttribute="trailing" constant="40" id="ktK-uG-Hyu"/>
@@ -804,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kI-vq-LAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3188.4057971014495" y="68.478260869565219"/>
+            <point key="canvasLocation" x="-3188" y="64"/>
         </scene>
         <!--Home-->
         <scene sceneID="A7b-hY-kEV">
@@ -2202,7 +2176,7 @@
             <objects>
                 <viewController storyboardIdentifier="QuizViewController" id="SLS-ZC-twu" customClass="QuizViewController" customModule="SORTa_Helpful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glB-LT-7xB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-gr-S92">
@@ -2494,32 +2468,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEARN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="135-qp-L0S">
-                                <rect key="frame" x="50" y="152.33333333333334" width="50" height="19"/>
+                                <rect key="frame" x="182" y="152.33333333333334" width="50" height="19"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VISUALIZE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VR-mA-LE5">
-                                <rect key="frame" x="50" y="308" width="77" height="19"/>
+                                <rect key="frame" x="168.66666666666666" y="308" width="77" height="19"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyq-Ix-R7Z">
-                                <rect key="frame" x="50" y="426" width="63" height="19"/>
+                                <rect key="frame" x="175.66666666666666" y="426" width="63" height="19"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy4-WC-t6F">
-                                <rect key="frame" x="80" y="175.33333333333334" width="294" height="112.66666666666666"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy4-WC-t6F">
+                                <rect key="frame" x="60" y="175.33333333333334" width="294" height="112.66666666666666"/>
                                 <string key="text">Visit the flashcards section under the practice tab to help learn sorting algorithm topics such as best, worst and average case analysis, algorithm types, and more! Check out the cheat sheet to see every algorithm and its vital information</string>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5D-g7-6BK">
-                                <rect key="frame" x="80" y="449" width="294" height="112.66666666666663"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5D-g7-6BK">
+                                <rect key="frame" x="60" y="449" width="294" height="112.66666666666663"/>
                                 <string key="text">Ever hear about the amount of time it takes to master a skill (~10,000 hours of practice)? Well through the practice feature, you can get started through various quizzes that will put your knowledge to the test!</string>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2545,8 +2519,8 @@
                                     <segue destination="adg-S0-vkp" kind="show" id="dJu-0U-89O"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJa-29-TGR">
-                                <rect key="frame" x="80" y="331" width="294" height="75"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJa-29-TGR">
+                                <rect key="frame" x="60" y="331" width="294" height="75"/>
                                 <string key="text">Check out the sorting algorithm visualization feature under the search tab to view how a sorting algorithm actually sorts items! Watch the code come to life. </string>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2558,21 +2532,21 @@
                             <constraint firstItem="dZp-kz-qPq" firstAttribute="centerX" secondItem="seA-jo-I5M" secondAttribute="centerX" id="2J3-xa-jmE"/>
                             <constraint firstItem="dJa-29-TGR" firstAttribute="centerY" secondItem="seA-jo-I5M" secondAttribute="centerY" id="2n3-CT-KEz"/>
                             <constraint firstItem="fqe-ar-ahc" firstAttribute="bottom" secondItem="dZp-kz-qPq" secondAttribute="bottom" constant="60" id="888-KN-3Mo"/>
-                            <constraint firstItem="135-qp-L0S" firstAttribute="leading" secondItem="fqe-ar-ahc" secondAttribute="leading" constant="50" id="8kF-RB-Xqp"/>
                             <constraint firstItem="dJa-29-TGR" firstAttribute="top" secondItem="9VR-mA-LE5" secondAttribute="bottom" constant="4" id="91g-4O-ifC"/>
-                            <constraint firstAttribute="trailing" secondItem="dJa-29-TGR" secondAttribute="trailing" constant="40" id="BLq-d1-rfV"/>
+                            <constraint firstAttribute="trailing" secondItem="dJa-29-TGR" secondAttribute="trailing" constant="60" id="BLq-d1-rfV"/>
+                            <constraint firstItem="kyq-Ix-R7Z" firstAttribute="centerX" secondItem="seA-jo-I5M" secondAttribute="centerX" id="Bei-IX-MJJ"/>
                             <constraint firstItem="qy4-WC-t6F" firstAttribute="top" secondItem="135-qp-L0S" secondAttribute="bottom" constant="4" id="FYd-4e-wB1"/>
                             <constraint firstItem="0Zi-dR-igl" firstAttribute="centerX" secondItem="seA-jo-I5M" secondAttribute="centerX" id="Gib-Dk-LTs"/>
-                            <constraint firstItem="qy4-WC-t6F" firstAttribute="leading" secondItem="fqe-ar-ahc" secondAttribute="leading" constant="80" id="Guf-t4-DBn"/>
+                            <constraint firstItem="qy4-WC-t6F" firstAttribute="leading" secondItem="fqe-ar-ahc" secondAttribute="leading" constant="60" id="Guf-t4-DBn"/>
                             <constraint firstItem="0Zi-dR-igl" firstAttribute="top" secondItem="fqe-ar-ahc" secondAttribute="top" constant="66" id="IPf-sy-ap0"/>
-                            <constraint firstItem="fqe-ar-ahc" firstAttribute="trailing" secondItem="qy4-WC-t6F" secondAttribute="trailing" constant="40" id="LmE-Ts-aeJ"/>
+                            <constraint firstItem="fqe-ar-ahc" firstAttribute="trailing" secondItem="qy4-WC-t6F" secondAttribute="trailing" constant="60" id="LmE-Ts-aeJ"/>
                             <constraint firstItem="kyq-Ix-R7Z" firstAttribute="top" secondItem="dJa-29-TGR" secondAttribute="bottom" constant="20" id="Pi5-Q7-Wc4"/>
-                            <constraint firstItem="9VR-mA-LE5" firstAttribute="leading" secondItem="fqe-ar-ahc" secondAttribute="leading" constant="50" id="RIH-mE-QX0"/>
-                            <constraint firstItem="fqe-ar-ahc" firstAttribute="trailing" secondItem="f5D-g7-6BK" secondAttribute="trailing" constant="40" id="RWO-S6-zjF"/>
-                            <constraint firstItem="f5D-g7-6BK" firstAttribute="leading" secondItem="fqe-ar-ahc" secondAttribute="leading" constant="80" id="Y8H-7G-uYW"/>
-                            <constraint firstItem="dJa-29-TGR" firstAttribute="leading" secondItem="seA-jo-I5M" secondAttribute="leading" constant="80" id="bqC-Ht-aXo"/>
+                            <constraint firstItem="fqe-ar-ahc" firstAttribute="trailing" secondItem="f5D-g7-6BK" secondAttribute="trailing" constant="60" id="RWO-S6-zjF"/>
+                            <constraint firstItem="9VR-mA-LE5" firstAttribute="centerX" secondItem="seA-jo-I5M" secondAttribute="centerX" id="Xqo-jR-S46"/>
+                            <constraint firstItem="f5D-g7-6BK" firstAttribute="leading" secondItem="fqe-ar-ahc" secondAttribute="leading" constant="60" id="Y8H-7G-uYW"/>
+                            <constraint firstItem="dJa-29-TGR" firstAttribute="leading" secondItem="seA-jo-I5M" secondAttribute="leading" constant="60" id="bqC-Ht-aXo"/>
                             <constraint firstItem="f5D-g7-6BK" firstAttribute="top" secondItem="kyq-Ix-R7Z" secondAttribute="bottom" constant="4" id="djW-nQ-cje"/>
-                            <constraint firstItem="kyq-Ix-R7Z" firstAttribute="leading" secondItem="fqe-ar-ahc" secondAttribute="leading" constant="50" id="lyV-Ue-5yk"/>
+                            <constraint firstItem="135-qp-L0S" firstAttribute="centerX" secondItem="seA-jo-I5M" secondAttribute="centerX" id="gMN-el-fQq"/>
                             <constraint firstItem="9VR-mA-LE5" firstAttribute="top" secondItem="qy4-WC-t6F" secondAttribute="bottom" constant="20" id="q7p-Q5-1KG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fqe-ar-ahc"/>
@@ -2580,7 +2554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZM4-oU-7Ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3178.2608695652175" y="892.66304347826099"/>
+            <point key="canvasLocation" x="-3188" y="895"/>
         </scene>
         <!--Practice-->
         <scene sceneID="IBQ-gJ-eCd">
@@ -2624,6 +2598,6 @@
         <image name="stats icon 29x29" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KuB-nW-CEq"/>
+        <segue reference="jC9-Zd-71F"/>
     </inferredMetricsTieBreakers>
 </document>
