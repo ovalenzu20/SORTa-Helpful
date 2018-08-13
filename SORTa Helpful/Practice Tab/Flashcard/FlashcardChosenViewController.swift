@@ -57,7 +57,7 @@ class FlashcardChosenViewController: UIViewController, UICollectionViewDelegate,
             algoInfo = self.getFlachcardLabels(algorithmInfo: categoryCollection[indexPath.item])
         }
         
-        flashcardCell.setupLabelText(name: algoInfo.0, info: algoInfo.1)
+        flashcardCell.setupLabelText(name: algoInfo.0, info: algoInfo.1, fcType: fcType)
         flashcardCell.setCardTextToName()
         
         return flashcardCell

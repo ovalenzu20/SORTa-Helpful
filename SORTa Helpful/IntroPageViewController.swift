@@ -42,10 +42,7 @@ class IntroPageViewController: UIPageViewController {
         self.delegate   = self
         
         if let firstViewController = introPages.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
+            setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
         
         self.configurePageControl()

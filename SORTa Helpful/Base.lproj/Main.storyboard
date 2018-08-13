@@ -186,7 +186,7 @@
                                 <rect key="frame" x="80" y="179" width="254" height="468"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-UM-lxq" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="71.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="BEST CASE"/>
                                         <userDefinedRuntimeAttributes>
@@ -214,7 +214,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-e1-TEF" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="68" width="254" height="60"/>
+                                        <rect key="frame" x="0.0" y="79.333333333333314" width="254" height="71.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="AVERAGE CASE"/>
                                         <userDefinedRuntimeAttributes>
@@ -242,7 +242,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-zV-UWB" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="254" height="60"/>
+                                        <rect key="frame" x="0.0" y="158.66666666666669" width="254" height="71.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="WORST CASE"/>
                                         <userDefinedRuntimeAttributes>
@@ -270,7 +270,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-tD-O6q" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="204" width="254" height="60"/>
+                                        <rect key="frame" x="0.0" y="238.00000000000003" width="254" height="71.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="TYPE"/>
                                         <userDefinedRuntimeAttributes>
@@ -298,7 +298,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-D1-Aop" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="272" width="254" height="60"/>
+                                        <rect key="frame" x="0.0" y="317.33333333333331" width="254" height="71.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="MEMORY"/>
                                         <userDefinedRuntimeAttributes>
@@ -325,36 +325,8 @@
                                             <action selector="memoryCaseFlachcards:" destination="GeX-zu-uOD" eventType="touchUpInside" id="5TI-Jd-ftg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-4u-Udn" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="340" width="254" height="60"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
-                                        <state key="normal" title="RANDOM MIX"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="0.29999999999999999"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="randomMixCaseFlachcards:" destination="GeX-zu-uOD" eventType="touchUpInside" id="2Dm-XH-WJ8"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-dl-nBg" customClass="SearchFilterButton" customModule="SORTa_Helpful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="408" width="254" height="60"/>
+                                        <rect key="frame" x="0.0" y="396.66666666666663" width="254" height="71.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="CHEAT SHEET"/>
                                         <userDefinedRuntimeAttributes>

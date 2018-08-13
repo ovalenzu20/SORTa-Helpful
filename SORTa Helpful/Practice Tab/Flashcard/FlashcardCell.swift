@@ -14,6 +14,7 @@ class FlashcardCell: UICollectionViewCell {
     var nameText : String!
     var infoText : String!
     
+    
     var flashcardButton : UIButton = {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 0.1725490196, green: 0.1607843137, blue: 0.2078431373, alpha: 1)
@@ -29,6 +30,16 @@ class FlashcardCell: UICollectionViewCell {
         lbl.numberOfLines = 6
         lbl.textAlignment = .center
         lbl.font = UIFont(name: "Roboto-Bold", size: 20)
+        return lbl
+    }()
+    
+    
+    var fcTypeLabel : UILabel = {
+        let lbl = UILabel()
+        lbl.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        lbl.numberOfLines = 6
+        lbl.textAlignment = .center
+        lbl.font = UIFont(name: "Roboto-Light", size: 14)
         return lbl
     }()
     
@@ -52,11 +63,6 @@ class FlashcardCell: UICollectionViewCell {
     }
     
     
-    private func setupSubviewConstraints() {
-        
-    }
-    
-    
     func setupViews() {
         // Add flashcard button to view
         self.addSubview(flashcardButton)
@@ -71,16 +77,22 @@ class FlashcardCell: UICollectionViewCell {
         
         // Add info label to flashcard button view
         flashcardButton.addSubview(infoLabel)
+        flashcardButton.addSubview(fcTypeLabel)
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         infoLabel.centerYAnchor.constraint(equalTo:  flashcardButton.centerYAnchor).isActive                 = true
         infoLabel.leadingAnchor.constraint(equalTo:  flashcardButton.leadingAnchor,  constant: 10).isActive  = true
         infoLabel.trailingAnchor.constraint(equalTo: flashcardButton.trailingAnchor, constant: -10).isActive = true
+        
+        fcTypeLabel.translatesAutoresizingMaskIntoConstraints = false
+        fcTypeLabel.topAnchor.constraint(equalTo: flashcardButton.topAnchor, constant: 10).isActive         = true
+        fcTypeLabel.leadingAnchor.constraint(equalTo: flashcardButton.leadingAnchor, constant: 10).isActive = true
     }
     
     
-    func setupLabelText(name: String, info: String) {
+    func setupLabelText(name: String, info: String, fcType: String) {
         self.nameText = name.uppercased()
         self.infoText = info
+        self.fcTypeLabel.text = fcType.uppercased()
     }
     
     
