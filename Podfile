@@ -5,6 +5,5 @@ target 'SORTa Helpful' do
 
 pod 'SwiftyJSON', '~> 4.0'
 pod 'Charts'
-pod 'SwiftSVG', '~> 2.0'
 
 end
